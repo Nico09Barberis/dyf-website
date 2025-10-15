@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import AppRoutes from "./routes/AppRouter";
 
 export default function App() {
   useEffect(() => {
@@ -12,9 +12,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/*" element={<Home />} />
-      </Routes>
+      <AppRoutes />
     </BrowserRouter>
   );
 }
