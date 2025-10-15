@@ -10,7 +10,7 @@ import { FaSquarePhone } from "react-icons/fa6";
 import { MdOutlineWork } from "react-icons/md";
 
 
-function MainLayout({ children }) {
+function AppLayout({ children }) {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
@@ -131,4 +131,4 @@ function MainLayout({ children }) {
   );
 }
 
-export default MainLayout;
+export default AppLayout;

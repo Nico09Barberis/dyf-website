@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AppRoutes from "./routes/AppRouter";
+import ScrollToTop from "./layout/ScrollToTop";
 
 export default function App() {
   useEffect(() => {
@@ -12,6 +13,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <AppRoutes />
     </BrowserRouter>
   );
