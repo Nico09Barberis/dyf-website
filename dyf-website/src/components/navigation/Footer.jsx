@@ -38,16 +38,16 @@ const Footer = () => {
             Inicio
           </Link>
           <Link
-            to="/productos"
+            to="/nosotros"
             className="text-gray-300 hover:text-white mb-1 transition-colors duration-300"
           >
-            Productos
+            Nosotros
           </Link>
           <Link
-            to="/como-comprar"
+            to="/galeria"
             className="text-gray-300 hover:text-white mb-1 transition-colors duration-300 capitalize"
           >
-            Como comprar
+            Galeria
           </Link>
         </div>
 
