@@ -13,7 +13,6 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <p>hola!</p>
         <Route path="/*" element={<Home />} />
       </Routes>
     </BrowserRouter>
