@@ -107,7 +107,7 @@ function Navbar() {
         <Link
           to="/"
           className={`flex-1 flex justify-center items-center transition-all duration-300 ${
-            isShrunk ? "h-14 md:h-16" : "h-16 md:h-20"
+            isShrunk ? "h-12 md:h-14" : "h-14 md:h-16"
           }`}
         >
           <img
@@ -261,7 +261,7 @@ function Navbar() {
         </div>
       </div>
 
-      <div className="bg-white hidden md:flex justify-center font-bebas tracking-wide text-xl space-x-8 pt-4">
+      <div className="bg-white hidden md:flex justify-center font-bebas tracking-wide text-lg space-x-8 pt-2">
         {[
           { to: "/", label: "Home" },
           {
@@ -290,9 +290,9 @@ function Navbar() {
             <Link
               to={item.to}
               className="relative text-gray-700 uppercase hover:text-gray-900 pb-1
-          border-b-2 border-transparent hover:border-gray-900
-          transition-all duration-200"
-            >
+                border-b-2 border-transparent hover:border-gray-900
+                transition-all duration-200"
+                >
               {item.label}
             </Link>
 

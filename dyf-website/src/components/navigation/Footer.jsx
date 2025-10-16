@@ -11,16 +11,16 @@ import SocialLinks from "../ui/SocialLinks";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#121212] text-white pt-12">
+    <footer className="bg-[#121212] text-white pt-6">
       {/* Contenedor principal */}
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="w-full px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Columna izquierda: Logo */}
         <div className="flex flex-col items-center md:items-start">
           <Link to="/">
             <img
               src={logo}
               alt="Mi Empresa Logo"
-              className="h-34 w-40 object-contain"
+              className="w-40 h-auto object-contain"
             />
           </Link>
         </div>
@@ -116,7 +116,7 @@ const Footer = () => {
 
           {/* Redes sociales */}
           <div className="flex gap-3">
-           <SocialLinks />
+            <SocialLinks />
           </div>
         </div>
       </div>
