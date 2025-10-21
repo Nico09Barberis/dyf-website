@@ -4,6 +4,7 @@ import AboutSection from "../sections/home/AboutSection";
 import ServicesSection from "../sections/home/ServicesSection";
 import ClientsSection from "../sections/home/ClientsSection";
 import HeroBanner from "../sections/home/HeroBanner";
+import BlurCard from "../components/ui/BlurCard";
 
 export default function HomePage() {
   return (
@@ -17,6 +18,8 @@ export default function HomePage() {
       <ClientsSection />
 
       <HeroBanner />
+
+      <BlurCard />
     </main>
   );
 }

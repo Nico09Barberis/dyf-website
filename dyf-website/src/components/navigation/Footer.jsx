@@ -123,7 +123,7 @@ const Footer = () => {
 
       {/* Línea inferior */}
       <div className="bg-black mt-10 py-4 text-center text-gray-300 text-sm">
-        © {new Date().getFullYear()} Mi Empresa — Todos los derechos reservados
+        © Copyright {new Date().getFullYear()} DyF Celebraciones | Todos los Derechos Reservados | All Rights Reserved
       </div>
     </footer>
   );

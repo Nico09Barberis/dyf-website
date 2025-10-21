@@ -243,14 +243,6 @@ function Navbar() {
             </Link>
 
             <Link
-              to="/blog"
-              onClick={() => setIsOpen(false)}
-              className="block text-gray-500 hover:text-gray-700 hover:bg-[#E0F7FA] font-ancois-one uppercase rounded-xl py-1 px-2 text-lg"
-            >
-              Blog
-            </Link>
-
-            <Link
               to="/contacto"
               onClick={() => setIsOpen(false)}
               className="block text-gray-500 hover:text-gray-700 hover:bg-[#E0F7FA] font-ancois-one uppercase rounded-xl py-1 px-2 text-lg"
@@ -283,7 +275,6 @@ function Navbar() {
             ],
           },
           { to: "/galeria", label: "galeria" },
-          { to: "/blog", label: "blog" },
           { to: "/contacto", label: "contacto" },
         ].map((item) => (
           <div key={item.to} className="relative group">
