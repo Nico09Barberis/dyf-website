@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import CarouselHome from "../components/common/CarouselHome";
 import AboutSection from "../sections/home/AboutSection";
+import ServicesSection from "../sections/home/ServicesSection";
+import ClientsSection from "../sections/home/ClientsSection";
 
 export default function HomePage() {
   return (
@@ -8,6 +10,10 @@ export default function HomePage() {
       <CarouselHome />
 
       <AboutSection />
+
+      <ServicesSection />
+
+      <ClientsSection />
     </main>
   );
 }

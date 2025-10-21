@@ -3,11 +3,11 @@ import { CgAbstract } from "react-icons/cg";
 
 const CustomButton = ({
   to = "/",
-  label = "Ver más",
-  icon: Icon = CgAbstract, // 👈 ícono opcional
+  label = "",
+  icon: Icon = CgAbstract, // ícono opcional
 }) => {
   return (
-    <div className="w-auto">
+    <div className="inline-block">
       <Link
         to={to}
         className="relative inline-flex items-center gap-2 px-6 py-3 uppercase text-black text-sm font-semibold tracking-wider overflow-hidden transition-all duration-500 group"
@@ -23,7 +23,7 @@ const CustomButton = ({
         )}
 
         {/* Línea inferior */}
-        <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#ffc506] transition-all duration-500 group-hover:w-full"></span>
+        <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#ffc506] transition-all duration-500 group-hover:w-full z-0"></span>
 
         {/* Fondo animado */}
         <span className="absolute left-0 bottom-0 h-0 w-full bg-[#ffc506] z-0 transition-all duration-500 group-hover:h-full"></span>

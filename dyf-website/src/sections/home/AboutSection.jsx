@@ -5,7 +5,7 @@ import CustomButton from "../../components/ui/CustomButton";
 
 const AboutSection = () => {
   return (
-    <section className="max-w-6xl mx-auto flex flex-col md:flex-row my-6">
+    <section className="max-w-6xl mx-auto flex flex-col md:flex-row my-6 p-2">
       {/* Contenedor Izquierdo */}
       <div className="w-full md:w-1/2 flex">
         {/* Columna izquierda (2 imágenes apiladas) */}
