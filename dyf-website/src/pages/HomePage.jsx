@@ -3,6 +3,7 @@ import CarouselHome from "../components/common/CarouselHome";
 import AboutSection from "../sections/home/AboutSection";
 import ServicesSection from "../sections/home/ServicesSection";
 import ClientsSection from "../sections/home/ClientsSection";
+import HeroBanner from "../sections/home/HeroBanner";
 
 export default function HomePage() {
   return (
@@ -14,6 +15,8 @@ export default function HomePage() {
       <ServicesSection />
 
       <ClientsSection />
+
+      <HeroBanner />
     </main>
   );
 }

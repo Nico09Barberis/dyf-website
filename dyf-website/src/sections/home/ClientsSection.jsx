@@ -36,7 +36,7 @@ const clients = [
 
 const ClientsSection = () => {
   return (
-    <section className="w-full py-20 bg-gray-50">
+    <section className="w-full py-20 bg-white">
       <div className="max-w-6xl mx-auto px-6 text-center">
         {/* Título */}
         <h2 className="text-3xl font-bold mb-2 text-gray-900">Nuestros Clientes</h2>
