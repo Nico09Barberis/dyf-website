@@ -35,14 +35,14 @@ const Footer = () => {
 
         {/* Columna Servicios */}
         <div className="flex flex-col items-center md:items-start">
-          <h3 className="font-bold mb-3 text-lg">Servicios</h3>
+          <h3 className="font-semibold uppercase mb-3 text-lg">Servicios</h3>
           {servicios.map((item, idx) => (
             <Link
               key={idx}
               to={item.to}
               className="flex items-center gap-2 text-gray-300 mb-1 transition-all duration-300 hover:text-white hover:translate-x-2"
             >
-              <IoIosArrowForward className="text-gray-300 group-hover:text-white" />
+              <IoIosArrowForward className="text-yellow-300 group-hover:text-white" />
               {item.label}
             </Link>
           ))}
@@ -50,14 +50,14 @@ const Footer = () => {
 
         {/* Columna Empresa */}
         <div className="flex flex-col items-center md:items-start">
-          <h3 className="font-bold mb-3 text-lg">Empresa</h3>
+          <h3 className="font-semibold uppercase mb-3 text-lg">Empresa</h3>
           {empresa.map((item, idx) => (
             <Link
               key={idx}
               to={item.to}
               className="flex items-center gap-2 text-gray-300 mb-1 transition-all duration-300 hover:text-white hover:translate-x-2"
             >
-              <IoIosArrowForward className="text-gray-300 group-hover:text-white" />
+              <IoIosArrowForward className="text-yellow-300 group-hover:text-white" />
               {item.label}
             </Link>
           ))}
@@ -65,7 +65,7 @@ const Footer = () => {
 
         {/* Columna Contacto */}
         <div className="flex flex-col items-center md:items-start">
-          <h3 className="font-bold mb-3 text-lg">Contacto</h3>
+          <h3 className="font-semibold uppercase mb-3 text-lg">Contacto</h3>
 
           <p className="flex items-center gap-2 text-gray-300 mb-2">
             <MdEmail className="text-gray-300 text-lg" aria-label="Correo electrónico" />

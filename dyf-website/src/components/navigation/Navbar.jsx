@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/logo.png";
+import logoDark from "../../assets/images/logo.png";
+import logoLight from "../../assets/images/logo-blanco.png";
 import { FaFacebook, FaInstagram } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -37,9 +38,9 @@ function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full z-50 bg-white shadow-md transition-all duration-300 ${
-        isShrunk ? "py-1" : "py-4"
-      }`}
+      className={`fixed w-full z-50 transition-all duration-300 shadow-md
+        ${isShrunk ? "bg-white py-2" : "bg-transparent py-4"}
+      `}
     >
       {/* Main Navbar */}
       <div className="relative max-w-6xl mx-auto px-4 flex items-center justify-between h-20">
@@ -48,10 +49,16 @@ function Navbar() {
           {/* Phone Number (hidden on mobile) */}
           <a
             href="tel:+34123456789"
-            className="hidden md:flex items-center text-gray-700 font-medium hover:text-gray-900"
+            className={`hidden md:flex items-center font-medium transition-colors duration-300 ${
+              isShrunk
+                ? "text-gray-700 hover:text-gray-900"
+                : "text-white hover:text-gray-200"
+            }`}
           >
             <svg
-              className="w-5 h-5 mr-2 text-gray-500"
+              className={`w-5 h-5 mr-2 transition-colors duration-300 ${
+                isShrunk ? "text-gray-500" : "text-white"
+              }`}
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -68,7 +75,11 @@ function Navbar() {
 
           {/* Hamburger (only mobile) */}
           <button
-            className="md:hidden text-gray-700 hover:text-gray-900 focus:outline-none"
+            className={`md:hidden transition-colors duration-300 ${
+              isShrunk
+                ? "text-gray-700 hover:text-gray-900"
+                : "text-white hover:text-gray-200"
+            }`}
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? (
@@ -111,23 +122,41 @@ function Navbar() {
           }`}
         >
           <img
-            src={logo}
+            src={isShrunk ? logoDark : logoLight} // Cambia según scroll
             alt="Mi Empresa Logo"
-            className="h-full w-auto object-contain"
+            className="h-full w-auto object-contain transition-all duration-300"
           />
         </Link>
 
         {/* Right Section: Icons */}
         <div className="hidden md:flex items-center space-x-4 z-10">
-          <button className="text-gray-700 hover:text-gray-900 transition-colors duration-200">
+          <button
+            className={`transition-colors duration-200 ${
+              isShrunk
+                ? "text-gray-700 hover:text-gray-900"
+                : "text-white hover:text-gray-200"
+            }`}
+          >
             <FaInstagram className="w-6 h-6" />
           </button>
 
-          <button className="text-gray-700 hover:text-gray-900 transition-colors duration-200">
+          <button
+            className={`transition-colors duration-200 ${
+              isShrunk
+                ? "text-gray-700 hover:text-gray-900"
+                : "text-white hover:text-gray-200"
+            }`}
+          >
             <FaFacebook className="w-6 h-6" />
           </button>
 
-          <button className="text-gray-700 hover:text-gray-900 transition-colors duration-200">
+          <button
+            className={`transition-colors duration-200 ${
+              isShrunk
+                ? "text-gray-700 hover:text-gray-900"
+                : "text-white hover:text-gray-200"
+            }`}
+          >
             <FaWhatsapp className="w-6 h-6" />
           </button>
         </div>
@@ -253,7 +282,9 @@ function Navbar() {
         </div>
       </div>
 
-      <div className="bg-white hidden md:flex justify-center font-bebas tracking-wide text-lg space-x-8 pt-2">
+      <div
+        className={`hidden md:flex justify-center font-bebas tracking-wide text-lg space-x-8 pt-2 transition-colors duration-300`}
+      >
         {[
           { to: "/", label: "Home" },
           {
@@ -280,21 +311,33 @@ function Navbar() {
           <div key={item.to} className="relative group">
             <Link
               to={item.to}
-              className="relative text-gray-700 uppercase hover:text-gray-900 pb-1
-                border-b-2 border-transparent hover:border-gray-900
-                transition-all duration-200"
-                >
+              className={`relative uppercase pb-1 border-b-2 border-transparent transition-all duration-200
+          ${
+            isShrunk
+              ? "text-gray-700 hover:text-gray-900 hover:border-gray-900"
+              : "text-white hover:text-gray-200 hover:border-white"
+          }`}
+            >
               {item.label}
             </Link>
 
             {/* Submenu */}
             {item.submenu && (
-              <div className="absolute left-0 top-full mt-2 hidden group-hover:block bg-white shadow-lg rounded-md py-2 w-48 z-10">
+              <div
+                className={`absolute left-0 top-full mt-2 hidden group-hover:block shadow-lg rounded-md py-2 w-48 z-10 transition-colors duration-300
+            ${isShrunk ? "bg-white" : "bg-black/70"}
+          `}
+              >
                 {item.submenu.map((sub) => (
                   <Link
                     key={sub.to}
                     to={sub.to}
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors duration-150"
+                    className={`block px-4 py-2 transition-colors duration-150
+                ${
+                  isShrunk
+                    ? "text-gray-700 hover:text-gray-900 hover:bg-gray-100"
+                    : "text-white hover:text-gray-200 hover:bg-black/50"
+                }`}
                   >
                     {sub.label}
                   </Link>
