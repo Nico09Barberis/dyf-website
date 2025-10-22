@@ -23,7 +23,7 @@ export default function HeroWithBreadcrumb({ title, breadcrumbItems, imageUrl })
 
         {/* Breadcrumb */}
         <nav
-          className="mt-4 md:mt-0 flex text-white/80 text-sm md:text-base items-center"
+          className="mt-4 md:mt-0 flex bg-black/30 px-4 py-2 text-white/80 text-sm md:text-base items-center"
           aria-label="breadcrumb"
         >
           <ol className="inline-flex items-center space-x-2 md:space-x-3">

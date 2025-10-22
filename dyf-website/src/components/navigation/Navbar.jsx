@@ -209,18 +209,11 @@ function Navbar() {
                     Nosotros
                   </Link>
                   <Link
-                    to="/empresa/historia"
+                    to="/empresa/clientes"
                     onClick={() => setIsOpen(false)}
                     className="block text-gray-600 hover:text-gray-800 py-1 px-2 rounded-lg"
                   >
                     Historia
-                  </Link>
-                  <Link
-                    to="/empresa/equipo"
-                    onClick={() => setIsOpen(false)}
-                    className="block text-gray-600 hover:text-gray-800 py-1 px-2 rounded-lg"
-                  >
-                    Equipo
                   </Link>
                 </div>
               )}
@@ -292,8 +285,7 @@ function Navbar() {
             label: "empresa",
             submenu: [
               { to: "/empresa/nosotros", label: "Nosotros" },
-              { to: "/empresa/historia", label: "Historia" },
-              { to: "/empresa/equipo", label: "Equipo" },
+              { to: "/empresa/clientes", label: "Clientes" },
             ],
           },
           {
@@ -309,24 +301,37 @@ function Navbar() {
           { to: "/contacto", label: "contacto" },
         ].map((item) => (
           <div key={item.to} className="relative group">
-            <Link
-              to={item.to}
-              className={`relative uppercase pb-1 border-b-2 border-transparent transition-all duration-200
+            {/* Si tiene submenu, usamos un span en vez de Link */}
+            {item.submenu ? (
+              <span
+                className={`relative uppercase pb-1 border-b-2 border-transparent cursor-default transition-all duration-200
+            ${
+              isShrunk
+                ? "text-gray-700 hover:text-gray-900"
+                : "text-white hover:text-gray-200"
+            }`}
+              >
+                {item.label}
+              </span>
+            ) : (
+              <Link
+                to={item.to}
+                className={`relative uppercase pb-1 border-b-2 border-transparent transition-all duration-200
           ${
             isShrunk
               ? "text-gray-700 hover:text-gray-900 hover:border-gray-900"
               : "text-white hover:text-gray-200 hover:border-white"
           }`}
-            >
-              {item.label}
-            </Link>
+              >
+                {item.label}
+              </Link>
+            )}
 
             {/* Submenu */}
             {item.submenu && (
               <div
-                className={`absolute left-0 top-full mt-2 hidden group-hover:block shadow-lg rounded-md py-2 w-48 z-10 transition-colors duration-300
-            ${isShrunk ? "bg-white" : "bg-black/70"}
-          `}
+                className={`absolute left-0 top-full mt-1 hidden group-hover:block shadow-lg rounded-md py-2 w-48 z-10 transition-colors duration-300
+            ${isShrunk ? "bg-white" : "bg-black/70"}`}
               >
                 {item.submenu.map((sub) => (
                   <Link
