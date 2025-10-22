@@ -70,7 +70,7 @@ const Footer = () => {
           <p className="flex items-center gap-2 text-gray-300 mb-2">
             <MdEmail className="text-gray-300 text-lg" aria-label="Correo electrónico" />
             <a href="mailto:alfajores500millas@gmail.com" className="hover:underline">
-              alfajores500millas@gmail.com
+              correoelectronico@hotmail.com
             </a>
           </p>
 

@@ -1,8 +1,13 @@
 // src/components/sections/HeroBanner.jsx
 import React from "react";
-import { Link } from "react-router-dom";
 
 const HeroBanner = () => {
+  const whatsappNumber = "5491123456789"; // reemplaza con tu número
+  const defaultMessage = "Hola! Estoy interesado en sus servicios.";
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+    defaultMessage
+  )}`;
+
   return (
     <section
       className="relative w-full h-[30vh] md:h-[40vh] bg-cover bg-center flex items-center justify-center my-12"
@@ -20,13 +25,15 @@ const HeroBanner = () => {
           Impulsa tu negocio con tecnología innovadora
         </h2>
 
-        {/* Botón personalizado */}
-        <Link
-          to="/contacto"
+        {/* Botón WhatsApp */}
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-block border-2 border-white text-white px-6 py-3 text-sm uppercase font-semibold tracking-wider bg-transparent hover:bg-white hover:text-black transition-all duration-300"
         >
           Contáctanos
-        </Link>
+        </a>
       </div>
     </section>
   );

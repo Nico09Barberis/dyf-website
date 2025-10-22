@@ -33,7 +33,7 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="relative w-full overflow-hidden h-[600px] my-6">
+    <div className="relative w-full overflow-hidden h-[600px]">
       {slides.map((slide, index) => {
         const isActive = index === current;
         return (
@@ -49,6 +49,9 @@ const Carousel = () => {
               alt={slide.title}
               className="w-full h-full object-cover"
             />
+
+            {/* Overlay oscuro semitransparente */}
+            <div className="absolute inset-0 bg-black/70"></div>
 
             {/* Cortinas/puertas con misma imagen */}
             <div className="absolute inset-0 flex">
