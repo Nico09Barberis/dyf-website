@@ -5,6 +5,7 @@ import ServicesSection from "../sections/home/ServicesSection";
 import ClientsSection from "../sections/home/ClientsSection";
 import HeroBanner from "../sections/home/HeroBanner";
 import BlurCard from "../components/ui/BlurCard";
+import GallerySection from "../sections/home/GallerySection";
 
 export default function HomePage() {
   return (
@@ -20,6 +21,9 @@ export default function HomePage() {
       <HeroBanner />
 
       <BlurCard />
+
+      <GallerySection />
+      
     </main>
   );
 }
