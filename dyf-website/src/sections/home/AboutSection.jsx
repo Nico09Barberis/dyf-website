@@ -46,7 +46,7 @@ const AboutSection = () => {
           personas y las empresas se conectan con el mundo digital.
         </p>
         <div className="w-auto mt-4">
-          <CustomButton to="/contacto" label="saber mas" icon={CgMathPlus} />
+          <CustomButton to="/empresa/nosotros" label="saber mas" icon={CgMathPlus} />
         </div>
       </div>
     </section>

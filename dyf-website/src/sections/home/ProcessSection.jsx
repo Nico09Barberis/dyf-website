@@ -47,7 +47,7 @@ export default function ProcessSteps() {
       id="process-section"
       className="max-w-6xl mx-auto px-6 py-20 text-center overflow-hidden"
     >
-      <h2 className="text-3xl font-semibold mb-2">Nuestro proceso de trabajo</h2>
+      <h2 className="text-3xl font-bold mb-2">Nuestro proceso de trabajo</h2>
       <div className="w-20 h-1 bg-blue-500 rounded mx-auto mb-4"></div>
       <p className="text-gray-500 mb-12">
         Acompañamos cada etapa para que tu evento sea perfecto.
