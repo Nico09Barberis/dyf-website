@@ -1,5 +1,6 @@
 import { FaArrowRight } from "react-icons/fa";
 import CustomButton from "../../components/ui/CustomButton";
+import FlexCard from "../../components/ui/FlexCard";
 
 const services = [
   {
@@ -76,7 +77,9 @@ const ServicesSection = () => {
               </div>
             </div>
           ))}
+
         </div>
+      <FlexCard />
       </div>
     </section>
   );
