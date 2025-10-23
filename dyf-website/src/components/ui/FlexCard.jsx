@@ -23,13 +23,13 @@ const FlexCard = () => {
       title: "Innovación", 
       subtitle: "Ideas nuevas", 
       button: "Explorar", 
-      image: "https://images.unsplash.com/photo-1526403226209-7bcd65f60845", 
+      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f", 
       link: "/innovacion" 
     },
   ];
 
   return (
-    <div className="flex w-full h-[500px] gap-3 p-3 bg-neutral-900 rounded-lg overflow-hidden">
+    <div className="flex w-full h-[500px] gap-3 p-3 rounded-lg overflow-hidden">
       {cards.map((card, index) => (
         <div
           key={index}
@@ -88,6 +88,7 @@ const FlexCard = () => {
                 <CustomButton
                   to={card.link}
                   label={card.button}
+                  variant="dark"
                 />
               </div>
             </div>

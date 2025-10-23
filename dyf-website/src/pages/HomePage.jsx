@@ -6,8 +6,8 @@ import HeroBanner from "../sections/home/HeroBanner";
 import BlurCard from "../components/ui/BlurCard";
 import GallerySection from "../sections/home/GallerySection";
 import ProcessSection from "../sections/home/ProcessSection";
-import SliderCards from "../components/common/SliderCards";
 import TestimonialsSection from "../sections/home/TestimonialsSection";
+import CountersSection from "../sections/home/CounterSection";
 
 export default function HomePage() {
 
@@ -17,6 +17,8 @@ export default function HomePage() {
       <CarouselHome />
 
       <AboutSection />
+
+      <CountersSection />
 
       <ServicesSection />
 
