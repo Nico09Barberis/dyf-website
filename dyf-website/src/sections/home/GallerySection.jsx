@@ -61,7 +61,7 @@ const GallerySection = () => {
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-500 flex items-center justify-center">
               {/* Ícono aparece solo al hover */}
               <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="bg-yellow-400 rounded-full p-3 transition-transform duration-500 group-hover:rotate-[360deg] group-hover:scale-110">
+                <div className="bg-dorado rounded-full p-3 transition-transform duration-500 group-hover:rotate-[360deg] group-hover:scale-110">
                   <FaSearchPlus className="text-white text-md" />
                 </div>
               </div>

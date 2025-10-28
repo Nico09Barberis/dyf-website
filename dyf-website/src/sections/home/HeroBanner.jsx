@@ -17,11 +17,11 @@ const HeroBanner = () => {
       }}
     >
       {/* Overlay semitransparente */}
-      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="absolute inset-0 bg-black/70"></div>
 
       {/* Contenido */}
       <div className="relative z-10 text-center text-white px-6">
-        <h2 className="text-3xl md:text-5xl font-bold mb-6">
+        <h2 className="text-3xl md:text-5xl font-italiana uppercase font-bold mb-6">
           Impulsa tu negocio con tecnología innovadora
         </h2>
 
@@ -30,7 +30,7 @@ const HeroBanner = () => {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block border-2 border-white text-white px-6 py-3 text-sm uppercase font-semibold tracking-wider bg-transparent hover:bg-white hover:text-black transition-all duration-300"
+          className="inline-block border-2 border-white text-white px-6 py-3 text-sm uppercase font-marcellus font-semibold tracking-wider bg-transparent hover:bg-white hover:text-black transition-all duration-300"
         >
           Contáctanos
         </a>

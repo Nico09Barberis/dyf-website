@@ -21,7 +21,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#121212] text-white pt-6">
-      <div className="w-full px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="w-full px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Columna izquierda: Logo */}
         <div className="flex flex-col items-center md:items-start">
           <Link to="/">
@@ -64,18 +64,27 @@ const Footer = () => {
         </div>
 
         {/* Columna Contacto */}
-        <div className="flex flex-col items-center md:items-start">
+        <div className="flex flex-col items-center md:items-start w-full max-w-full">
           <h3 className="font-semibold uppercase mb-3 text-lg">Contacto</h3>
 
-          <p className="flex items-center gap-2 text-gray-300 mb-2">
-            <MdEmail className="text-gray-300 text-lg" aria-label="Correo electrónico" />
-            <a href="mailto:alfajores500millas@gmail.com" className="hover:underline">
+          <p className="flex flex-wrap items-center gap-2 text-gray-300 mb-2">
+            <MdEmail
+              className="text-gray-300 text-lg"
+              aria-label="Correo electrónico"
+            />
+            <a
+              href="mailto:alfajores500millas@gmail.com"
+              className="hover:underline break-words"
+            >
               correoelectronico@hotmail.com
             </a>
           </p>
 
-          <p className="flex items-center gap-2 text-gray-300 mb-2">
-            <FaSquarePhone className="text-gray-300 text-lg" aria-label="Teléfono" />
+          <p className="flex flex-wrap items-center gap-2 text-gray-300 mb-2">
+            <FaSquarePhone
+              className="text-gray-300 text-lg"
+              aria-label="Teléfono"
+            />
             +54 3492 582838
           </p>
 
@@ -83,14 +92,17 @@ const Footer = () => {
             href="https://docs.google.com/forms/d/e/1FAIpQLSf5OjN13wZ91Tu4Kz7onGUFzcYkvsOibqi3HEQvoqu3ml7Vaw/viewform?usp=header"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-gray-300 mb-4 hover:underline transition-colors"
+            className="flex flex-wrap items-center gap-2 text-gray-300 mb-4 hover:underline transition-colors break-words"
           >
-            <MdOutlineWork className="text-gray-300 text-lg" aria-label="Trabaja con nosotros" />
+            <MdOutlineWork
+              className="text-gray-300 text-lg"
+              aria-label="Trabaja con nosotros"
+            />
             Trabaja con nosotros
           </a>
 
           {/* Redes sociales */}
-          <div className="flex gap-3">
+          <div className="flex gap-3 flex-wrap">
             <SocialLinks />
           </div>
         </div>
@@ -98,7 +110,8 @@ const Footer = () => {
 
       {/* Línea inferior */}
       <div className="bg-black mt-10 py-4 text-center text-gray-300 text-sm">
-        © Copyright {new Date().getFullYear()} DyF Celebraciones | Todos los Derechos Reservados | All Rights Reserved
+        © Copyright {new Date().getFullYear()} DyF Celebraciones | Todos los
+        Derechos Reservados | All Rights Reserved
       </div>
     </footer>
   );

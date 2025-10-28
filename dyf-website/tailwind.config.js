@@ -9,6 +9,7 @@ export default {
       colors: {
         dorado: "#F4D03F",
         beige: "#F9F6F0",
+        azulOscuro: "#001F3F",
       },
       fontFamily: {
         audiowide: ["'Audiowide'", "sans-serif"],

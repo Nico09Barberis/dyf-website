@@ -38,7 +38,7 @@ function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 shadow-md
+      className={`fixed w-full z-50 transition-all duration-300 font-urbanist uppercase text-sm font-semibold shadow-md
         ${isShrunk ? "bg-white py-2" : "bg-transparent py-4"}
       `}
     >
@@ -176,7 +176,7 @@ function Navbar() {
         {/* Side Menu */}
         <div
           ref={menuRef}
-          className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ${
+          className={`fixed top-0 left-0 h-full w-64 bg-azulOscuro shadow-lg transform transition-transform duration-300 ${
             isOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
@@ -184,7 +184,7 @@ function Navbar() {
             <Link
               to="/"
               onClick={() => setIsOpen(false)}
-              className="block text-gray-500 hover:text-gray-700 hover:bg-[#E0F7FA] font-ancois-one uppercase rounded-xl py-1 px-2 text-lg"
+              className="block text-gray-200 hover:text-gray-300 hover:bg-[#002856] uppercase rounded-md py-1 px-2"
             >
               Home
             </Link>
@@ -193,7 +193,7 @@ function Navbar() {
             <div>
               <button
                 onClick={() => toggleDropdown("empresa")}
-                className="w-full text-left text-gray-500 hover:text-gray-700 hover:bg-[#E0F7FA] font-ancois-one uppercase rounded-xl py-1 px-2 text-lg flex justify-between items-center"
+                className="w-full text-left text-gray-200 hover:text-gray-300 hover:bg-[#002856] uppercase rounded-md py-1 px-2 flex justify-between items-center"
               >
                 Empresa
                 <span>{openDropdown === "empresa" ? "−" : "+"}</span>
@@ -204,14 +204,14 @@ function Navbar() {
                   <Link
                     to="/empresa/nosotros"
                     onClick={() => setIsOpen(false)}
-                    className="block text-gray-600 hover:text-gray-800 py-1 px-2 rounded-lg"
+                    className="block text-gray-200 hover:text-gray-300 py-1 px-2 rounded-lg"
                   >
                     Nosotros
                   </Link>
                   <Link
                     to="/empresa/clientes"
                     onClick={() => setIsOpen(false)}
-                    className="block text-gray-600 hover:text-gray-800 py-1 px-2 rounded-lg"
+                    className="block text-gray-200 hover:text-gray-300 py-1 px-2 rounded-lg"
                   >
                     Historia
                   </Link>
@@ -223,7 +223,7 @@ function Navbar() {
             <div>
               <button
                 onClick={() => toggleDropdown("servicios")}
-                className="w-full text-left text-gray-500 hover:text-gray-700 hover:bg-[#E0F7FA] font-ancois-one uppercase rounded-xl py-1 px-2 text-lg flex justify-between items-center"
+                className="w-full text-left text-gray-200 hover:text-gray-300 hover:bg-[#002856] uppercase rounded-md py-1 px-2 flex justify-between items-center"
               >
                 Servicios
                 <span>{openDropdown === "servicios" ? "−" : "+"}</span>
@@ -234,21 +234,21 @@ function Navbar() {
                   <Link
                     to="/servicios/diseno"
                     onClick={() => setIsOpen(false)}
-                    className="block text-gray-600 hover:text-gray-800 py-1 px-2 rounded-lg"
+                    className="block text-gray-200 hover:text-gray-300 py-1 px-2 rounded-lg"
                   >
                     Diseño
                   </Link>
                   <Link
                     to="/servicios/construccion"
                     onClick={() => setIsOpen(false)}
-                    className="block text-gray-600 hover:text-gray-800 py-1 px-2 rounded-lg"
+                    className="block text-gray-200 hover:text-gray-300 py-1 px-2 rounded-lg"
                   >
                     Construcción
                   </Link>
                   <Link
                     to="/servicios/mantenimiento"
                     onClick={() => setIsOpen(false)}
-                    className="block text-gray-600 hover:text-gray-800 py-1 px-2 rounded-lg"
+                    className="block text-gray-200 hover:text-gray-300 py-1 px-2 rounded-lg"
                   >
                     Mantenimiento
                   </Link>
@@ -259,7 +259,7 @@ function Navbar() {
             <Link
               to="/galeria"
               onClick={() => setIsOpen(false)}
-              className="block text-gray-500 hover:text-gray-700 hover:bg-[#E0F7FA] font-ancois-one uppercase rounded-xl py-1 px-2 text-lg"
+              className="block text-gray-200 hover:text-gray-300 hover:bg-[#002856] rounded-md py-1 px-2"
             >
               Galeria
             </Link>
@@ -267,7 +267,7 @@ function Navbar() {
             <Link
               to="/contacto"
               onClick={() => setIsOpen(false)}
-              className="block text-gray-500 hover:text-gray-700 hover:bg-[#E0F7FA] font-ancois-one uppercase rounded-xl py-1 px-2 text-lg"
+              className="block text-gray-200 hover:text-gray-300 hover:bg-[#002856] rounded-md py-1 px-2"
             >
               Contacto
             </Link>
@@ -276,7 +276,7 @@ function Navbar() {
       </div>
 
       <div
-        className={`hidden md:flex justify-center font-bebas tracking-wide text-lg space-x-8 pt-2 transition-colors duration-300`}
+        className={`hidden md:flex justify-center font-bebas tracking-wide text-sm space-x-8 pt-2 transition-colors duration-300`}
       >
         {[
           { to: "/", label: "Home" },

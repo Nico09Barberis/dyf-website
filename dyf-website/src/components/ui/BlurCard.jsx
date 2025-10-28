@@ -1,27 +1,27 @@
 import React from "react";
-import { FaCode, FaMobileAlt, FaCogs } from "react-icons/fa";
+import { FaCameraRetro, FaVolumeUp, FaPeopleCarry} from "react-icons/fa";
 
 const cards = [
   {
     id: 1,
-    icon: <FaCode className="text-4xl mb-3 text-red-500" />,
-    title: "Desarrollo Web",
-    subtitle: "Sitios modernos y rápidos",
-    color: "from-red-700/70 via-red-600/60 to-red-500/50",
+    icon: <FaPeopleCarry className="text-6xl mb-3 text-black" />,
+    title: "Decoracion integral",
+    subtitle: "Carpas, Decoración y Ambientación especial",
+    color: "from-blue-700/70 via-blue-600/60 to-blue-500/50",
   },
   {
     id: 2,
-    icon: <FaMobileAlt className="text-4xl mb-3 text-blue-500" />,
-    title: "Apps Móviles",
-    subtitle: "Experiencias nativas y fluidas",
+    icon: <FaVolumeUp className="text-6xl mb-3 text-black" />,
+    title: "Audio e iluminación",
+    subtitle: "DJs, equipos de sonido y efectos luminosos",
     color: "from-blue-700/70 via-blue-600/60 to-blue-500/50",
   },
   {
     id: 3,
-    icon: <FaCogs className="text-4xl mb-3 text-green-500" />,
-    title: "Automatización",
-    subtitle: "Optimización inteligente",
-    color: "from-green-700/70 via-green-600/60 to-green-500/50",
+    icon: <FaCameraRetro className="text-6xl mb-3 text-black" />,
+    title: "Captura profesional",
+    subtitle: "Fotografía y filmación de la mano de expertos",
+    color: "from-blue-700/70 via-blue-600/60 to-blue-500/50",
   },
 ];
 
@@ -53,8 +53,8 @@ const Cards = () => {
           {/* Contenido */}
           <div className="relative z-10 flex flex-col items-center justify-center">
             {card.icon}
-            <h3 className="text-lg font-bold">{card.title}</h3>
-            <p className="text-sm font-normal text-gray-700 mt-1">
+            <h3 className="text-lg font-bold font-italiana uppercase">{card.title}</h3>
+            <p className="font-lora font-semibold text-gray-700 mt-1">
               {card.subtitle}
             </p>
           </div>
