@@ -5,26 +5,29 @@ const FlexCard = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const cards = [
-    { 
-      title: "Diseño", 
-      subtitle: "Interfaz moderna", 
-      button: "Ver más", 
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f", 
-      link: "/diseno" 
+    {
+      title: "Organización total",
+      subtitle: "Eventos sin estrés",
+      button: "Ver más",
+      image:
+        "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1920&q=80",
+      link: "/diseno",
     },
-    { 
-      title: "Desarrollo", 
-      subtitle: "Código limpio", 
-      button: "Detalles", 
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c", 
-      link: "/desarrollo" 
+    {
+      title: "Momentos únicos",
+      subtitle: "Recuerdos inolvidables",
+      button: "Detalles",
+      image:
+        "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&w=1920&q=80",
+      link: "/desarrollo",
     },
-    { 
-      title: "Innovación", 
-      subtitle: "Ideas nuevas", 
-      button: "Explorar", 
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f", 
-      link: "/innovacion" 
+    {
+      title: "Eventos corporativos",
+      subtitle: "Profesional y elegante",
+      button: "Explorar",
+      image:
+        "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1920&q=80",
+      link: "/innovacion",
     },
   ];
 
@@ -64,16 +67,21 @@ const FlexCard = () => {
             {/* 🔹 Contenedor de subtítulo y botón con animación secuencial */}
             <div
               className={`flex flex-col items-center gap-3 transition-all duration-700 ease-out
-                ${activeIndex === index
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-8 pointer-events-none"
+                ${
+                  activeIndex === index
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8 pointer-events-none"
                 }
               `}
             >
               {/* Subtítulo con entrada suave */}
               <p
-                className={`text-sm text-gray-200 transition-all duration-700 delay-100
-                  ${activeIndex === index ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"}
+                className={`max-w-xl mx-auto text-lg font-lora font-semibold text-gray-200 transition-all duration-700 delay-100
+                  ${
+                    activeIndex === index
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-3"
+                  }
                 `}
               >
                 {card.subtitle}
@@ -82,7 +90,11 @@ const FlexCard = () => {
               {/* Botón con animación ligeramente más tardía */}
               <div
                 className={`transition-all duration-700 delay-200
-                  ${activeIndex === index ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}
+                  ${
+                    activeIndex === index
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-5"
+                  }
                 `}
               >
                 <CustomButton

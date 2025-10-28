@@ -52,7 +52,7 @@ const Counter = ({ from = 0, to = 2500, duration = 2000 }) => {
   return (
     <div
       ref={ref}
-      className={`text-6xl font-extrabold text-center bg-clip-text text-transparent
+      className={`text-6xl font-extrabold font-audiowide text-center bg-clip-text text-transparent
         bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500
         transition-transform duration-150 ease-out drop-shadow-[0_0_15px_rgba(139,92,246,0.7)]
       `}

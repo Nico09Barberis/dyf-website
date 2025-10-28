@@ -7,14 +7,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        dorado: "#CFA768",
+        dorado: "#F4D03F",
         beige: "#F9F6F0",
       },
       fontFamily: {
-        playfair: ["'Playfair Display', serif"],
-        inter: ["Inter", "sans-serif"]
-      }
-    }
+        audiowide: ["'Audiowide'", "sans-serif"],
+        cormorant: ["'Cormorant Garamond'", "serif"],
+        lora: ["'Lora'", "serif"],
+        prata: ["'Prata'", "serif"],
+        urbanist: ["'Urbanist'", "sans-serif"],
+        marcellus: ["'Marcellus'", "serif"],
+        italiana: ["'Italiana'", "sans-serif"],
+      },
+    },
   },
   plugins: [],
-}
+};

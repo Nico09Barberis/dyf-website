@@ -34,12 +34,12 @@ const AboutSection = () => {
 
       {/* Contenedor Derecho */}
       <div className="w-full md:w-1/2 flex flex-col shadow-2xl justify-center px-6 py-10">
-        <h2 className="text-xl font-bold mb-2">dyf</h2>
-        <h3 className="text-3xl font-semibold text-gray-600 mb-1">
+        <h2 className="text-2xl uppercase font-urbanist font-semibold mb-2">dyf</h2>
+        <h3 className="text-3xl font-lora font-semibold text-gray-600 mb-1">
           Sobre nosotros
         </h3>
-        <div className="w-20 h-2 bg-[#ddc53b] mb-2"></div>
-        <p className="text-gray-700 leading-relaxed">
+        <div className="w-20 h-2 bg-[#F4D03F] mb-2"></div>
+        <p className="text-gray-700 font-lora font-semibold leading-relaxed">
           Somos una empresa comprometida con la innovación y el desarrollo
           tecnológico. Nuestro equipo multidisciplinario trabaja día a día para
           ofrecer soluciones creativas que transforman la manera en que las

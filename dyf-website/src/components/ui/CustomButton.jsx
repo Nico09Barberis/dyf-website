@@ -5,7 +5,7 @@ const CustomButton = ({
   to = "/",
   label = "",
   icon: Icon = CgAbstract,
-  variant = "light", // 🔹 nuevo prop para tema
+  variant = "light", // "light" o "dark"
 }) => {
   const isDark = variant === "dark";
 
@@ -20,30 +20,28 @@ const CustomButton = ({
       >
         {/* Texto */}
         <span
-          className={`relative z-10 transition-colors duration-500 group-hover:text-[#000000] ${
-            isDark ? "group-hover:text-[#000000]" : "group-hover:text-[#ffffff]"
-          }`}
+          className={`relative z-10 transition-colors duration-500 
+            group-hover:text-white
+          `}
         >
           {label}
         </span>
 
-        {/* Ícono dinámico */}
+        {/* Ícono */}
         {Icon && (
           <Icon
-            className={`w-5 h-5 relative z-10 transition-transform duration-500 group-hover:translate-x-1 ${
-              isDark ? "group-hover:text-[#000000]" : "group-hover:text-[#ffffff]"
-            }`}
+            className={`w-5 h-5 relative z-10 transition-all duration-500 group-hover:translate-x-1 group-hover:text-white`}
           />
         )}
 
-        {/* Línea inferior */}
+        {/* Línea inferior animada */}
         <span
-          className={`absolute left-0 bottom-0 h-[2px] w-0 bg-[#ffc506] transition-all duration-500 group-hover:w-full z-0`}
+          className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#001F3F] transition-all duration-500 group-hover:w-full z-0"
         ></span>
 
-        {/* Fondo animado */}
+        {/* Fondo azul al hacer hover */}
         <span
-          className={`absolute left-0 bottom-0 h-0 w-full bg-[#ffc506] z-0 transition-all duration-500 group-hover:h-full`}
+          className="absolute left-0 bottom-0 h-0 w-full bg-[#001F3F] z-0 transition-all duration-500 group-hover:h-full"
         ></span>
       </Link>
     </div>
