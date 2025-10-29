@@ -1,80 +1,86 @@
-import React, { useEffect, useState } from "react";
-import { FaRegHandshake, FaPenNib, FaTruck, FaRegSmile } from "react-icons/fa";
+import React from "react";
+import bgImage from "../../assets/images/bg-flashcards.jpeg";
 
-const steps = [
+const cards = [
   {
+    id: 1,
     title: "Contacto inicial",
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
     description: "Contanos tu idea, fechas y estilo del evento.",
-    icon: <FaRegHandshake className="w-6 h-6 text-dorado" />,
   },
   {
+    id: 2,
     title: "Diseño y propuesta",
+    image: "https://images.unsplash.com/photo-1503602642458-232111445657",
     description: "Creamos un moodboard y presupuesto a medida.",
-    icon: <FaPenNib className="w-6 h-6 text-dorado" />,
   },
   {
+    id: 3,
     title: "Coordinación y montaje",
+    image: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5",
     description: "Gestionamos proveedores y el montaje completo.",
-    icon: <FaTruck className="w-6 h-6 text-dorado" />,
   },
   {
+    id: 4,
     title: "Disfrutá tu evento",
+    image: "https://images.unsplash.com/photo-1511988617509-a57c8a288659",
     description: "Supervisamos todo para que vos solo disfrutes.",
-    icon: <FaRegSmile className="w-6 h-6 text-dorado" />,
   },
 ];
 
-export default function ProcessSteps() {
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const section = document.getElementById("process-section");
-      if (section) {
-        const rect = section.getBoundingClientRect();
-        if (rect.top < window.innerHeight * 0.8) {
-          setVisible(true);
-        }
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
+const ProcessSection = () => {
   return (
-    <section
-      id="process-section"
-      className="max-w-6xl mx-auto px-6 py-20 text-center"
-    >
-      <h2 className="text-3xl md:text-4xl font-italiana uppercase font-bold mb-2">
-        Nuestro proceso de trabajo
-      </h2>
-      <div className="w-20 h-2 bg-dorado mx-auto mb-4"></div>
-      <p className="text-gray-500 mb-12 text-xl font-lora font-semibold">
-        Acompañamos cada etapa para que tu evento sea perfecto.
-      </p>
+    <section className="min-h-screen flex flex-col items-center justify-center py-2 my-12">
+      {/* Título y subtítulo */}
+      <div className="text-center mb-12 px-4">
+        <h2 className="text-3xl md:text-4xl font-italiana uppercase font-bold tracking-wide text-gray-800 mb-2">
+          Nuestro Proceso de Trabajo
+        </h2>
+        <div className="bg-dorado h-2 w-20 mx-auto mb-4"></div>
+        <p className="text-xl text-gray-600 font-lora font-semibold mt-2">
+          Te acompañamos paso a paso para crear un evento inolvidable.
+        </p>
+      </div>
 
-      <div className="grid gap-10 md:grid-cols-4">
-        {steps.map((step, i) => (
-          <div
-            key={i}
-            className={`relative bg-white p-6 rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105 hover:shadow-2xl
-              ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
-            `}
-            style={{ transitionDelay: `${i * 150}ms` }}
-          >
-            {/* Icono */}
-            <div className="w-14 h-14 flex items-center justify-center bg-dorado/10 text-dorado rounded-full mb-4 mx-auto">
-              {step.icon}
+      {/* Flashcards */}
+      <div className="flex flex-wrap justify-center items-center gap-6 p-2">
+        {cards.map((card) => (
+          <div key={card.id} className="group [perspective:1000px] w-64 h-80">
+            <div className="relative w-full h-full font-italiana uppercase transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+              {/* Frente */}
+              <div className="absolute inset-0 rounded-xl overflow-hidden shadow-lg [backface-visibility:hidden]">
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                  <h3 className="text-white text-2xl font-semibold text-center px-2">
+                    {card.title}
+                  </h3>
+                </div>
+              </div>
+
+              {/* Reverso */}
+              <div className="absolute inset-0 rounded-xl overflow-hidden shadow-lg [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                <img
+                  src={bgImage}
+                  alt="Fondo reverso"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black/30 flex items-center justify-center p-4">
+                  <p className="text-white text-center text-2xl font-bold leading-relaxed">
+                    {card.description}
+                  </p>
+                </div>
+              </div>
             </div>
-
-            {/* Contenido */}
-            <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
-            <p className="text-gray-500 text-sm leading-relaxed">{step.description}</p>
           </div>
         ))}
       </div>
     </section>
   );
-}
+};
+
+
+export default ProcessSection;

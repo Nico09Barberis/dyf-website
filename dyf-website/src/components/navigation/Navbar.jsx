@@ -48,16 +48,10 @@ function Navbar() {
           {/* Phone Number (hidden on mobile) */}
           <a
             href="tel:+34123456789"
-            className={`hidden md:flex items-center font-medium transition-colors duration-300 ${
-              isShrunk
-                ? "text-gray-700 hover:text-gray-900"
-                : "text-white hover:text-gray-200"
-            }`}
+            className="hidden md:flex items-center text-beige font-medium transition-colors duration-300"
           >
             <svg
-              className={`w-5 h-5 mr-2 transition-colors duration-300 ${
-                isShrunk ? "text-gray-500" : "text-white"
-              }`}
+              className="w-5 h-5 mr-2 transition-colors duration-300 text-beige"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
