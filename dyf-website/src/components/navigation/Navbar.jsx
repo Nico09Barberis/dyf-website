@@ -53,7 +53,7 @@ function Navbar() {
             href="tel:+34123456789"
             className="hidden md:flex items-center text-beige font-medium transition-colors duration-300"
           >
-           <MdOutlinePhoneIphone className="w-5 h-5 mr-2 transition-colors duration-300 text-beige" />
+            <MdOutlinePhoneIphone className="w-5 h-5 mr-2 transition-colors duration-300 text-beige" />
             +34 123 456 789
           </a>
 
@@ -97,7 +97,6 @@ function Navbar() {
             )}
           </button>
         </div>
-
         {/* Center: Logo */}
         <Link
           to="/"
@@ -108,12 +107,11 @@ function Navbar() {
           }`}
         >
           <img
-            src={navLogo} // una sola imagen
+            src={navLogo}
             alt="Mi Empresa Logo"
             className="h-full w-auto object-contain transition-all duration-300"
           />
         </Link>
-
         {/* Right Section: Icons */}
         <div className="hidden md:flex items-center space-x-4 z-10">
           {/* Instagram */}
@@ -138,7 +136,7 @@ function Navbar() {
 
           {/* WhatsApp */}
           <a
-            href="https://wa.me/5493492582838" 
+            href="https://wa.me/5493492582838"
             target="_blank"
             rel="noopener noreferrer"
             className="text-beige hover:text-white transition-colors"
@@ -146,6 +144,7 @@ function Navbar() {
             <FaWhatsapp className="w-7 h-7" />
           </a>
         </div>
+        <div className="w-6 h-6 md:hidden" />{" "}
       </div>
 
       {/* Mobile Menu */}
