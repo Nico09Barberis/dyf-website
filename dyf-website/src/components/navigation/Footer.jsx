@@ -5,7 +5,8 @@ import logo from "../../assets/images/logo.png"; // Ajustá la ruta según dónd
 import SocialLinks from "../ui/SocialLinks";
 import { IoIosArrowForward } from "react-icons/io";
 import { GrMapLocation } from "react-icons/gr";
-import { FaPhoneAlt } from "react-icons/fa";
+import { MdOutlinePhoneIphone } from "react-icons/md";
+
 
 const Footer = () => {
   const servicios = [
@@ -30,13 +31,13 @@ const Footer = () => {
             <img
               src={logo}
               alt="Mi Empresa Logo"
-              className="w-40 h-auto object-contain"
+              className="w-44 h-auto object-contain"
             />
           </Link>
         </div>
 
         {/* Columna Servicios */}
-        <div className="flex flex-col items-center md:items-start">
+        <div className="flex flex-col items-center md:items-start gap-2">
           <h3 className="font-semibold uppercase mb-3 text-lg">Servicios</h3>
           {servicios.map((item, idx) => (
             <Link
@@ -51,7 +52,7 @@ const Footer = () => {
         </div>
 
         {/* Columna Empresa */}
-        <div className="flex flex-col items-center md:items-start">
+        <div className="flex flex-col items-center md:items-start gap-2">
           <h3 className="font-semibold uppercase mb-3 text-lg">Empresa</h3>
           {empresa.map((item, idx) => (
             <Link
@@ -66,12 +67,12 @@ const Footer = () => {
         </div>
 
         {/* Columna Contacto */}
-        <div className="flex flex-col items-center md:items-start w-full max-w-full">
+        <div className="flex flex-col items-center md:items-start w-full max-w-full gap-2">
           <h3 className="font-semibold uppercase mb-3 text-lg">Contacto</h3>
 
           <p className="flex flex-wrap items-center gap-2 text-gray-300 mb-2">
             <GrMapLocation
-              className="text-[#D4AF37] text-lg"
+              className="text-[#D4AF37] text-2xl"
               aria-label="Teléfono"
             />
             Cordoba, Argentina
@@ -79,7 +80,7 @@ const Footer = () => {
 
           <p className="flex flex-wrap items-center gap-2 text-gray-300 mb-2">
             <MdEmail
-              className="text-[#D4AF37] text-lg"
+              className="text-[#D4AF37] text-2xl"
               aria-label="Correo electrónico"
             />
             <a
@@ -91,8 +92,8 @@ const Footer = () => {
           </p>
 
           <p className="flex flex-wrap items-center gap-2 text-gray-300 mb-2">
-            <FaPhoneAlt
-              className="text-[#D4AF37] text-lg"
+            <MdOutlinePhoneIphone
+              className="text-[#D4AF37] text-2xl"
               aria-label="Teléfono"
             />
             +54 3492 582838

@@ -1,8 +1,11 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
+
 import navLogo from "../../assets/images/logo.png";
+
 import { FaFacebook, FaInstagram } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
+import { MdOutlinePhoneIphone } from "react-icons/md";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,19 +53,7 @@ function Navbar() {
             href="tel:+34123456789"
             className="hidden md:flex items-center text-beige font-medium transition-colors duration-300"
           >
-            <svg
-              className="w-5 h-5 mr-2 transition-colors duration-300 text-beige"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.5 4.5a1 1 0 01-.272 1.016l-2.12 2.12a16 16 0 006.36 6.36l2.12-2.12a1 1 0 011.016-.272l4.5 1.5A1 1 0 0121 19.72V23a2 2 0 01-2 2h-1C9.163 25 3 18.837 3 11V5z"
-              />
-            </svg>
+           <MdOutlinePhoneIphone className="w-5 h-5 mr-2 transition-colors duration-300 text-beige" />
             +34 123 456 789
           </a>
 
