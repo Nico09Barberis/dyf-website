@@ -1,6 +1,6 @@
 import Navbar from "../components/navigation/Navbar";
 import Footer from "../components/navigation/Footer";
-import WhatsAppButton from "../components/ui/WhatsAppButton";
+import WhatsAppButton from "../components/common/WhatsAppButton";
 
 
 function AppLayout({ children }) {

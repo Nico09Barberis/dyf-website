@@ -7,7 +7,7 @@ const SocialLinks = () => {
       id: "instagram",
       icon: FaInstagram,
       color: "hover:bg-gray-800",
-      link: "https://www.instagram.com/tu_usuario", // reemplaza con tu Instagram
+      link: "https://www.instagram.com/dyfcelebraciones", // reemplaza con tu Instagram
     },
     {
       id: "whatsapp",

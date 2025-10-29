@@ -125,17 +125,35 @@ function Navbar() {
 
         {/* Right Section: Icons */}
         <div className="hidden md:flex items-center space-x-4 z-10">
-          <button className="text-beige">
+          {/* Instagram */}
+          <a
+            href="https://www.instagram.com/dyfcelebraciones"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-beige hover:text-white transition-colors"
+          >
             <FaInstagram className="w-6 h-6" />
-          </button>
+          </a>
 
-          <button className="text-beige">
+          {/* Facebook */}
+          <a
+            href="https://www.facebook.com/TU_PERFIL"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-beige hover:text-white transition-colors"
+          >
             <FaFacebook className="w-6 h-6" />
-          </button>
+          </a>
 
-          <button className="text-beige">
-            <FaWhatsapp className="w-6 h-6" />
-          </button>
+          {/* WhatsApp */}
+          <a
+            href="https://wa.me/5493492582838" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-beige hover:text-white transition-colors"
+          >
+            <FaWhatsapp className="w-7 h-7" />
+          </a>
         </div>
       </div>
 
@@ -252,7 +270,9 @@ function Navbar() {
         </div>
       </div>
 
-      <div className={`hidden md:flex justify-center text-sm space-x-8 pt-2 transition-colors duration-300`}>
+      <div
+        className={`hidden md:flex justify-center text-sm space-x-8 pt-2 transition-colors duration-300`}
+      >
         {[
           { to: "/", label: "Home" },
           {

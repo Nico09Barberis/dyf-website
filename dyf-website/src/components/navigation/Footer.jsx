@@ -4,6 +4,8 @@ import { FaSquarePhone } from "react-icons/fa6";
 import logo from "../../assets/images/logo.png"; // Ajustá la ruta según dónde esté tu logo
 import SocialLinks from "../ui/SocialLinks";
 import { IoIosArrowForward } from "react-icons/io";
+import { GrMapLocation } from "react-icons/gr";
+import { FaPhoneAlt } from "react-icons/fa";
 
 const Footer = () => {
   const servicios = [
@@ -20,8 +22,8 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#121212] text-white pt-6">
-      <div className="w-full px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="bg-[#121212] text-white pt-6 font-sans">
+      <div className="max-w-6xl mx-auto px-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* Columna izquierda: Logo */}
         <div className="flex flex-col items-center md:items-start">
           <Link to="/">
@@ -68,38 +70,33 @@ const Footer = () => {
           <h3 className="font-semibold uppercase mb-3 text-lg">Contacto</h3>
 
           <p className="flex flex-wrap items-center gap-2 text-gray-300 mb-2">
+            <GrMapLocation
+              className="text-[#D4AF37] text-lg"
+              aria-label="Teléfono"
+            />
+            Cordoba, Argentina
+          </p>
+
+          <p className="flex flex-wrap items-center gap-2 text-gray-300 mb-2">
             <MdEmail
-              className="text-gray-300 text-lg"
+              className="text-[#D4AF37] text-lg"
               aria-label="Correo electrónico"
             />
             <a
               href="mailto:alfajores500millas@gmail.com"
               className="hover:underline break-words"
             >
-              correoelectronico@hotmail.com
+              correo@hotmail.com
             </a>
           </p>
 
           <p className="flex flex-wrap items-center gap-2 text-gray-300 mb-2">
-            <FaSquarePhone
-              className="text-gray-300 text-lg"
+            <FaPhoneAlt
+              className="text-[#D4AF37] text-lg"
               aria-label="Teléfono"
             />
             +54 3492 582838
           </p>
-
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSf5OjN13wZ91Tu4Kz7onGUFzcYkvsOibqi3HEQvoqu3ml7Vaw/viewform?usp=header"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-wrap items-center gap-2 text-gray-300 mb-4 hover:underline transition-colors break-words"
-          >
-            <MdOutlineWork
-              className="text-gray-300 text-lg"
-              aria-label="Trabaja con nosotros"
-            />
-            Trabaja con nosotros
-          </a>
 
           {/* Redes sociales */}
           <div className="flex gap-3 flex-wrap">

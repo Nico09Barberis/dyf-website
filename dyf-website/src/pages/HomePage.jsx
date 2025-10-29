@@ -12,7 +12,7 @@ import CountersSection from "../sections/home/CounterSection";
 export default function HomePage() {
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50 text-gray-800">
+    <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
 
       <CarouselHome />
 
