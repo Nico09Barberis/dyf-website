@@ -57,7 +57,7 @@ const FlexCard = () => {
           <div className="relative z-10 text-center p-4 transition-all duration-500">
             {/* 🔹 Título que se agranda al hover */}
             <h2
-              className={`font-bold mb-2 transition-all duration-500 
+              className={`font-bold font-urbanist mb-2 transition-all duration-500 
                 ${activeIndex === index ? "text-4xl" : "text-2xl"}
               `}
             >
@@ -76,7 +76,7 @@ const FlexCard = () => {
             >
               {/* Subtítulo con entrada suave */}
               <p
-                className={`max-w-xl mx-auto text-lg font-lora font-semibold text-gray-200 transition-all duration-700 delay-100
+                className={`max-w-xl mx-auto text-lg font-urbanist font-semibold text-gray-200 transition-all duration-700 delay-100
                   ${
                     activeIndex === index
                       ? "opacity-100 translate-y-0"

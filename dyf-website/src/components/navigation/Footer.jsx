@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { MdEmail, MdOutlineWork } from "react-icons/md";
 import { FaSquarePhone } from "react-icons/fa6";
-import logo from "../../assets/images/logo-blanco.png"; // Ajustá la ruta según dónde esté tu logo
+import logo from "../../assets/images/logo.png"; // Ajustá la ruta según dónde esté tu logo
 import SocialLinks from "../ui/SocialLinks";
 import { IoIosArrowForward } from "react-icons/io";
 

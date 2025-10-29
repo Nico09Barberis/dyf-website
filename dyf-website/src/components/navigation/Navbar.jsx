@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import logoDark from "../../assets/images/logo.png";
-import logoLight from "../../assets/images/logo-blanco.png";
+import navLogo from "../../assets/images/logo.png";
 import { FaFacebook, FaInstagram } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -39,7 +38,7 @@ function Navbar() {
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 font-urbanist uppercase text-sm font-semibold shadow-md
-        ${isShrunk ? "bg-white py-2" : "bg-transparent py-4"}
+        ${isShrunk ? "bg-azulOscuro py-2" : "bg-transparent py-4"}
       `}
     >
       {/* Main Navbar */}
@@ -118,11 +117,13 @@ function Navbar() {
         <Link
           to="/"
           className={`flex-1 flex justify-center items-center transition-all duration-300 ${
-            isShrunk ? "h-12 md:h-14" : "h-14 md:h-16"
+            isShrunk
+              ? "w-36 h-36 md:w-40 md:h-40" // tamaño reducido cuando se hace scroll
+              : "w-40 h-40 md:w-44 md:h-44" // tamaño original
           }`}
         >
           <img
-            src={isShrunk ? logoDark : logoLight} // Cambia según scroll
+            src={navLogo} // una sola imagen
             alt="Mi Empresa Logo"
             className="h-full w-auto object-contain transition-all duration-300"
           />
@@ -130,33 +131,15 @@ function Navbar() {
 
         {/* Right Section: Icons */}
         <div className="hidden md:flex items-center space-x-4 z-10">
-          <button
-            className={`transition-colors duration-200 ${
-              isShrunk
-                ? "text-gray-700 hover:text-gray-900"
-                : "text-white hover:text-gray-200"
-            }`}
-          >
+          <button className="text-beige">
             <FaInstagram className="w-6 h-6" />
           </button>
 
-          <button
-            className={`transition-colors duration-200 ${
-              isShrunk
-                ? "text-gray-700 hover:text-gray-900"
-                : "text-white hover:text-gray-200"
-            }`}
-          >
+          <button className="text-beige">
             <FaFacebook className="w-6 h-6" />
           </button>
 
-          <button
-            className={`transition-colors duration-200 ${
-              isShrunk
-                ? "text-gray-700 hover:text-gray-900"
-                : "text-white hover:text-gray-200"
-            }`}
-          >
+          <button className="text-beige">
             <FaWhatsapp className="w-6 h-6" />
           </button>
         </div>
@@ -275,9 +258,7 @@ function Navbar() {
         </div>
       </div>
 
-      <div
-        className={`hidden md:flex justify-center font-bebas tracking-wide text-sm space-x-8 pt-2 transition-colors duration-300`}
-      >
+      <div className={`hidden md:flex justify-center text-sm space-x-8 pt-2 transition-colors duration-300`}>
         {[
           { to: "/", label: "Home" },
           {
@@ -303,25 +284,13 @@ function Navbar() {
           <div key={item.to} className="relative group">
             {/* Si tiene submenu, usamos un span en vez de Link */}
             {item.submenu ? (
-              <span
-                className={`relative uppercase pb-1 border-b-2 border-transparent cursor-default transition-all duration-200
-            ${
-              isShrunk
-                ? "text-gray-700 hover:text-gray-900"
-                : "text-white hover:text-gray-200"
-            }`}
-              >
+              <span className="relative uppercase pb-1 border-b-2 border-transparent cursor-default transition-all duration-200 text-gray-200 hover:text-gray-300">
                 {item.label}
               </span>
             ) : (
               <Link
                 to={item.to}
-                className={`relative uppercase pb-1 border-b-2 border-transparent transition-all duration-200
-          ${
-            isShrunk
-              ? "text-gray-700 hover:text-gray-900 hover:border-gray-900"
-              : "text-white hover:text-gray-200 hover:border-white"
-          }`}
+                className="relative uppercase text-gray-200 hover:text-gray-300 pb-1 border-b-2 border-transparent transition-all duration-200"
               >
                 {item.label}
               </Link>
@@ -330,7 +299,7 @@ function Navbar() {
             {/* Submenu */}
             {item.submenu && (
               <div
-                className={`absolute left-0 top-full mt-1 hidden group-hover:block shadow-lg rounded-md py-2 w-48 z-10 transition-colors duration-300
+                className={`absolute left-0 top-full mt-1 hidden group-hover:block shadow-lg w-48 z-10 transition-colors duration-300
             ${isShrunk ? "bg-white" : "bg-black/70"}`}
               >
                 {item.submenu.map((sub) => (
