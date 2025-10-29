@@ -2,20 +2,19 @@ import React, { useState, useEffect } from "react";
 
 const slides = [
   {
-    image: "https://picsum.photos/id/1018/1920/600",
-    title: "Bienvenido al Mundo Vaquero",
-    subtitle: "Experimenta la aventura desde el primer momento",
+    image: "https://picsum.photos/1920/600?random=1011", // ejemplo genérico
+    title: "Creamos Momentos Inolvidables",
+    subtitle: "Desde la primera idea hasta el último detalle, hacemos que cada evento sea único",
   },
   {
-    image: "https://picsum.photos/id/1015/1920/600",
-    title: "Descubre Nuevos Horizontes",
-    subtitle: "Cada slide una historia diferente",
-
+    image: "https://picsum.photos/1920/600?random=1022",
+    title: "Celebraciones a tu Medida",
+    subtitle: "Diseñamos y coordinamos cada evento para que refleje tu estilo y personalidad",
   },
   {
-    image: "https://picsum.photos/id/1016/1920/600",
-    title: "Viajes y Aventuras",
-    subtitle: "Deja que las cortinas se abran hacia nuevas experiencias",
+    image: "https://picsum.photos/1920/600?random=1033",
+    title: "Eventos Corporativos y Sociales",
+    subtitle: "Nos ocupamos de todo para que vos solo disfrutes de la experiencia",
   },
 ];
 
