@@ -11,7 +11,7 @@ function AppRoutes() {
       <Route path="/" element={<AppLayout><HomePage /></AppLayout>} />
       <Route path="/empresa/nosotros" element={<AppLayout><AboutPage /></AppLayout>} />
       <Route path="/empresa/clientes" element={<AppLayout><ClientsPage /></AppLayout>} />
-      <Route path="/empresa/galeria" element={<AppLayout><GaleryPage /></AppLayout>} />
+      <Route path="/galeria" element={<AppLayout><GaleryPage /></AppLayout>} />
     </Routes>
   );
 }

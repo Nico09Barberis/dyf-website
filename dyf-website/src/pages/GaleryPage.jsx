@@ -1,6 +1,6 @@
 
 import HeroWithBreadcrumb from "../components/navigation/HeroWithBreadcrumb";
-import GallerySection from "../sections/home/GallerySection";
+import Gallery from "../sections/gallery/Gallery";
 
 export default function GaleryPage() {
 
@@ -18,7 +18,7 @@ export default function GaleryPage() {
         imageUrl="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
       />
 
-      <GallerySection />
+      <Gallery />
 
     </main>
   );
