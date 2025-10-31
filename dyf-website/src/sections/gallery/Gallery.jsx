@@ -1,40 +1,38 @@
 import React, { useState } from "react";
 import GalleryModal from "./GalleryModal";
 import GallerySection from "./GallerySection";
-import { FaImages } from "react-icons/fa";
 
 const sectionsData = [
   {
     key: "bodas",
     title: "bodas",
     images: [
-      "/images/bodas/boda-1.jpg",
-      "/images/bodas/boda-2.jpg",
-      "/images/bodas/boda-3.jpg",
-      "/images/bodas/boda-4.jpg",
+      { src: "/images/bodas/boda-1.jpg", caption: "Ceremonia al aire libre" },
+      { src: "/images/bodas/boda-2.jpg", caption: "Recepción con estilo" },
+      { src: "/images/bodas/boda-3.jpg", caption: "Decoración floral" },
+      { src: "/images/bodas/boda-4.jpg", caption: "Baile de los novios" },
     ],
   },
   {
     key: "eventos",
     title: "eventos",
     images: [
-      "/images/eventos/evento-1.jpg",
-      "/images/eventos/evento-2.jpg",
-      "/images/eventos/evento-3.jpg",
-      "/images/eventos/evento-4.jpg",
+      { src: "/images/eventos/evento-1.jpg", caption: "Show en vivo" },
+      { src: "/images/eventos/evento-2.jpg", caption: "Ambiente nocturno" },
+      { src: "/images/eventos/evento-3.jpg", caption: "Brindis con amigos" },
+      { src: "/images/eventos/evento-4.jpg", caption: "Celebración especial" },
     ],
   },
   {
     key: "comidas",
     title: "comidas",
     images: [
-      "/images/comidas/comida-1.jpg",
-      "/images/comidas/comida-2.jpg",
-      "/images/comidas/comida-3.jpg",
-      "/images/comidas/comida-4.jpg",
+      { src: "/images/comidas/comida-1.jpg", caption: "Entrada gourmet" },
+      { src: "/images/comidas/comida-2.jpg", caption: "Plato principal" },
+      { src: "/images/comidas/comida-3.jpg", caption: "Postre artesanal" },
+      { src: "/images/comidas/comida-4.jpg", caption: "Buffet variado" },
     ],
   },
-  // agregá más secciones acá
 ];
 
 export default function Gallery() {
@@ -115,12 +113,10 @@ export default function Gallery() {
       {isOpen && (
         <GalleryModal
           onClose={closeModal}
-          src={sectionsData[currentSection].images[currentIndex]}
+          src={sectionsData[currentSection].images[currentIndex].src}
           goNext={goNext}
           goPrev={goPrev}
-          caption={`${sectionsData[currentSection].title} — ${
-            currentIndex + 1
-          } / ${sectionsData[currentSection].images.length}`}
+          caption={sectionsData[currentSection].images[currentIndex].caption}
         />
       )}
     </div>
