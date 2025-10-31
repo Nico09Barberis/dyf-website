@@ -2,7 +2,9 @@ export default function ContactForm() {
   return (
     <section className="bg-white">
       <div className="max-w-3xl mx-auto bg-white p-8">
-        <h2 className="text-3xl font-italiana uppercase font-bold mb-2 text-start">Contactanos</h2>
+        <h2 className="text-3xl font-italiana uppercase font-bold mb-2 text-start">
+          Contactanos
+        </h2>
         <div className="bg-dorado h-2 w-20 mb-6"></div>
         <form
           action="https://formspree.io/f/xovpkokq" // <- reemplaza con tu endpoint
@@ -11,12 +13,11 @@ export default function ContactForm() {
         >
           {/* Nombre */}
           <div className="flex flex-col">
-            <label htmlFor="nombre" className="mb-1 font-italiana  font-bold tracking-wider">Nombre</label>
             <input
               type="text"
               id="nombre"
               name="nombre"
-              placeholder="Tu nombre"
+              placeholder="Nombre"
               className="border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
@@ -24,12 +25,11 @@ export default function ContactForm() {
 
           {/* Apellido */}
           <div className="flex flex-col">
-            <label htmlFor="apellido" className="mb-1 font-italiana  font-bold tracking-wider">Apellido</label>
             <input
               type="text"
               id="apellido"
               name="apellido"
-              placeholder="Tu apellido"
+              placeholder="Apellido"
               className="border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
@@ -37,12 +37,11 @@ export default function ContactForm() {
 
           {/* Email */}
           <div className="flex flex-col">
-            <label htmlFor="email" className="mb-1 font-italiana  font-bold tracking-wider">Email</label>
             <input
               type="email"
               id="email"
               name="email"
-              placeholder="tu@email.com"
+              placeholder="Email"
               className="border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
@@ -50,19 +49,23 @@ export default function ContactForm() {
 
           {/* Teléfono */}
           <div className="flex flex-col">
-            <label htmlFor="telefono" className="mb-1 font-italiana  font-bold tracking-wider">Teléfono</label>
             <input
               type="tel"
               id="telefono"
               name="telefono"
-              placeholder="Ej: +54 9 11 1234-5678"
+              placeholder="Telefono"
               className="border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
           {/* Fecha de evento */}
           <div className="flex flex-col">
-            <label htmlFor="fecha" className="mb-1 font-italiana  font-bold tracking-wider">Fecha de evento</label>
+            <label
+              htmlFor="fecha"
+              className="mb-1 font-italiana  font-bold trac"
+            >
+              Fecha de evento
+            </label>
             <input
               type="date"
               id="fecha"
@@ -74,7 +77,12 @@ export default function ContactForm() {
 
           {/* Tipo de evento */}
           <div className="flex flex-col">
-            <label htmlFor="tipoEvento" className="mb-1 font-italiana  font-bold tracking-wider">Tipo de evento</label>
+            <label
+              htmlFor="tipoEvento"
+              className="mb-1 font-italiana  font-bold trac"
+            >
+              Tipo de evento
+            </label>
             <select
               id="tipoEvento"
               name="tipoEvento"
@@ -91,7 +99,12 @@ export default function ContactForm() {
 
           {/* Mensaje (textarea) */}
           <div className="flex flex-col md:col-span-2">
-            <label htmlFor="mensaje" className="mb-1 font-italiana  font-bold tracking-wider">Descripción del evento</label>
+            <label
+              htmlFor="mensaje"
+              className="mb-1 font-italiana  font-bold trac"
+            >
+              Descripción del evento
+            </label>
             <textarea
               id="mensaje"
               name="mensaje"
@@ -106,7 +119,7 @@ export default function ContactForm() {
           <div className="md:col-span-2 flex justify-center">
             <button
               type="submit"
-              className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition"
+              className="inline-block border-2 border-[#121212] bg-transparent hover:bg-[#121212] text-[#121212] hover:text-white px-6 py-3 text-md uppercase font-marcellus font-semibold tracking-wider transition-all duration-300"
             >
               Enviar
             </button>
