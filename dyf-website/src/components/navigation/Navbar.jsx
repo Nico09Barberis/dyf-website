@@ -315,7 +315,7 @@ function Navbar() {
                 ${
                   isShrunk
                     ? "text-gray-700 hover:text-gray-900 hover:bg-gray-100"
-                    : "text-white hover:text-gray-200 hover:bg-black/50"
+                    : "text-white hover:text-dorado hover:bg-black/50"
                 }`}
                   >
                     {sub.label}
