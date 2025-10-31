@@ -1,54 +1,36 @@
-// src/components/CustomerTestimonials.jsx
-import React, { useEffect, useRef, useState } from "react";
-import { FaStar, FaQuoteLeft } from "react-icons/fa"; // Ejemplo de íconos
-import userPlaceholder from "../../assets/images/google-profile.png"
+import React, { useEffect, useRef, useState, useMemo } from "react";
+import { FaStar } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import userPlaceholder from "../../assets/images/google-profile.png";
 
 const testimonials = [
-  {
-    name: "Juan Pérez",
-    userName: "@juanperez12",
-    comment:
-      "Excelente servicio, muy profesional y atento. Recomiendo totalmente esta empresa.",
-  },
-  {
-    name: "María López",
-    userName: "@maria.lopez3",
-    comment:
-      "Me encantó la atención y la calidad del trabajo. Muy satisfecho con el resultado final.",
-  },
-  {
-    name: "Carlos Rodríguez",
-    userName: "@crodriguez10",
-    comment:
-      "Gran experiencia, equipo muy capacitado y amable. Sin dudas volveré a contratar.",
-  },
-  {
-    name: "Ana Gómez",
-    userName: "@soy_anagomez",
-    comment:
-      "Superaron mis expectativas, la comunicación fue excelente y el trabajo impecable.",
-  },
+  { name: "Juan Pérez", userName: "@juanperez12", comment: "Excelente servicio, muy profesional y atento. Recomiendo totalmente esta empresa." },
+  { name: "María López", userName: "@maria.lopez3", comment: "Me encantó la atención y la calidad del trabajo. Muy satisfecho con el resultado final." },
+  { name: "Carlos Rodríguez", userName: "@crodriguez10", comment: "Gran experiencia, equipo muy capacitado y amable. Sin dudas volveré a contratar." },
+  { name: "Ana Gómez", userName: "@soy_anagomez", comment: "Superaron mis expectativas, la comunicación fue excelente y el trabajo impecable." },
 ];
 
-const SliderCards = () => {
-  const [offset, setOffset] = useState(0);
+const SliderCards = ({ speed = 0.5 }) => {
   const [isPaused, setIsPaused] = useState(false);
   const sliderRef = useRef(null);
-  const speed = 0.5;
+  const offsetRef = useRef(0); // offset persistente
+  const slides = useMemo(() => [...testimonials, ...testimonials], []);
 
   useEffect(() => {
     let animationFrame;
+
     const move = () => {
       if (!isPaused && sliderRef.current) {
         const totalWidth = sliderRef.current.scrollWidth / 2;
-        setOffset((prev) => (prev + speed) % totalWidth);
+        offsetRef.current = (offsetRef.current + speed) % totalWidth;
+        sliderRef.current.style.transform = `translateX(-${offsetRef.current}px)`;
       }
       animationFrame = requestAnimationFrame(move);
     };
+
     animationFrame = requestAnimationFrame(move);
     return () => cancelAnimationFrame(animationFrame);
-  }, [isPaused]);
+  }, [isPaused, speed]);
 
   return (
     <div
@@ -56,12 +38,8 @@ const SliderCards = () => {
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      <div
-        ref={sliderRef}
-        className="flex space-x-6 px-6"
-        style={{ transform: `translateX(-${offset}px)` }}
-      >
-        {[...testimonials, ...testimonials].map((slide, idx) => (
+      <div ref={sliderRef} className="flex space-x-6 px-6 will-change-transform">
+        {slides.map((slide, idx) => (
           <div
             key={idx}
             className="flex-shrink-0 w-64 md:w-72 lg:w-80 p-3 flex flex-col justify-between overflow-hidden bg-white text-black transition-transform duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
@@ -69,30 +47,25 @@ const SliderCards = () => {
             {/* Fila superior */}
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center space-x-3">
-                {/* Imagen de perfil */}
                 <img
                   src={userPlaceholder}
                   alt={slide.name}
                   className="w-10 h-10 rounded-full object-cover"
+                  loading="lazy"
                 />
                 <div className="flex flex-col font-sans">
                   <span className="font-semibold text-sm text-gray-800">{slide.name}</span>
-                  <span className="text-xs text-gray-600 opacity-80">
-                    {slide.userName}
-                  </span>
+                  <span className="text-xs text-gray-600 opacity-80">{slide.userName}</span>
                 </div>
               </div>
-              {/* Icono a la derecha */}
               <FcGoogle className="text-lg" />
             </div>
 
-            {/* Fila del icono inferior */}
+            {/* Estrellas */}
             <div className="flex items-center mb-2">
-              <FaStar className="text-dorado opacity-70 text-lg" />
-              <FaStar className="text-dorado opacity-70 text-lg" />
-              <FaStar className="text-dorado opacity-70 text-lg" />
-              <FaStar className="text-dorado opacity-70 text-lg" />
-              <FaStar className="text-dorado opacity-70 text-lg" />
+              {[...Array(5)].map((_, i) => (
+                <FaStar key={i} className="text-dorado opacity-70 text-lg" />
+              ))}
             </div>
 
             {/* Comentario */}
