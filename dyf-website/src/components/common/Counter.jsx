@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 
-const Counter = ({ from = 0, to = 2500, duration = 2000 }) => {
+const Counter = ({ from = 0, to = 250, duration = 2000 }) => {
   const [count, setCount] = useState(from);
   const [scale, setScale] = useState(1);
   const [startCount, setStartCount] = useState(false);

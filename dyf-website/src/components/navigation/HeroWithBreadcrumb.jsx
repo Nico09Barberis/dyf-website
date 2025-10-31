@@ -15,7 +15,7 @@ export default function HeroWithBreadcrumb({ title, breadcrumbItems, imageUrl })
       <div className="absolute inset-0 bg-black/40" />
 
       {/* Contenido */}
-      <div className="absolute inset-0 flex flex-col md:flex-row items-center justify-between px-6 md:px-20 h-full">
+      <div className="absolute inset-0 flex flex-col md:flex-row items-start  md:items-center justify-center md:justify-between px-6 md:px-20 h-full">
         {/* Título */}
         <h1 className="text-3xl md:text-5xl font-bold text-white max-w-md text-left">
           {title}

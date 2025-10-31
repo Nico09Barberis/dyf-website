@@ -58,7 +58,7 @@ const FlexCard = () => {
             {/* 🔹 Título que se agranda al hover */}
             <h2
               className={`font-bold font-urbanist mb-2 transition-all duration-500 
-                ${activeIndex === index ? "text-4xl" : "text-2xl"}
+                ${activeIndex === index ? "text-3xl md:text-4xl" : "text-xl md:text-2xl"}
               `}
             >
               {card.title}
