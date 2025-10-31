@@ -288,13 +288,14 @@ function Navbar() {
           <div key={item.to} className="relative group">
             {/* Si tiene submenu, usamos un span en vez de Link */}
             {item.submenu ? (
-              <span className="relative uppercase pb-1 border-b-2 border-transparent cursor-default transition-all duration-200 text-gray-200 hover:text-gray-300">
+              
+              <span className="relative uppercase text-gray-200 hover:text-gray-300 pb-1 border-b-2 border-transparent hover:border-beige transition-all duration-200">
                 {item.label}
               </span>
             ) : (
               <Link
                 to={item.to}
-                className="relative uppercase text-gray-200 hover:text-gray-300 pb-1 border-b-2 border-transparent transition-all duration-200"
+                className="relative uppercase text-gray-200 hover:text-gray-300 pb-1 border-b-2 border-transparent hover:border-beige transition-all duration-200"
               >
                 {item.label}
               </Link>
