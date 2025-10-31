@@ -5,11 +5,13 @@ import { FaMapMarkedAlt } from "react-icons/fa";
 
 export default function ContactSection() {
   return (
-    <section className="py-16 px-4">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2">
+    <section className="w-full py-0 md:py-16 px-0 md:px-8">
+      <div className="w-full md:max-w-6xl md:mx-auto grid grid-cols-1 md:grid-cols-2 gap-0">
         {/* Columna izquierda */}
-        <div className="flex flex-col bg-[#121212] justify-start space-y-6 p-2 md:p-8">
-          <h2 className="text-4xl font-bold text-gray-200 uppercase">Info de contacto</h2>
+        <div className="flex flex-col w-full bg-[#121212] justify-start space-y-6 p-4 md:p-8">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-200 uppercase">
+            Info de contacto
+          </h2>
 
           <div className="flex items-center space-x-4">
             <MdOutlineEmail className="w-10 h-10 p-2 bg-gray-700 rounded-full text-dorado mt-1" />
@@ -37,7 +39,7 @@ export default function ContactSection() {
         </div>
 
         {/* Columna derecha: Formulario */}
-        <div>
+        <div className="w-full">
           <ContactForm />
         </div>
       </div>
