@@ -1,8 +1,9 @@
 export default function ContactForm() {
   return (
-    <section className="bg-gray-100 py-16 px-4">
-      <div className="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-        <h2 className="text-3xl font-bold mb-6 text-center">Contacto</h2>
+    <section className="bg-white">
+      <div className="max-w-3xl mx-auto bg-white p-8">
+        <h2 className="text-3xl font-italiana uppercase font-bold mb-2 text-start">Contactanos</h2>
+        <div className="bg-dorado h-2 w-20 mb-6"></div>
         <form
           action="https://formspree.io/f/xovpkokq" // <- reemplaza con tu endpoint
           method="POST"
@@ -10,7 +11,7 @@ export default function ContactForm() {
         >
           {/* Nombre */}
           <div className="flex flex-col">
-            <label htmlFor="nombre" className="mb-1 font-medium">Nombre</label>
+            <label htmlFor="nombre" className="mb-1 font-italiana  font-bold tracking-wider">Nombre</label>
             <input
               type="text"
               id="nombre"
@@ -23,7 +24,7 @@ export default function ContactForm() {
 
           {/* Apellido */}
           <div className="flex flex-col">
-            <label htmlFor="apellido" className="mb-1 font-medium">Apellido</label>
+            <label htmlFor="apellido" className="mb-1 font-italiana  font-bold tracking-wider">Apellido</label>
             <input
               type="text"
               id="apellido"
@@ -36,7 +37,7 @@ export default function ContactForm() {
 
           {/* Email */}
           <div className="flex flex-col">
-            <label htmlFor="email" className="mb-1 font-medium">Email</label>
+            <label htmlFor="email" className="mb-1 font-italiana  font-bold tracking-wider">Email</label>
             <input
               type="email"
               id="email"
@@ -49,7 +50,7 @@ export default function ContactForm() {
 
           {/* Teléfono */}
           <div className="flex flex-col">
-            <label htmlFor="telefono" className="mb-1 font-medium">Teléfono</label>
+            <label htmlFor="telefono" className="mb-1 font-italiana  font-bold tracking-wider">Teléfono</label>
             <input
               type="tel"
               id="telefono"
@@ -61,7 +62,7 @@ export default function ContactForm() {
 
           {/* Fecha de evento */}
           <div className="flex flex-col">
-            <label htmlFor="fecha" className="mb-1 font-medium">Fecha de evento</label>
+            <label htmlFor="fecha" className="mb-1 font-italiana  font-bold tracking-wider">Fecha de evento</label>
             <input
               type="date"
               id="fecha"
@@ -73,7 +74,7 @@ export default function ContactForm() {
 
           {/* Tipo de evento */}
           <div className="flex flex-col">
-            <label htmlFor="tipoEvento" className="mb-1 font-medium">Tipo de evento</label>
+            <label htmlFor="tipoEvento" className="mb-1 font-italiana  font-bold tracking-wider">Tipo de evento</label>
             <select
               id="tipoEvento"
               name="tipoEvento"
@@ -90,7 +91,7 @@ export default function ContactForm() {
 
           {/* Mensaje (textarea) */}
           <div className="flex flex-col md:col-span-2">
-            <label htmlFor="mensaje" className="mb-1 font-medium">Descripción del evento</label>
+            <label htmlFor="mensaje" className="mb-1 font-italiana  font-bold tracking-wider">Descripción del evento</label>
             <textarea
               id="mensaje"
               name="mensaje"
