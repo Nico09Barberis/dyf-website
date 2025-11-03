@@ -10,10 +10,8 @@ import TestimonialsSection from "../sections/home/TestimonialsSection";
 import CountersSection from "../sections/home/CounterSection";
 
 export default function HomePage() {
-
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
-
       <CarouselHome />
 
       <AboutSection />
@@ -24,7 +22,12 @@ export default function HomePage() {
 
       <ClientsSection />
 
-      <HeroBanner />
+      <HeroBanner
+        title="¿Necesitás asesoramiento inmediato?"
+        buttonText="Hablá con nosotros"
+        message="¡Hola! Me gustaría recibir más información sobre sus servicios."
+        backgroundImage="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80"
+      />
 
       <BlurCard />
 
@@ -33,7 +36,6 @@ export default function HomePage() {
       <ProcessSection />
 
       <TestimonialsSection />
-
     </main>
   );
 }

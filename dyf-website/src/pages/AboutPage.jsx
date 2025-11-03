@@ -1,9 +1,9 @@
-
 import HeroWithBreadcrumb from "../components/navigation/HeroWithBreadcrumb";
+import PresentationSection from "../sections/bussines/PresentationSection";
 import GallerySection from "../sections/home/GallerySection";
+import HeroBanner from "../sections/home/HeroBanner";
 
 export default function AboutPage() {
-
   const breadcrumb = [
     { label: "Home", href: "/" },
     { label: "Empresa" },
@@ -12,7 +12,6 @@ export default function AboutPage() {
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50 text-gray-800">
-
       <HeroWithBreadcrumb
         title="Acerca de nosotros"
         breadcrumbItems={breadcrumb}
@@ -21,6 +20,14 @@ export default function AboutPage() {
 
       <GallerySection />
 
+      <PresentationSection />
+      
+      <HeroBanner
+        title="¿Buscas ayuda ahora mismo?"
+        buttonText="Contactanos"
+        message="¡Hola! Me gustaría recibir más información sobre sus servicios."
+        backgroundImage="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80"
+      />
     </main>
   );
 }

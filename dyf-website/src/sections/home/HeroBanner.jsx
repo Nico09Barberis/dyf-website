@@ -1,19 +1,22 @@
 // src/components/sections/HeroBanner.jsx
 import React from "react";
 
-const HeroBanner = () => {
-  const whatsappNumber = "5491123456789"; // reemplaza con tu número
-  const defaultMessage = "Hola! Estoy interesado en sus servicios.";
+const HeroBanner = ({
+  title = "¿Buscás ayuda ahora mismo?",
+  buttonText = "Contáctanos",
+  message = "Hola! Estoy interesado en sus servicios.",
+  backgroundImage = "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80",
+}) => {
+  const whatsappNumber = "5491123456789"; // número fijo
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-    defaultMessage
+    message
   )}`;
 
   return (
     <section
-      className="relative w-full h-[30vh] md:h-[40vh] bg-cover bg-center flex items-center justify-center my-12"
+      className="relative w-full h-auto p-12 bg-cover bg-center flex items-center justify-center my-12"
       style={{
-        backgroundImage:
-          "url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80')",
+        backgroundImage: `url('${backgroundImage}')`,
       }}
     >
       {/* Overlay semitransparente */}
@@ -22,7 +25,7 @@ const HeroBanner = () => {
       {/* Contenido */}
       <div className="relative z-10 text-center text-white px-6">
         <h2 className="text-3xl md:text-5xl font-italiana uppercase font-bold mb-6">
-          Impulsa tu negocio con tecnología innovadora
+          {title}
         </h2>
 
         {/* Botón WhatsApp */}
@@ -32,7 +35,7 @@ const HeroBanner = () => {
           rel="noopener noreferrer"
           className="inline-block border-2 border-white text-white px-6 py-3 text-sm uppercase font-marcellus font-semibold tracking-wider bg-transparent hover:bg-white hover:text-black transition-all duration-300"
         >
-          Contáctanos
+          {buttonText}
         </a>
       </div>
     </section>
