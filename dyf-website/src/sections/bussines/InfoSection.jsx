@@ -1,4 +1,3 @@
-// src/components/sections/InfoSection.jsx
 import React from "react";
 
 const InfoSection = () => {
@@ -7,22 +6,30 @@ const InfoSection = () => {
       id: 1,
       image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80",
       title: "Asesoramiento Personalizado",
-      text: "Contamos con un equipo de profesionales listos para ofrecerte soluciones adaptadas a tus necesidades.",
-      reverse: false, // imagen izquierda, texto derecha
+      text: `Contamos con un equipo de profesionales altamente capacitados y con amplia experiencia en distintos sectores, 
+             listos para ofrecerte soluciones adaptadas a tus necesidades específicas. 
+             Desde la planificación inicial hasta la implementación final, nos aseguramos de que cada estrategia esté alineada 
+             con tus objetivos y expectativas, brindando un acompañamiento integral en cada etapa del proceso.`,
+      reverse: false,
     },
     {
       id: 2,
       image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80",
       title: "Experiencia y Confianza",
-      text: "Más de 10 años brindando asesoramiento integral a empresas y particulares.",
-      reverse: true, // texto izquierda, imagen derecha
+      text: `Durante más de 10 años hemos brindado asesoramiento integral a empresas y particulares, 
+             consolidando relaciones basadas en la confianza y la transparencia. 
+             Nuestra experiencia nos permite anticipar desafíos, ofrecer soluciones efectivas y garantizar que cada decisión 
+             esté respaldada por un profundo conocimiento del mercado y las mejores prácticas.`,
+      reverse: true,
     },
     {
       id: 3,
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80",
       title: "Resultados Reales",
-      text: "Nuestro compromiso es acompañarte hasta alcanzar tus objetivos de forma eficiente y transparente.",
-      reverse: false, // imagen derecha, texto izquierda
+      text: `Nuestro compromiso es acompañarte hasta alcanzar tus objetivos de forma eficiente y transparente. 
+             Nos enfocamos en generar resultados medibles y sostenibles, utilizando herramientas estratégicas y análisis detallados 
+             que nos permitan optimizar cada acción y asegurar que tus metas se conviertan en logros tangibles.`,
+      reverse: false,
     },
   ];
 
@@ -52,7 +59,7 @@ const InfoSection = () => {
             <h3 className="text-2xl md:text-3xl font-marcellus font-semibold mb-4">
               {title}
             </h3>
-            <p className="text-gray-700 text-base md:text-lg">{text}</p>
+            <p className="text-gray-700 font-lora font-semibold text-base md:text-lg leading-relaxed">{text}</p>
           </div>
         </div>
       ))}

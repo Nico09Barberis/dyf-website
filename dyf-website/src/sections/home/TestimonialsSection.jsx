@@ -4,7 +4,7 @@ import SliderCards from "../../components/common/SliderCards";
 
 const TestimonialsSection = () => {
   return (
-    <section className="w-full py-16 bg-[#E3EBF6]">
+    <section className="w-full py-16 bg-[#A7C7E7]">
       <div className="max-w-6xl mx-auto px-6 text-center">
         {/* Título */}
         <h2 className="text-3xl md:text-4xl font-italiana uppercase font-bold text-gray-800 mb-2">
