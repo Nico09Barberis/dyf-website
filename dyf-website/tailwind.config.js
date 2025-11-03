@@ -1,8 +1,7 @@
-// tailwind.config.js
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}"
+    "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {
@@ -19,6 +18,9 @@ export default {
         urbanist: ["'Urbanist'", "sans-serif"],
         marcellus: ["'Marcellus'", "serif"],
         italiana: ["'Italiana'", "sans-serif"],
+      },
+      transitionTimingFunction: {
+        'custom': 'cubic-bezier(0.23, 1, 0.32, 1)',
       },
     },
   },

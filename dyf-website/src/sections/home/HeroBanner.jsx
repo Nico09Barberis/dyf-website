@@ -14,7 +14,7 @@ const HeroBanner = ({
 
   return (
     <section
-      className="relative w-full h-auto p-12 bg-cover bg-center flex items-center justify-center my-12"
+      className="relative w-full h-auto p-12 bg-cover bg-center flex items-center justify-center"
       style={{
         backgroundImage: `url('${backgroundImage}')`,
       }}

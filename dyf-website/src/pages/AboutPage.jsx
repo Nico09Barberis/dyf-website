@@ -1,5 +1,8 @@
 import HeroWithBreadcrumb from "../components/navigation/HeroWithBreadcrumb";
+import AnimatedCard from "../components/ui/AnimatedCard";
+import InfoSection from "../sections/bussines/InfoSection";
 import PresentationSection from "../sections/bussines/PresentationSection";
+import ValuesSection from "../sections/bussines/ValuesSection";
 import GallerySection from "../sections/home/GallerySection";
 import HeroBanner from "../sections/home/HeroBanner";
 
@@ -18,16 +21,19 @@ export default function AboutPage() {
         imageUrl="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
       />
 
-      <GallerySection />
-
       <PresentationSection />
-      
+
       <HeroBanner
         title="¿Buscas ayuda ahora mismo?"
         buttonText="Contactanos"
         message="¡Hola! Me gustaría recibir más información sobre sus servicios."
         backgroundImage="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80"
       />
+
+      <InfoSection />
+
+      <ValuesSection />
+
     </main>
   );
 }
