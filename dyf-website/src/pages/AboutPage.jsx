@@ -1,9 +1,7 @@
 import HeroWithBreadcrumb from "../components/navigation/HeroWithBreadcrumb";
-import AnimatedCard from "../components/ui/AnimatedCard";
 import InfoSection from "../sections/bussines/InfoSection";
 import PresentationSection from "../sections/bussines/PresentationSection";
 import ValuesSection from "../sections/bussines/ValuesSection";
-import GallerySection from "../sections/home/GallerySection";
 import HeroBanner from "../sections/home/HeroBanner";
 
 export default function AboutPage() {

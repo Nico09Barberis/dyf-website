@@ -189,14 +189,14 @@ function Navbar() {
                   <Link
                     to="/empresa/nosotros"
                     onClick={() => setIsOpen(false)}
-                    className="block text-gray-200 hover:text-gray-300 py-1 px-2 rounded-lg"
+                    className="block text-gray-200 hover:text-gray-300 hover:bg-[#002856] py-1 px-2 rounded-lg"
                   >
                     Nosotros
                   </Link>
                   <Link
                     to="/empresa/clientes"
                     onClick={() => setIsOpen(false)}
-                    className="block text-gray-200 hover:text-gray-300 py-1 px-2 rounded-lg"
+                    className="block text-gray-200 hover:text-gray-300 hover:bg-[#002856] py-1 px-2 rounded-lg"
                   >
                     Historia
                   </Link>
@@ -219,21 +219,21 @@ function Navbar() {
                   <Link
                     to="/servicios/diseno"
                     onClick={() => setIsOpen(false)}
-                    className="block text-gray-200 hover:text-gray-300 py-1 px-2 rounded-lg"
+                    className="block text-gray-200 hover:text-gray-300 hover:bg-[#002856] py-1 px-2 rounded-lg"
                   >
                     Diseño
                   </Link>
                   <Link
                     to="/servicios/construccion"
                     onClick={() => setIsOpen(false)}
-                    className="block text-gray-200 hover:text-gray-300 py-1 px-2 rounded-lg"
+                    className="block text-gray-200 hover:text-gray-300 hover:bg-[#002856] py-1 px-2 rounded-lg"
                   >
                     Construcción
                   </Link>
                   <Link
                     to="/servicios/mantenimiento"
                     onClick={() => setIsOpen(false)}
-                    className="block text-gray-200 hover:text-gray-300 py-1 px-2 rounded-lg"
+                    className="block text-gray-200 hover:text-gray-300 hover:bg-[#002856] py-1 px-2 rounded-lg"
                   >
                     Mantenimiento
                   </Link>
@@ -273,7 +273,7 @@ function Navbar() {
               { to: "/empresa/clientes", label: "Clientes" },
             ],
           },
-          {
+          { 
             to: "/servicios",
             label: "servicios",
             submenu: [

@@ -82,7 +82,7 @@ export default function Gallery() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 mt-12">
       {/* Sección introductoria a la galería */}
       <section className="mb-16 flex flex-col items-center text-center px-4 sm:px-6 lg:px-0">
         {/* Título */}
