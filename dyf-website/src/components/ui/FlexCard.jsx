@@ -32,7 +32,7 @@ const FlexCard = () => {
   ];
 
   return (
-    <div className="flex w-full h-[500px] gap-3 p-3 rounded-lg overflow-hidden">
+    <div className="flex flex-col md:flex-row w-full h-[500px] gap-3 p-3 rounded-lg overflow-hidden">
       {cards.map((card, index) => (
         <div
           key={index}

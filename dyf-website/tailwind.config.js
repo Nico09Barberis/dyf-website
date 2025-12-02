@@ -5,7 +5,7 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
+      colors: { 
         dorado: "#F4D03F",
         beige: "#F9F6F0",
         azulOscuro: "#001F3F",
