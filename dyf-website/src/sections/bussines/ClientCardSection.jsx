@@ -43,7 +43,7 @@ const ClientCardSection = () => {
           {testimonios.map((testimonio) => (
             <div
               key={testimonio.id}
-              className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col items-center text-center"
+              className="bg-[#BBDCE5] p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col items-center text-center"
             >
               <img
                 src={testimonio.imagen}

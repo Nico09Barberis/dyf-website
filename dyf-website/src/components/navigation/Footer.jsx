@@ -71,7 +71,7 @@ const Footer = () => {
 
           <p className="flex flex-wrap items-center gap-2 text-gray-300 mb-2">
             <GrMapLocation
-              className="text-[#D4AF37] text-2xl"
+              className="text-[#E7D283] text-2xl"
               aria-label="Teléfono"
             />
             Cordoba, Argentina
@@ -79,7 +79,7 @@ const Footer = () => {
 
           <p className="flex flex-wrap items-center gap-2 text-gray-300 mb-2">
             <MdEmail
-              className="text-[#D4AF37] text-2xl"
+              className="text-[#E7D283] text-2xl"
               aria-label="Correo electrónico"
             />
             <a
@@ -92,7 +92,7 @@ const Footer = () => {
 
           <p className="flex flex-wrap items-center gap-2 text-gray-300 mb-2">
             <MdOutlinePhoneIphone
-              className="text-[#D4AF37] text-2xl"
+              className="text-[#E7D283] text-2xl"
               aria-label="Teléfono"
             />
             +54 3492 582838
