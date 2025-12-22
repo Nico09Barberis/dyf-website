@@ -50,11 +50,11 @@ const ClientIntroSection = () => {
   return (
     <section className="bg-gray-50 py-8 px-4 md:px-8 lg:px-16 mt-12">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-italiana font-semibold uppercase text-gray-800 mb-2">
+        <h2 className="text-3xl md:text-4xl font-urbanist font-semibold uppercase text-gray-900 tracking-wide mb-2">
           Ellos confiaron en nosotros
         </h2>
         <div className="bg-dorado h-2 w-20 mx-auto mb-2"></div>
-        <p className="text-gray-600 text-lg md:text-xl font-lora font-semibold mb-12">
+        <p className="text-gray-800 text-md md:text-lg font-marcellus mb-12">
           Más de 200 eventos organizados con amor, dedicación y profesionalismo.
         </p>
 
