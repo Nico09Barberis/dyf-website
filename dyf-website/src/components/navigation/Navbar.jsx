@@ -7,6 +7,9 @@ import { FaFacebook, FaInstagram } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
 import { MdOutlinePhoneIphone } from "react-icons/md";
 
+import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowUp } from "react-icons/io";
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isShrunk, setIsShrunk] = useState(false);
@@ -181,7 +184,13 @@ function Navbar() {
                 className="w-full text-left text-gray-200 hover:text-gray-300 hover:bg-[#002856] uppercase rounded-md py-1 px-2 flex justify-between items-center"
               >
                 Empresa
-                <span>{openDropdown === "empresa" ? "−" : "+"}</span>
+                <span className="ml-2">
+                  {openDropdown === "empresa" ? (
+                    <IoIosArrowUp size={14} />
+                  ) : (
+                    <IoIosArrowDown size={14} />
+                  )}
+                </span>
               </button>
 
               {openDropdown === "empresa" && (
@@ -198,7 +207,7 @@ function Navbar() {
                     onClick={() => setIsOpen(false)}
                     className="block text-gray-200 hover:text-gray-300 hover:bg-[#002856] py-1 px-2 rounded-lg"
                   >
-                    Historia
+                    Clientes
                   </Link>
                 </div>
               )}
@@ -211,7 +220,13 @@ function Navbar() {
                 className="w-full text-left text-gray-200 hover:text-gray-300 hover:bg-[#002856] uppercase rounded-md py-1 px-2 flex justify-between items-center"
               >
                 Servicios
-                <span>{openDropdown === "servicios" ? "−" : "+"}</span>
+                <span className="ml-2">
+                  {openDropdown === "servicios" ? (
+                    <IoIosArrowUp size={14} />
+                  ) : (
+                    <IoIosArrowDown size={14} />
+                  )}
+                </span>
               </button>
 
               {openDropdown === "servicios" && (
@@ -256,6 +271,30 @@ function Navbar() {
             >
               Contacto
             </Link>
+
+            {/* Social Icons in Mobile Menu */}
+
+            <div className="flex justify-start mt-6 gap-4 ml-2 border-t pt-4 border-gray-400">
+              <a
+                href="https://www.instagram.com/dyfcelebraciones"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-200 hover:text-gray-400 transition-colors"
+                aria-label="Instagram"
+              >
+                <FaInstagram size={24} />
+              </a>
+
+              <a
+                href="https://wa.me/5493492582838?text=Hola%2C+me+gustar%C3%ADa+recibir+m%C3%A1s+informaci%C3%B3n+sobre+sus+servicios."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-beige hover:text-white transition-colors"
+                aria-label="WhatsApp"
+              >
+                <FaWhatsapp size={24} />
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -273,7 +312,7 @@ function Navbar() {
               { to: "/empresa/clientes", label: "Clientes" },
             ],
           },
-          { 
+          {
             to: "/servicios",
             label: "servicios",
             submenu: [
@@ -288,7 +327,6 @@ function Navbar() {
           <div key={item.to} className="relative group">
             {/* Si tiene submenu, usamos un span en vez de Link */}
             {item.submenu ? (
-              
               <span className="relative uppercase text-gray-200 hover:text-gray-300 pb-1 border-b-2 border-transparent hover:border-beige transition-all duration-200">
                 {item.label}
               </span>

@@ -2,7 +2,7 @@ import Counter from "../../components/common/Counter";
 
 export default function CountersSection() {
   return (
-    <section className="bg-[#A7C7E7] w-full py-20">
+    <section className="bg-[#BBDCE5] w-full py-20">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-around items-center gap-10 font-urbanist uppercase">
         {/* Contador 1 */}
         <div className="flex flex-col items-center">

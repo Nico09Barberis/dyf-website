@@ -22,7 +22,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#121212] text-white pt-6 font-sans">
+    <footer className="bg-[#141414] text-white pt-6 font-sans">
       <div className="max-w-6xl mx-auto px-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* Columna izquierda: Logo */}
         <div className="flex flex-col items-center md:items-start">

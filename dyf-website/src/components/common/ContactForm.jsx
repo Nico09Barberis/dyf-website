@@ -62,7 +62,7 @@ export default function ContactForm() {
           <div className="flex flex-col">
             <label
               htmlFor="fecha"
-              className="mb-1 font-italiana  font-bold trac"
+              className="mb-1 font-semibold"
             >
               Fecha de evento
             </label>
@@ -79,7 +79,7 @@ export default function ContactForm() {
           <div className="flex flex-col">
             <label
               htmlFor="tipoEvento"
-              className="mb-1 font-italiana  font-bold trac"
+              className="mb-1 font-semibold"
             >
               Tipo de evento
             </label>
@@ -101,7 +101,7 @@ export default function ContactForm() {
           <div className="flex flex-col md:col-span-2">
             <label
               htmlFor="mensaje"
-              className="mb-1 font-italiana  font-bold trac"
+              className="mb-1 font-semibold"
             >
               Descripción del evento
             </label>
