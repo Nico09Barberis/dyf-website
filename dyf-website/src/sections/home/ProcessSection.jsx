@@ -33,11 +33,11 @@ const ProcessSection = () => {
     <section className="flex flex-col items-center justify-center py-16 my-12">
       {/* Título y subtítulo */}
       <div className="text-center mb-12 px-4">
-        <h2 className="text-3xl md:text-4xl font-italiana uppercase font-bold tracking-wide text-gray-800 mb-2">
+        <h2 className="text-3xl md:text-4xl font-urbanist uppercase font-bold tracking-wide text-gray-900 mb-2">
           Nuestro Proceso de Trabajo
         </h2>
         <div className="bg-dorado h-2 w-20 mx-auto mb-4"></div>
-        <p className="text-xl text-gray-600 font-lora font-semibold mt-2">
+        <p className="text-lg md:text-xl text-gray-800 font-marcellus mt-2">
           Te acompañamos paso a paso para crear un evento inolvidable.
         </p>
       </div>

@@ -35,11 +35,11 @@ const AboutSection = () => {
       {/* Contenedor Derecho */}
       <div className="w-full md:w-1/2 flex flex-col shadow-2xl justify-center px-6 py-10">
         <h2 className="text-2xl uppercase font-lora font-semibold mb-2">d&f</h2>
-        <h3 className="text-3xl font-marcellus font-semibold text-gray-600 mb-1">
+        <h3 className="text-3xl font-marcellus font-semibold text-gray-800 mb-1">
           Sobre nosotros
         </h3>
         <div className="w-20 h-2 bg-[#F4D03F] mb-2"></div>
-        <p className="text-gray-700 font-lora font-semibold leading-relaxed">
+        <p className="text-gray-800 text-md md:text-lg font-marcellus leading-relaxed">
           En d&f creemos que cada evento cuenta una historia, y nuestro
           propósito es ayudarte a contar la tuya de la mejor manera. Nos
           especializamos en la gestión, organización y planificación integral de

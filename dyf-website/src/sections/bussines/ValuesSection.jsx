@@ -4,14 +4,14 @@ import AnimatedCard from "../../components/ui/AnimatedCard";
 
 const ValuesSection = () => {
   return (
-    <section className="w-full py-20 bg-beige text-azulOscuro flex flex-col items-center">
+    <section className="w-full py-20 bg-beige text-azulOscuro flex flex-col items-center text-center">
       {/* Título */}
-      <h2 className="text-3xl md:text-5xl font-italiana font-bold uppercase mb-4 text-center">
+      <h2 className="text-3xl md:text-4xl font-urbanist font-semibold uppercase mb-4 tracking-wide">
         Nuestra Esencia
       </h2>
 
       {/* Subtítulo */}
-      <p className="font-lora font-semibold text-base md:text-lg text-gray-600 max-w-2xl text-center mb-12">
+      <p className="max-w-2xl font-marcellus text-md md:text-lg text-gray-800 text-center mb-12">
         Descubrí qué nos motiva como empresa, nuestros principios y cómo generamos valor 
         para nuestros clientes y la comunidad.
       </p>

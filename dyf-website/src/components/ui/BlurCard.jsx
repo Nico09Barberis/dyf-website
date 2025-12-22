@@ -53,8 +53,8 @@ const Cards = () => {
           {/* Contenido */}
           <div className="relative z-10 flex flex-col items-center justify-center">
             {card.icon}
-            <h3 className="text-lg font-bold font-italiana uppercase">{card.title}</h3>
-            <p className="font-lora font-semibold text-gray-700 mt-1">
+            <h3 className="text-lg font-bold font-urbanist uppercase">{card.title}</h3>
+            <p className="font-marcellus font-normal text-gray-800 mt-1">
               {card.subtitle}
             </p>
           </div>

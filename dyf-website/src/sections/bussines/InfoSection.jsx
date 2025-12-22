@@ -60,10 +60,10 @@ const InfoSection = () => {
                 reverse ? "md:order-1" : ""
               }`}
             >
-              <h3 className="text-2xl md:text-3xl font-marcellus font-semibold mb-4">
+              <h3 className="text-2xl md:text-3xl font-urbanist uppercase tracking-wide font-semibold mb-4">
                 {title}
               </h3>
-              <p className="text-gray-700 font-lora font-semibold text-base md:text-lg leading-relaxed">
+              <p className="text-gray-800 font-marcellus text-md md:text-lg leading-relaxed">
                 {text}
               </p>
             </div>
