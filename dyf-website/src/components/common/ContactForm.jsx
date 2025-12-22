@@ -1,125 +1,140 @@
+const inputBaseStyles =
+  "border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500";
+
+function FormField({ type = "text", id, name, placeholder, required }) {
+  return (
+    <input
+      type={type}
+      id={id}
+      name={name}
+      placeholder={placeholder}
+      required={required}
+      className={inputBaseStyles}
+    />
+  );
+}
+
+function FormSelect({ id, name, label, options, required }) {
+  return (
+    <div className="flex flex-col">
+      <label htmlFor={id} className="mb-1 font-semibold">
+        {label}
+      </label>
+      <select
+        id={id}
+        name={name}
+        required={required}
+        className={inputBaseStyles}
+      >
+        <option value="">Selecciona</option>
+        {options.map(({ value, label }) => (
+          <option key={value} value={value}>
+            {label}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
+}
+
+function FormTextarea({ id, name, label, placeholder, required, rows = 5 }) {
+  return (
+    <div className="flex flex-col md:col-span-2">
+      <label htmlFor={id} className="mb-1 font-semibold">
+        {label}
+      </label>
+      <textarea
+        id={id}
+        name={name}
+        placeholder={placeholder}
+        required={required}
+        rows={rows}
+        className={inputBaseStyles}
+      />
+    </div>
+  );
+}
+
 export default function ContactForm() {
   return (
     <section className="bg-white">
-      <div className="max-w-3xl mx-auto bg-white p-8">
-        <h2 className="text-3xl font-italiana uppercase font-bold mb-2 text-start">
+      <div className="mx-auto max-w-3xl bg-white p-8">
+        <h2 className="mb-2 text-start text-3xl font-bold uppercase font-italiana">
           Contactanos
         </h2>
-        <div className="bg-dorado h-2 w-20 mb-6"></div>
+        <div className="mb-6 h-2 w-20 bg-dorado" />
+
         <form
-          action="https://formspree.io/f/xovpkokq" // <- reemplaza con tu endpoint
+          action="https://formspree.io/f/xovpkokq"
           method="POST"
-          className="grid grid-cols-1 md:grid-cols-2 gap-4"
+          className="grid grid-cols-1 gap-4 md:grid-cols-2"
         >
-          {/* Nombre */}
-          <div className="flex flex-col">
-            <input
-              type="text"
-              id="nombre"
-              name="nombre"
-              placeholder="Nombre"
-              className="border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-              required
-            />
-          </div>
+          <FormField
+            id="nombre"
+            name="nombre"
+            placeholder="Nombre"
+            required
+          />
 
-          {/* Apellido */}
-          <div className="flex flex-col">
-            <input
-              type="text"
-              id="apellido"
-              name="apellido"
-              placeholder="Apellido"
-              className="border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-              required
-            />
-          </div>
+          <FormField
+            id="apellido"
+            name="apellido"
+            placeholder="Apellido"
+            required
+          />
 
-          {/* Email */}
-          <div className="flex flex-col">
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email"
-              className="border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-              required
-            />
-          </div>
+          <FormField
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
 
-          {/* Teléfono */}
-          <div className="flex flex-col">
-            <input
-              type="tel"
-              id="telefono"
-              name="telefono"
-              placeholder="Telefono"
-              className="border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
+          <FormField
+            type="tel"
+            id="telefono"
+            name="telefono"
+            placeholder="Telefono"
+          />
 
-          {/* Fecha de evento */}
           <div className="flex flex-col">
-            <label
-              htmlFor="fecha"
-              className="mb-1 font-semibold"
-            >
+            <label htmlFor="fecha" className="mb-1 font-semibold">
               Fecha de evento
             </label>
-            <input
+            <FormField
               type="date"
               id="fecha"
               name="fecha"
-              className="border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
           </div>
 
-          {/* Tipo de evento */}
-          <div className="flex flex-col">
-            <label
-              htmlFor="tipoEvento"
-              className="mb-1 font-semibold"
-            >
-              Tipo de evento
-            </label>
-            <select
-              id="tipoEvento"
-              name="tipoEvento"
-              className="border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-              required
-            >
-              <option value="">Selecciona</option>
-              <option value="cumpleaños">Cumpleaños</option>
-              <option value="bodas">Boda</option>
-              <option value="corporativo">Evento corporativo</option>
-              <option value="otros">Otros</option>
-            </select>
-          </div>
+          <FormSelect
+            id="tipoEvento"
+            name="tipoEvento"
+            label="Tipo de evento"
+            required
+            options={[
+              { value: "cumpleaños", label: "Cumpleaños" },
+              { value: "bodas", label: "Boda" },
+              { value: "corporativo", label: "Evento corporativo" },
+              { value: "otros", label: "Otros" },
+            ]}
+          />
 
-          {/* Mensaje (textarea) */}
-          <div className="flex flex-col md:col-span-2">
-            <label
-              htmlFor="mensaje"
-              className="mb-1 font-semibold"
-            >
-              Descripción del evento
-            </label>
-            <textarea
-              id="mensaje"
-              name="mensaje"
-              placeholder="Cuéntanos un poco qué quieres..."
-              className="border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-              rows="5"
-              required
-            ></textarea>
-          </div>
+          <FormTextarea
+            id="mensaje"
+            name="mensaje"
+            label="Descripción del evento"
+            placeholder="Cuéntanos un poco qué quieres..."
+            required
+          />
 
-          {/* Botón de envío */}
-          <div className="md:col-span-2 flex justify-center">
+          <div className="flex justify-center md:col-span-2">
             <button
               type="submit"
-              className="inline-block border-2 border-[#121212] bg-transparent hover:bg-[#121212] text-[#121212] hover:text-white px-6 py-3 text-md uppercase font-marcellus font-semibold tracking-wider transition-all duration-300"
+              className="inline-block border-2 border-[#121212] bg-transparent px-6 py-3 text-md font-semibold uppercase tracking-wider text-[#121212] transition-all duration-300 hover:bg-[#121212] hover:text-white font-marcellus"
             >
               Enviar
             </button>

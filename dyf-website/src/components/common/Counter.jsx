@@ -1,58 +1,60 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Counter = ({ from = 0, to = 250, duration = 2000 }) => {
   const [count, setCount] = useState(from);
-  const [scale, setScale] = useState(1);
-  const [startCount, setStartCount] = useState(false);
-  const ref = useRef();
+  const elementRef = useRef(null);
+  const hasStarted = useRef(false);
 
-  // Detecta cuando el contador entra en pantalla
+  // Observer: inicia el conteo al entrar en viewport
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setStartCount(true);
-          observer.unobserve(ref.current);
+        if (entry.isIntersecting && !hasStarted.current) {
+          hasStarted.current = true;
+          animateCount();
+          observer.disconnect();
         }
       },
       { threshold: 0.5 }
     );
 
-    if (ref.current) observer.observe(ref.current);
+    if (elementRef.current) observer.observe(elementRef.current);
+
     return () => observer.disconnect();
   }, []);
 
-  // Conteo animado
-  useEffect(() => {
-    if (!startCount) return;
+  const animateCount = () => {
+    const startTime = performance.now();
 
-    let start = from;
-    const end = to;
-    const incrementTime = 10;
-    const steps = duration / incrementTime;
-    const stepValue = (end - start) / steps;
+    const animate = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
 
-    const timer = setInterval(() => {
-      start += stepValue;
-      if (start >= end) {
-        start = end;
-        clearInterval(timer);
+      const value = Math.floor(from + (to - from) * progress);
+      setCount(value);
+
+      // efecto sutil de escala (sin estado)
+      if (elementRef.current) {
+        elementRef.current.style.transform = "scale(1.15)";
+        requestAnimationFrame(() => {
+          if (elementRef.current) {
+            elementRef.current.style.transform = "scale(1)";
+          }
+        });
       }
-      setCount(Math.floor(start));
 
-      // efecto sutil de escala
-      setScale(1.15);
-      setTimeout(() => setScale(1), incrementTime);
-    }, incrementTime);
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
 
-    return () => clearInterval(timer);
-  }, [startCount, from, to, duration]);
+    requestAnimationFrame(animate);
+  };
 
   return (
     <div
-      ref={ref}
+      ref={elementRef}
       className="text-6xl font-extrabold font-audiowide text-center text-azulOscuro transition-transform duration-150 ease-out"
-      style={{ transform: `scale(${scale})` }}
     >
       {count.toLocaleString()}+
     </div>
