@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, useCallback } from "react";
 import GalleryModal from "./GalleryModal";
 import GallerySection from "./GallerySection";
 
@@ -40,60 +40,55 @@ export default function Gallery() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentSection, setCurrentSection] = useState(0);
 
-  // arreglo combinado para navegación lineal en modal (opcional)
-  /*  const flattened = useMemo(
-    () => sectionsData.map(s => s.images).flat(),
-    []
-  ); */
+  const currentImages = sectionsData[currentSection].images;
+  const currentImage = currentImages[currentIndex];
 
-  const openModal = (sectionIdx, imgIdx) => {
+  const openModal = useCallback((sectionIdx, imgIdx) => {
     setCurrentSection(sectionIdx);
     setCurrentIndex(imgIdx);
     setIsOpen(true);
-  };
+  }, []);
 
-  const closeModal = () => setIsOpen(false);
+  const closeModal = useCallback(() => {
+    setIsOpen(false);
+  }, []);
 
-  const goNext = () => {
-    const images = sectionsData[currentSection].images;
-    if (currentIndex < images.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-    } else {
-      // si querés rotar entre secciones (opcional), podés hacer:
-      // pasar a siguiente sección si existe
-      if (currentSection < sectionsData.length - 1) {
-        setCurrentSection(currentSection + 1);
-        setCurrentIndex(0);
-      }
+  const goNext = useCallback(() => {
+    if (currentIndex < currentImages.length - 1) {
+      setCurrentIndex((i) => i + 1);
+      return;
     }
-  };
 
-  const goPrev = () => {
+    if (currentSection < sectionsData.length - 1) {
+      setCurrentSection((s) => s + 1);
+      setCurrentIndex(0);
+    }
+  }, [currentIndex, currentImages.length, currentSection]);
+
+  const goPrev = useCallback(() => {
     if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    } else {
-      if (currentSection > 0) {
-        const prevSection = currentSection - 1;
-        const prevImgs = sectionsData[prevSection].images;
-        setCurrentSection(prevSection);
-        setCurrentIndex(prevImgs.length - 1);
-      }
+      setCurrentIndex((i) => i - 1);
+      return;
     }
-  };
+
+    if (currentSection > 0) {
+      const prevSection = currentSection - 1;
+      const prevImages = sectionsData[prevSection].images;
+
+      setCurrentSection(prevSection);
+      setCurrentIndex(prevImages.length - 1);
+    }
+  }, [currentIndex, currentSection]);
 
   return (
     <div className="container mx-auto px-4 py-8 mt-12">
-      {/* Sección introductoria a la galería */}
       <section className="mb-16 flex flex-col items-center text-center px-4 sm:px-6 lg:px-0">
-        {/* Título */}
         <h1 className="text-3xl md:text-4xl font-urbanist font-semibold uppercase mb-2 tracking-wide">
           nuestra galeria
         </h1>
 
-        {/* Línea decorativa */}
-        <div className="bg-dorado h-2 w-16 sm:w-20 mb-6"></div>
+        <div className="bg-dorado h-2 w-16 sm:w-20 mb-6" />
 
-        {/* Mensaje */}
         <p className="text-gray-800 font-marcellus text-lg md:text-xl max-w-3xl">
           Descubrí los momentos más especiales de nuestros eventos, la
           creatividad en nuestra barra de tragos y los detalles que hacen que
@@ -113,10 +108,10 @@ export default function Gallery() {
       {isOpen && (
         <GalleryModal
           onClose={closeModal}
-          src={sectionsData[currentSection].images[currentIndex].src}
+          src={currentImage.src}
+          caption={currentImage.caption}
           goNext={goNext}
           goPrev={goPrev}
-          caption={sectionsData[currentSection].images[currentIndex].caption}
         />
       )}
     </div>
