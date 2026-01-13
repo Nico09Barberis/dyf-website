@@ -4,33 +4,64 @@ import GallerySection from "./GallerySection";
 
 const sectionsData = [
   {
-    key: "bodas",
-    title: "bodas",
+    key: "eventos-celebraciones-integrales",
+    title: "eventos & celebraciones integrales",
     images: [
-      { src: "/images/galery/weddings/wedding-1.jpg", caption: "Ceremonia al aire libre" },
-      { src: "/images/galery/weddings/wedding-2.jpg", caption: "Recepción con estilo" },
-      { src: "/images/galery/weddings/wedding-3.jpg", caption: "Decoración floral" },
-      { src: "/images/galery/weddings/wedding-4.jpg", caption: "Baile de los novios" },
+      {
+        src: "/images/galery/weddings/wedding-1.jpg",
+        caption: "Ceremonia al aire libre",
+      },
+      {
+        src: "/images/galery/weddings/wedding-2.jpg",
+        caption: "Recepción con estilo",
+      },
+      {
+        src: "/images/galery/weddings/wedding-3.jpg",
+        caption: "Decoración floral",
+      },
+      {
+        src: "/images/galery/weddings/wedding-4.jpg",
+        caption: "Baile de los novios",
+      },
     ],
   },
   {
-    key: "eventos",
-    title: "eventos",
+    key: "decoracion",
+    title: "decoración",
     images: [
       { src: "/images/galery/eventos/event-1.jpg", caption: "Show en vivo" },
-      { src: "/images/galery/eventos/event-2.jpg", caption: "Ambiente nocturno" },
-      { src: "/images/galery/eventos/event-3.jpg", caption: "Brindis con amigos" },
-      { src: "/images/galery/eventos/event-4.jpg", caption: "Celebración especial" },
+      {
+        src: "/images/galery/eventos/event-2.jpg",
+        caption: "Ambiente nocturno",
+      },
+      {
+        src: "/images/galery/eventos/event-3.jpg",
+        caption: "Brindis con amigos",
+      },
+      {
+        src: "/images/galery/eventos/event-4.jpg",
+        caption: "Celebración especial",
+      },
     ],
   },
   {
-    key: "comidas",
-    title: "comidas",
+    key: "mobiliario",
+    title: "mobiliario",
     images: [
-      { src: "/images/galery/foods/food-1.jpg", caption: "Entrada gourmet" },
-      { src: "/images/galery/foods/food-2.jpg", caption: "Plato principal" },
-      { src: "/images/galery/foods/food-3.jpg", caption: "Postre artesanal" },
-      { src: "/images/galery/foods/food-4.jpg", caption: "Buffet variado" },
+      { src: "/images/galery/furniture/furniture-1.webp", caption: "Entrada gourmet" },
+      { src: "/images/galery/furniture/furniture-2.webp", caption: "Plato principal" },
+      { src: "/images/galery/furniture/furniture-3.webp", caption: "Postre artesanal" },
+      { src: "/images/galery/furniture/furniture-4.webp", caption: "Buffet variado" },
+    ],
+  },
+  {
+    key: "vajilla",
+    title: "vajilla",
+    images: [
+      { src: "/images/galery/tableware/tableware-1.webp", caption: "Entrada gourmet" },
+      { src: "/images/galery/tableware/tableware-2.webp", caption: "Plato principal" },
+      { src: "/images/galery/tableware/tableware-3.webp", caption: "Postre artesanal" },
+      { src: "/images/galery/tableware/tableware-4.webp", caption: "Buffet variado" },
     ],
   },
 ];
