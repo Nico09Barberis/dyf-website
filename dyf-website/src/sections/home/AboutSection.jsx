@@ -40,9 +40,9 @@ const AboutSection = () => {
         </h3>
         <div className="w-20 h-2 bg-[#F4D03F] mb-2"></div>
         <p className="text-gray-800 text-md md:text-lg font-marcellus leading-relaxed">
-          En d&f creemos que cada evento cuenta una historia, y nuestro
+          En d&f creemos que cada evento cuenta una historia y nuestro
           propósito es ayudarte a contar la tuya de la mejor manera. Nos
-          especializamos en la gestión, organización y planificación integral de
+          especializamos en la gestión, planificación y organización integral de
           todo tipo de eventos, creando experiencias únicas que reflejan la
           esencia y estilo de cada cliente.< br/> Acompañamos a nuestros clientes
           desde la primera idea hasta el último detalle, creando experiencias

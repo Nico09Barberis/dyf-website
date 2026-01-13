@@ -232,25 +232,32 @@ function Navbar() {
               {openDropdown === "servicios" && (
                 <div className="ml-4 mt-2 space-y-2">
                   <Link
-                    to="/servicios/diseno"
+                    to="/servicios/alquiler-vajilla"
                     onClick={() => setIsOpen(false)}
                     className="block text-gray-200 hover:text-gray-300 hover:bg-[#002856] py-1 px-2 rounded-lg"
                   >
-                    Diseño
+                    Alquiler de vajilla
                   </Link>
                   <Link
-                    to="/servicios/construccion"
+                    to="/servicios/alquiler-mobiliario"
                     onClick={() => setIsOpen(false)}
                     className="block text-gray-200 hover:text-gray-300 hover:bg-[#002856] py-1 px-2 rounded-lg"
                   >
-                    Construcción
+                    Alquiler de mobiliario
                   </Link>
                   <Link
-                    to="/servicios/mantenimiento"
+                    to="/servicios/decoracion-ambientacion"
                     onClick={() => setIsOpen(false)}
                     className="block text-gray-200 hover:text-gray-300 hover:bg-[#002856] py-1 px-2 rounded-lg"
                   >
-                    Mantenimiento
+                    Decoración y ambientación de eventos
+                  </Link>
+                  <Link
+                    to="/servicios/organizacion-integral"
+                    onClick={() => setIsOpen(false)}
+                    className="block text-gray-200 hover:text-gray-300 hover:bg-[#002856] py-1 px-2 rounded-lg"
+                  >
+                    Organizacion integral de eventos
                   </Link>
                 </div>
               )}
@@ -316,9 +323,10 @@ function Navbar() {
             to: "/servicios",
             label: "servicios",
             submenu: [
-              { to: "/servicios/diseno", label: "Diseño" },
-              { to: "/servicios/construccion", label: "Construcción" },
-              { to: "/servicios/mantenimiento", label: "Mantenimiento" },
+              { to: "/servicios/alquiler-vajilla", label: "Alquiler de vajilla" },
+              { to: "/servicios/alquiler-mobiliario", label: "Alquiler de mobiliario" },
+              { to: "/servicios/ambientacion-decoracion", label: "Ambientación y decoración de eventos" },
+              { to: "/servicios/organizacion-integral", label: "Organizacion integral de eventos" },
             ],
           },
           { to: "/galeria", label: "galeria" },

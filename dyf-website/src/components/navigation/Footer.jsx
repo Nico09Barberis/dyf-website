@@ -7,9 +7,10 @@ import logo from "../../assets/images/logo.png";
 import SocialLinks from "../ui/SocialLinks";
 
 const SERVICIOS = [
-  { id: "s1", label: "Servicio 1", to: "/" },
-  { id: "s2", label: "Servicio 2", to: "/nosotros" },
-  { id: "s3", label: "Servicio 3", to: "/galeria" },
+  { id: "s1", label: "Alquiler de vajilla", to: "/" },
+  { id: "s2", label: "Alquiler de mobiliario", to: "/nosotros" },
+  { id: "s3", label: "Ambientación y decoración de eventos", to: "/galeria" },
+  { id: "s4", label: "Organizacion integral de eventos", to: "/galeria" },
 ];
 
 const EMPRESA = [
@@ -72,14 +73,18 @@ const Footer = () => {
               href="mailto:correo@hotmail.com"
               className="break-words hover:underline"
             >
-              correo@hotmail.com
+              dyfcelebraciones@gmail.com
             </a>
           </p>
 
-          <p className="flex flex-wrap items-center gap-2 text-gray-300">
-            <MdOutlinePhoneIphone className="text-2xl text-[#E7D283]" />
-            +54 3492 582838
-          </p>
+          <div className="flex items-start gap-2 text-gray-300">
+            <MdOutlinePhoneIphone className="text-2xl text-[#E7D283] mt-2" />
+
+            <div className="flex flex-col leading-tight">
+              <span>3512 324008</span>
+              <span>351 2312725</span>
+            </div>
+          </div>
 
           <div className="mt-2 flex flex-wrap gap-3">
             <SocialLinks />
