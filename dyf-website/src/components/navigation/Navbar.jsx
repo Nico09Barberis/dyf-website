@@ -371,7 +371,7 @@ function Navbar() {
             {/* Submenu */}
             {item.submenu && (
               <div
-                className={`absolute left-0 top-full mt-1 hidden group-hover:block shadow-lg w-48 z-10 transition-colors duration-300
+                className={`absolute left-0 top-full mt-1 hidden group-hover:block shadow-lg w-56 z-10 transition-colors duration-300
             ${isShrunk ? "bg-white" : "bg-black/70"}`}
               >
                 {item.submenu.map((sub) => (
@@ -381,7 +381,7 @@ function Navbar() {
                     className={`block px-4 py-2 transition-colors duration-150
                 ${
                   isShrunk
-                    ? "text-gray-700 hover:text-gray-900 hover:bg-gray-100"
+                    ? "text-gray-700 hover:text-gray-900 hover:bg-gray-200"
                     : "text-white hover:text-dorado hover:bg-black/50"
                 }`}
                   >

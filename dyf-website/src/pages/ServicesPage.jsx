@@ -1,6 +1,8 @@
 import HeroWithBreadcrumb from "../components/navigation/HeroWithBreadcrumb";
-import AboutSection from "../sections/home/AboutSection";
 import HeroBanner from "../sections/home/HeroBanner";
+import ImgCardSection from "../sections/services/ImgCardSection";
+import ServicesIntroSection from "../sections/services/ServicesIntroSection";
+import ServicesZigZagSection from "../sections/services/ServiceZigZagSection";
 
 export default function ServicesPage() {
   const breadcrumb = [
@@ -16,7 +18,11 @@ export default function ServicesPage() {
         imageUrl="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
       />
 
-      <AboutSection />
+      <ServicesIntroSection />
+
+      <ImgCardSection />
+
+      <ServicesZigZagSection />
 
       <HeroBanner
         title="¿Buscas ayuda ahora mismo?"
