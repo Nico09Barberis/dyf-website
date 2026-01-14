@@ -7,41 +7,20 @@ const sectionsData = [
     key: "eventos-celebraciones-integrales",
     title: "eventos & celebraciones integrales",
     images: [
-      {
-        src: "/images/galery/weddings/wedding-1.jpg",
-        caption: "Ceremonia al aire libre",
-      },
-      {
-        src: "/images/galery/weddings/wedding-2.jpg",
-        caption: "Recepción con estilo",
-      },
-      {
-        src: "/images/galery/weddings/wedding-3.jpg",
-        caption: "Decoración floral",
-      },
-      {
-        src: "/images/galery/weddings/wedding-4.jpg",
-        caption: "Baile de los novios",
-      },
+      { src: "/images/galery/fullEvents/fullEvent-1.webp", caption: "Ceremonia al aire libre" },
+      { src: "/images/galery/fullEvents/fullEvent-2.webp", caption: "Recepción con estilo"},
+      { src: "/images/galery/fullEvents/fullEvent-3.webp", caption: "Decoración floral" },
+      { src: "/images/galery/fullEvents/fullEvent-4.webp", caption: "Baile de los novios" },
     ],
   },
   {
     key: "decoracion",
     title: "decoración",
     images: [
-      { src: "/images/galery/eventos/event-1.jpg", caption: "Show en vivo" },
-      {
-        src: "/images/galery/eventos/event-2.jpg",
-        caption: "Ambiente nocturno",
-      },
-      {
-        src: "/images/galery/eventos/event-3.jpg",
-        caption: "Brindis con amigos",
-      },
-      {
-        src: "/images/galery/eventos/event-4.jpg",
-        caption: "Celebración especial",
-      },
+      { src: "/images/galery/eventos/event-1.webp", caption: "Show en vivo" },
+      { src: "/images/galery/eventos/event-2.webp", caption: "Ambiente nocturno"},
+      { src: "/images/galery/eventos/event-3.webp", caption: "Brindis con amigos" },
+      { src: "/images/galery/eventos/event-4.webp", caption: "Celebración especial" },
     ],
   },
   {

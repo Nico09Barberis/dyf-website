@@ -14,7 +14,7 @@ function GallerySection({ title, images = [], onImageClick }) {
       {/* Título */}
       <div className="flex items-center gap-3 mb-4 border-l-4 border-dorado pl-3">
         <FaCameraRetro className="text-gray-800 text-2xl" aria-hidden />
-        <h2 className="text-3xl font-italiana font-semibold uppercase tracking-wide">
+        <h2 className="text-xl md:text-3xl font-italiana font-semibold uppercase tracking-wide">
           {title}
         </h2>
       </div>

@@ -323,10 +323,22 @@ function Navbar() {
             to: "/servicios",
             label: "servicios",
             submenu: [
-              { to: "/servicios/alquiler-vajilla", label: "Alquiler de vajilla" },
-              { to: "/servicios/alquiler-mobiliario", label: "Alquiler de mobiliario" },
-              { to: "/servicios/ambientacion-decoracion", label: "Ambientación y decoración de eventos" },
-              { to: "/servicios/organizacion-integral", label: "Organizacion integral de eventos" },
+              {
+                to: "/servicios/alquiler-vajilla",
+                label: "Alquiler de vajilla",
+              },
+              {
+                to: "/servicios/alquiler-mobiliario",
+                label: "Alquiler de mobiliario",
+              },
+              {
+                to: "/servicios/ambientacion-decoracion",
+                label: "Ambientación y decoración de eventos",
+              },
+              {
+                to: "/servicios/organizacion-integral",
+                label: "Organizacion integral de eventos",
+              },
             ],
           },
           { to: "/galeria", label: "galeria" },
@@ -335,9 +347,18 @@ function Navbar() {
           <div key={item.to} className="relative group">
             {/* Si tiene submenu, usamos un span en vez de Link */}
             {item.submenu ? (
-              <span className="relative uppercase text-gray-200 hover:text-gray-300 pb-1 border-b-2 border-transparent hover:border-beige transition-all duration-200">
-                {item.label}
-              </span>
+              item.to === "/servicios" ? (
+                <Link
+                  to={item.to}
+                  className="relative uppercase text-gray-200 hover:text-gray-300 pb-1 border-b-2 border-transparent hover:border-beige transition-all duration-200"
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <span className="relative uppercase text-gray-200 hover:text-gray-300 pb-1 border-b-2 border-transparent hover:border-beige transition-all duration-200 cursor-default">
+                  {item.label}
+                </span>
+              )
             ) : (
               <Link
                 to={item.to}
