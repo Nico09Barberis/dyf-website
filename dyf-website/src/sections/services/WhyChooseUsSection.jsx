@@ -5,7 +5,7 @@ import {
   FiStar,
   FiUsers,
   FiClock,
-  FiGrid
+  FiGrid,
 } from "react-icons/fi";
 
 const benefits = [
@@ -13,38 +13,38 @@ const benefits = [
     title: "Servicios flexibles",
     description:
       "Contrata uno o varios servicios según las necesidades de tu evento, sin obligación de paquetes cerrados.",
-    icon: FiLayers
+    icon: FiLayers,
   },
   {
     title: "Experiencia en eventos",
     description:
       "Acompañamos celebraciones sociales y corporativas, cuidando cada detalle desde la planificación hasta la ejecución.",
-    icon: FiAward
+    icon: FiAward,
   },
   {
     title: "Calidad garantizada",
     description:
       "Trabajamos con vajilla y mobiliario en excelente estado, seleccionados para ofrecer una presentación elegante y profesional.",
-    icon: FiStar
+    icon: FiStar,
   },
   {
     title: "Atención personalizada",
     description:
       "Escuchamos tus ideas y te asesoramos para crear una propuesta acorde a tu estilo, presupuesto y tipo de evento.",
-    icon: FiUsers
+    icon: FiUsers,
   },
   {
     title: "Puntualidad y compromiso",
     description:
       "Cumplimos con los tiempos acordados para que tu evento se desarrolle sin imprevistos.",
-    icon: FiClock
+    icon: FiClock,
   },
   {
     title: "Soluciones integrales",
     description:
       "Si lo deseas, coordinamos todos los servicios en una sola propuesta para mayor comodidad y tranquilidad.",
-    icon: FiGrid
-  }
+    icon: FiGrid,
+  },
 ];
 
 const WhyChooseUsSection = () => {
@@ -97,9 +97,14 @@ const WhyChooseUsSection = () => {
             </div>
 
             <div className="mt-10">
-              <button className="inline-flex items-center gap-2 text-dorado font-urbanist font-medium hover:underline transition">
+              <a
+                href="https://wa.me/5493512324008?text=Hola%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20sus%20servicios"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-dorado font-urbanist font-medium hover:underline transition"
+              >
                 Consultar por los servicios →
-              </button>
+              </a>
             </div>
           </div>
 

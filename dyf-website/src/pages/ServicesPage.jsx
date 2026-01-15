@@ -4,7 +4,7 @@ import ImgCardSection from "../sections/services/ImgCardSection";
 import ServicesIntroSection from "../sections/services/ServicesIntroSection";
 import ServicesZigZagSection from "../sections/services/ServiceZigZagSection";
 import WhyChooseUsSection from "../sections/services/WhyChooseUsSection";
-import MiniFAQSection from "./servicesPage/MiniFAQSection";
+import MiniFAQSection from "../sections/services/MiniFAQSection";
 
 export default function ServicesPage() {
   const breadcrumb = [{ label: "Home", href: "/" }, { label: "Servicios" }];
