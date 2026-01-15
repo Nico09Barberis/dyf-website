@@ -1,4 +1,3 @@
-
 import HeroWithBreadcrumb from "../components/navigation/HeroWithBreadcrumb";
 import ClientsIntroSection from "../sections/bussines/clientsSections/ClientIntroSection";
 import ClientsCatSection from "../sections/bussines/clientsSections/ClientsCatSection";
@@ -7,7 +6,6 @@ import ClientTestimonialsSection from "../sections/bussines/clientsSections/Clie
 import HeroBanner from "../sections/home/HeroBanner";
 
 export default function ClientsPage() {
-
   const breadcrumb = [
     { label: "Home", href: "/" },
     { label: "Empresa" },
@@ -16,7 +14,6 @@ export default function ClientsPage() {
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50 text-gray-800">
-
       <HeroWithBreadcrumb
         title="Clientes"
         breadcrumbItems={breadcrumb}
@@ -30,14 +27,6 @@ export default function ClientsPage() {
       <ClientsGallerySection />
 
       <ClientTestimonialsSection />
-
- 
-      <HeroBanner
-        title="¿Listo para organizar tu proximo evento?"
-        buttonText="Hablá con nosotros"
-        message="¡Hola! Me gustaría recibir más información sobre sus servicios."
-        backgroundImage="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80"
-      />
 
     </main>
   );
