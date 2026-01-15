@@ -17,7 +17,7 @@ const ImgCardSection = () => {
       {/* Contenedor Derecho */}
       <div className="w-full md:w-1/2 flex flex-col shadow-2xl justify-center px-6 py-10">
         <h2 className="text-2xl uppercase font-lora font-semibold mb-2">d&f</h2>
-        <h3 className="text-3xl font-lora font-semibold text-gray-800 mb-1">
+        <h3 className="text-2xl md:text-3xl font-lora font-semibold text-gray-800 mb-1">
           ¿Que ofrecemos?
         </h3>
         <div className="w-20 h-2 bg-[#F4D03F] mb-2"></div>
