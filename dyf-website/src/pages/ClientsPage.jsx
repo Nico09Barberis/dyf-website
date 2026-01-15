@@ -1,8 +1,9 @@
 
 import HeroWithBreadcrumb from "../components/navigation/HeroWithBreadcrumb";
-import ClientCardSection from "../sections/bussines/clientsSections/ClientCardSection";
 import ClientsIntroSection from "../sections/bussines/clientsSections/ClientIntroSection";
 import ClientsCatSection from "../sections/bussines/clientsSections/ClientsCatSection";
+import ClientsGallerySection from "../sections/bussines/clientsSections/ClientsGallerySection";
+import ClientTestimonialsSection from "../sections/bussines/clientsSections/ClientTestimonialSection";
 import HeroBanner from "../sections/home/HeroBanner";
 
 export default function ClientsPage() {
@@ -26,11 +27,13 @@ export default function ClientsPage() {
 
       <ClientsCatSection />
 
-      <ClientCardSection />
+      <ClientsGallerySection />
+
+      <ClientTestimonialsSection />
 
  
       <HeroBanner
-        title="¿Necesitás asesoramiento inmediato?"
+        title="¿Listo para organizar tu proximo evento?"
         buttonText="Hablá con nosotros"
         message="¡Hola! Me gustaría recibir más información sobre sus servicios."
         backgroundImage="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80"

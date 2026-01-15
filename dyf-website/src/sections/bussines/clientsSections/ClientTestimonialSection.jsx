@@ -1,5 +1,6 @@
 import React from "react";
 import { FiMessageSquare } from "react-icons/fi";
+import commentImg from "../../../../public/images/varias/coment.jpg";
 
 const testimonials = [
   {
@@ -31,31 +32,28 @@ const ClientTestimonialsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
           {/* Image */}
-          <div className="w-full h-72 md:h-96 rounded-xl overflow-hidden">
+          <div className="w-full h-72 md:h-80 rounded-xl overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80"
+              src={commentImg}
               alt="Clientes satisfechos"
-              className="w-full h-full object-cover"
+              className="w-full h-48 md:h-80 object-cover"
             />
           </div>
 
           {/* Text content */}
-          <div>
-            <h2 className="text-3xl md:text-4xl font-urbanist uppercase font-bold text-gray-900 mb-3">
+          <div className="bg-gray-50 p-12">
+            <p className="text-md text-gray-400 font-urbanist uppercase font-bold tracking-widest mb-4">
+              reseñas
+            </p>
+            <h2 className="text-3xl md:text-4xl font-urbanist uppercase font-bold text-gray-500 mb-3">
               La experiencia de nuestros clientes
             </h2>
 
             <div className="w-20 h-1.5 bg-dorado mb-4"></div>
 
-            <p className="font-marcellus text-gray-700 text-lg mb-3">
+            <p className="font-marcellus text-gray-600 text-lg mb-3">
               Cada evento es una oportunidad para construir relaciones duraderas
               basadas en la confianza, la calidad y el compromiso.
-            </p>
-
-            <p className="font-marcellus text-gray-600 text-base leading-relaxed">
-              Empresas privadas, instituciones públicas y clientes particulares
-              confían en nuestro trabajo para desarrollar celebraciones y encuentros
-              que requieren organización, estética y cumplimiento profesional.
             </p>
           </div>
 
@@ -69,10 +67,18 @@ const ClientTestimonialsSection = () => {
           {testimonials.map((item, index) => (
             <div
               key={index}
-              className="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm relative"
+              className="
+                group
+                bg-gray-50 border border-gray-200 rounded-b-xl p-6 shadow-sm relative
+                transition-all duration-300 ease-out
+                hover:-translate-y-2 hover:shadow-lg
+              "
             >
+              {/* Top golden bar */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-dorado scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+
               {/* Quote icon */}
-              <div className="absolute top-4 right-4 text-dorado/30 text-3xl">
+              <div className="absolute top-4 right-4 text-dorado/30 text-3xl transition-all duration-300 group-hover:text-dorado group-hover:scale-110">
                 <FiMessageSquare />
               </div>
 
@@ -81,7 +87,7 @@ const ClientTestimonialsSection = () => {
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="w-12 h-12 rounded-full object-cover"
+                  className="w-12 h-12 rounded-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
                 <div>
                   <p className="font-urbanist font-semibold text-gray-900 text-sm">
