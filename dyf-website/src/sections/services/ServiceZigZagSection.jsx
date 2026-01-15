@@ -34,7 +34,7 @@ const services = [
 
 const ServicesZigZagSection = () => {
   return (
-    <section className="max-w-6xl mx-auto bg-white py-20">
+    <section className="max-w-6xl mx-auto py-20">
       <div className="max-w-7xl mx-auto px-6 space-y-20">
         {services.map((service, index) => {
           const isReversed = index % 2 !== 0;
