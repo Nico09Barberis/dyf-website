@@ -6,21 +6,21 @@ const services = [
     title: "Alquiler de vajilla",
     description:
       "Vajilla, cristalería y accesorios para eventos sociales y corporativos, con variedad de estilos y una presentación impecable.",
-    image: "/images/galery/eventos/event-1.jpg",
+    image: "/images/galery/tableware/tableware-3.webp",
     path: "/servicios/alquiler-vajilla",
   },
   {
     title: "Alquiler de mobiliario",
     description:
       "Mesas, sillas y mobiliario funcional y estético para todo tipo de eventos, adaptado a cada espacio y necesidad.",
-    image: "/images/galery/eventos/event-1.jpg",
+    image: "/images/galery/furniture/furniture-2.webp",
     path: "/servicios/alquiler-mobiliario",
   },
   {
     title: "Ambientación y decoración",
     description:
       "Diseño y montaje de espacios únicos, personalizados según la temática, el estilo y la identidad de cada celebración.",
-    image: "/images/galery/eventos/event-1.jpg",
+    image: "/images/galery/eventos/event-4.jpg",
     path: "/servicios/ambientacion-decoracion",
   },
   {
@@ -69,7 +69,7 @@ const ServicesZigZagSection = () => {
                 <div className="flex flex-wrap gap-4">
                   <Link
                     to={service.path}
-                    className="inline-block px-6 py-3 font-marcellus bg-gray-900 text-white rounded-md transition-all duration-300 hover:bg-gray-800 hover:scale-[1.03]"
+                    className="inline-block px-6 py-3 font-marcellus bg-azulOscuro text-white rounded-md transition-all duration-300 hover:bg-gray-800 hover:scale-[1.03]"
                   >
                     Ver más
                   </Link>

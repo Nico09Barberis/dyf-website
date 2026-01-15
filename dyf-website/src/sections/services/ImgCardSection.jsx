@@ -21,13 +21,15 @@ const ImgCardSection = () => {
           ¿Que ofrecemos?
         </h3>
         <div className="w-20 h-2 bg-[#F4D03F] mb-2"></div>
-        <p className="text-gray-800 font-marcellus text-md md:text-lg leading-relaxed">
-          En DyF Celebraciones brindamos un servicio completo para la
-          realización de eventos, combinando planificación, ambientación
-          profesional y alquiler de vajilla y mobiliario. Nos adaptamos a cada
-          tipo de celebración, cuidando cada detalle para lograr experiencias
-          únicas, elegantes y memorables.
-        </p>
+          <p className="text-gray-800 font-marcellus text-md md:text-lg leading-relaxed">
+            En DyF Celebraciones ofrecemos soluciones flexibles para la
+            realización de eventos. Contamos con servicios de planificación
+            personalizada, ambientación profesional, alquiler de vajilla y
+            alquiler de mobiliario, los cuales pueden contratarse de forma
+            individual o integrarse en una propuesta completa según las
+            necesidades de cada celebración. Nos adaptamos a cada evento, cuidando
+            cada detalle para lograr experiencias únicas, elegantes y memorables.
+          </p>
         <div className="w-auto mt-4">
           <CustomButton
             to="/empresa/nosotros"
