@@ -99,7 +99,7 @@ export default function Gallery() {
 
         <div className="bg-dorado h-2 w-16 sm:w-20 mb-6" />
 
-        <p className="text-gray-800 font-marcellus text-lg md:text-xl max-w-3xl">
+        <p className="text-gray-800 font-marcellus text-md md:text-lg max-w-3xl">
           Descubrí los momentos más especiales de nuestros eventos, la
           creatividad en nuestra barra de tragos y los detalles que hacen que
           cada experiencia sea única.

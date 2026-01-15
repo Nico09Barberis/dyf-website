@@ -74,7 +74,7 @@ function ProcessSection() {
           Nuestro Proceso de Trabajo
         </h2>
         <div className="bg-dorado h-2 w-20 mx-auto mb-4" />
-        <p className="text-lg md:text-xl text-gray-800 font-marcellus">
+        <p className="text-md md:text-lg text-gray-800 font-marcellus">
           Te acompañamos paso a paso para crear un evento inolvidable.
         </p>
       </div>

@@ -9,7 +9,7 @@ const ServicesIntroSection = () => {
 
         <div className="w-20 h-2 bg-dorado mx-auto mb-6"></div>
 
-        <p className="text-lg md:text-xl font-marcellus text-gray-600 max-w-3xl mx-auto">
+        <p className="text-md md:text-lg font-marcellus text-gray-600 max-w-3xl mx-auto">
           Soluciones integrales en organización, ambientación y alquiler de
           equipamiento para eventos sociales y corporativos.
         </p>
