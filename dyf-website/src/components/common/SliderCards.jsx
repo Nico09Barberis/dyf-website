@@ -2,14 +2,15 @@ import { useEffect, useMemo, useRef, memo } from "react";
 import { FaStar } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import userPlaceholder from "../../assets/images/google-profile.png";
+import MarybelGatti from "../../assets/images/testimonials/marybel.png";
 
 const TESTIMONIALS = [
   {
     id: 1,
-    name: "Juan Pérez",
+    name: "Marybel Alvarez Gatti",
     userName: "@juanperez12",
     comment:
-      "Excelente servicio, muy profesional y atento. Recomiendo totalmente esta empresa.",
+    "Gracias Dani & Fede por acompañarnos en un momento TAN importante. Si buscan acompañamiento en cada detalle, profesionalismo y calidad sin duda llamen a D&F. Los queremos 🫶🏻…"
   },
   {
     id: 2,
@@ -68,7 +69,7 @@ const TestimonialCard = memo(function TestimonialCard({ data }) {
 
       <Stars />
 
-      <p className="break-words font-sans text-sm leading-relaxed text-gray-800 md:text-base">
+      <p className="break-words font-sans text-sm leading-relaxed text-gray-800">
         "{data.comment}"
       </p>
     </div>
