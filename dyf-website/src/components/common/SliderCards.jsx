@@ -2,36 +2,56 @@ import { useEffect, useMemo, useRef, memo } from "react";
 import { FaStar } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import userPlaceholder from "../../assets/images/google-profile.png";
-import MarybelGatti from "../../assets/images/testimonials/marybel.png";
+import test1 from "../../../public/images/testimonials/test-1.webp";
+import Test2 from "../../../public/images/testimonials/test-2.webp";
+import Test3 from "../../../public/images/testimonials/test-3.webp";
+import Test4 from "../../../public/images/testimonials/test-4.webp";
+import Test5 from "../../../public/images/testimonials/test-5.webp";
+import Test6 from "../../../public/images/testimonials/test-6.webp";
+
 
 const TESTIMONIALS = [
   {
     id: 1,
     name: "Marybel Alvarez Gatti",
-    userName: "@juanperez12",
+    image: test1,
     comment:
     "Gracias Dani & Fede por acompañarnos en un momento TAN importante. Si buscan acompañamiento en cada detalle, profesionalismo y calidad sin duda llamen a D&F. Los queremos 🫶🏻…"
   },
   {
     id: 2,
-    name: "María López",
-    userName: "@maria.lopez3",
+    name: "Guillermo Bianchini",
+    image: Test2,
     comment:
-      "Me encantó la atención y la calidad del trabajo. Muy satisfecho con el resultado final.",
+      "Excelente servicio! Muy prolijos, puntuales, limpios, y sus productos son impecables! Super recomendables!",
   },
   {
     id: 3,
-    name: "Carlos Rodríguez",
-    userName: "@crodriguez10",
+    name: "juan jose chekirdimian",
+    image: Test3,
     comment:
-      "Gran experiencia, equipo muy capacitado y amable. Sin dudas volveré a contratar.",
+      "Me han provisto de sillas y cubre asientos nuevos . Me han traído las sillas a mi domicilio. Hab cumplido con el horario prometido para la entrega. Estoy muy satisfecho.",
   },
   {
     id: 4,
-    name: "Ana Gómez",
-    userName: "@soy_anagomez",
+    name: "Liliana Ludueña",
+    image: Test4,
     comment:
-      "Superaron mis expectativas, la comunicación fue excelente y el trabajo impecable.",
+      "Excelente el Servicio. Acomodaron las entregas y retiró de acuerdo a nuestra conveniencia lo que apreciamos muchísimo. Los tendremos siempre en cuenta para nuestros eventos y con mucho gusto los recomendamos.",
+  },
+   {
+    id: 5,
+    name: "Cecilia Casella",
+    image: Test5,
+    comment:
+      "Excelente atención! Trataron de resolver mis inconvenientes de tiempo, así la fiesta salía perfecta. Hermosos los juegos de living.",
+  },
+   {
+    id: 6,
+    name: "Rodrigo Ariel Ochoa",
+    image: Test6,
+    comment:
+      "Excelente servicio. Muy puntuales y amables. La vajilla excelente. Buena calidad de sillas y mesas. Y excelente relación precio / calidad. 100% recomendados  para que tu evento sea un éxito!",
   },
 ];
 
@@ -50,7 +70,7 @@ const TestimonialCard = memo(function TestimonialCard({ data }) {
       <div className="mb-4 flex items-center justify-between">
         <div className="flex items-center space-x-3">
           <img
-            src={userPlaceholder}
+            src={data.image || userPlaceholder}
             alt={data.name}
             className="h-10 w-10 rounded-full object-cover"
             loading="lazy"
@@ -58,9 +78,6 @@ const TestimonialCard = memo(function TestimonialCard({ data }) {
           <div className="flex flex-col font-sans">
             <span className="text-sm font-semibold text-gray-800">
               {data.name}
-            </span>
-            <span className="text-xs text-gray-600 opacity-80">
-              {data.userName}
             </span>
           </div>
         </div>
