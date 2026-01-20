@@ -78,7 +78,7 @@ export default function ServiceIncludesSection() {
 
                   {/* Texto */}
                   <div>
-                    <h3 className="font-marcellus text-lg font-semibold mb-1">
+                    <h3 className="font-marcellus text-lg font-semibold tracking-wider mb-1">
                       {item.title}
                     </h3>
                     <p className="font-marcellus text-gray-600 text-md leading-relaxed">
