@@ -53,19 +53,21 @@ function Navbar() {
         <div className="flex items-center space-x-4 z-10">
           {/* Phone Number (hidden on mobile) */}
           <a
-            href="tel:+34123456789"
+            href="https://wa.me/5493512324008?text=Hola%20quiero%20hacer%20una%20consulta."
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden md:flex items-center text-beige font-medium transition-colors duration-300"
           >
             <MdOutlinePhoneIphone className="w-5 h-5 mr-2 transition-colors duration-300 text-beige" />
-            +34 123 456 789
+            +3512324008
           </a>
 
           {/* Hamburger (only mobile) */}
           <button
             className={`md:hidden transition-colors duration-300 ${
               isShrunk
-                ? "text-gray-700 hover:text-gray-900"
-                : "text-white hover:text-gray-200"
+                ? "text-gray-300 hover:text-gray-200"
+                : "text-gray-100 hover:text-white"
             }`}
             onClick={() => setIsOpen(!isOpen)}
           >

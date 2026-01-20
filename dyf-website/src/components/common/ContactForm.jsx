@@ -134,9 +134,18 @@ export default function ContactForm() {
           <div className="flex justify-center md:col-span-2">
             <button
               type="submit"
-              className="inline-block border-2 border-[#121212] bg-transparent px-6 py-3 text-md font-semibold uppercase tracking-wider text-[#121212] transition-all duration-300 hover:bg-[#121212] hover:text-white font-marcellus"
-            >
-              Enviar
+              className="
+                inline-flex items-center justify-center
+                px-8 py-3
+                bg-dorado text-white
+                font-urbanist font-semibold
+                rounded-full
+                shadow-md
+                transition-all duration-300
+                hover:bg-dorado/90 hover:shadow-lg hover:-translate-y-0.5
+                focus:outline-none focus:ring-2 focus:ring-dorado focus:ring-offset-2"
+              >
+              Enviar 
             </button>
           </div>
         </form>

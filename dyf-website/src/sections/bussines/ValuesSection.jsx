@@ -4,7 +4,7 @@ import AnimatedCard from "../../components/ui/AnimatedCard";
 
 const ValuesSection = () => {
   return (
-    <section className="w-full py-20 bg-beige text-azulOscuro flex flex-col items-center text-center">
+    <section className="w-full py-20 bg-white text-azulOscuro flex flex-col items-center text-center">
       {/* Título */}
       <h2 className="text-3xl md:text-4xl font-urbanist font-semibold uppercase mb-2 text-azulOscuro">
         Nuestra Esencia
@@ -13,8 +13,8 @@ const ValuesSection = () => {
 
       {/* Subtítulo */}
       <p className="max-w-2xl font-marcellus text-md md:text-lg text-gray-800 text-center mb-12">
-        Descubrí qué nos motiva como empresa, nuestros principios y cómo generamos valor 
-        para nuestros clientes y la comunidad.
+        Descubrí qué nos motiva como empresa, nuestros principios y cómo
+        generamos valor para nuestros clientes y la comunidad.
       </p>
 
       {/* Contenedor de Cards */}
@@ -25,14 +25,14 @@ const ValuesSection = () => {
           text="Brindar soluciones innovadoras que empoderen a nuestros clientes y generen un impacto duradero en nuestro sector."
         />
         <AnimatedCard
-          title="Visión"
-          heading="Nuestra Visión"
-          text="Convertirnos en un referente de calidad y confianza, liderando con integridad e inspirando crecimiento para todos los que servimos."
-        />
-        <AnimatedCard
           title="Valores"
           heading="Nuestros Valores"
           text="Integridad, compromiso, excelencia y colaboración están en el corazón de todo lo que hacemos."
+        />
+        <AnimatedCard
+          title="Visión"
+          heading="Nuestra Visión"
+          text="Convertirnos en un referente de calidad y confianza, liderando con integridad e inspirando crecimiento para todos los que servimos."
         />
       </div>
     </section>

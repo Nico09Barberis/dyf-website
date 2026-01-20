@@ -16,7 +16,7 @@ export default function AboutPage() {
       <HeroWithBreadcrumb
         title="Acerca de nosotros"
         breadcrumbItems={breadcrumb}
-        imageUrl="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
+        imageUrl="../../public/images/bgPages/bgAbout.webp"
       />
 
       <PresentationSection />
