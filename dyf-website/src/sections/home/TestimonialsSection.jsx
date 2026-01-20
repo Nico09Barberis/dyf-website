@@ -1,5 +1,4 @@
 // src/components/sections/TestimonialsSection.jsx
-import React from "react";
 import SliderCards from "../../components/common/SliderCards";
 
 const TestimonialsSection = () => {
@@ -13,7 +12,7 @@ const TestimonialsSection = () => {
         <div className="bg-azulOscuro w-20 h-2 mx-auto mb-2"></div>
 
         {/* Subtítulo */}
-        <p className="text-gray-800 text-xl font-marcellus  mb-12">
+        <p className="text-gray-800 text-md md:text-lg font-marcellus  mb-12">
           Escucha directamente de quienes ya confiaron en nosotros y tuvieron
           una experiencia increíble.
         </p>

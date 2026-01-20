@@ -65,7 +65,7 @@ const Stars = memo(() => (
 
 const TestimonialCard = memo(function TestimonialCard({ data }) {
   return (
-    <div className="flex w-64 flex-shrink-0 cursor-pointer flex-col justify-between overflow-hidden bg-white p-3 text-black transition-transform duration-300 hover:scale-105 hover:shadow-2xl md:w-72 lg:w-80">
+    <div className="flex w-64 flex-shrink-0 cursor-pointer flex-col justify-start overflow-hidden bg-white p-3 text-black transition-transform duration-300 hover:scale-105 hover:shadow-2xl md:w-72 lg:w-80">
       {/* Header */}
       <div className="mb-4 flex items-center justify-between">
         <div className="flex items-center space-x-3">

@@ -9,6 +9,7 @@ const ValuesSection = () => {
       <h2 className="text-3xl md:text-4xl font-urbanist font-semibold uppercase mb-4 tracking-wide">
         Nuestra Esencia
       </h2>
+      <div className="w-20 h-1.5 bg-dorado mb-6"></div>
 
       {/* Subtítulo */}
       <p className="max-w-2xl font-marcellus text-md md:text-lg text-gray-800 text-center mb-12">
@@ -17,7 +18,7 @@ const ValuesSection = () => {
       </p>
 
       {/* Contenedor de Cards */}
-      <div className="flex flex-col md:flex-row justify-center items-center gap-8">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-8 max-w-full overflow-hidden">
         <AnimatedCard
           title="Misión"
           heading="Nuestra Misión"
