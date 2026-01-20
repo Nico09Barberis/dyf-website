@@ -1,6 +1,7 @@
 import HeroWithBreadcrumb from "../../components/navigation/HeroWithBreadcrumb";
 import AboutSection from "../../sections/home/AboutSection";
 import HeroSection from "../../sections/services/tableware/HeroSection";
+import ServiceIncludesSection from "../../sections/services/tableware/ServiceIncludesSection";
 import TypesSection from "../../sections/services/tableware/TypesSection";
 
 export default function TablewarePage() {
@@ -21,6 +22,8 @@ export default function TablewarePage() {
       <HeroSection />
 
       <TypesSection />
+
+      <ServiceIncludesSection />
 
       <AboutSection />
 

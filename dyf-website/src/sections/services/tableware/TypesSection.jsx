@@ -31,7 +31,7 @@ const types = [
   {
     title: "Vajilla Infantil",
     description: "Diseños divertidos y seguros para los más chicos.",
-    image: "../../../public/images/galery/tableware/tableware-1.webpg",
+    image: "../../../public/images/galery/tableware/tableware-2.webp",
   },
 ];
 
@@ -73,11 +73,11 @@ const TablewareTypes = () => {
               </div>
 
               {/* Contenido hover */}
-              <div className="absolute inset-0 flex flex-col justify-center items-center bg-dorado text-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <h3 className="text-xl font-semibold mb-3">
+              <div className="absolute inset-0 flex flex-col justify-center items-center bg-gradient-to-br from-[#A7C7E7] to-[#5B9BD5] text-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <h3 className="text-xl font-urbanist uppercase font-semibold mb-3">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 text-sm mb-4 font-lora">
+                <p className="text-md mb-4 font-marcellus font-semibold">
                   {item.description}
                 </p>
 
