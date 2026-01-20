@@ -93,11 +93,11 @@ export default function Gallery() {
   return (
     <div className="container mx-auto px-4 py-8 mt-12">
       <section className="mb-16 flex flex-col items-center text-center px-4 sm:px-6 lg:px-0">
-        <h1 className="text-3xl md:text-4xl font-urbanist font-semibold uppercase mb-2 tracking-wide">
+        <h1 className="text-3xl md:text-4xl font-urbanist font-semibold uppercase mb-2 text-azulOscuro">
           nuestra galeria
         </h1>
 
-        <div className="bg-dorado h-2 w-16 sm:w-20 mb-6" />
+        <div className="h-2 w-20 mx-auto mb-4 bg-dorado" />
 
         <p className="text-gray-800 font-marcellus text-md md:text-lg max-w-3xl">
           Descubrí los momentos más especiales de nuestros eventos, la

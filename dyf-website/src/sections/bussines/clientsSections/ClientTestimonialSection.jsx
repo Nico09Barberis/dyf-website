@@ -45,7 +45,7 @@ const ClientTestimonialsSection = () => {
             <p className="text-md text-gray-400 font-urbanist uppercase font-bold tracking-widest mb-4">
               reseñas
             </p>
-            <h2 className="text-3xl md:text-4xl font-urbanist uppercase font-bold text-gray-500 mb-3">
+            <h2 className="text-2xl md:text-3xl font-urbanist uppercase font-bold text-gray-600 mb-3">
               La experiencia de nuestros clientes
             </h2>
 

@@ -70,7 +70,7 @@ function ProcessSection() {
     <section className="flex flex-col items-center justify-center py-16 my-12">
       {/* Header */}
       <div className="text-center mb-12 px-4">
-        <h2 className="text-3xl md:text-4xl font-urbanist uppercase font-bold tracking-wide text-gray-900 mb-2">
+        <h2 className="text-3xl md:text-4xl font-urbanist uppercase font-semibold text-azulOscuro mb-2">
           Nuestro Proceso de Trabajo
         </h2>
         <div className="bg-dorado h-2 w-20 mx-auto mb-4" />

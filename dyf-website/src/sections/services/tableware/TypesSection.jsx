@@ -8,14 +8,17 @@ const types = [
   },
   {
     title: "Vajilla Moderna",
+    description: "Estilo minimalista y contemporáneo para celebraciones actuales.",
     image: "/images/galery/tableware/tableware-2.webp",
   },
   {
     title: "Vajilla Premium",
+    description: "Porcelana y terminaciones de alta gama para eventos exclusivos.",
     image: "/images/galery/tableware/tableware-3.webp",
   },
   {
     title: "Cristalería",
+    description: "Copas y vasos para todo tipo de bebidas y mesas elegantes.",
     image: "/images/galery/tableware/tableware-4.webp",
   },
 ];
@@ -60,11 +63,11 @@ const TablewareTypes = () => {
               </div>
 
               {/* Contenido hover */}
-              <div className="absolute inset-0 flex flex-col justify-center items-center bg-gradient-to-br from-[#A7C7E7] to-[#5B9BD5] text-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <div className="absolute inset-0 flex flex-col justify-center items-center bg-gradient-to-br from-[#CFE5F5] to-[#8FBCE8] text-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <h3 className="text-xl font-urbanist uppercase font-semibold mb-3">
                   {item.title}
                 </h3>
-                <p className="text-md mb-4 font-marcellus font-semibold">
+                <p className="text-md mb-4 font-marcellus">
                   {item.description}
                 </p>
 

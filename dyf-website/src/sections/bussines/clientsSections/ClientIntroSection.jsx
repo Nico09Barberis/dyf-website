@@ -35,11 +35,11 @@ const ClientsIntroSection = () => {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-urbanist uppercase font-bold text-gray-900 mb-3">
+          <h2 className="text-3xl md:text-4xl font-urbanist uppercase font-semibold text-azulOscuro mb-2">
             Clientes que confían en nosotros
           </h2>
-          <div className="w-20 h-1.5 mx-auto bg-dorado mb-5"></div>
-          <p className="text-gray-700 max-w-3xl mx-auto font-marcellus text-md md:text-lg">
+          <div className="w-20 h-1.5 mx-auto bg-dorado mb-4"></div>
+          <p className="text-gray-700 max-w-3xl mx-auto font-marcellus text-base md:text-lg">
             Acompañamos eventos sociales, empresas y organismos públicos con
             soluciones profesionales, flexibles y orientadas a la excelencia.
           </p>

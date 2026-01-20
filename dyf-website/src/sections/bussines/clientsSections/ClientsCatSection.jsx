@@ -32,11 +32,11 @@ const ClientsCatSection = () => {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-urbanist uppercase font-bold text-gray-900 mb-2">
+          <h2 className="text-3xl md:text-4xl font-urbanist uppercase font-semibold text-azulOscuro mb-2">
             clientes con los que hemos trabajado
           </h2>
-          <div className="w-20 h-1.5 mx-auto bg-dorado mb-4"></div>
-          <p className="text-gray-700 max-w-3xl mx-auto font-marcellus text-md md:text-lg">
+          <div className="w-20 h-2 mx-auto bg-dorado mb-4"></div>
+          <p className="text-gray-700 max-w-3xl mx-auto font-marcellus text-base md:text-lg">
             A lo largo de nuestra trayectoria hemos trabajado con una amplia
             variedad de clientes, desde empresas privadas hasta organismos
             públicos, brindando soluciones adaptadas a cada contexto y

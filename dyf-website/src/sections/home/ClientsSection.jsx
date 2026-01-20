@@ -39,8 +39,10 @@ const ClientsSection = () => {
     <section className="w-full py-20 bg-white">
       <div className="max-w-6xl mx-auto px-6 text-center">
         {/* Título */}
-        <h2 className="text-3xl md:text-4xl font-urbanist font-bold uppercase mb-2 text-gray-900 tracking-wide">Nuestros Clientes</h2>
-        <div className="w-20 h-2 bg-dorado mx-auto mb-6"></div>
+        <h2 className="text-3xl md:text-4xl font-urbanist font-semibold uppercase mb-2 text-azulOscuro">
+          Nuestros Clientes
+        </h2>
+        <div className="w-20 h-2 bg-dorado mx-auto mb-4"></div>
         {/* Subtítulo */}
         <p className="text-gray-800 max-w-3xl mx-auto mb-12 text-md md:text-lg font-marcellus">
           Hemos trabajado con marcas líderes en distintas industrias, ofreciendo soluciones innovadoras y confiables.

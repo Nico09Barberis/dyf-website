@@ -45,7 +45,7 @@ export default function ServiceIncludesSection() {
       <div className="max-w-5xl mx-auto">
 
         <header className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-urbanist uppercase font-bold mb-2">
+          <h2 className="text-3xl md:text-4xl font-urbanist uppercase font-semibold mb-2">
             ¿Qué incluye nuestro servicio?
           </h2>
           <div className="w-20 h-2 bg-dorado mx-auto mb-4"></div>
@@ -78,7 +78,7 @@ export default function ServiceIncludesSection() {
 
                   {/* Texto */}
                   <div>
-                    <h3 className="font-marcellus text-lg font-semibold tracking-wider mb-1">
+                    <h3 className="font-marcellus text-lg font-semibold tracking-wide mb-1">
                       {item.title}
                     </h3>
                     <p className="font-marcellus text-gray-600 text-md leading-relaxed">
