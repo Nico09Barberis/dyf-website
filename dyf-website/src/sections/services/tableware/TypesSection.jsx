@@ -4,36 +4,22 @@ const types = [
   {
     title: "Vajilla Clásica",
     description: "Diseño tradicional ideal para eventos formales y familiares.",
-    image: "../../../public/images/galery/tableware/tableware-1.webp",
+    image: "/images/galery/tableware/tableware-1.webp",
   },
   {
     title: "Vajilla Moderna",
-    description:
-      "Estilo minimalista y contemporáneo para celebraciones actuales.",
-    image: "../../../public/images/galery/tableware/tableware-2.webp",
+    image: "/images/galery/tableware/tableware-2.webp",
   },
   {
     title: "Vajilla Premium",
-    description:
-      "Porcelana y terminaciones de alta gama para eventos exclusivos.",
-    image: "../../../public/images/galery/tableware/tableware-3.webp",
+    image: "/images/galery/tableware/tableware-3.webp",
   },
   {
     title: "Cristalería",
-    description: "Copas y vasos para todo tipo de bebidas y mesas elegantes.",
-    image: "../../../public/images/galery/tableware/tableware-4.webp",
-  },
-  {
-    title: "Cubiertos",
-    description: "Acero inoxidable y opciones premium para cada ocasión.",
-    image: "../../../public/images/galery/tableware/tableware-1.webp",
-  },
-  {
-    title: "Vajilla Infantil",
-    description: "Diseños divertidos y seguros para los más chicos.",
-    image: "../../../public/images/galery/tableware/tableware-2.webp",
+    image: "/images/galery/tableware/tableware-4.webp",
   },
 ];
+
 
 const TablewareTypes = () => {
   return (

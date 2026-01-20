@@ -2,15 +2,15 @@ import React from "react";
 
 const images = [
   {
-    src: "../../../../public/images/galery/tableware/tableware-1.webp",
+    src: "/images/galery/tableware/tableware-1.webp",
     title: "Evento corporativo empresarial",
   },
   {
-    src: "../../../../public/images/galery/tableware/tableware-3.webp",
+    src: "/images/galery/tableware/tableware-3.webp",
     title: "Celebración social privada",
   },
   {
-    src: "../../../../public/images/galery/tableware/tableware-4.webp",
+    src: "/images/galery/tableware/tableware-4.webp",
     title: "Evento institucional",
   },
 ];
