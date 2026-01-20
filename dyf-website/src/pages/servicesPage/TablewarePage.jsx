@@ -1,7 +1,9 @@
 import HeroWithBreadcrumb from "../../components/navigation/HeroWithBreadcrumb";
-import AboutSection from "../../sections/home/AboutSection";
+import HeroBanner from "../../sections/home/HeroBanner";
 import HeroSection from "../../sections/services/tableware/HeroSection";
+import RentalProcessSection from "../../sections/services/tableware/RentalProcessSection";
 import ServiceIncludesSection from "../../sections/services/tableware/ServiceIncludesSection";
+import TablewareGallerySection from "../../sections/services/tableware/TablewareGallerySection";
 import TypesSection from "../../sections/services/tableware/TypesSection";
 
 export default function TablewarePage() {
@@ -25,7 +27,16 @@ export default function TablewarePage() {
 
       <ServiceIncludesSection />
 
-      <AboutSection />
+      <RentalProcessSection />
+
+      <HeroBanner
+        title="¿Listo para organizar tu evento?"
+        buttonText="Contactanos"
+        message="¡Hola! Me gustaría recibir más información sobre sus servicios."
+        backgroundImage="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80"
+      />
+
+      <TablewareGallerySection />
 
     </main>
   );

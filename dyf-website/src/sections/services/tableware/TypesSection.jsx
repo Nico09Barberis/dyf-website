@@ -40,11 +40,12 @@ const TablewareTypes = () => {
     <section className="py-12 text-azulOscuro">
       <div className="max-w-7xl mx-auto px-6">
 
-        <h2 className="text-3xl md:text-4xl font-urbanist font-semibold uppercase text-center mb-4">
+        <h2 className="text-3xl md:text-4xl font-urbanist font-semibold uppercase text-center mb-2">
           Tipos de Vajilla
         </h2>
+        <div className="w-20 h-2 bg-dorado mx-auto mb-4"></div>
 
-        <p className="text-center max-w-2xl mx-auto text-gray-600 mb-12 font-marcellus">
+        <p className="text-center max-w-3xl mx-auto text-gray-600 text-base md:text-lg mb-12 font-marcellus">
           Contamos con una amplia variedad de estilos para adaptarnos a cada tipo de evento.
         </p>
 
