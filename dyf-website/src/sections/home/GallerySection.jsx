@@ -7,14 +7,14 @@ import {
 } from "react-icons/fa";
 
 const images = [
-  "../../../public/images/catFurniture/catDecoracion.webp",
-  "../../../public/images/galery/fullEvents/fullEvent-2.webp",
-  "../../../public/images/galery/tableware/tableware-3.webp",
-  "../../../public/images/galery/furniture/furniture-2.webp",
-  "../../../public/images/galery/furniture/furniture-3.webp",
-  "../../../public/images/galery/tableware/tableware-4.webp",
-  "../../../public/images/home/servHome2.webp",
-  "../../../public/images/galery/tableware/tableware-1.webp",
+  "/images/catFurniture/catDecoracion.webp",
+  "/images/galery/fullEvents/fullEvent-2.webp",
+  "/images/galery/tableware/tableware-3.webp",
+  "/images/galery/furniture/furniture-2.webp",
+  "/images/galery/furniture/furniture-3.webp",
+  "/images/galery/tableware/tableware-4.webp",
+  "/images/home/servHome2.webp",
+  "/images/galery/tableware/tableware-1.webp",
 ];
 
 const GallerySection = () => {
