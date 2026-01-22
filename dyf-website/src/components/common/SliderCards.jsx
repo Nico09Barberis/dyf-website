@@ -2,12 +2,12 @@ import { useEffect, useMemo, useRef, memo } from "react";
 import { FaStar } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import userPlaceholder from "../../assets/images/google-profile.png";
-import test1 from "../../../public/images/testimonials/test-1.webp";
-import Test2 from "../../../public/images/testimonials/test-2.webp";
-import Test3 from "../../../public/images/testimonials/test-3.webp";
-import Test4 from "../../../public/images/testimonials/test-4.webp";
-import Test5 from "../../../public/images/testimonials/test-5.webp";
-import Test6 from "../../../public/images/testimonials/test-6.webp";
+import test1 from "/images/testimonials/test-1.webp";
+import Test2 from "/images/testimonials/test-2.webp";
+import Test3 from "/images/testimonials/test-3.webp";
+import Test4 from "/images/testimonials/test-4.webp";
+import Test5 from "/images/testimonials/test-5.webp";
+import Test6 from "/images/testimonials/test-6.webp";
 
 
 const TESTIMONIALS = [

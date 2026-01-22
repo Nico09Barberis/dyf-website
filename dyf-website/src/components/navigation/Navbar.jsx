@@ -217,19 +217,29 @@ function Navbar() {
 
             {/* Servicios con submenú */}
             <div>
-              <button
-                onClick={() => toggleDropdown("servicios")}
-                className="w-full text-left text-gray-200 hover:text-gray-300 hover:bg-[#002856] uppercase rounded-md py-1 px-2 flex justify-between items-center"
-              >
-                Servicios
-                <span className="ml-2">
+              <div className="w-full flex justify-between items-center">
+                {/* Link principal */}
+                <Link
+                  to="/servicios"
+                  onClick={() => setIsOpen(false)}
+                  className="flex-1 text-left text-gray-200 hover:text-gray-300 hover:bg-[#002856] uppercase rounded-md py-1 px-2"
+                >
+                  Servicios
+                </Link>
+
+                {/* Botón solo para el dropdown */}
+                <button
+                  onClick={() => toggleDropdown("servicios")}
+                  className="text-gray-200 hover:text-gray-300 px-2"
+                  aria-label="Abrir submenú servicios"
+                >
                   {openDropdown === "servicios" ? (
                     <IoIosArrowUp size={14} />
                   ) : (
                     <IoIosArrowDown size={14} />
                   )}
-                </span>
-              </button>
+                </button>
+              </div>
 
               {openDropdown === "servicios" && (
                 <div className="ml-4 mt-2 space-y-2">
@@ -240,6 +250,7 @@ function Navbar() {
                   >
                     Alquiler de vajilla
                   </Link>
+
                   <Link
                     to="/servicios/alquiler-mobiliario"
                     onClick={() => setIsOpen(false)}
@@ -247,6 +258,7 @@ function Navbar() {
                   >
                     Alquiler de mobiliario
                   </Link>
+
                   <Link
                     to="/servicios/decoracion-ambientacion"
                     onClick={() => setIsOpen(false)}
@@ -254,12 +266,13 @@ function Navbar() {
                   >
                     Decoración y ambientación de eventos
                   </Link>
+
                   <Link
                     to="/servicios/organizacion-integral"
                     onClick={() => setIsOpen(false)}
                     className="block text-gray-200 hover:text-gray-300 hover:bg-[#002856] py-1 px-2 rounded-lg"
                   >
-                    Organizacion integral de eventos
+                    Organización integral de eventos
                   </Link>
                 </div>
               )}

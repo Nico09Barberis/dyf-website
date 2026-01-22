@@ -33,7 +33,7 @@ export default function TablewarePage() {
         title="¿Listo para organizar tu evento?"
         buttonText="Contactanos"
         message="¡Hola! Me gustaría recibir más información sobre sus servicios."
-        backgroundImage="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80"
+        backgroundImage="../../../public/images/galery/tableware/tableware-2.webp"
       />
 
       <TablewareGallerySection />

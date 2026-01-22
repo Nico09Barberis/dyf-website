@@ -6,24 +6,24 @@ const FlexCard = () => {
 
   const cards = [
     {
-      title: "Organización total",
-      subtitle: "Eventos sin estrés, de principio a fin",
+      title: "Alquiler de vajilla",
+      subtitle: "Estilo y calidad para tu evento",
       button: "Ver más",
       image:
         "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&auto=format&fit=crop&q=80",
       link: "/diseno",
     },
     {
-      title: "Asesoramiento personalizado",
-      subtitle: "Soluciones a tu medida para cada celebración",
+      title: "Ambientación y decoración",
+      subtitle: "Creamos espacios únicos para cada evento",
       button: "Ver más",
       image:
         "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?w=800&auto=format&fit=crop&q=80",
       link: "/desarrollo",
     },
     {
-      title: "Nuestra galería",
-      subtitle: "Momentos reales que hablan por nuestro trabajo",
+      title: "Alquiler de mobiliario",
+      subtitle: "Muebles funcionales con diseño y estilo",
       button: "Explorar",
       image:
         "https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&auto=format&fit=crop&q=80",
@@ -43,33 +43,36 @@ const FlexCard = () => {
           tabIndex={0}
           aria-label={`${card.title}: ${card.subtitle}`}
           className={`
-            relative flex flex-col items-center justify-center
-            text-white border border-pink-500 rounded-md
-            cursor-pointer overflow-hidden
+            group relative flex flex-col items-center justify-center
+            text-white rounded-md cursor-pointer overflow-hidden
             transition-[flex,font-size,opacity,transform] duration-500 ease-out
             will-change-[flex,font-size,opacity,transform]
-            ${activeIndex === index ? "flex-[4]" : "flex-[1]"}
+            ${activeIndex === index ? "flex-[4] scale-[1.02]" : "flex-[1] scale-100"}
           `}
         >
-          {/* Fondo con lazy-load */}
+          {/* Imagen de fondo */}
           <img
             src={card.image}
             alt={card.title}
-            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 transform scale-100 group-hover:scale-105"
             loading="lazy"
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           />
 
-          {/* Overlay dinámico */}
+          {/* Overlay premium */}
           <div
-            className={`absolute inset-0 bg-black/40 transition-opacity duration-500
-              ${activeIndex === index ? "bg-black/60" : "bg-black/40"}
+            className={`absolute inset-0 transition-opacity duration-500
+              ${
+                activeIndex === index
+                  ? "bg-gradient-to-t from-black/80 via-black/45 to-black/20"
+                  : "bg-gradient-to-t from-black/60 via-black/30 to-black/10"
+              }
             `}
-          ></div>
+          />
 
           {/* Contenido */}
           <div className="relative z-10 text-center p-4 transition-[opacity,transform] duration-500 ease-out">
             <h2
-              className={`font-bold font-urbanist mb-2 transition-[font-size] duration-500
+              className={`font-bold font-urbanist mb-2 drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)] transition-[font-size] duration-500
                 ${
                   activeIndex === index
                     ? "text-3xl md:text-4xl"
@@ -90,7 +93,7 @@ const FlexCard = () => {
               `}
             >
               <p
-                className={`max-w-xl mx-auto text-lg font-urbanist font-semibold text-gray-200 transition-[opacity,transform] duration-700 delay-100
+                className={`max-w-xl mx-auto text-lg font-urbanist font-semibold text-gray-200 drop-shadow-sm transition-[opacity,transform] duration-700 delay-100
                   ${
                     activeIndex === index
                       ? "opacity-100 translate-y-0"

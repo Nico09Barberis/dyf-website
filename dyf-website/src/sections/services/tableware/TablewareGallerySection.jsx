@@ -31,7 +31,7 @@ const TablewareGallerySection = () => {
         </div>
 
         {/* Gallery */}
-        <div className="grid grid-cols-1 md:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           {images.map((item, index) => (
             <div
               key={index}
@@ -39,17 +39,18 @@ const TablewareGallerySection = () => {
                 relative
                 z-0
                 group
-                overflow-hidden
-                transition-transform duration-300 ease-out
-                will-change-transform
-                hover:scale-105 hover:z-20
+                overflow-hidden rounded-xl
+                duration-300 ease-out
+                hover:z-20
               "
             >
               {/* Image */}
               <img
                 src={item.src}
                 alt={item.title}
-                className="w-full h-72 object-cover"
+                className="w-full h-72 object-cover 
+                  transition-transform duration-500 ease-out
+                  group-hover:scale-110"
               />
 
               {/* Overlay */}
