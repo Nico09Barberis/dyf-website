@@ -58,7 +58,7 @@ const ServicesZigZagSection = () => {
 
               {/* Content */}
               <div className="w-full md:w-1/2">
-                <h3 className="text-2xl md:text-3xl font-urbanist uppercase font-semibold text-gray-900 mb-4">
+                <h3 className="text-2xl md:text-3xl font-urbanist uppercase font-bold text-gray-900 mb-4">
                   {service.title}
                 </h3>
 

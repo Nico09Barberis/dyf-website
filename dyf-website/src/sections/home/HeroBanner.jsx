@@ -24,7 +24,7 @@ const HeroBanner = ({
 
       {/* Contenido */}
       <div className="relative z-10 text-center text-white px-6">
-        <h2 className="text-2xl md:text-4xl font-urbanist uppercase font-semibold mb-2 md:mb-4">
+        <h2 className="text-2xl md:text-4xl font-urbanist uppercase font-bold mb-2 md:mb-4">
           {title}
         </h2>
 

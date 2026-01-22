@@ -64,7 +64,7 @@ const TablewareTypes = () => {
 
               {/* Contenido hover */}
               <div className="absolute inset-0 flex flex-col justify-center items-center bg-gradient-to-br from-[#CFE5F5] to-[#8FBCE8] text-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <h3 className="text-xl font-urbanist uppercase font-semibold mb-3">
+                <h3 className="text-xl font-urbanist uppercase font-bold mb-3">
                   {item.title}
                 </h3>
                 <p className="text-md mb-4 font-marcellus">

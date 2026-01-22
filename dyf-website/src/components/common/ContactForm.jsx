@@ -59,7 +59,7 @@ export default function ContactForm() {
   return (
     <section className="bg-white">
       <div className="mx-auto max-w-3xl bg-white p-8">
-        <h2 className="mb-2 text-start text-3xl font-urbanist uppercase font-semibold tracking-wide">
+        <h2 className="mb-2 text-start text-3xl font-urbanist uppercase font-bold tracking-wide">
           Contactanos
         </h2>
         <div className="mb-6 h-2 w-20 bg-dorado" />

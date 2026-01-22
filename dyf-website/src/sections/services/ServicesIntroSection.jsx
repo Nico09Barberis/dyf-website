@@ -3,7 +3,7 @@ const ServicesIntroSection = () => {
     <section className="w-full bg-gray-50">
       {/* Hero */}
       <div className="max-w-7xl mx-auto px-6 py-6 mt-12 text-center">
-        <h1 className="text-3xl md:text-4xl font-urbanist uppercase font-semibold text-azulOscuro mb-2">
+        <h1 className="text-3xl md:text-4xl font-urbanist uppercase font-bold text-azulOscuro mb-2">
           Nuestros servicios
         </h1>
 
