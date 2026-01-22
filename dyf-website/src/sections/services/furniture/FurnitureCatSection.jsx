@@ -14,7 +14,7 @@ const categories = [
   {
     title: "Livings",
     image:
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+      "/images/catFurniture/catSillones.webp",
   },
   {
     title: "Barras",
@@ -24,7 +24,7 @@ const categories = [
   {
     title: "Mobiliario decorativo",
     image:
-      "https://images.unsplash.com/photo-1505691723518-36a5ac3b2c1c?auto=format&fit=crop&w=900&q=80",
+      "../../../../public/images/catFurniture/catDecoracion.webp",
   },
   {
     title: "Carpas y estructuras",

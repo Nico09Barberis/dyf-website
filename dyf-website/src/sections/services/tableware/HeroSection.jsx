@@ -20,12 +20,27 @@ const HeroSection = () => {
             href="https://wa.me/5493512324008?text=Hola%20quiero%20solicitar%20un%20presupuesto%20para%20alquiler%20de%20vajilla."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-3 bg-azulOscuro text-white font-semibold rounded-md hover:bg-opacity-90 transition"
+            className="inline-block items-center justify-center
+              px-8 py-3
+              bg-dorado text-white
+              font-urbanist font-semibold
+              rounded-full
+              shadow-md 
+              transition-all duration-300
+              hover:bg-dorado/90 hover:-translate-y-0.5 hover:shadow-lg
+              focus:outline-none focus:ring-2 focus:ring-dorado focus:ring-offset-2"
           >
             Solicitar presupuesto
           </a>
 
-          <button className="px-8 py-3 border border-azulOscuro text-azulOscuro font-semibold rounded-md hover:bg-azulOscuro hover:text-white transition">
+          <button className="inline-flex items-center justify-center
+              px-8 py-3
+              border border-dorado text-dorado
+              font-urbanist font-semibold
+              rounded-full
+              transition-all duration-300
+              hover:bg-dorado hover:text-white
+              focus:outline-none focus:ring-2 focus:ring-dorado focus:ring-offset-2">
             Ver catálogo
           </button>
         </div>

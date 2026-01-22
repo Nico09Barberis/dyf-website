@@ -26,17 +26,17 @@ const FurnitureHeroSection = () => {
         </p>
 
         {/* CTA buttons */}
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
 
           <a
             href="/contacto"
             className="
-              inline-flex items-center justify-center
+              inline-block items-center justify-center
               px-8 py-3
               bg-dorado text-white
               font-urbanist font-semibold
               rounded-full
-              shadow-md
+              shadow-md 
               transition-all duration-300
               hover:bg-dorado/90 hover:-translate-y-0.5 hover:shadow-lg
               focus:outline-none focus:ring-2 focus:ring-dorado focus:ring-offset-2

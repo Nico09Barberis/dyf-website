@@ -18,7 +18,7 @@ export default function TablewarePage() {
       <HeroWithBreadcrumb
         title="Alquiler de vajilla"
         breadcrumbItems={breadcrumb}
-        imageUrl="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
+        imageUrl="../../../public/images/galery/tableware/tableware-3.webp"
       />
 
       <HeroSection />
