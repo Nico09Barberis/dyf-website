@@ -1,9 +1,12 @@
+import { useRef } from "react";
 import {
   FaTruck,
   FaShieldAlt,
   FaHandsHelping,
   FaBoxOpen,
   FaSoap,
+  FaChevronLeft,
+  FaChevronRight,
 } from "react-icons/fa";
 
 const includes = [
@@ -40,10 +43,23 @@ const includes = [
 ];
 
 export default function ServiceIncludesSection() {
+  const sliderRef = useRef(null);
+
+  const scroll = (direction) => {
+    if (!sliderRef.current) return;
+
+    const width = sliderRef.current.offsetWidth;
+    sliderRef.current.scrollBy({
+      left: direction === "left" ? -width : width,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section className="w-full py-20 px-4 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-5xl mx-auto">
 
+        {/* Header */}
         <header className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-urbanist uppercase font-bold mb-2">
             ¿Qué incluye nuestro servicio?
@@ -54,44 +70,78 @@ export default function ServiceIncludesSection() {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          {includes.map((item, index) => {
-            const Icon = item.icon;
+        {/* Carousel container */}
+        <div className="relative">
 
-            return (
+          {/* Left button */}
+          <button
+            onClick={() => scroll("left")}
+            className="hidden md:flex items-center justify-center absolute -left-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white shadow-md border hover:bg-gray-100 transition z-10"
+          >
+            <FaChevronLeft />
+          </button>
+
+          {/* Right button */}
+          <button
+            onClick={() => scroll("right")}
+            className="hidden md:flex items-center justify-center absolute -right-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white shadow-md border hover:bg-gray-100 transition z-10"
+          >
+            <FaChevronRight />
+          </button>
+
+          {/* Slider */}
+          <div
+            ref={sliderRef}
+            className="
+              flex gap-6 overflow-x-auto scroll-smooth
+              snap-x snap-mandatory
+              pb-6
+              scrollbar-hide
+            "
+          >
+            {includes.map((item, index) => {
+              const Icon = item.icon;
+
+              return (
               <div
                 key={index}
-                className="group relative bg-white rounded-2xl p-6 shadow-md transition-all duration-300
-                          hover:-translate-y-2 hover:shadow-xl"
+                className="
+                  snap-center
+                  min-w-[280px] sm:min-w-[340px] md:min-w-[380px]
+                  bg-gray-50 rounded-2xl p-6
+                  shadow-sm hover:shadow-lg transition
+                  relative group
+                "
               >
-                {/* Glow azul */}
-                <div
-                  className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition 
-                            blur-xl bg-sky-200/40"
-                />
+                {/* Glow dorado suave */}
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition blur-xl bg-dorado/10" />
 
-                <div className="relative z-10 flex items-center gap-4">
+                <div className="relative z-10">
                   {/* Icono */}
-                  <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-xl bg-sky-100">
-                    <Icon className="text-sky-600 text-xl" />
+                  <div className="w-12 h-12 mb-4 flex items-center justify-center rounded-xl bg-dorado/15">
+                    <Icon className="text-dorado text-xl" />
                   </div>
 
                   {/* Texto */}
-                  <div>
-                    <h3 className="font-marcellus text-lg font-semibold tracking-wide mb-1">
-                      {item.title}
-                    </h3>
-                    <p className="font-marcellus text-gray-600 text-md leading-relaxed">
-                      {item.description}
-                    </p>
-                  </div>
+                  <h3 className="font-marcellus text-lg font-semibold tracking-wide mb-2 text-gray-900">
+                    {item.title}
+                  </h3>
+
+                  <p className="font-marcellus text-gray-600 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
                 </div>
-
               </div>
-            );
-          })}
-        </div>
+              );
+            })}
+          </div>
 
+          {/* Hint text mobile */}
+          <p className="text-center text-sm text-gray-400 mt-4 md:hidden">
+            Deslizá para ver más →
+          </p>
+
+        </div>
       </div>
     </section>
   );

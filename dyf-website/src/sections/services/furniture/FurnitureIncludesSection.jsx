@@ -1,9 +1,12 @@
+import { useRef } from "react";
 import {
   FaTruckMoving,
   FaPeopleCarry,
   FaTools,
   FaBroom,
   FaUserTie,
+  FaChevronLeft,
+  FaChevronRight,
 } from "react-icons/fa";
 
 const includes = [
@@ -40,6 +43,18 @@ const includes = [
 ];
 
 const FurnitureIncludesSection = () => {
+  const sliderRef = useRef(null);
+
+  const scroll = (direction) => {
+    if (!sliderRef.current) return;
+
+    const width = sliderRef.current.offsetWidth;
+    sliderRef.current.scrollBy({
+      left: direction === "left" ? -width : width,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section className="w-full py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
@@ -55,38 +70,58 @@ const FurnitureIncludesSection = () => {
           </p>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        {/* Carousel container */}
+        <div className="relative">
 
-          {includes.map((item, index) => {
-            const Icon = item.icon;
+          {/* Left button */}
+          <button
+            onClick={() => scroll("left")}
+            className="hidden md:flex items-center justify-center absolute -left-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white shadow-md border hover:bg-gray-100 transition z-10"
+          >
+            <FaChevronLeft />
+          </button>
 
-            return (
-              <div
-                key={index}
-                className="
-                  group relative bg-gray-50 rounded-2xl p-6
-                  shadow-sm transition-all duration-300
-                  hover:-translate-y-1 hover:shadow-lg
-                "
-              >
-                {/* Glow effect */}
+          {/* Right button */}
+          <button
+            onClick={() => scroll("right")}
+            className="hidden md:flex items-center justify-center absolute -right-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white shadow-md border hover:bg-gray-100 transition z-10"
+          >
+            <FaChevronRight />
+          </button>
+
+          {/* Slider */}
+          <div
+            ref={sliderRef}
+            className="
+              flex gap-6 overflow-x-auto scroll-smooth
+              snap-x snap-mandatory
+              pb-6
+              scrollbar-hide
+            "
+          >
+            {includes.map((item, index) => {
+              const Icon = item.icon;
+
+              return (
                 <div
+                  key={index}
                   className="
-                    absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition
-                    blur-xl bg-dorado/10
+                    snap-center
+                    min-w-[280px] sm:min-w-[340px] md:min-w-[380px]
+                    bg-gray-50 rounded-2xl p-6
+                    shadow-sm hover:shadow-lg transition
+                    relative group
                   "
-                />
+                >
+                  {/* Glow */}
+                  <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition blur-xl bg-dorado/10" />
 
-                <div className="relative z-10 flex items-start gap-4">
-                  {/* Icon */}
-                  <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-xl bg-dorado/15">
-                    <Icon className="text-dorado text-xl" />
-                  </div>
+                  <div className="relative z-10">
+                    <div className="w-12 h-12 mb-4 flex items-center justify-center rounded-xl bg-dorado/15">
+                      <Icon className="text-dorado text-xl" />
+                    </div>
 
-                  {/* Text */}
-                  <div>
-                    <h3 className="text-lg font-urbanist font-semibold text-gray-900 mb-1">
+                    <h3 className="text-lg font-urbanist font-semibold text-gray-900 mb-2">
                       {item.title}
                     </h3>
                     <p className="text-gray-600 text-sm leading-relaxed">
@@ -94,13 +129,16 @@ const FurnitureIncludesSection = () => {
                     </p>
                   </div>
                 </div>
+              );
+            })}
+          </div>
 
-              </div>
-            );
-          })}
+          {/* Hint text mobile */}
+          <p className="text-center text-sm text-gray-400 mt-4 md:hidden">
+            Deslizá para ver más →
+          </p>
 
         </div>
-
       </div>
     </section>
   );
