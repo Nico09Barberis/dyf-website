@@ -26,11 +26,13 @@ export default function HomePage() {
         backgroundImage="../../public/images/varias/varias.webp"
       />
 
+      {/*
       <BlurCard />
-
-      <GallerySection />
+      */}
 
       <ProcessSection />
+
+      <GallerySection />
 
       <TestimonialsSection />
     </main>

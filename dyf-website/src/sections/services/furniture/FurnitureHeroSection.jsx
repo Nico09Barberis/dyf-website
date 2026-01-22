@@ -2,7 +2,7 @@ import React from "react";
 
 const FurnitureHeroSection = () => {
   return (
-    <section className="py-12 md:py-16">
+    <section className="py-12 md:py-16 bg-white w-full">
       <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
 
         {/* Eyebrow */}

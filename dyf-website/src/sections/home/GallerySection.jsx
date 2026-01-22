@@ -7,14 +7,14 @@ import {
 } from "react-icons/fa";
 
 const images = [
-  "https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1473187983305-f615310e7daa?auto=format&fit=crop&w=900&q=80",
+  "../../../public/images/catFurniture/catDecoracion.webp",
+  "../../../public/images/galery/fullEvents/fullEvent-2.webp",
+  "../../../public/images/galery/tableware/tableware-3.webp",
+  "../../../public/images/galery/furniture/furniture-2.webp",
+  "../../../public/images/galery/furniture/furniture-3.webp",
+  "../../../public/images/galery/tableware/tableware-4.webp",
+  "../../../public/images/home/servHome2.webp",
+  "../../../public/images/galery/tableware/tableware-1.webp",
 ];
 
 const GallerySection = () => {
@@ -42,7 +42,7 @@ const GallerySection = () => {
   }, [handleClose, handleNext, handlePrev]);
 
   return (
-    <section className="w-full my-12">
+    <section className="w-full">
       {/* Galería sin separación */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-0">
         {images.map((src, index) => (

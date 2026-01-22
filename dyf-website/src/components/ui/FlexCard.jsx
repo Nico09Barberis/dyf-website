@@ -26,7 +26,7 @@ const FlexCard = () => {
       subtitle: "Muebles funcionales con diseño y estilo",
       button: "Explorar",
       image:
-        "../../../public/images/catFurniture/catDecoracion.webp",
+        "/images/catFurniture/catDecoracion.webp",
       link: "/galeria",
     },
   ];
@@ -116,7 +116,7 @@ const FlexCard = () => {
                 <CustomButton
                   to={card.link}
                   label={card.button}
-                  variant="dark"
+                  variant="light"
                 />
               </div>
             </div>
