@@ -27,7 +27,7 @@ export default function AboutPage() {
         title="¿Buscas ayuda ahora mismo?"
         buttonText="Contactanos"
         message="¡Hola! Me gustaría recibir más información sobre sus servicios."
-        backgroundImage="../../public/images/galery/furniture/furniture-2.webp"
+        backgroundImage="/images/galery/furniture/furniture-2.webp"
       />
 
 

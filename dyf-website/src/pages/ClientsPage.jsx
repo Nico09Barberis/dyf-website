@@ -17,7 +17,7 @@ export default function ClientsPage() {
       <HeroWithBreadcrumb
         title="Clientes"
         breadcrumbItems={breadcrumb}
-        imageUrl="../../public/images/bgPages/bgClients.webp"
+        imageUrl="/images/bgPages/bgClients.webp"
       />
 
       <ClientsIntroSection />

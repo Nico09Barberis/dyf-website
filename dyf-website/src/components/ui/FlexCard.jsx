@@ -15,7 +15,7 @@ const FlexCard = () => {
     },
     {
       title: "Ambientación y decoración",
-      subtitle: "Creamos espacios únicos para cada evento",
+      subtitle: "Creamos espacios únicos para tu evento",
       button: "Ver más",
       image:
         "/images/home/servHome2.webp",

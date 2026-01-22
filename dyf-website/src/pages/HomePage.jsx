@@ -23,7 +23,7 @@ export default function HomePage() {
         title="¿Necesitás asesoramiento inmediato?"
         buttonText="Hablá con nosotros"
         message="¡Hola! Me gustaría recibir más información sobre sus servicios."
-        backgroundImage="../../public/images/varias/varias.webp"
+        backgroundImage="/images/varias/varias.webp"
       />
 
       {/*
