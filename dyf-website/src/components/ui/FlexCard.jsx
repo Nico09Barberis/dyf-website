@@ -10,7 +10,7 @@ const FlexCard = () => {
       subtitle: "Estilo y calidad para tu evento",
       button: "Ver más",
       image:
-        "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&auto=format&fit=crop&q=80",
+        "/images/home/servHome1.webp",
       link: "/diseno",
     },
     {
@@ -18,7 +18,7 @@ const FlexCard = () => {
       subtitle: "Creamos espacios únicos para cada evento",
       button: "Ver más",
       image:
-        "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?w=800&auto=format&fit=crop&q=80",
+        "/images/home/servHome2.webp",
       link: "/desarrollo",
     },
     {
@@ -26,7 +26,7 @@ const FlexCard = () => {
       subtitle: "Muebles funcionales con diseño y estilo",
       button: "Explorar",
       image:
-        "https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&auto=format&fit=crop&q=80",
+        "../../../public/images/catFurniture/catDecoracion.webp",
       link: "/galeria",
     },
   ];

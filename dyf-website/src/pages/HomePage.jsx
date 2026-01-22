@@ -1,7 +1,6 @@
 import CarouselHome from "../components/common/CarouselHome";
 import AboutSection from "../sections/home/AboutSection";
 import ServicesSection from "../sections/home/ServicesSection";
-import ClientsSection from "../sections/home/ClientsSection";
 import HeroBanner from "../sections/home/HeroBanner";
 import BlurCard from "../components/ui/BlurCard";
 import GallerySection from "../sections/home/GallerySection";
@@ -20,13 +19,11 @@ export default function HomePage() {
 
       <ServicesSection />
 
-      <ClientsSection />
-
       <HeroBanner
         title="¿Necesitás asesoramiento inmediato?"
         buttonText="Hablá con nosotros"
         message="¡Hola! Me gustaría recibir más información sobre sus servicios."
-        backgroundImage="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80"
+        backgroundImage="../../public/images/varias/varias.webp"
       />
 
       <BlurCard />

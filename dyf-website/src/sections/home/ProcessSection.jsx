@@ -5,25 +5,26 @@ const cards = [
     id: 1,
     title: "Contacto inicial",
     image: "/images/home/process/process1.webp",
-    description: "Contanos tu idea, fechas y estilo del evento.",
+    description: "Analizamos tu evento, fechas, necesidades y expectativas.",
   },
   {
     id: 2,
     title: "Diseño y propuesta",
     image: "/images/home/process/process2.webp",
-    description: "Creamos un moodboard y presupuesto a medida.",
+    description: "Definimos concepto, proveedores y presupuesto personalizado.",
   },
   {
     id: 3,
     title: "Coordinación y montaje",
     image: "/images/home/process/process3.webp",
-    description: "Gestionamos proveedores y el montaje completo.",
+    description: "Coordinamos cada detalle y ejecutamos el montaje completo.",
   },
   {
     id: 4,
-    title: "Disfrutá tu evento",
+    title: "Evento en marcha",
     image: "/images/home/process/process4.webp",
-    description: "Supervisamos todo para que vos solo disfrutes.",
+    description:
+      "Supervisamos todo el desarrollo para que disfrutes sin preocupaciones.",
   },
 ];
 
@@ -32,8 +33,7 @@ const BG_IMAGE = "/images/home/process/bg-flashcards.jpeg";
 const ProcessCard = memo(function ProcessCard({ title, image, description }) {
   return (
     <div className="group [perspective:1000px] w-64 aspect-[4/5]">
-      <div className="relative w-full h-full font-italiana uppercase transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-        
+      <div className="relative w-full h-full font-lora uppercase transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
         {/* Frente */}
         <div className="absolute inset-0 rounded-xl overflow-hidden shadow-lg [backface-visibility:hidden]">
           <img
@@ -55,7 +55,7 @@ const ProcessCard = memo(function ProcessCard({ title, image, description }) {
           style={{ backgroundImage: `url(${BG_IMAGE})` }}
         >
           <div className="absolute inset-0 bg-black/40 flex items-center justify-center p-4">
-            <p className="text-white text-center text-xl font-bold leading-relaxed drop-shadow-lg">
+            <p className="text-white text-center text-lg md:text-xl font-bold leading-relaxed drop-shadow-lg">
               {description}
             </p>
           </div>
@@ -71,11 +71,14 @@ function ProcessSection() {
       {/* Header */}
       <div className="text-center mb-12 px-4">
         <h2 className="text-3xl md:text-4xl font-urbanist uppercase font-bold text-azulOscuro mb-2">
-          Nuestro Proceso de Trabajo
+          Organización integral de tu evento
         </h2>
+
         <div className="bg-dorado h-2 w-20 mx-auto mb-4" />
+
         <p className="text-md md:text-lg text-gray-800 font-marcellus">
-          Te acompañamos paso a paso para crear un evento inolvidable.
+          Nos encargamos de todo el proceso, desde la idea inicial hasta la
+          coordinación completa del día del evento.
         </p>
       </div>
 
