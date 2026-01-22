@@ -24,7 +24,7 @@ const categories = [
   {
     title: "Mobiliario decorativo",
     image:
-      "../../../../public/images/catFurniture/catDecoracion.webp",
+      "/images/catFurniture/catDecoracion.webp",
   },
   {
     title: "Carpas y estructuras",

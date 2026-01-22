@@ -18,7 +18,7 @@ export default function FurniturePage() {
       <HeroWithBreadcrumb
         title="Alquiler de mobiliario"
         breadcrumbItems={breadcrumb}
-        imageUrl="../../../public/images/bgPages/bgFurniture.webp"
+        imageUrl="/images/bgPages/bgFurniture.webp"
       />
 
       <FurnitureHeroSection />
@@ -33,7 +33,7 @@ export default function FurniturePage() {
         title="¿Listo para organizar tu evento?"
         buttonText="Contactanos"
         message="¡Hola! Me gustaría recibir más información sobre sus servicios."
-        backgroundImage="../../../public/images/varias/varias.webp"
+        backgroundImage="/images/varias/varias.webp"
       />
 
       <FurnitureAdvantages />
