@@ -20,14 +20,14 @@ const services = [
     title: "Ambientación y decoración",
     description:
       "Diseño y montaje de espacios únicos, personalizados según la temática, el estilo y la identidad de cada celebración.",
-    image: "/images/galery/eventos/event-4.jpg",
+    image: "/images/galery/fullEvents/fullEvent-4.webp",
     path: "/servicios/ambientacion-decoracion",
   },
   {
     title: "Organización integral",
     description:
       "Planificación, coordinación y ejecución completa de eventos para que disfrutes sin preocupaciones y con resultados profesionales.",
-    image: "/images/galery/eventos/event-1.jpg",
+    image: "../../../public/images/home/servHome2.webp",
     path: "/servicios/organizacion-integral",
   },
 ];

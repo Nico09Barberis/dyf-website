@@ -7,17 +7,17 @@ import logo from "../../assets/images/logo.png";
 import SocialLinks from "../ui/SocialLinks";
 
 const SERVICIOS = [
-  { id: "s1", label: "Alquiler de vajilla", to: "/" },
-  { id: "s2", label: "Alquiler de mobiliario", to: "/nosotros" },
-  { id: "s3", label: "Ambientación y decoración de eventos", to: "/galeria" },
-  { id: "s4", label: "Organizacion integral de eventos", to: "/galeria" },
+  { id: "s1", label: "Alquiler de vajilla", to: "/servicios/alquiler-vajilla" },
+  { id: "s2", label: "Alquiler de mobiliario", to: "/servicios/alquiler-mobiliario" },
+  { id: "s3", label: "Ambientación y decoración de eventos", to: "/servicios/ambientacion-decoracion" },
+  { id: "s4", label: "Organizacion integral de eventos", to: "/servicios/organizacion-integral" },
 ];
 
 const EMPRESA = [
   { id: "e1", label: "Inicio", to: "/" },
-  { id: "e2", label: "Nosotros", to: "/nosotros" },
+  { id: "e2", label: "Nosotros", to: "/empresa/nosotros" },
   { id: "e3", label: "Galeria", to: "/galeria" },
-  { id: "e4", label: "Contacto", to: "/blog" },
+  { id: "e4", label: "Contacto", to: "/contacto" },
 ];
 
 const linkBaseStyles =

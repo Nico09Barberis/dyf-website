@@ -1,6 +1,5 @@
 import HeroWithBreadcrumb from "../components/navigation/HeroWithBreadcrumb";
 import HeroBanner from "../sections/home/HeroBanner";
-import ImgCardSection from "../sections/services/ImgCardSection";
 import ServicesIntroSection from "../sections/services/ServicesIntroSection";
 import ServicesZigZagSection from "../sections/services/ServiceZigZagSection";
 import WhyChooseUsSection from "../sections/services/WhyChooseUsSection";
@@ -14,12 +13,10 @@ export default function ServicesPage() {
       <HeroWithBreadcrumb
         title="Servicios"
         breadcrumbItems={breadcrumb}
-        imageUrl="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
+        imageUrl="../../public/images/galery/fullEvents/fullEvent-2.webp"
       />
 
       <ServicesIntroSection />
-
-      <ImgCardSection />
 
       <ServicesZigZagSection />
 

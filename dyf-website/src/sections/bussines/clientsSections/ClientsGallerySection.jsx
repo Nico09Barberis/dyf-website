@@ -33,30 +33,36 @@ const ClientsGallerySection = () => {
         </div>
 
         {/* Gallery */}
-        <div className="grid grid-cols-1 md:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
           {images.map((item, index) => (
             <div
               key={index}
               className="
                 relative
-                z-0
                 group
                 overflow-hidden
-                transition-transform duration-300 ease-out
-                will-change-transform
-                hover:scale-105 hover:z-20
+                rounded-xl
               "
             >
               {/* Image */}
               <img
                 src={item.src}
                 alt={item.title}
-                className="w-full h-72 object-cover"
+                className="
+                  w-full
+                  h-72
+                  object-cover
+                  rounded-xl
+                  transition-transform
+                  duration-500
+                  ease-out
+                  group-hover:scale-105
+                "
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-90"></div>
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
 
               {/* Content */}
               <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
