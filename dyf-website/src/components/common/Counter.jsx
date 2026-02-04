@@ -54,7 +54,7 @@ const Counter = ({ from = 0, to = 250, duration = 2000 }) => {
   return (
     <div
       ref={elementRef}
-      className="text-6xl font-extrabold font-audiowide text-center text-azulOscuro transition-transform duration-150 ease-out"
+      className="text-6xl md:text-7xl font-extrabold font-audiowide text-center text-azulOscuro transition-transform duration-150 ease-out"
     >
       {count.toLocaleString()}+
     </div>

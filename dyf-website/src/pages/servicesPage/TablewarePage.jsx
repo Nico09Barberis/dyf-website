@@ -33,7 +33,7 @@ export default function TablewarePage() {
         title="¿Listo para organizar tu evento?"
         buttonText="Contactanos"
         message="¡Hola! Me gustaría recibir más información sobre sus servicios."
-        backgroundImage="../../../public/images/galery/tableware/tableware-2.webp"
+        backgroundImage="/images/galery/tableware/tableware-2.webp"
       />
 
       <TablewareGallerySection />

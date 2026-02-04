@@ -1,6 +1,6 @@
 import React from "react";
 import { FiMessageSquare } from "react-icons/fi";
-import commentImg from "../../../../public/images/varias/coment.jpg";
+import commentImg from "/images/varias/coment.jpg";
 
 const testimonials = [
   {

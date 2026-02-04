@@ -9,24 +9,21 @@ const FlexCard = () => {
       title: "Alquiler de vajilla",
       subtitle: "Estilo y calidad para tu evento",
       button: "Ver más",
-      image:
-        "/images/home/servHome1.webp",
+      image: "/images/home/servHome1.webp",
       link: "/diseno",
     },
     {
       title: "Ambientación y decoración",
       subtitle: "Creamos espacios únicos para tu evento",
       button: "Ver más",
-      image:
-        "/images/home/servHome2.webp",
+      image: "/images/home/servHome2.webp",
       link: "/desarrollo",
     },
     {
       title: "Alquiler de mobiliario",
       subtitle: "Muebles funcionales con diseño y estilo",
       button: "Explorar",
-      image:
-        "/images/catFurniture/catDecoracion.webp",
+      image: "/images/galery/furniture/furniture-2.webp",
       link: "/galeria",
     },
   ];
@@ -48,6 +45,8 @@ const FlexCard = () => {
             transition-[flex,font-size,opacity,transform] duration-500 ease-out
             will-change-[flex,font-size,opacity,transform]
             ${activeIndex === index ? "flex-[4] scale-[1.02]" : "flex-[1] scale-100"}
+            ${index === 0 ? "order-1" : index === 2 ? "order-2" : "order-3"}
+            md:order-none
           `}
         >
           {/* Imagen de fondo */}

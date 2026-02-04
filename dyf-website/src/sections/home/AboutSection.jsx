@@ -6,26 +6,28 @@ import CustomButton from "../../components/ui/CustomButton";
 const AboutSection = () => {
   return (
     <section className="max-w-6xl mx-auto flex flex-col md:flex-row my-20 p-2">
-      {/* Contenedor Izquierdo */}
-      <div className="w-full md:w-1/2 flex">
-        {/* Columna izquierda (2 imágenes apiladas) */}
-        <div className="w-1/2 flex flex-col gap-3">
+      
+      {/* Contenedor Izquierdo con altura fija */}
+      <div className="w-full md:w-1/2 flex h-[450px] md:h-[520px]">
+        
+        {/* Columna izquierda */}
+        <div className="w-1/2 flex flex-col gap-3 h-full">
           <img
-            src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=800&q=80"
+            src="/images/home/about1.webp"
             alt="Equipo trabajando"
             className="w-full h-1/2 object-cover"
           />
           <img
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
+            src="/images/home/about2.webp"
             alt="Reunión de trabajo"
             className="w-full h-1/2 object-cover"
           />
         </div>
 
-        {/* Columna derecha (1 imagen alta) */}
-        <div className="w-1/2 ml-3">
+        {/* Columna derecha */}
+        <div className="w-1/2 ml-3 h-full">
           <img
-            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80"
+            src="/images/home/about3.webp"
             alt="Oficina moderna"
             className="w-full h-full object-cover"
           />
@@ -41,13 +43,9 @@ const AboutSection = () => {
         <div className="w-20 h-2 bg-[#F4D03F] mb-2"></div>
         <p className="text-gray-800 text-md md:text-lg font-marcellus leading-relaxed">
           En d&f creemos que cada evento cuenta una historia y nuestro
-          propósito es ayudarte a contar la tuya de la mejor manera. Nos
-          especializamos en la gestión, planificación y organización integral de
-          todo tipo de eventos, creando experiencias únicas que reflejan la
-          esencia y estilo de cada cliente.< br/> Acompañamos a nuestros clientes
-          desde la primera idea hasta el último detalle, creando experiencias
-          únicas, cuidadas y llenas de emoción.
+          propósito es ayudarte a contar la tuya de la mejor manera...
         </p>
+
         <div className="w-auto mt-4">
           <CustomButton
             to="/empresa/nosotros"
@@ -59,5 +57,6 @@ const AboutSection = () => {
     </section>
   );
 };
+
 
 export default AboutSection;

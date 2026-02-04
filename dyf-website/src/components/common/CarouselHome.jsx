@@ -2,25 +2,30 @@ import { useEffect, useState, memo } from "react";
 
 const SLIDES = [
   {
-    image: "https://picsum.photos/1920/600?random=1011",
-    title: "Creamos Momentos Inolvidables",
+    image: "/images/home/slide1.webp",
+    title: "Momentos que se Viven, Detalles que se Recuerdan",
     subtitle:
-      "Desde la primera idea hasta el último detalle, hacemos que cada evento sea único",
+      "Transformamos tus ideas en eventos únicos y perfectamente organizados",
   },
   {
-    image: "https://picsum.photos/1920/600?random=1022",
-    title: "Celebraciones a tu Medida",
+    image: "/images/home/slide2.webp",
+    title: "Tu Evento, Nuestra Pasión",
     subtitle:
-      "Diseñamos y coordinamos cada evento para que refleje tu estilo y personalidad",
+      "Decoración, coordinación y equipamiento pensados para cada ocasión",
   },
   {
-    image: "https://picsum.photos/1920/600?random=1033",
-    title: "Eventos Corporativos y Sociales",
+    image: "/images/home/slide3.webp",
+    title: "Vajilla y Ambientación Profesional",
     subtitle:
-      "Nos ocupamos de todo para que vos solo disfrutes de la experiencia",
+      "Calidad, estilo y elegancia para realzar cada celebración",
+  },
+  {
+    image: "/images/home/slide4.webp",
+    title: "Confianza y Experiencia",
+    subtitle:
+      "Acompañamos eventos sociales y corporativos con compromiso y excelencia",
   },
 ];
-
 const CarouselSlide = memo(function CarouselSlide({ slide, isActive }) {
   return (
     <div
