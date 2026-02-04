@@ -9,7 +9,7 @@ export default function CountersSection() {
         <div className="flex flex-col items-center">
           <Counter to={2500} duration={3000} />
           <p className="mt-2 text-3xl text-center font-extrabold text-azulOscuro">
-            Más de 2500 eventos realizados
+            eventos realizados
           </p>
         </div>
 
@@ -17,7 +17,7 @@ export default function CountersSection() {
         <div className="flex flex-col items-center">
           <Counter to={8} duration={2000} />
           <p className="mt-2 text-3xl text-center font-extrabold text-azulOscuro">
-            Más de 8 años de experiencia
+            años de experiencia
           </p>
         </div>
 
