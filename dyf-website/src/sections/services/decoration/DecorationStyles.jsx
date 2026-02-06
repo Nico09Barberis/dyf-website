@@ -5,39 +5,40 @@ const styles = [
   {
     title: "Bodas",
     description:
-      "Diseñamos ambientaciones elegantes y personalizadas para celebrar momentos únicos, cuidando cada detalle visual.",
+      "Ambientaciones elegantes y personalizadas para celebrar momentos únicos.",
     image:
       "https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?auto=format&fit=crop&w=1400&q=80",
   },
   {
     title: "Eventos corporativos",
     description:
-      "Espacios profesionales alineados con la identidad de tu marca, ideales para lanzamientos, conferencias y eventos empresariales.",
+      "Espacios profesionales alineados con la identidad de tu marca.",
     image:
       "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1400&q=80",
   },
   {
     title: "Eventos sociales",
     description:
-      "Cumpleaños, aniversarios y celebraciones privadas con ambientaciones que marcan la diferencia.",
+      "Celebraciones privadas con ambientaciones que marcan la diferencia.",
     image:
       "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1400&q=80",
   },
   {
     title: "Temáticas",
     description:
-      "Conceptos creativos adaptados a la idea del evento, logrando experiencias únicas y memorables.",
+      "Conceptos creativos adaptados a la idea de tu evento.",
     image:
       "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1400&q=80",
   },
   {
     title: "Cumpleaños",
     description:
-      "Ambientaciones divertidas y personalizadas para celebrar momentos especiales con estilo y alegría.",
+      "Ambientaciones divertidas y personalizadas para celebrar a lo grande.",
     image:
       "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1400&q=80",
   },
 ];
+
 
 const DecorationStylesCarousel = () => {
   const [current, setCurrent] = useState(0);

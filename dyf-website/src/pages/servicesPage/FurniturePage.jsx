@@ -29,7 +29,7 @@ export default function FurniturePage() {
 
       <FurnitureRentalProcess />
 
-       <HeroBanner
+      <HeroBanner
         title="¿Listo para organizar tu evento?"
         buttonText="Contactanos"
         message="¡Hola! Me gustaría recibir más información sobre sus servicios."
