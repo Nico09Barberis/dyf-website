@@ -1,5 +1,6 @@
 import HeroWithBreadcrumb from "../../components/navigation/HeroWithBreadcrumb";
-import AboutSection from "../../sections/home/AboutSection";
+import FullServiceHero from "../../sections/services/fullService/FullServiceHero";
+import FullServiceScope from "../../sections/services/fullService/FullServiceScope";
 
 export default function FullEventsPage() {
   const breadcrumb = [
@@ -16,7 +17,9 @@ export default function FullEventsPage() {
         imageUrl="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
       />
 
-      <AboutSection />
+      <FullServiceHero />
+
+      <FullServiceScope />
 
     </main>
   );
