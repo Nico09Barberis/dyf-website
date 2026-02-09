@@ -2,7 +2,7 @@ import React from "react";
 
 const FullServiceHero = () => {
   return (
-    <section className="relative w-full bg-white py-24 md:py-32 overflow-hidden">
+    <section className="relative w-full py-24 md:py-32 overflow-hidden">
 
       {/* Soft background glow */}
       <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] 

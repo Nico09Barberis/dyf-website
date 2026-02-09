@@ -43,7 +43,7 @@ const items = [
 
 const FullServiceScope = () => {
   return (
-    <section className="relative py-24 bg-white overflow-hidden">
+    <section className="relative py-24 overflow-hidden bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Header */}
         <div className="text-center mb-20">
@@ -176,7 +176,7 @@ const FullServiceScope = () => {
                 className="
                   w-14 h-14
                   rounded-xl
-                  bg-blue-600
+                  bg-[#3A6EA5]
                   text-white
                   flex items-center justify-center
                   text-xl

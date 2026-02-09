@@ -44,11 +44,11 @@ const DecorationGallery = () => {
         </div>
 
         {/* Gallery */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {images.map((img, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-2xl bg-gray-100"
+              className="group relative overflow-hidden bg-gray-100"
             >
               <img
                 src={img.src}

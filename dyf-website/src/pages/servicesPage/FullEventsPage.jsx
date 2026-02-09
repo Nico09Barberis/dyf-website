@@ -1,6 +1,8 @@
 import HeroWithBreadcrumb from "../../components/navigation/HeroWithBreadcrumb";
 import FullServiceHero from "../../sections/services/fullService/FullServiceHero";
+import PlanningProcess from "../../sections/services/fullService/FullServiceProcess";
 import FullServiceScope from "../../sections/services/fullService/FullServiceScope";
+import HeroBanner from "../../sections/home/HeroBanner";
 
 export default function FullEventsPage() {
   const breadcrumb = [
@@ -20,6 +22,16 @@ export default function FullEventsPage() {
       <FullServiceHero />
 
       <FullServiceScope />
+
+      <PlanningProcess />
+
+      <HeroBanner
+        title="¿Listo para organizar tu evento?"
+        buttonText="Contactanos"
+        message="¡Hola! Me gustaría recibir más información sobre sus servicios."
+        backgroundImage="/images/varias/varias.webp"
+      />
+
 
     </main>
   );
