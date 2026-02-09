@@ -6,7 +6,7 @@ const ValuesSection = () => {
   return (
     <section className="w-full py-20 bg-white text-azulOscuro flex flex-col items-center text-center">
       {/* Título */}
-      <h2 className="text-3xl md:text-4xl font-urbanist font-semibold uppercase mb-2 text-azulOscuro">
+      <h2 className="text-3xl md:text-4xl font-marcellus font-semibold uppercase mb-2 text-azulOscuro">
         Nuestra Esencia
       </h2>
       <div className="w-20 h-2 mx-auto bg-dorado mb-4"></div>

@@ -33,7 +33,7 @@ const BG_IMAGE = "/images/home/process/bg-flashcards.jpeg";
 const ProcessCard = memo(function ProcessCard({ title, image, description }) {
   return (
     <div className="group [perspective:1000px] w-64 aspect-[4/5]">
-      <div className="relative w-full h-full font-lora uppercase transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+      <div className="relative w-full h-full font-urbanist transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
         {/* Frente */}
         <div className="absolute inset-0 rounded-xl overflow-hidden shadow-lg [backface-visibility:hidden]">
           <img
@@ -43,7 +43,7 @@ const ProcessCard = memo(function ProcessCard({ title, image, description }) {
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-            <h3 className="text-white text-2xl font-semibold text-center px-2 drop-shadow-md">
+            <h3 className="text-white text-2xl md:text-3xl font-semibold text-center px-2 drop-shadow-md">
               {title}
             </h3>
           </div>
@@ -55,7 +55,7 @@ const ProcessCard = memo(function ProcessCard({ title, image, description }) {
           style={{ backgroundImage: `url(${BG_IMAGE})` }}
         >
           <div className="absolute inset-0 bg-black/40 flex items-center justify-center p-4">
-            <p className="text-white text-center text-lg md:text-xl font-bold leading-relaxed drop-shadow-lg">
+            <p className="text-white text-center text-xl md:text-2xl font-bold leading-relaxed drop-shadow-lg">
               {description}
             </p>
           </div>
@@ -70,7 +70,7 @@ function ProcessSection() {
     <section className="flex flex-col items-center justify-center py-16 my-12">
       {/* Header */}
       <div className="text-center mb-12 px-4">
-        <h2 className="text-3xl md:text-4xl font-urbanist uppercase font-bold text-azulOscuro mb-2">
+        <h2 className="text-3xl md:text-4xl font-marcellus uppercase font-bold text-azulOscuro mb-2">
           Organización integral de tu evento
         </h2>
 
@@ -92,6 +92,26 @@ function ProcessSection() {
             description={card.description}
           />
         ))}
+      </div>
+
+      {/* CTA secundario */}
+      <div className="mt-14">
+        <a
+          href="/servicios/organizacion-integral"
+          className="
+            inline-flex items-center gap-2
+            px-8 py-3
+            font-urbanist uppercase text-sm tracking-wide
+            text-white bg-azulOscuro
+            rounded-full
+            transition-all duration-300
+            hover:bg-blue-900 hover:scale-105
+            shadow-lg shadow-blue-900/30
+          "
+        >
+          saber mas
+          <span className="text-lg">→</span>
+        </a>
       </div>
     </section>
   );

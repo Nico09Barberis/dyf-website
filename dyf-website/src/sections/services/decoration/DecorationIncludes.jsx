@@ -54,7 +54,7 @@ const DecorationIncludes = () => {
 
         {/* Header */}
         <div className="mb-16 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold font-urbanist text-gray-900 mb-2">
+          <h2 className="text-3xl md:text-4xl font-semibold font-marcellus uppercase text-gray-900 mb-2">
             Un servicio pensado de principio a fin
           </h2>
           <div className="w-24 h-2 bg-dorado mx-auto mb-4" />

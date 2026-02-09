@@ -33,7 +33,7 @@ const DecorationGallery = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="mb-10 md:mb-14 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold font-urbanist text-gray-900 mb-2">
+          <h2 className="text-3xl md:text-4xl font-semibold font-marcellus uppercase text-gray-900 mb-2">
             Ambientaciones que inspiran
           </h2>
           <div className="w-24 h-2 bg-dorado mx-auto mb-4" />

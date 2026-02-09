@@ -61,7 +61,7 @@ const FurnitureIncludesSection = () => {
 
         {/* Header */}
         <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-urbanist uppercase font-bold text-azulOscuro mb-2">
+          <h2 className="text-3xl md:text-4xl font-marcellus uppercase font-bold text-azulOscuro mb-2">
             ¿Qué incluye el servicio?
           </h2>
           <div className="w-20 h-1.5 mx-auto bg-dorado mb-4"></div>

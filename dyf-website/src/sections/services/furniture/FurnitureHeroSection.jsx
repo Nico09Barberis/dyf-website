@@ -11,7 +11,7 @@ const FurnitureHeroSection = () => {
         </span>
 
         {/* Title */}
-        <h1 className="text-3xl md:text-4xl font-urbanist uppercase font-bold text-azulOscuro leading-tight mb-2">
+        <h1 className="text-3xl md:text-4xl font-marcellus uppercase font-bold text-azulOscuro leading-tight mb-2">
           Alquiler de mobiliario para eventos
         </h1>
 

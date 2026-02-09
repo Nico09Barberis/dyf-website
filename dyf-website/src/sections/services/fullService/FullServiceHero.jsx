@@ -17,7 +17,7 @@ const FullServiceHero = () => {
           rounded-full uppercase tracking-wider
           text-sm font-urbanist font-light
           text-dorado
-          bg-blue-50/80 backdrop-blur
+          bg-blue-50/70 backdrop-blur
           border border-blue-100
         ">
           Servicio premium

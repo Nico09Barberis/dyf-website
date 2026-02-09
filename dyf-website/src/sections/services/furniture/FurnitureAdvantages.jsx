@@ -46,7 +46,7 @@ const FurnitureAdvantages = () => {
 
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-urbanist uppercase font-bold text-gray-900 mb-3">
+          <h2 className="text-3xl md:text-4xl font-marcellus uppercase font-bold text-gray-900 mb-3">
             ¿Por qué elegirnos?
           </h2>
           <div className="w-20 h-1.5 mx-auto bg-dorado mb-4"></div>

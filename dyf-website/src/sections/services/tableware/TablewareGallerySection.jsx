@@ -3,15 +3,15 @@ import React from "react";
 const images = [
   {
     src: "/images/galery/tableware/tableware-1.webp",
-    title: "Evento corporativo empresarial",
+    title: "Vajilla clasica",
   },
   {
     src: "/images/galery/tableware/tableware-3.webp",
-    title: "Celebración social privada",
+    title: "Vajilla premium para eventos exclusivos",
   },
   {
     src: "/images/galery/tableware/tableware-4.webp",
-    title: "Evento institucional",
+    title: "Vajilla moderna para eventos actuales",
   },
 ];
 
@@ -21,7 +21,7 @@ const TablewareGallerySection = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-urbanist uppercase font-bold text-gray-900 mb-2">
+          <h2 className="text-3xl md:text-4xl font-marcellus uppercase font-bold text-gray-900 mb-2">
             Galeria de eventos
           </h2>
           <div className="w-20 h-1.5 mx-auto bg-dorado mb-4"></div>

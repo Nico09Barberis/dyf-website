@@ -47,7 +47,7 @@ const FullServiceScope = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Header */}
         <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-4xl font-urbanist font-bold uppercase text-gray-900 mb-2">
+          <h2 className="text-3xl md:text-4xl font-marcellus font-bold uppercase text-gray-900 mb-2">
             Todo bajo una sola coordinación
           </h2>
           <div className="w-20 h-2 bg-dorado mx-auto mb-4"></div>

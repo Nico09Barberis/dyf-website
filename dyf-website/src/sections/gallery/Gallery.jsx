@@ -17,10 +17,10 @@ const sectionsData = [
     key: "decoracion",
     title: "decoración",
     images: [
-      { src: "/images/galery/eventos/event-1.webp", caption: "Show en vivo" },
-      { src: "/images/galery/eventos/event-2.webp", caption: "Ambiente nocturno"},
-      { src: "/images/galery/eventos/event-3.webp", caption: "Brindis con amigos" },
-      { src: "/images/galery/eventos/event-4.webp", caption: "Celebración especial" },
+      { src: "/images/decGallery/decGallery1.webp", caption: "Show en vivo" },
+      { src: "/images/decGallery/decGallery2.webp", caption: "Ambiente nocturno"},
+      { src: "/images/decGallery/decGallery3.webp", caption: "Brindis con amigos" },
+      { src: "/images/decGallery/decGallery4.webp", caption: "Celebración especial" },
     ],
   },
   {
@@ -93,7 +93,7 @@ export default function Gallery() {
   return (
     <div className="container mx-auto px-4 py-8 mt-12">
       <section className="mb-16 flex flex-col items-center text-center px-4 sm:px-6 lg:px-0">
-        <h1 className="text-3xl md:text-4xl font-urbanist font-semibold uppercase mb-2 text-azulOscuro">
+        <h1 className="text-3xl md:text-4xl font-marcellus font-semibold uppercase mb-2 text-azulOscuro">
           nuestra galeria
         </h1>
 
