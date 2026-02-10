@@ -20,7 +20,7 @@ const ImgCardSection = () => {
         <h3 className="text-2xl md:text-3xl font-lora font-semibold text-gray-800 mb-1">
           ¿Que ofrecemos?
         </h3>
-        <div className="w-20 h-2 bg-[#F4D03F] mb-2"></div>
+        <div className="w-20 h-1.5 bg-[#F4D03F] mb-2"></div>
         <p className="text-gray-800 font-marcellus text-md md:text-lg leading-relaxed">
           En DyF Celebraciones ofrecemos soluciones flexibles para la
           realización de eventos. Contamos con servicios de planificación

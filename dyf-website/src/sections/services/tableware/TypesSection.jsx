@@ -32,7 +32,7 @@ const TablewareTypes = () => {
         <h2 className="text-xl md:text-4xl font-marcellus font-semibold uppercase text-center mb-2">
           Tipos de Vajilla
         </h2>
-        <div className="w-20 h-2 bg-dorado mx-auto mb-4"></div>
+        <div className="w-20 h-1.5 bg-dorado mx-auto mb-4"></div>
 
         <p className="text-center max-w-3xl mx-auto text-gray-600 text-base md:text-lg mb-12 font-marcellus">
           Contamos con una amplia variedad de estilos para adaptarnos a cada tipo de evento.

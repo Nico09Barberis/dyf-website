@@ -45,7 +45,7 @@ const PlanningProcess = () => {
           <h2 className="text-xl md:text-4xl font-marcellus font-bold uppercase text-gray-900 mb-2">
             Nuestro proceso de trabajo
           </h2>
-          <div className="w-20 h-2 bg-dorado mx-auto mb-4" />
+          <div className="w-20 h-1.5 bg-dorado mx-auto mb-4" />
           <p className="max-w-2xl mx-auto text-gray-700 font-marcellus text-lg">
             Un método probado para planificar, coordinar y ejecutar eventos sin margen de error.
           </p>

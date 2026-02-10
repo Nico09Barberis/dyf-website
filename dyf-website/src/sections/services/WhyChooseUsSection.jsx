@@ -59,7 +59,7 @@ const WhyChooseUsSection = () => {
           <h2 className="text-xl md:text-4xl font-marcellus uppercase font-bold mb-3">
             ¿Por qué elegir DyF Celebraciones?
           </h2>
-          <div className="w-20 h-2 mx-auto bg-dorado mb-5"></div>
+          <div className="w-20 h-1.5 mx-auto bg-dorado mb-5"></div>
           <p className="text-gray-300 max-w-3xl mx-auto font-marcellus text-md md:text-lg">
             Nos especializamos en brindar soluciones confiables, elegantes y
             adaptadas a cada tipo de evento, combinando experiencia, calidad y

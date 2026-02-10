@@ -50,7 +50,7 @@ const FullServiceScope = () => {
           <h2 className="text-xl md:text-4xl font-marcellus font-bold uppercase text-gray-900 mb-2">
             Todo bajo una sola coordinación
           </h2>
-          <div className="w-20 h-2 bg-dorado mx-auto mb-4"></div>
+          <div className="w-20 h-1.5 bg-dorado mx-auto mb-4"></div>
           <p className="max-w-3xl mx-auto text-gray-700 font-marcellus text-lg">
             Centralizamos cada área del evento para garantizar coherencia,
             eficiencia y resultados impecables.

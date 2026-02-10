@@ -25,7 +25,7 @@ const ClientsGallerySection = () => {
           <h2 className="text-xl md:text-4xl font-marcellus uppercase font-bold text-azulOscuro mb-2">
             Eventos realizados
           </h2>
-          <div className="w-20 h-2 mx-auto bg-dorado mb-4"></div>
+          <div className="w-20 h-1.5 mx-auto bg-dorado mb-4"></div>
           <p className="text-gray-700 max-w-3xl mx-auto font-marcellus text-base md:text-lg">
             Algunos momentos de los eventos que hemos acompañado, reflejando nuestro
             compromiso con la organización, la ambientación y cada detalle.

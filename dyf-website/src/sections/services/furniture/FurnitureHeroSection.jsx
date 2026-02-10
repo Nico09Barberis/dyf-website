@@ -16,7 +16,7 @@ const FurnitureHeroSection = () => {
         </h1>
 
         {/* Separator */}
-        <div className="w-24 h-1.5 mx-auto bg-dorado mb-8"></div>
+        <div className="w-20 h-1.5 mx-auto bg-dorado mb-8"></div>
 
         {/* Description */}
         <p className="max-w-3xl mx-auto text-gray-700 font-marcellus text-md md:text-lg mb-10">

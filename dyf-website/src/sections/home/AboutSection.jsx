@@ -41,7 +41,7 @@ const AboutSection = () => {
           Sobre nosotros
         </h3>
 
-        <div className="w-20 h-2 bg-[#F4D03F] mb-4"></div>
+        <div className="w-20 h-1.5 bg-[#F4D03F] mb-4"></div>
 
         <p className="text-gray-800 text-md md:text-lg font-marcellus leading-relaxed">
           En d&f creemos que cada evento cuenta una historia y nuestro

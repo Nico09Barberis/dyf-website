@@ -42,7 +42,7 @@ const ClientsSection = () => {
         <h2 className="text-xl md:text-4xl font-marcellus font-semibold uppercase mb-2 text-azulOscuro">
           Nuestros Clientes
         </h2>
-        <div className="w-20 h-2 bg-dorado mx-auto mb-4"></div>
+        <div className="w-20 h-1.5 bg-dorado mx-auto mb-4"></div>
         {/* Subtítulo */}
         <p className="text-gray-800 max-w-3xl mx-auto mb-12 text-md md:text-lg font-marcellus">
           Hemos trabajado con marcas líderes en distintas industrias, ofreciendo soluciones innovadoras y confiables.

@@ -35,7 +35,7 @@ const ClientsCatSection = () => {
           <h2 className="text-xl md:text-4xl font-marcellus uppercase font-bold text-azulOscuro mb-2">
             clientes con los que hemos trabajado
           </h2>
-          <div className="w-20 h-2 mx-auto bg-dorado mb-4"></div>
+          <div className="w-20 h-1.5 mx-auto bg-dorado mb-4"></div>
           <p className="text-gray-700 max-w-3xl mx-auto font-marcellus text-base md:text-lg">
             A lo largo de nuestra trayectoria hemos trabajado con una amplia
             variedad de clientes, desde empresas privadas hasta organismos

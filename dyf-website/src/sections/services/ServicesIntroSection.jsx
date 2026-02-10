@@ -7,7 +7,7 @@ const ServicesIntroSection = () => {
           Nuestros servicios
         </h1>
  
-        <div className="w-20 h-2 bg-dorado mx-auto mb-6"></div>
+        <div className="w-20 h-1.5 bg-dorado mx-auto mb-6"></div>
 
         <p className="text-md md:text-lg font-marcellus text-gray-600 max-w-3xl mx-auto">
           En DyF Celebraciones ofrecemos soluciones flexibles para la

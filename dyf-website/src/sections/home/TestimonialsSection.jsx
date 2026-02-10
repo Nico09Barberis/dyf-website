@@ -9,7 +9,7 @@ const TestimonialsSection = () => {
         <h2 className="text-xl md:text-4xl font-marcellus uppercase font-bold text-azulOscuro mb-2">
           Lo que dicen nuestros clientes
         </h2>
-        <div className="bg-azulOscuro w-20 h-2 mx-auto mb-4"></div>
+        <div className="bg-azulOscuro w-20 h-1.5 mx-auto mb-4"></div>
 
         {/* Subtítulo */}
         <p className="text-gray-800 text-md md:text-lg font-marcellus  mb-12">

@@ -16,7 +16,7 @@ const FullServiceOurApproach = () => {
         </h2>
 
         {/* Divider */}
-        <div className="w-20 h-2 mx-auto bg-dorado mb-8"></div>
+        <div className="w-20 h-1.5 mx-auto bg-dorado mb-8"></div>
 
         {/* Main text */}
         <p className="font-marcellus text-gray-700 text-lg md:text-xl leading-relaxed mb-10">

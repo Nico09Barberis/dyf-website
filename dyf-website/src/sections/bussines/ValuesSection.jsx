@@ -9,7 +9,7 @@ const ValuesSection = () => {
       <h2 className="text-xl md:text-4xl font-marcellus font-semibold uppercase mb-2 text-azulOscuro">
         Nuestra Esencia
       </h2>
-      <div className="w-20 h-2 mx-auto bg-dorado mb-4"></div>
+      <div className="w-20 h-1.5 mx-auto bg-dorado mb-4"></div>
 
       {/* Subtítulo */}
       <p className="max-w-2xl font-marcellus text-md md:text-lg text-gray-800 text-center mb-12">
