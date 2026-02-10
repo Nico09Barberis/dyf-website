@@ -32,7 +32,7 @@ const DecorationGallery = () => {
           <h2 className="text-xl md:text-4xl font-semibold font-marcellus uppercase text-gray-900 mb-2">
             Ambientaciones que inspiran
           </h2>
-          <div className="w-24 h-2 bg-dorado mx-auto mb-4" />
+          <div className="w-20 h-1.5 bg-dorado mx-auto mb-4" />
           <p className="max-w-3xl mx-auto text-gray-600 font-marcellus text-base md:text-lg">
             Cada espacio es diseñado desde cero para reflejar una identidad
             única, cuidando cada detalle estético y funcional.
@@ -49,7 +49,7 @@ const DecorationGallery = () => {
               <div
                 key={index}
                 className={`
-                group relative overflow-hidden rounded-2xl bg-gray-100
+                group relative overflow-hidden rounded-xl md:rounded-none bg-gray-100
                 ${isFeatured ? "lg:col-span-2 lg:row-span-2" : ""}
                 ${isDesktopOnly ? "hidden lg:block" : ""}
               `}

@@ -58,7 +58,7 @@ const DecorationStylesCarousel = () => {
           <h2 className="text-xl md:text-4xl font-semibold font-marcellus uppercase text-gray-900 mb-2">
             Estilos de ambientación
           </h2>
-          <div className="w-24 h-2 bg-dorado mx-auto mb-4" />
+          <div className="w-20 h-1.5 bg-dorado mx-auto mb-4" />
           <p className="max-w-3xl mx-auto text-gray-600 font-marcellus text-base md:text-lg">
             Cada evento es único. Creamos ambientaciones pensadas para reflejar
             tu estilo y transformar el espacio.

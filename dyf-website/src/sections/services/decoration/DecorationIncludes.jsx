@@ -57,7 +57,7 @@ const DecorationIncludes = () => {
           <h2 className="text-xl md:text-4xl font-semibold font-marcellus uppercase text-gray-900 mb-2">
             De la idea al espacio
           </h2>
-          <div className="w-24 h-2 bg-dorado mx-auto mb-4" />
+          <div className="w-20 h-1.5 bg-dorado mx-auto mb-4" />
           <p className="text-gray-600 font-marcellus text-lg max-w-3xl mx-auto">
             Cada ambientación es el resultado de un proceso creativo cuidado,
             donde diseño, estética y ejecución trabajan en conjunto.
