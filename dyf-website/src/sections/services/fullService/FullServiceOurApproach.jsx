@@ -11,7 +11,7 @@ const FullServiceOurApproach = () => {
       <div className="relative max-w-4xl mx-auto px-6 text-center">
 
         {/* Title */}
-        <h2 className="text-3xl md:text-4xl font-marcellus font-bold uppercase text-gray-900 mb-2">
+        <h2 className="text-xl md:text-4xl font-marcellus font-bold uppercase text-gray-900 mb-2">
           Nuestro enfoque
         </h2>
 

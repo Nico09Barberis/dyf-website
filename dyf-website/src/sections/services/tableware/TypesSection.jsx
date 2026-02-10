@@ -29,7 +29,7 @@ const TablewareTypes = () => {
     <section className="py-12 text-azulOscuro">
       <div className="max-w-7xl mx-auto px-6">
 
-        <h2 className="text-3xl md:text-4xl font-marcellus font-semibold uppercase text-center mb-2">
+        <h2 className="text-xl md:text-4xl font-marcellus font-semibold uppercase text-center mb-2">
           Tipos de Vajilla
         </h2>
         <div className="w-20 h-2 bg-dorado mx-auto mb-4"></div>

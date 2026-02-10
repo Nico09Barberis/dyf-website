@@ -40,7 +40,7 @@ export default function RentalProcessSection() {
       <div className="max-w-6xl mx-auto">
 
         <header className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-marcellus uppercase font-bold mb-2 text-azulOscuro">
+          <h2 className="text-xl md:text-4xl font-marcellus uppercase font-bold mb-2 text-azulOscuro">
             ¿Cómo funciona el alquiler?
           </h2>
           <div className="w-20 h-2 bg-dorado mx-auto mb-4"></div>
