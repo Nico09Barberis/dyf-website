@@ -69,7 +69,7 @@ const ClientTestimonialsSection = () => {
               key={index}
               className="
                 group
-                bg-gray-50 border border-gray-200 rounded-b-xl p-6 shadow-sm relative
+                bg-[#EDF4FF] border border-gray-200 rounded-b-xl p-6 shadow-sm relative
                 transition-all duration-300 ease-out
                 hover:-translate-y-2 hover:shadow-lg
               "
@@ -78,7 +78,7 @@ const ClientTestimonialsSection = () => {
               <div className="absolute top-0 left-0 w-full h-1 bg-dorado scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
 
               {/* Quote icon */}
-              <div className="absolute top-4 right-4 text-dorado/30 text-3xl transition-all duration-300 group-hover:text-dorado group-hover:scale-110">
+              <div className="absolute top-4 right-4 text-dorado/70 text-3xl transition-all duration-300 group-hover:text-dorado group-hover:scale-110">
                 <FiMessageSquare />
               </div>
 

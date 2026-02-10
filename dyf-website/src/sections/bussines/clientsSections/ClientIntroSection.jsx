@@ -1,32 +1,31 @@
 import React from "react";
-import {
-  FiUsers,
-  FiBriefcase,
-  FiCoffee,
-  FiHome
-} from "react-icons/fi";
+import { FiUsers, FiBriefcase, FiCoffee, FiHome } from "react-icons/fi";
 
 const clientTypes = [
   {
     title: "Eventos sociales",
-    description: "Cumpleaños, aniversarios, celebraciones familiares y eventos privados.",
-    icon: FiUsers
+    description:
+      "Cumpleaños, aniversarios, celebraciones familiares y eventos privados.",
+    icon: FiUsers,
   },
   {
     title: "Empresas y clientes privados",
-    description: "Empresas, estancias, salones y organizaciones que confían en nuestros servicios.",
-    icon: FiBriefcase
+    description:
+      "Empresas, estancias, salones y organizaciones que confían en nuestros servicios.",
+    icon: FiBriefcase,
   },
   {
     title: "Sector gastronómico y hotelero",
-    description: "Restaurantes, posadas y espacios turísticos que requieren soluciones profesionales.",
-    icon: FiCoffee
+    description:
+      "Restaurantes, posadas y espacios turísticos que requieren soluciones profesionales.",
+    icon: FiCoffee,
   },
   {
     title: "Organismos públicos",
-    description: "Instituciones y entidades gubernamentales con altos estándares operativos.",
-    icon: FiHome
-  }
+    description:
+      "Instituciones y entidades gubernamentales con altos estándares operativos.",
+    icon: FiHome,
+  },
 ];
 
 const ClientsIntroSection = () => {
@@ -55,8 +54,14 @@ const ClientsIntroSection = () => {
                 key={index}
                 className="group bg-[#EDF4FF] border border-gray-200 rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
               >
-                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-dorado/10 flex items-center justify-center transition group-hover:bg-dorado/20">
-                  <Icon className="text-dorado text-2xl" />
+                <div
+                  className="w-14 h-14 mx-auto mb-4 rounded-full 
+                  bg-azulOscuro/10 
+                    flex items-center justify-center 
+                    transition 
+                  group-hover:bg-azulOscuro/20"
+                >
+                  <Icon className="text-azulOscuro text-2xl" />
                 </div>
 
                 <h3 className="font-urbanist font-semibold text-gray-900 mb-2">
