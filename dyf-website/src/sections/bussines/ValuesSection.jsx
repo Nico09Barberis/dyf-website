@@ -4,7 +4,7 @@ import AnimatedCard from "../../components/ui/AnimatedCard";
 
 const ValuesSection = () => {
   return (
-    <section className="w-full py-20 bg-white text-azulOscuro flex flex-col items-center text-center">
+    <section className="w-full p-6 md:p-12 bg-white text-azulOscuro flex flex-col items-center text-center">
       {/* Título */}
       <h2 className="text-xl md:text-4xl font-marcellus font-semibold uppercase mb-2 text-azulOscuro">
         Nuestra Esencia

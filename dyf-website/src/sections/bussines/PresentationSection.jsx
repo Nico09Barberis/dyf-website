@@ -1,6 +1,6 @@
 const PresentationSection = () => {
   return (
-    <section className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row my-20 p-2">
+    <section className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row md:my-20 p-2">
       
       {/* Contenedor Izquierdo (imagen en desktop, abajo en mobile) */}
       <div className="w-full md:w-1/2">

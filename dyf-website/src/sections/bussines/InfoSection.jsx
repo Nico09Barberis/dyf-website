@@ -62,7 +62,7 @@ const InfoSection = () => {
   ];
 
   return (
-    <section className="w-full py-12 bg-[#A7C7E7]">
+    <section className="w-full py-2 md:py-12 bg-[#A7C7E7]">
       <div className="max-w-6xl mx-auto">
         {sections.map(({ id, image, title, text, reverse }) => (
           <AnimatedBlock key={id}>
