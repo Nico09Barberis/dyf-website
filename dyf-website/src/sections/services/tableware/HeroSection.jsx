@@ -1,11 +1,11 @@
 const HeroSection = () => {
   return (
-    <section className="relative w-full min-h-[40vh] md:min-h-[70vh] flex items-center justify-center bg-white text-azulOscuro overflow-hidden">
+    <section className="py-12 md:py-24 w-full flex items-center justify-center bg-white text-azulOscuro overflow-hidden">
       {/* Contenido */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center flex flex-col items-center gap-2">
         <h1 className="text-xl md:text-4xl font-marcellus font-semibold uppercase tracking-wide">
           Alquiler de Vajilla para Eventos
-        </h1>
+        </h1> 
 
         <div className="w-20 h-1.5 bg-dorado mx-auto mb-4"></div>
 
