@@ -49,13 +49,13 @@ const includes = [
 
 const DecorationIncludes = () => {
   return (
-    <section className="py-20 md:py-28">
+    <section className="py-8 md:py-16">
       <div className="max-w-5xl mx-auto px-6 md:px-12">
 
         {/* Header */}
         <div className="mb-16 text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold font-marcellus uppercase text-gray-900 mb-2">
-            Un servicio pensado de principio a fin
+          <h2 className="text-xl md:text-4xl font-semibold font-marcellus uppercase text-gray-900 mb-2">
+            De la idea al espacio
           </h2>
           <div className="w-24 h-2 bg-dorado mx-auto mb-4" />
           <p className="text-gray-600 font-marcellus text-lg max-w-3xl mx-auto">

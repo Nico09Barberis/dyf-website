@@ -62,7 +62,7 @@ const FurnitureAdvantages = () => {
             <div
               key={index}
               className="
-                group bg-gray-50 rounded-2xl p-6
+                group bg-[#EDF4FF] rounded-2xl p-6
                 shadow-sm transition-all duration-300
                 hover:-translate-y-1 hover:shadow-lg
               "

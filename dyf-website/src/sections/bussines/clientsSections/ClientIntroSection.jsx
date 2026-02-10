@@ -53,7 +53,7 @@ const ClientsIntroSection = () => {
             return (
               <div
                 key={index}
-                className="group bg-gray-50 border border-gray-200 rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                className="group bg-[#EDF4FF] border border-gray-200 rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
               >
                 <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-dorado/10 flex items-center justify-center transition group-hover:bg-dorado/20">
                   <Icon className="text-dorado text-2xl" />

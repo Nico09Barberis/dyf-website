@@ -41,6 +41,7 @@ const ServicesZigZagSection = () => {
 
           return (
             <div
+            key={service.path}
               className={`group flex flex-col md:flex-row ${
                 isReversed ? "md:flex-row-reverse" : ""
               } items-center gap-10 transition-transform duration-500 hover:-translate-y-1`}

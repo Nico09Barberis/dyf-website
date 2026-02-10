@@ -25,8 +25,7 @@ const styles = [
   },
   {
     title: "Temáticas",
-    description:
-      "Conceptos creativos adaptados a la idea de tu evento.",
+    description: "Conceptos creativos adaptados a la idea de tu evento.",
     image:
       "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1400&q=80",
   },
@@ -38,7 +37,6 @@ const styles = [
       "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1400&q=80",
   },
 ];
-
 
 const DecorationStylesCarousel = () => {
   const [current, setCurrent] = useState(0);
@@ -57,7 +55,7 @@ const DecorationStylesCarousel = () => {
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-10 md:mb-14 text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold font-marcellus uppercase text-gray-900 mb-2">
+          <h2 className="text-xl md:text-4xl font-semibold font-marcellus uppercase text-gray-900 mb-2">
             Estilos de ambientación
           </h2>
           <div className="w-24 h-2 bg-dorado mx-auto mb-4" />
@@ -67,105 +65,100 @@ const DecorationStylesCarousel = () => {
           </p>
         </div>
 
-        {/* Carousel wrapper */}
-        <div className="relative w-full overflow-hidden rounded-2xl">
-          {/* Track */}
-          <div
-            className="flex transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${current * 100}%)` }}
-          >
-            {styles.map((item, index) => (
-              <div
-                key={index}
-                className="w-full min-w-full flex-shrink-0"
-              >
-                {/* Card */}
-                <div
-                  className="
-                    relative
-                    w-full
-                    aspect-[5/3]
-                    sm:aspect-[21/9]
-                    rounded-2xl
-                    overflow-hidden
-                    bg-cover
-                    bg-center
+        {/* Carousel */}
+        <div className="w-full">
+          {/* Carousel viewport */}
+          <div className="relative w-full overflow-hidden rounded-2xl">
+            {/* Track */}
+            <div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${current * 100}%)` }}
+            >
+              {styles.map((item, index) => (
+                <div key={index} className="w-full min-w-full flex-shrink-0">
+                  <div
+                    className="
+              relative
+              w-full
+              aspect-[5/3]
+              sm:aspect-[21/9]
+              rounded-2xl
+              overflow-hidden
+              bg-cover
+              bg-center
+            "
+                    style={{ backgroundImage: `url(${item.image})` }}
+                  >
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-black/55" />
+
+                    {/* Content */}
+                    <div className="relative z-10 h-full w-full flex items-center justify-center px-4 sm:px-8">
+                      <div className="text-center max-w-xl">
+                        <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold font-urbanist text-white mb-4">
+                          {item.title}
+                        </h3>
+
+                        <p className="text-white/90 font-marcellus text-sm sm:text-base md:text-lg mb-6">
+                          {item.description}
+                        </p>
+
+                        <a
+                          href="/contacto"
+                          className="
+                    inline-block
+                    px-6 py-3
+                    bg-white
+                    text-gray-900
+                    font-urbanist
+                    font-semibold
+                    rounded-xl
+                    hover:bg-gray-100
+                    transition
                   "
-                  style={{ backgroundImage: `url(${item.image})` }}
-                >
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-black/55" />
-
-                  {/* Content */}
-                  <div className="relative z-10 h-full w-full flex items-center justify-center px-4 sm:px-8">
-                    <div className="text-center max-w-xl">
-                      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold font-urbanist text-white mb-4">
-                        {item.title}
-                      </h3>
-
-                      <p className="text-white/90 font-marcellus text-sm sm:text-base md:text-lg mb-6">
-                        {item.description}
-                      </p>
-
-                      <a
-                        href="/contacto"
-                        className="
-                          inline-block
-                          px-6 py-3
-                          bg-white
-                          text-gray-900
-                          font-urbanist
-                          font-semibold
-                          rounded-xl
-                          hover:bg-gray-100
-                          transition
-                        "
-                      >
-                        Solicitar asesoramiento
-                      </a>
+                        >
+                          Solicitar asesoramiento
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
-          {/* Controls */}
-          <button
-            onClick={prevSlide}
-            className="
-              absolute
-              left-3
-              top-1/2
-              -translate-y-1/2
-              bg-white/90
-              rounded-full
-              p-2 sm:p-3
-              shadow
-              hover:bg-white
-              transition
-            "
-          >
-            <FiChevronLeft className="text-xl sm:text-2xl text-gray-900" />
-          </button>
+          {/* Controls BELOW carousel */}
+          <div className="mt-6 flex items-center justify-center gap-4">
+            <button
+              onClick={prevSlide}
+              className="
+        bg-gray-100
+        hover:bg-gray-200
+        rounded-full
+        p-3
+        shadow
+        transition
+      "
+              aria-label="Anterior"
+            >
+              <FiChevronLeft className="text-2xl text-gray-900" />
+            </button>
 
-          <button
-            onClick={nextSlide}
-            className="
-              absolute
-              right-3
-              top-1/2
-              -translate-y-1/2
-              bg-white/90
-              rounded-full
-              p-2 sm:p-3
-              shadow
-              hover:bg-white
-              transition
-            "
-          >
-            <FiChevronRight className="text-xl sm:text-2xl text-gray-900" />
-          </button>
+            <button
+              onClick={nextSlide}
+              className="
+        bg-gray-100
+        hover:bg-gray-200
+        rounded-full
+        p-3
+        shadow
+        transition
+      "
+              aria-label="Siguiente"
+            >
+              <FiChevronRight className="text-2xl text-gray-900" />
+            </button>
+          </div>
         </div>
       </div>
     </section>

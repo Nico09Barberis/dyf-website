@@ -56,7 +56,7 @@ const ClientsCatSection = () => {
                 className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm grid grid-cols-1 md:grid-cols-4"
               >
                 {/* Left panel */}
-                <div className="bg-gray-100 p-6 flex flex-col justify-center items-start md:items-center text-left md:text-center">
+                <div className="bg-[#EDF4FF] p-6 flex flex-col justify-center items-start md:items-center text-left md:text-center">
                   <h3 className="text-xl md:text-2xl font-urbanist uppercase font-bold text-gray-900 leading-tight">
                     {category.title}
                   </h3>

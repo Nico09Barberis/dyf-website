@@ -35,7 +35,7 @@ const categories = [
 
 const FurnitureCatSection = () => {
   return (
-    <section id="categorias" className="py-16 md:py-24 bg-gray-50">
+    <section id="categorias" className="py-8 md:py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
 
         {/* Header */}

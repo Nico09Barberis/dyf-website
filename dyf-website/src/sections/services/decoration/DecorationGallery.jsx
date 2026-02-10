@@ -21,19 +21,15 @@ const images = [
     src: "/images/decGallery/decGallery5.webp",
     alt: "Detalles premium en ambientación",
   },
-  {
-    src: "/images/decGallery/decGallery6.webp",
-    alt: "Diseño integral de espacios",
-  },
 ];
 
 const DecorationGallery = () => {
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-8 md:py-16">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="mb-10 md:mb-14 text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold font-marcellus uppercase text-gray-900 mb-2">
+          <h2 className="text-xl md:text-4xl font-semibold font-marcellus uppercase text-gray-900 mb-2">
             Ambientaciones que inspiran
           </h2>
           <div className="w-24 h-2 bg-dorado mx-auto mb-4" />
@@ -44,22 +40,41 @@ const DecorationGallery = () => {
         </div>
 
         {/* Gallery */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          {images.map((img, index) => (
-            <div
-              key={index}
-              className="group relative overflow-hidden bg-gray-100"
-            >
-              <img
-                src={img.src}
-                alt={img.alt}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {images.map((img, index) => {
+            const isFeatured = index === 0;
+            const isDesktopOnly = index === 4;
 
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/10 transition-colors duration-500" />
-            </div>
-          ))}
+            return (
+              <div
+                key={index}
+                className={`
+                group relative overflow-hidden rounded-2xl bg-gray-100
+                ${isFeatured ? "lg:col-span-2 lg:row-span-2" : ""}
+                ${isDesktopOnly ? "hidden lg:block" : ""}
+              `}
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="
+                    w-full h-full object-cover
+                    transition-transform duration-700 ease-out
+                    group-hover:scale-105
+                  "
+                />
+
+                <div
+                  className="
+                    absolute inset-0
+                    bg-black/0
+                    group-hover:bg-black/20
+                    transition-colors duration-500
+                  "
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

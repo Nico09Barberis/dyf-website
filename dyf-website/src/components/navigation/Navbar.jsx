@@ -260,7 +260,7 @@ function Navbar() {
                   </Link>
 
                   <Link
-                    to="/servicios/decoracion-ambientacion"
+                    to="/servicios/ambientacion-decoracion"
                     onClick={() => setIsOpen(false)}
                     className="block text-gray-200 hover:text-gray-300 hover:bg-[#002856] py-1 px-2 rounded-lg"
                   >
