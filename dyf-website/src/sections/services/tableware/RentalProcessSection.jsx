@@ -36,9 +36,8 @@ const steps = [
 
 export default function RentalProcessSection() {
   return (
-    <section className="w-full py-20 px-4 bg-white">
+    <section className="w-full py-8 md:py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
-
         <header className="text-center mb-16">
           <h2 className="text-xl md:text-4xl font-marcellus uppercase font-bold mb-2 text-azulOscuro">
             ¿Cómo funciona el alquiler?
@@ -49,7 +48,7 @@ export default function RentalProcessSection() {
           </p>
         </header>
 
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 relative">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 md:gap-10 relative">
 
           {steps.map((step, index) => {
             const Icon = step.icon;

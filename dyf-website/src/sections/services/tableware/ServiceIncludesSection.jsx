@@ -56,7 +56,7 @@ export default function ServiceIncludesSection() {
   };
 
   return (
-    <section className="w-full py-20 px-4 bg-gradient-to-b from-white to-gray-50">
+    <section className="w-full py-8 md:py-20 px-4 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-5xl mx-auto">
 
         {/* Header */}

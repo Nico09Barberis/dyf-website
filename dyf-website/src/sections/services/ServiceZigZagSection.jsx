@@ -27,7 +27,7 @@ const services = [
     title: "Organización integral",
     description:
       "Planificación, coordinación y ejecución completa de eventos para que disfrutes sin preocupaciones y con resultados profesionales.",
-    image: "../../../public/images/home/servHome2.webp",
+    image: "/images/home/servHome2.webp",
     path: "/servicios/organizacion-integral",
   },
 ];
@@ -58,7 +58,7 @@ const ServicesZigZagSection = () => {
 
               {/* Content */}
               <div className="w-full md:w-1/2">
-                <h3 className="text-2xl md:text-3xl font-urbanist uppercase font-bold text-gray-900 mb-4">
+                <h3 className="text-2xl md:text-3xl font-marcellus uppercase font-bold text-gray-900 mb-4">
                   {service.title}
                 </h3>
 

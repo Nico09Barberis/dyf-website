@@ -13,7 +13,7 @@ export default function ServicesPage() {
       <HeroWithBreadcrumb
         title="Servicios"
         breadcrumbItems={breadcrumb}
-        imageUrl="../../public/images/galery/fullEvents/fullEvent-2.webp"
+        imageUrl="/images/galery/fullEvents/fullEvent-2.webp"
       />
 
       <ServicesIntroSection />
