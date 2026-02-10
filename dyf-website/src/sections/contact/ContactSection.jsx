@@ -8,7 +8,7 @@ export default function ContactSection() {
     <section className="w-full py-0 md:py-16 px-0 md:px-8 mt-0 md:mt-12">
       <div className="w-full md:max-w-6xl md:mx-auto grid grid-cols-1 md:grid-cols-2 gap-0">
         {/* Columna izquierda */}
-        <div className="flex flex-col w-full bg-[#121212] justify-start space-y-6 p-4 md:p-8">
+        <div className="flex flex-col w-full bg-[#121212] justify-start space-y-6 p-8 md:p-10">
           <h2 className="text-2xl md:text-4xl font-bold text-gray-200 uppercase">
             Info de contacto
           </h2>

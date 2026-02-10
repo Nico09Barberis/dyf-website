@@ -35,8 +35,8 @@ const FullServiceHero = () => {
         {/* Title */}
         <h1
           className="
-            text-4xl md:text-5xl lg:text-6xl
-            font-urbanist font-extrabold
+            text-3xl md:text-5xl lg:text-6xl
+            font-marcellus font-extrabold
             uppercase
             text-gray-900
             leading-tight

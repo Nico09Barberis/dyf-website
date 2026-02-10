@@ -28,9 +28,9 @@ export default function DecorationPage() {
       <DecorationIncludes />
 
       <HeroBanner
-        title="¿Listo para organizar tu evento?"
-        buttonText="Contactanos"
-        message="¡Hola! Me gustaría recibir más información sobre sus servicios."
+        title="Diseñamos experiencias únicas"
+        buttonText="Hablemos"
+        message="Hola, quisiera conocer más sobre sus propuestas de ambientación."
         backgroundImage="/images/varias/varias.webp"
       />
 

@@ -37,7 +37,7 @@ const steps = [
 
 const PlanningProcess = () => {
   return (
-    <section className="py-20">
+    <section className="py-8 md:py-16">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Header */}

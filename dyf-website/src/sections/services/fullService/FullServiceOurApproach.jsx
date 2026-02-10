@@ -2,7 +2,7 @@ import React from "react";
 
 const FullServiceOurApproach = () => {
   return (
-    <section className="relative w-full py-20 md:py-28 overflow-hidden">
+    <section className="relative w-full py-8 md:py-16 overflow-hidden">
       
       {/* Decorative blur */}
       <div className="absolute -top-20 -left-20 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl"></div>

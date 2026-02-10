@@ -43,7 +43,7 @@ const items = [
 
 const FullServiceScope = () => {
   return (
-    <section className="relative py-24 overflow-hidden bg-white">
+    <section className="relative py-8 md:py-16 overflow-hidden bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Header */}
         <div className="text-center mb-20">

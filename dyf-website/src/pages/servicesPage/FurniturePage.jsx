@@ -30,9 +30,9 @@ export default function FurniturePage() {
       <FurnitureRentalProcess />
 
       <HeroBanner
-        title="¿Listo para organizar tu evento?"
-        buttonText="Contactanos"
-        message="¡Hola! Me gustaría recibir más información sobre sus servicios."
+        title="Creamos espacios que se sienten"
+        buttonText="Quiero asesoramiento"
+        message="Hola, me gustaría recibir asesoramiento para la ambientación de mi evento."
         backgroundImage="/images/varias/varias.webp"
       />
 
