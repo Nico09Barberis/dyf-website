@@ -17,7 +17,7 @@ const images = [
   "/images/galery/tableware/tableware-1.webp",
 ];
 
-const GallerySection = () => {
+const HomeGallery = () => {
   const [selectedIndex, setSelectedIndex] = useState(null);
 
   const handleClose = useCallback(() => setSelectedIndex(null), []);
@@ -119,4 +119,4 @@ const GallerySection = () => {
   );
 };
 
-export default GallerySection;
+export default HomeGallery;

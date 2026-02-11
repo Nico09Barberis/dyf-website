@@ -2,7 +2,7 @@ import React from "react";
 import { CgMathPlus } from "react-icons/cg";
 import CustomButton from "../../components/ui/CustomButton";
 
-const AboutSection = () => {
+const HomeAbout = () => {
   return (
     <section className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row my-20 p-2">
 
@@ -26,7 +26,7 @@ const AboutSection = () => {
         {/* Columna derecha */}
         <div className="w-1/2 ml-3 h-full">
           <img
-            src="../../../public/images/home/servHome2.webp"
+            src="/images/home/servHome2.webp"
             alt="Oficina moderna"
             className="w-full h-full object-cover"
           />
@@ -61,4 +61,4 @@ const AboutSection = () => {
   );
 };
 
-export default AboutSection;
+export default HomeAbout;

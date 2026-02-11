@@ -1,6 +1,6 @@
 import Counter from "../../components/common/Counter";
 
-export default function CountersSection() {
+export default function HomeCounter() {
   return (
     <section className="bg-[#BBDCE5] w-full py-20">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-around items-center gap-10 font-marcellus font-semibold uppercase">

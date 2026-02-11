@@ -1,7 +1,7 @@
-// src/components/sections/TestimonialsSection.jsx
+// src/components/sections/HomeTestimonials.jsx
 import SliderCards from "../../components/common/SliderCards";
 
-const TestimonialsSection = () => {
+const HomeTestimonials = () => {
   return (
     <section className="w-full py-16 bg-[#BBDCE5]">
       <div className="max-w-6xl mx-auto px-6 text-center">
@@ -23,4 +23,4 @@ const TestimonialsSection = () => {
   );
 };
 
-export default TestimonialsSection;
+export default HomeTestimonials;

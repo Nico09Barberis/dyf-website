@@ -1,35 +1,38 @@
 import CarouselHome from "../components/common/CarouselHome";
-import AboutSection from "../sections/home/AboutSection";
-import ServicesSection from "../sections/home/ServicesSection";
 import HeroBanner from "../sections/home/HeroBanner";
-import GallerySection from "../sections/home/GallerySection";
-import ProcessSection from "../sections/home/ProcessSection";
-import TestimonialsSection from "../sections/home/TestimonialsSection";
-import CountersSection from "../sections/home/CounterSection";
+
+import HomeAbout from "../sections/home/HomeAbout";
+import HomeServices from "../sections/home/HomeServices";
+import HomeCounter from "../sections/home/HomeCounter";
+import HomeProcess from "../sections/home/HomeProcess";
+import HomeGallery from "../sections/home/HomeGalley";
+import HomeTestimonials from "../sections/home/HomeTestimonial";
 
 export default function HomePage() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
+      
       <CarouselHome />
 
-      <AboutSection />
+      <HomeAbout />
 
-      <CountersSection />
+      <HomeCounter />
 
-      <ServicesSection />
+      <HomeServices />
 
       <HeroBanner
         title="¿Necesitás asesoramiento inmediato?"
         buttonText="Hablá con nosotros"
         message="¡Hola! Me gustaría recibir más información sobre sus servicios."
-        backgroundImage="/images/varias/varias.webp"
+        backgroundImage="/images/bgPages/bgGallery.webp"
       />
 
-      <ProcessSection />
+      <HomeProcess />
 
-      <GallerySection />
+      <HomeGallery />
 
-      <TestimonialsSection />
+      <HomeTestimonials />
+
     </main>
   );
 }

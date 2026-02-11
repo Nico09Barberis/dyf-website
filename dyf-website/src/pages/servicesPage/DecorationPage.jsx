@@ -1,5 +1,4 @@
 import HeroWithBreadcrumb from "../../components/navigation/HeroWithBreadcrumb";
-import AboutSection from "../../sections/home/AboutSection";
 import HeroBanner from "../../sections/home/HeroBanner";
 import DecorationGallery from "../../sections/services/decoration/DecorationGallery";
 import DecorationHero from "../../sections/services/decoration/DecorationHero";

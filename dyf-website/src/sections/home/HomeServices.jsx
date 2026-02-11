@@ -1,6 +1,6 @@
 import FlexCard from "../../components/ui/FlexCard";
 
-const ServicesSection = () => {
+const HomeServices = () => {
   return (
     <section className="w-full my-20 p-2 bg-gray-50">
       <div className="max-w-6xl mx-auto text-center">
@@ -18,4 +18,4 @@ const ServicesSection = () => {
   );
 };
 
-export default ServicesSection;
+export default HomeServices;

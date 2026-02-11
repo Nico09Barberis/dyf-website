@@ -65,7 +65,7 @@ const ProcessCard = memo(function ProcessCard({ title, image, description }) {
   );
 });
 
-function ProcessSection() {
+function HomeProcess() {
   return (
     <section className="flex flex-col items-center justify-center py-16 my-12">
       {/* Header */}
@@ -117,4 +117,4 @@ function ProcessSection() {
   );
 }
 
-export default memo(ProcessSection);
+export default memo(HomeProcess);
