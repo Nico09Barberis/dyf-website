@@ -69,7 +69,7 @@ const ClientTestimonialsSection = () => {
               key={index}
               className="
                 group
-                bg-[#EDF4FF] border border-gray-200 rounded-b-xl p-6 shadow-sm relative
+                bg-[#F2F4F7] border border-gray-200 rounded-b-xl p-6 shadow-sm relative
                 transition-all duration-300 ease-out
                 hover:-translate-y-2 hover:shadow-lg
               "

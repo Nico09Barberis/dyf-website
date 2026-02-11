@@ -26,7 +26,7 @@ export default function ServicesPage() {
         title="¿Necesitas asesoramiento para tu evento?"
         buttonText="Escríbenos"
         message="Hola, quisiera conocer más detalles sobre los servicios que ofrecen."
-        backgroundImage="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80"
+        backgroundImage="/images/home/slide2.webp"
       />
 
       <MiniFAQSection />

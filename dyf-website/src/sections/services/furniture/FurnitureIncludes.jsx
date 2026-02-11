@@ -117,7 +117,7 @@ const FurnitureIncludes = () => {
 
                   <div className="relative z-10">
                     <div className="w-12 h-12 mb-4 flex items-center justify-center rounded-xl bg-blue-600/10">
-                      <Icon className="text-blue-700 text-xl" />
+                      <Icon className="text-azulOscuro text-xl" />
                     </div>
 
                     <h3 className="text-lg font-marcellus font-semibold text-gray-900 mb-2">

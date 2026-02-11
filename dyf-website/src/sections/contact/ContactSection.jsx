@@ -17,7 +17,7 @@ export default function ContactSection() {
             <MdOutlineEmail className="w-10 h-10 p-2 bg-gray-700 rounded-full text-[#EEDF7A] mt-1" />
             <div>
               <h3 className="font-semibold text-[#EEDF7A] uppercase">Correo electrónico</h3>
-              <p className="text-gray-100">contacto@tusitio.com</p>
+              <p className="text-gray-100">dyfcelebraciones@gmail.com</p>
             </div>
           </div>
 

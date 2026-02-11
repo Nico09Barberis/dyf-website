@@ -41,7 +41,7 @@ const ServicesZigZagSection = () => {
 
           return (
             <div
-            key={service.path}
+              key={service.path}
               className={`group flex flex-col md:flex-row ${
                 isReversed ? "md:flex-row-reverse" : ""
               } items-center gap-10 transition-transform duration-500 hover:-translate-y-1`}
@@ -70,7 +70,17 @@ const ServicesZigZagSection = () => {
                 <div className="flex flex-wrap gap-4">
                   <Link
                     to={service.path}
-                    className="inline-block px-6 py-3 font-marcellus bg-azulOscuro text-white rounded-md transition-all duration-300 hover:bg-gray-800 hover:scale-[1.03]"
+                    className="
+      inline-flex items-center justify-center
+      px-8 py-3
+      bg-[#4F7CD9] text-white
+      font-urbanist font-semibold
+      rounded-full
+      shadow-md
+      transition-all duration-300
+      hover:bg-[#3F6ECC] hover:-translate-y-0.5 hover:shadow-lg
+      focus:outline-none focus:ring-2 focus:ring-[#4F7CD9] focus:ring-offset-2
+    "
                   >
                     Ver más
                   </Link>
@@ -79,7 +89,16 @@ const ServicesZigZagSection = () => {
                     href="https://wa.me/543512324008"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block px-6 py-3 font-marcellus border border-gray-900 text-gray-900 rounded-md transition-all duration-300 hover:bg-gray-100 hover:scale-[1.03]"
+                    className="
+      inline-flex items-center justify-center
+      px-8 py-3
+      border border-[#4F7CD9] text-[#4F7CD9]
+      font-urbanist font-semibold
+      rounded-full
+      transition-all duration-300
+      hover:bg-[#4F7CD9] hover:text-white hover:-translate-y-0.5
+      focus:outline-none focus:ring-2 focus:ring-[#4F7CD9] focus:ring-offset-2
+    "
                   >
                     Consultar por WhatsApp
                   </a>
