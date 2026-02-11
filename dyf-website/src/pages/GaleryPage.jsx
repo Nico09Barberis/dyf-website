@@ -15,7 +15,7 @@ export default function GaleryPage() {
       <HeroWithBreadcrumb
         title="Galeria de imagenes"
         breadcrumbItems={breadcrumb}
-        imageUrl="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
+        imageUrl="/images/bgPages/bgGallery.webp"
       />
 
       <Gallery />

@@ -26,7 +26,7 @@ const AboutSection = () => {
         {/* Columna derecha */}
         <div className="w-1/2 ml-3 h-full">
           <img
-            src="/images/home/about3.webp"
+            src="../../../public/images/home/servHome2.webp"
             alt="Oficina moderna"
             className="w-full h-full object-cover"
           />

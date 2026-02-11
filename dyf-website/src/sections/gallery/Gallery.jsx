@@ -7,40 +7,40 @@ const sectionsData = [
     key: "eventos-celebraciones-integrales",
     title: "eventos & celebraciones integrales",
     images: [
-      { src: "/images/galery/fullEvents/fullEvent-1.webp", caption: "Ceremonia al aire libre" },
-      { src: "/images/galery/fullEvents/fullEvent-2.webp", caption: "Recepción con estilo"},
-      { src: "/images/galery/fullEvents/fullEvent-3.webp", caption: "Decoración floral" },
-      { src: "/images/galery/fullEvents/fullEvent-4.webp", caption: "Baile de los novios" },
+      { src: "/images/galery/fullEvents/fullEvent-1.webp" },
+      { src: "/images/galery/fullEvents/fullEvent-2.webp" },
+      { src: "/images/galery/fullEvents/fullEvent-3.webp" },
+      { src: "/images/galery/fullEvents/fullEvent-4.webp" },
     ],
   },
   {
     key: "decoracion",
     title: "decoración",
     images: [
-      { src: "/images/decGallery/decGallery1.webp", caption: "Show en vivo" },
-      { src: "/images/decGallery/decGallery2.webp", caption: "Ambiente nocturno"},
-      { src: "/images/decGallery/decGallery3.webp", caption: "Brindis con amigos" },
-      { src: "/images/decGallery/decGallery4.webp", caption: "Celebración especial" },
+      { src: "/images/decGallery/decGallery1.webp" },
+      { src: "/images/decGallery/decGallery2.webp" },
+      { src: "/images/decGallery/decGallery3.webp" },
+      { src: "/images/decGallery/decGallery4.webp" },
     ],
   },
   {
     key: "mobiliario",
     title: "mobiliario",
     images: [
-      { src: "/images/galery/furniture/furniture-1.webp", caption: "Entrada gourmet" },
-      { src: "/images/galery/furniture/furniture-2.webp", caption: "Plato principal" },
-      { src: "/images/galery/furniture/furniture-3.webp", caption: "Postre artesanal" },
-      { src: "/images/galery/furniture/furniture-4.webp", caption: "Buffet variado" },
+      { src: "/images/galery/furniture/furniture-1.webp" },
+      { src: "/images/galery/furniture/furniture-2.webp" },
+      { src: "/images/galery/furniture/furniture-3.webp" },
+      { src: "/images/galery/furniture/furniture-4.webp" },
     ],
   },
   {
     key: "vajilla",
     title: "vajilla",
     images: [
-      { src: "/images/galery/tableware/tableware-1.webp", caption: "Entrada gourmet" },
-      { src: "/images/galery/tableware/tableware-2.webp", caption: "Plato principal" },
-      { src: "/images/galery/tableware/tableware-3.webp", caption: "Postre artesanal" },
-      { src: "/images/galery/tableware/tableware-4.webp", caption: "Buffet variado" },
+      { src: "/images/galery/tableware/tableware-1.webp" },
+      { src: "/images/galery/tableware/tableware-2.webp" },
+      { src: "/images/galery/tableware/tableware-3.webp" },
+      { src: "/images/galery/tableware/tableware-4.webp" },
     ],
   },
 ];
@@ -119,7 +119,6 @@ export default function Gallery() {
         <GalleryModal
           onClose={closeModal}
           src={currentImage.src}
-          caption={currentImage.caption}
           goNext={goNext}
           goPrev={goPrev}
         />
