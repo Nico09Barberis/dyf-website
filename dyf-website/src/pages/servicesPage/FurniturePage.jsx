@@ -1,8 +1,8 @@
 import HeroWithBreadcrumb from "../../components/navigation/HeroWithBreadcrumb";
 import FurnitureAdvantages from "../../sections/services/furniture/FurnitureAdvantages";
 import FurnitureCatSection from "../../sections/services/furniture/FurnitureCatSection";
+import FurnitureIncludes from "../../sections/services/furniture/FurnitureIncludes";
 import FurnitureHeroSection from "../../sections/services/furniture/FurnitureHeroSection";
-import FurnitureIncludesSection from "../../sections/services/furniture/FurnitureIncludesSection";
 import FurnitureRentalProcess from "../../sections/services/furniture/FurnitureRentalProcess";
 import HeroBanner from "../../sections/home/HeroBanner";
 
@@ -25,7 +25,7 @@ export default function FurniturePage() {
 
       <FurnitureCatSection />
 
-      <FurnitureIncludesSection />
+      <FurnitureIncludes />
 
       <FurnitureRentalProcess />
 

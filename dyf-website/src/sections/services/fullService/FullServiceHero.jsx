@@ -3,7 +3,6 @@ import React from "react";
 const FullServiceHero = () => {
   return (
     <section className="relative w-full py-24 md:py-32 overflow-hidden">
-
       {/* Soft background glow */}
       <div
         className="
@@ -17,7 +16,6 @@ const FullServiceHero = () => {
       ></div>
 
       <div className="relative max-w-6xl mx-auto px-6 md:px-12 text-center">
-
         {/* Premium label */}
         <p
           className="
@@ -62,8 +60,8 @@ const FullServiceHero = () => {
           "
         >
           Planificamos, coordinamos y ejecutamos cada aspecto del evento:
-          estructuras, ambientación, vajilla, iluminación, fotografía, video y logística.
-          Vos solo te ocupás de vivir la experiencia.
+          estructuras, ambientación, vajilla, iluminación, fotografía, video y
+          logística. Vos solo te ocupás de vivir la experiencia.
         </p>
 
         {/* CTA */}
@@ -72,22 +70,19 @@ const FullServiceHero = () => {
             href="/contacto"
             className="
               inline-flex items-center justify-center
-              px-10 py-4
-              rounded-full
+              px-8 py-3
               bg-blue-600 text-white
-              font-urbanist font-semibold uppercase
-              tracking-wide
-              shadow-lg shadow-blue-500/30
+              font-urbanist font-semibold
+              rounded-full
+              shadow-md
               transition-all duration-300
-              hover:bg-blue-700
-              hover:shadow-xl hover:shadow-blue-500/40
-              hover:-translate-y-0.5
+              hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-lg
+              focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2
             "
           >
             Planificar mi evento
           </a>
         </div>
-
       </div>
     </section>
   );

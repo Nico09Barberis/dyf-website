@@ -17,7 +17,7 @@ export default function FullEventsPage() {
       <HeroWithBreadcrumb
         title="Organización integral de eventos"
         breadcrumbItems={breadcrumb}
-        imageUrl="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
+        imageUrl="/images/home/slide1.webp"
       />
 
       <FullServiceHero />
@@ -30,7 +30,7 @@ export default function FullEventsPage() {
         title="¿Listo para organizar tu evento?"
         buttonText="Contactanos"
         message="¡Hola! Me gustaría recibir más información sobre sus servicios."
-        backgroundImage="../../../public/images/galery/fullEvents/fullEvent-3.webp"
+        backgroundImage="/images/galery/fullEvents/fullEvent-3.webp"
       />
 
       <FullServiceOurApproach />

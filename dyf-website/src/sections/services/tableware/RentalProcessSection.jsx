@@ -57,7 +57,7 @@ export default function RentalProcessSection() {
               <div key={index} className="flex flex-col items-center text-center max-w-xs relative">
 
                 {/* Icono */}
-                <div className="w-14 h-14 flex items-center justify-center rounded-full bg-sky-100 mb-4
+                <div className="w-14 h-14 flex items-center justify-center rounded-full bg-[#CFE0FF] mb-4
                                 shadow-sm transition-transform duration-300 hover:scale-110">
                   <Icon className="text-azulOscuro text-xl" />
                 </div>

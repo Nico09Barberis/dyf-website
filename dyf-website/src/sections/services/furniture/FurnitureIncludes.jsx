@@ -42,7 +42,7 @@ const includes = [
   },
 ];
 
-const FurnitureIncludesSection = () => {
+const FurnitureIncludes = () => {
   const sliderRef = useRef(null);
 
   const scroll = (direction) => {
@@ -58,46 +58,44 @@ const FurnitureIncludesSection = () => {
   return (
     <section className="w-full py-8 md:py-16 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
-
         {/* Header */}
         <div className="text-center mb-14">
-          <h2 className="text-xl md:text-4xl font-marcellus uppercase font-bold text-azulOscuro mb-2">
+          <h2 className="text-xl md:text-4xl font-marcellus uppercase font-bold text-gray-900 mb-2">
             ¿Qué incluye el servicio?
           </h2>
           <div className="w-20 h-1.5 mx-auto bg-dorado mb-4"></div>
           <p className="text-gray-700 max-w-2xl mx-auto font-marcellus text-md md:text-lg">
-            Un servicio integral pensado para que no tengas que preocuparte por nada.
+            Un servicio integral pensado para que no tengas que preocuparte por
+            nada.
           </p>
         </div>
 
-        {/* Carousel container */}
         <div className="relative">
-
           {/* Left button */}
           <button
             onClick={() => scroll("left")}
-            className="hidden md:flex items-center justify-center absolute -left-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white shadow-md border hover:bg-gray-100 transition z-10"
+            className="hidden md:flex items-center justify-center absolute -left-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white border border-blue-200 shadow-md hover:bg-blue-50 hover:-translate-y-0.5 transition-all duration-300 z-10"
           >
-            <FaChevronLeft />
+            <FaChevronLeft className="text-blue-700" />
           </button>
 
           {/* Right button */}
           <button
             onClick={() => scroll("right")}
-            className="hidden md:flex items-center justify-center absolute -right-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white shadow-md border hover:bg-gray-100 transition z-10"
+            className="hidden md:flex items-center justify-center absolute -right-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white border border-blue-200 shadow-md hover:bg-blue-50 hover:-translate-y-0.5 transition-all duration-300 z-10"
           >
-            <FaChevronRight />
+            <FaChevronRight className="text-blue-700" />
           </button>
 
           {/* Slider */}
           <div
             ref={sliderRef}
             className="
-              flex gap-6 overflow-x-auto scroll-smooth
-              snap-x snap-mandatory
-              pb-6
-              scrollbar-hide
-            "
+          flex gap-6 overflow-x-auto scroll-smooth
+          snap-x snap-mandatory
+          pb-6
+          scrollbar-hide
+        "
           >
             {includes.map((item, index) => {
               const Icon = item.icon;
@@ -106,25 +104,26 @@ const FurnitureIncludesSection = () => {
                 <div
                   key={index}
                   className="
-                    snap-center
-                    min-w-[280px] sm:min-w-[340px] md:min-w-[380px]
-                    bg-gray-50 rounded-2xl p-6
-                    shadow-sm hover:shadow-lg transition
-                    relative group
-                  "
+                snap-center
+                min-w-[280px] sm:min-w-[340px] md:min-w-[380px]
+                bg-[#EDF4FF]
+                rounded-2xl p-6
+                shadow-sm hover:shadow-md
+                transition-all duration-300
+                relative group
+              "
                 >
-                  {/* Glow */}
-                  <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition blur-xl bg-dorado/10" />
+                  <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-300 blur-xl bg-blue-300/10" />
 
                   <div className="relative z-10">
-                    <div className="w-12 h-12 mb-4 flex items-center justify-center rounded-xl bg-dorado/15">
-                      <Icon className="text-dorado text-xl" />
+                    <div className="w-12 h-12 mb-4 flex items-center justify-center rounded-xl bg-blue-600/10">
+                      <Icon className="text-blue-700 text-xl" />
                     </div>
 
-                    <h3 className="text-lg font-urbanist font-semibold text-gray-900 mb-2">
+                    <h3 className="text-lg font-marcellus font-semibold text-gray-900 mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <p className="text-gray-700 font-marcellus text-sm leading-relaxed">
                       {item.description}
                     </p>
                   </div>
@@ -133,15 +132,13 @@ const FurnitureIncludesSection = () => {
             })}
           </div>
 
-          {/* Hint text mobile */}
           <p className="text-center text-sm text-gray-400 mt-4 md:hidden">
             Deslizá para ver más →
           </p>
-
         </div>
       </div>
     </section>
   );
 };
 
-export default FurnitureIncludesSection;
+export default FurnitureIncludes;

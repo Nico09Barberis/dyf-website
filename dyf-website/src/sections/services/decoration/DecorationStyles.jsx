@@ -106,16 +106,16 @@ const DecorationStylesCarousel = () => {
                         <a
                           href="/contacto"
                           className="
-                    inline-block
-                    px-6 py-3
-                    bg-white
-                    text-gray-900
-                    font-urbanist
-                    font-semibold
-                    rounded-xl
-                    hover:bg-gray-100
-                    transition
-                  "
+                            inline-flex items-center justify-center
+                            px-8 py-3
+                            bg-white text-gray-900
+                            font-urbanist font-semibold
+                            rounded-full
+                            shadow-md
+                            transition-all duration-300
+                            hover:bg-gray-100 hover:-translate-y-0.5 hover:shadow-lg
+                            focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2
+                          "
                         >
                           Solicitar asesoramiento
                         </a>

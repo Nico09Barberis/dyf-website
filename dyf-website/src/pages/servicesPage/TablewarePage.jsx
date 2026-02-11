@@ -1,9 +1,9 @@
 import HeroWithBreadcrumb from "../../components/navigation/HeroWithBreadcrumb";
 import HeroBanner from "../../sections/home/HeroBanner";
-import HeroSection from "../../sections/services/tableware/HeroSection";
 import RentalProcessSection from "../../sections/services/tableware/RentalProcessSection";
 import ServiceIncludesSection from "../../sections/services/tableware/ServiceIncludesSection";
 import TablewareGallerySection from "../../sections/services/tableware/TablewareGallerySection";
+import TablewareHero from "../../sections/services/tableware/TablewareHero";
 import TypesSection from "../../sections/services/tableware/TypesSection";
 
 export default function TablewarePage() {
@@ -21,7 +21,7 @@ export default function TablewarePage() {
         imageUrl="/images/galery/tableware/tableware-3.webp"
       />
 
-      <HeroSection />
+      <TablewareHero />
 
       <TypesSection />
 

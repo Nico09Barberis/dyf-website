@@ -29,14 +29,33 @@ const DecorationHero = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href="/contacto"
-            className="px-8 py-4 bg-blue-600 text-white font-urbanist font-semibold rounded-xl hover:bg-blue-700 transition-colors"
+            className="
+              inline-flex items-center justify-center
+              px-8 py-3
+              bg-blue-600 text-white
+              font-urbanist font-semibold
+              rounded-full
+              shadow-md
+              transition-all duration-300
+              hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-lg
+              focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2
+            "
           >
             Solicitar asesoramiento
           </a>
 
           <a
             href="#estilos"
-            className="px-8 py-4 border border-blue-600 text-blue-600 font-urbanist font-semibold rounded-xl hover:bg-blue-50 transition-colors"
+            className="
+              inline-flex items-center justify-center
+              px-8 py-3
+              border border-blue-600 text-blue-600
+              font-urbanist font-semibold
+              rounded-full
+              transition-all duration-300
+              hover:bg-blue-600 hover:text-white
+              focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2
+            "
           >
             Ver estilos
           </a>
