@@ -71,16 +71,16 @@ const ServicesZigZagSection = () => {
                   <Link
                     to={service.path}
                     className="
-      inline-flex items-center justify-center
-      px-8 py-3
-      bg-[#4F7CD9] text-white
-      font-urbanist font-semibold
-      rounded-full
-      shadow-md
-      transition-all duration-300
-      hover:bg-[#3F6ECC] hover:-translate-y-0.5 hover:shadow-lg
-      focus:outline-none focus:ring-2 focus:ring-[#4F7CD9] focus:ring-offset-2
-    "
+                      inline-flex items-center justify-center
+                      px-8 py-3
+                      bg-[#4F7CD9] text-white
+                      font-urbanist font-semibold
+                      rounded-full
+                      shadow-md
+                      transition-all duration-300
+                      hover:bg-[#3F6ECC] hover:-translate-y-0.5 hover:shadow-lg
+                      focus:outline-none focus:ring-2 focus:ring-[#4F7CD9] focus:ring-offset-2
+                    "
                   >
                     Ver más
                   </Link>
@@ -90,15 +90,15 @@ const ServicesZigZagSection = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="
-      inline-flex items-center justify-center
-      px-8 py-3
-      border border-[#4F7CD9] text-[#4F7CD9]
-      font-urbanist font-semibold
-      rounded-full
-      transition-all duration-300
-      hover:bg-[#4F7CD9] hover:text-white hover:-translate-y-0.5
-      focus:outline-none focus:ring-2 focus:ring-[#4F7CD9] focus:ring-offset-2
-    "
+                    inline-flex items-center justify-center
+                    px-8 py-3
+                    border border-[#4F7CD9] text-[#4F7CD9]
+                    font-urbanist font-semibold
+                    rounded-full
+                    transition-all duration-300
+                    hover:bg-[#4F7CD9] hover:text-white hover:-translate-y-0.5
+                    focus:outline-none focus:ring-2 focus:ring-[#4F7CD9] focus:ring-offset-2
+                  "
                   >
                     Consultar por WhatsApp
                   </a>
