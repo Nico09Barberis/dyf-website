@@ -17,7 +17,7 @@ export default function DecorationPage() {
       <HeroWithBreadcrumb
         title="Ambientación y decoración"
         breadcrumbItems={breadcrumb}
-        imageUrl="../../../public/images/home/slide4.webp"
+        imageUrl="/images/home/slide4.webp"
       />
 
       <DecorationHero />
