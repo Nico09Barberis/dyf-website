@@ -4,6 +4,7 @@ import PlanningProcess from "../../sections/services/fullService/FullServiceProc
 import FullServiceScope from "../../sections/services/fullService/FullServiceScope";
 import HeroBanner from "../../sections/home/HeroBanner";
 import FullServiceOurApproach from "../../sections/services/fullService/FullServiceOurApproach";
+import FullServiceGallery from "../../sections/services/fullService/FullServiceGallery";
 
 export default function FullEventsPage() {
   const breadcrumb = [
@@ -24,13 +25,15 @@ export default function FullEventsPage() {
 
       <FullServiceScope />
 
+      <FullServiceGallery />
+
       <PlanningProcess />
 
       <HeroBanner
         title="¿Listo para organizar tu evento?"
         buttonText="Contactanos"
         message="¡Hola! Me gustaría recibir más información sobre sus servicios."
-        backgroundImage="/images/galery/fullEvents/fullEvent-3.webp"
+        backgroundImage="/images/varias/intro1.webp"
       />
 
       <FullServiceOurApproach />
