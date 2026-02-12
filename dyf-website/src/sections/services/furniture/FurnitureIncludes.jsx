@@ -110,7 +110,7 @@ const FurnitureIncludes = () => {
                 rounded-2xl p-6
                 shadow-sm hover:shadow-md
                 transition-all duration-300
-                relative group
+                relative group 
               "
                 >
                   <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-300 blur-xl bg-blue-300/10" />

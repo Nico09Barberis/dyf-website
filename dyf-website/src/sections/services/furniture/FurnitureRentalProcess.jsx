@@ -41,7 +41,7 @@ const steps = [
 
 const FurnitureRentalProcess = () => {
   return (
-    <section className="w-full py-8 md:py-16 px-4 bg-gray-50">
+    <section className="w-full py-8 md:py-16 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
@@ -69,7 +69,7 @@ const FurnitureRentalProcess = () => {
                 <div
                   className="
                     w-14 h-14 flex items-center justify-center rounded-full
-                    bg-[#CFE0FF] mb-4 shadow-sm
+                    bg-[#EDF4FF] mb-4 shadow-sm
                     transition-transform duration-300 hover:scale-110
                   "
                 >
@@ -88,7 +88,7 @@ const FurnitureRentalProcess = () => {
 
                 {/* Connector desktop */}
                 {index !== steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-7 left-full w-24 h-0.5 bg-[#CFE0FF]" />
+                  <div className="hidden lg:block absolute top-7 left-full w-24 h-0.5 bg-[#EDF4FF]" />
                 )}
 
                 {/* Connector mobile */}

@@ -75,7 +75,7 @@ const PlanningProcess = () => {
                     w-10 h-10 md:w-12 md:h-12
                     rounded-full bg-[#3A6EA5] text-white
                     flex items-center justify-center
-                    text-lg shadow-md
+                    text-xl shadow-md
                   ">
                     <Icon />
                   </div>

@@ -50,7 +50,7 @@ const DecorationStylesCarousel = () => {
   return (
     <section
       id="estilos"
-      className="w-full overflow-x-hidden py-16 md:py-24 bg-white"
+      className="w-full overflow-x-hidden py-16 md:py-24"
     >
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}

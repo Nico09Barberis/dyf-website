@@ -49,7 +49,7 @@ const includes = [
 
 const DecorationIncludes = () => {
   return (
-    <section className="py-8 md:py-16">
+    <section className="py-8 md:py-16 bg-white w-full">
       <div className="max-w-5xl mx-auto px-6 md:px-12">
 
         {/* Header */}
@@ -82,8 +82,8 @@ const DecorationIncludes = () => {
                 w-12 h-12
                 flex items-center justify-center
                 rounded-lg
-                bg-blue-100
-                text-blue-600
+                bg-[#EDF4FF]
+                text-azulOscuro
                 text-xl
                 transition-transform
                 duration-300
