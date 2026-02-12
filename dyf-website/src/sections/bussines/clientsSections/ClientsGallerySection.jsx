@@ -2,16 +2,16 @@ import React from "react";
 
 const images = [
   {
-    src: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80",
-    title: "Evento corporativo empresarial"
+    src: "/images/galery/fullEvents/fullEvent-7.webp",
+    title: "Despedida de año corporativa"
   },
   {
-    src: "https://images.unsplash.com/photo-1503428593586-e225b39bddfe?auto=format&fit=crop&w=900&q=80",
-    title: "Celebración social privada"
+    src: "/images/home/servHome2.webp",
+    title: "Boda al aire libre"
   },
   {
-    src: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=80",
-    title: "Evento institucional"
+    src: "/images/galery/fullEvents/fullEvent-6.webp",
+    title: "Evento institucional nocturno"
   }
 ];
 

@@ -9,8 +9,12 @@ const sectionsData = [
     images: [
       { src: "/images/galery/fullEvents/fullEvent-1.webp" },
       { src: "/images/galery/fullEvents/fullEvent-2.webp" },
-      { src: "/images/galery/fullEvents/fullEvent-3.webp" },
+      { src: "/images/galery/fullEvents/fullEvent-7.webp" },
       { src: "/images/galery/fullEvents/fullEvent-4.webp" },
+      { src: "/images/galery/fullEvents/fullEvent-5.webp" },
+      { src: "/images/galery/fullEvents/fullEvent-3.webp" },
+      { src: "/images/galery/fullEvents/fullEvent-6.webp" },
+      { src: "/images/home/servHome2.webp" },
     ],
   },
   {
