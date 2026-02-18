@@ -28,18 +28,20 @@ const cards = [
   },
 ];
 
-const BG_IMAGE = "/images/home/process/bg-flashcards.jpeg";
+const BG_IMAGE = "/images/home/process/bg-flashcards.webp";
 
 const ProcessCard = memo(function ProcessCard({ title, image, description }) {
   return (
-    <div className="group [perspective:1000px] w-64 aspect-[4/5]">
-      <div className="relative w-full h-full font-urbanist transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div className="group w-64 aspect-[4/5] [perspective:1000px] content-visibility-auto">
+      <div className="relative w-full h-full font-urbanist transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] will-change-transform">
+        
         {/* Frente */}
         <div className="absolute inset-0 rounded-xl overflow-hidden shadow-lg [backface-visibility:hidden]">
           <img
             src={image}
             alt={title}
             loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
@@ -50,20 +52,26 @@ const ProcessCard = memo(function ProcessCard({ title, image, description }) {
         </div>
 
         {/* Reverso */}
-        <div
-          className="absolute inset-0 rounded-xl overflow-hidden shadow-lg [transform:rotateY(180deg)] [backface-visibility:hidden] bg-cover bg-center"
-          style={{ backgroundImage: `url(${BG_IMAGE})` }}
-        >
+        <div className="absolute inset-0 rounded-xl overflow-hidden shadow-lg [transform:rotateY(180deg)] [backface-visibility:hidden]">
+          <img
+            src={BG_IMAGE}
+            alt=""
+            loading="lazy"
+            decoding="async"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
           <div className="absolute inset-0 bg-black/40 flex items-center justify-center p-4">
             <p className="text-white text-center text-xl md:text-2xl font-bold leading-relaxed drop-shadow-lg">
               {description}
             </p>
           </div>
         </div>
+
       </div>
     </div>
   );
 });
+
 
 function HomeProcess() {
   return (

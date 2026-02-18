@@ -1,35 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Italiana&family=Lora:ital,wght@0,400..700;1,400..700&family=Marcellus&family=Prata&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Lora:wght@400;600;700&family=Marcellus&family=Urbanist:wght@400;600;700&display=swap');
 
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .content-visibility-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: 500px;
+  }
+}
+
 .audiowide-regular {
   font-family: "Audiowide", sans-serif;
   font-weight: 400;
-  font-style: normal;
-}
-
-
-.cormorant-garamond {
-  font-family: "Cormorant Garamond", serif;
-  font-optical-sizing: auto;
-  font-weight: normal;
-  font-style: normal;
-}
-
+  font-style: normal;}
 
 .lora {
   font-family: "Lora", serif;
   font-optical-sizing: auto;
   font-weight: normal;
-  font-style: normal;
-}
-
-.prata-regular {
-  font-family: "Prata", serif;
-  font-weight: 400;
   font-style: normal;
 }
 
@@ -42,12 +33,6 @@
 
 .marcellus-regular {
   font-family: "Marcellus", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.italiana-regular {
-  font-family: "Italiana", sans-serif;
   font-weight: 400;
   font-style: normal;
 }

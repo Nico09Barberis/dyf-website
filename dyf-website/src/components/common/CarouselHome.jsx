@@ -26,18 +26,16 @@ const SLIDES = [
       "Acompañamos eventos sociales y corporativos con compromiso y excelencia",
   },
 ];
-const CarouselSlide = memo(function CarouselSlide({ slide, isActive }) {
+
+const CarouselSlide = memo(function CarouselSlide({ slide }) {
   return (
-    <div
-      className={`absolute inset-0 transition-opacity duration-[2500ms] ease-in-out ${
-        isActive ? "opacity-100 z-10" : "opacity-0 z-0"
-      }`}
-    >
+    <div className="absolute inset-0 transition-opacity duration-[2000ms] ease-in-out">
       <img
         src={slide.image}
         alt={slide.title}
-        className="w-full h-full object-cover scale-105 transition-transform duration-1000"
-        loading="lazy"
+        className="w-full h-full object-cover will-change-transform"
+        fetchpriority="high"
+        decoding="async"
       />
 
       <div className="absolute inset-0 bg-black/60" />
@@ -54,27 +52,20 @@ const CarouselSlide = memo(function CarouselSlide({ slide, isActive }) {
 
 const Carousel = () => {
   const [current, setCurrent] = useState(0);
-  const totalSlides = SLIDES.length;
 
   useEffect(() => {
     const id = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % totalSlides);
+      setCurrent((prev) => (prev + 1) % SLIDES.length);
     }, 7000);
 
     return () => clearInterval(id);
-  }, [totalSlides]);
+  }, []);
 
   return (
     <div className="relative h-[600px] w-full overflow-hidden">
-      {SLIDES.map((slide, index) => (
-        <CarouselSlide
-          key={slide.image}
-          slide={slide}
-          isActive={index === current}
-        />
-      ))}
+      <CarouselSlide slide={SLIDES[current]} />
     </div>
   );
 };
 
-export default Carousel;
+export default memo(Carousel);
