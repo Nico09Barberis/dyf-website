@@ -56,7 +56,7 @@ const WhyChooseUsSection = () => {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14">
-          <h2 className="text-xl md:text-4xl font-marcellus uppercase font-bold mb-3">
+          <h2 className="text-xl md:text-4xl font-marcellus uppercase font-semibold mb-3">
             ¿Por qué elegir DyF Celebraciones?
           </h2>
           <div className="w-20 h-1.5 mx-auto bg-dorado mb-5"></div>

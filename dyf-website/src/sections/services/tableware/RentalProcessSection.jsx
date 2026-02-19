@@ -36,55 +36,84 @@ const steps = [
 
 export default function RentalProcessSection() {
   return (
-    <section className="w-full py-8 md:py-20 px-4 bg-white">
+    <section className="w-full py-12 md:py-24 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
-        <header className="text-center mb-16">
-          <h2 className="text-xl md:text-4xl font-marcellus uppercase font-bold mb-2 text-azulOscuro">
+
+        {/* HEADER */}
+        <header className="text-center mb-20">
+          <h2 className="text-2xl md:text-4xl font-marcellus uppercase font-semibold text-azulOscuro mb-3">
             ¿Cómo funciona el alquiler?
           </h2>
-          <div className="w-20 h-1.5 bg-dorado mx-auto mb-4"></div>
+
+          <div className="w-16 h-[2px] bg-dorado mx-auto mb-5"></div>
+
           <p className="text-gray-600 max-w-2xl mx-auto font-marcellus text-base md:text-lg">
             Un proceso simple y transparente, pensado para que no pierdas tiempo.
           </p>
         </header>
 
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 md:gap-10 relative">
+        {/* TIMELINE */}
+        <div className="relative">
 
-          {steps.map((step, index) => {
-            const Icon = step.icon;
+          {/* Línea central desktop */}
+          <div className="hidden lg:block absolute top-10 left-0 w-full h-[2px] bg-gradient-to-r from-blue-100 via-blue-300 to-blue-100" />
 
-            return (
-              <div key={index} className="flex flex-col items-center text-center max-w-xs relative">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-14 lg:gap-6">
 
-                {/* Icono */}
-                <div className="w-14 h-14 flex items-center justify-center rounded-full bg-[#CFE0FF] mb-4
-                                shadow-sm transition-transform duration-300 hover:scale-110">
-                  <Icon className="text-azulOscuro text-xl" />
+            {steps.map((step, index) => {
+              const Icon = step.icon;
+
+              return (
+                <div
+                  key={index}
+                  className="group relative flex flex-col items-center text-center max-w-xs"
+                >
+                  {/* STEP NUMBER */}
+                  <span className="absolute -top-8 text-xs font-urbanist tracking-widest text-gray-400">
+                    PASO {index + 1}
+                  </span>
+
+                  {/* ICON CIRCLE */}
+                  <div
+                    className="
+                      relative z-10
+                      w-16 h-16
+                      flex items-center justify-center
+                      rounded-full
+                      bg-[#EDF4FF]
+                      border border-blue-200
+                      shadow-sm
+                      transition-all duration-300
+                      group-hover:scale-110
+                      group-hover:shadow-md
+                      group-hover:bg-[#DCE9FF]
+                    "
+                  >
+                    <Icon className="text-azulOscuro text-xl" />
+                  </div>
+
+                  {/* MOBILE LINE */}
+                  {index !== steps.length - 1 && (
+                    <div className="lg:hidden w-[2px] h-12 bg-blue-200 mt-6" />
+                  )}
+
+                  {/* TEXT */}
+                  <div className="mt-6">
+                    <h3 className="font-marcellus font-semibold text-lg mb-2 text-gray-900">
+                      {step.title}
+                    </h3>
+
+                    <p className="font-marcellus text-gray-600 text-sm leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+
+                  {/* DOT sobre línea desktop */}
+                  <div className="hidden lg:block absolute top-10 w-3 h-3 rounded-full bg-blue-400 group-hover:scale-125 transition-transform" />
                 </div>
-
-                {/* Título */}
-                <h3 className="font-marcellus font-semibold text-lg mb-2">
-                  {step.title}
-                </h3>
-
-                {/* Descripción */}
-                <p className="font-marcellus text-gray-600 text-sm leading-relaxed">
-                  {step.description}
-                </p>
-
-                {/* Línea conectora desktop */}
-                {index !== steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-7 left-full w-24 h-0.5 bg-sky-200" />
-                )}
-
-                {/* Línea conectora mobile */}
-                {index !== steps.length - 1 && (
-                  <div className="lg:hidden w-0.5 h-12 bg-sky-200 mt-6" />
-                )}
-              </div>
-            );
-          })}
-
+              );
+            })}
+          </div>
         </div>
 
       </div>

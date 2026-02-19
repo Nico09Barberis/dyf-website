@@ -37,16 +37,21 @@ const MiniFAQSection = () => {
   };
 
   return (
-    <section className="py-16 px-6 md:px-12">
+    <section className="py-20 px-6 md:px-12">
       <div className="max-w-4xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-10">
-          <h3 className="text-2xl md:text-3xl font-urbanist font-bold text-gray-900 mb-3">
+        
+        {/* Intro */}
+        <div className="text-center mb-14">
+          <div className="w-20 h-1.5 bg-dorado mx-auto mb-5"></div>
+
+          <h3 className="text-lg md:text-2xl font-urbanist font-semibold text-gray-900 mb-4">
             Preguntas frecuentes
           </h3>
-          <p className="text-gray-600 font-marcellus">
+
+          <p className="text-gray-600 font-marcellus max-w-2xl mx-auto leading-relaxed">
             Respondemos algunas de las dudas más comunes antes de contratar
-            nuestros servicios.
+            nuestros servicios para que puedas organizar tu evento con total
+            tranquilidad.
           </p>
         </div>
 
@@ -58,31 +63,42 @@ const MiniFAQSection = () => {
             return (
               <div
                 key={index}
-                className="border border-gray-200 rounded-lg overflow-hidden"
+                className="border border-gray-200 rounded-xl overflow-hidden transition hover:shadow-sm"
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex items-center justify-between gap-4 p-5 text-left hover:bg-gray-50 transition"
+                  className="w-full flex items-center justify-between gap-4 p-6 text-left group"
                 >
-                  <span className="font-urbanist font-medium text-gray-900">
+                  <span className="font-marcellus font-medium text-gray-900 group-hover:text-black transition">
                     {item.question}
                   </span>
+
                   <FiChevronDown
-                    className={`text-gray-500 transition-transform ${
-                      isOpen ? "rotate-180" : ""
+                    className={`text-gray-500 transition-transform duration-300 ${
+                      isOpen ? "rotate-180 text-[#C6A86B]" : ""
                     }`}
+                    size={20}
                   />
                 </button>
 
-                {isOpen && (
-                  <div className="px-5 pb-5 text-gray-600 font-marcellus leading-relaxed">
-                    {item.answer}
+                <div
+                  className={`grid transition-all duration-300 ease-in-out ${
+                    isOpen
+                      ? "grid-rows-[1fr] opacity-100"
+                      : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <p className="px-6 pb-6 text-gray-600 font-marcellus leading-relaxed">
+                      {item.answer}
+                    </p>
                   </div>
-                )}
+                </div>
               </div>
             );
           })}
         </div>
+
       </div>
     </section>
   );

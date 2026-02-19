@@ -41,64 +41,84 @@ const steps = [
 
 const FurnitureRentalProcess = () => {
   return (
-    <section className="w-full py-8 md:py-16 px-4 bg-white">
+    <section className="w-full py-12 md:py-24 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
 
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-xl md:text-4xl font-marcellus uppercase font-bold text-gray-900 mb-3">
+        {/* HEADER */}
+        <header className="text-center mb-20">
+          <h2 className="text-2xl md:text-4xl font-marcellus uppercase font-semibold text-azulOscuro mb-3">
             ¿Cómo funciona el alquiler?
           </h2>
-          <div className="w-20 h-1.5 mx-auto bg-dorado mb-4"></div>
-          <p className="text-gray-700 max-w-2xl mx-auto font-marcellus text-md md:text-lg">
+
+          <div className="w-16 h-[2px] bg-dorado mx-auto mb-5"></div>
+
+          <p className="text-gray-600 max-w-2xl mx-auto font-marcellus text-base md:text-lg">
             Un proceso simple y organizado para garantizar que todo salga perfecto.
           </p>
-        </div>
+        </header>
 
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 relative">
+        {/* TIMELINE */}
+        <div className="relative">
 
-          {steps.map((step, index) => {
-            const Icon = step.icon;
+          {/* Línea horizontal desktop */}
+          <div className="hidden lg:block absolute top-10 left-0 w-full h-[2px] bg-gradient-to-r from-blue-100 via-blue-300 to-blue-100" />
 
-            return (
-              <div
-                key={index}
-                className="flex flex-col items-center text-center max-w-xs relative"
-              >
-                {/* Icon */}
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-14 lg:gap-6">
+
+            {steps.map((step, index) => {
+              const Icon = step.icon;
+
+              return (
                 <div
-                  className="
-                    w-14 h-14 flex items-center justify-center rounded-full
-                    bg-[#EDF4FF] mb-4 shadow-sm
-                    transition-transform duration-300 hover:scale-110
-                  "
+                  key={index}
+                  className="group relative flex flex-col items-center text-center max-w-xs"
                 >
-                  <Icon className="text-azulOscuro text-xl" />
+                  {/* STEP LABEL */}
+                  <span className="absolute -top-8 text-xs font-urbanist tracking-widest text-gray-400">
+                    PASO {index + 1}
+                  </span>
+
+                  {/* ICON */}
+                  <div
+                    className="
+                      relative z-10
+                      w-16 h-16
+                      flex items-center justify-center
+                      rounded-full
+                      bg-[#EDF4FF]
+                      border border-blue-200
+                      shadow-sm
+                      transition-all duration-300
+                      group-hover:scale-110
+                      group-hover:bg-[#DCE9FF]
+                      group-hover:shadow-md
+                    "
+                  >
+                    <Icon className="text-azulOscuro text-xl" />
+                  </div>
+
+                  {/* MOBILE CONNECTOR */}
+                  {index !== steps.length - 1 && (
+                    <div className="lg:hidden w-[2px] h-12 bg-blue-200 mt-6" />
+                  )}
+
+                  {/* TEXT */}
+                  <div className="mt-6">
+                    <h3 className="font-marcellus font-semibold text-lg mb-2 text-gray-900">
+                      {step.title}
+                    </h3>
+
+                    <p className="font-marcellus text-gray-600 text-sm leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+
+                  {/* DOT desktop */}
+                  <div className="hidden lg:block absolute top-10 w-3 h-3 rounded-full bg-blue-400 group-hover:scale-125 transition-transform" />
                 </div>
-
-                {/* Title */}
-                <h3 className="font-urbanist font-semibold text-lg mb-2 text-gray-900">
-                  {step.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-gray-600 text-sm leading-relaxed font-marcellus">
-                  {step.description}
-                </p>
-
-                {/* Connector desktop */}
-                {index !== steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-7 left-full w-24 h-0.5 bg-[#EDF4FF]" />
-                )}
-
-                {/* Connector mobile */}
-                {index !== steps.length - 1 && (
-                  <div className="lg:hidden w-0.5 h-12 bg-dorado/40 mt-6" />
-                )}
-              </div>
-            );
-          })}
-
+              );
+            })}
+          </div>
         </div>
 
       </div>

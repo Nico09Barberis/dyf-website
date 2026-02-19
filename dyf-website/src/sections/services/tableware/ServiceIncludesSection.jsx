@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useCallback, useEffect } from "react";
 import {
   FaTruck,
   FaShieldAlt,
@@ -44,100 +44,150 @@ const includes = [
 
 export default function ServiceIncludesSection() {
   const sliderRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  const scroll = (direction) => {
-    if (!sliderRef.current) return;
+  /* ---------------- SCROLL CONTROL ---------------- */
 
-    const width = sliderRef.current.offsetWidth;
-    sliderRef.current.scrollBy({
-      left: direction === "left" ? -width : width,
+  const scrollToIndex = useCallback((index) => {
+    const slider = sliderRef.current;
+    if (!slider) return;
+
+    const cardWidth = slider.children[0].clientWidth + 24; // gap-6
+    slider.scrollTo({
+      left: index * cardWidth,
       behavior: "smooth",
     });
-  };
+
+    setActiveIndex(index);
+  }, []);
+
+  const scroll = useCallback(
+    (direction) => {
+      const newIndex =
+        direction === "left"
+          ? Math.max(activeIndex - 1, 0)
+          : Math.min(activeIndex + 1, includes.length - 1);
+
+      scrollToIndex(newIndex);
+    },
+    [activeIndex, scrollToIndex]
+  );
+
+  /* ---------------- DETECT ACTIVE CARD ---------------- */
+
+  useEffect(() => {
+    const slider = sliderRef.current;
+    if (!slider) return;
+
+    const handleScroll = () => {
+      const cardWidth = slider.children[0].clientWidth + 24;
+      const index = Math.round(slider.scrollLeft / cardWidth);
+      setActiveIndex(index);
+    };
+
+    slider.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => slider.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <section className="w-full py-8 md:py-20 px-4 bg-white">
+    <section className="w-full py-12 md:py-20 px-4 bg-white">
       <div className="max-w-5xl mx-auto">
 
-        {/* Header */}
+        {/* HEADER */}
         <header className="text-center mb-14">
-          <h2 className="text-xl md:text-4xl font-marcellus uppercase font-bold mb-2 text-gray-900">
+          <h2 className="text-2xl md:text-4xl font-marcellus uppercase font-semibold text-gray-900 mb-3">
             ¿Qué incluye nuestro servicio?
           </h2>
-          <div className="w-20 h-1.5 bg-dorado mx-auto mb-4"></div>
-          <p className="text-gray-700 max-w-2xl mx-auto text-md md:text-lg font-marcellus">
+
+          <div className="w-20 h-2 bg-dorado mx-auto mb-5"></div>
+
+          <p className="text-gray-700 max-w-2xl mx-auto text-base md:text-lg font-marcellus">
             Diseñado para que tu evento sea simple, seguro y sin preocupaciones.
           </p>
         </header>
 
         <div className="relative">
 
-          {/* Left button */}
+          {/* LEFT */}
           <button
             onClick={() => scroll("left")}
-            className="hidden md:flex items-center justify-center absolute -left-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white border border-blue-200 shadow-md hover:bg-blue-50 hover:-translate-y-0.5 transition-all duration-300 z-10"
+            className="hidden md:flex absolute -left-6 top-1/2 -translate-y-1/2 w-10 h-10 items-center justify-center rounded-full bg-white border border-blue-200 shadow-sm hover:bg-blue-50 transition z-10"
           >
             <FaChevronLeft className="text-[#5F8AE6]" />
           </button>
 
-          {/* Right button */}
+          {/* RIGHT */}
           <button
             onClick={() => scroll("right")}
-            className="hidden md:flex items-center justify-center absolute -right-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white border border-blue-200 shadow-md hover:bg-blue-50 hover:-translate-y-0.5 transition-all duration-300 z-10"
+            className="hidden md:flex absolute -right-6 top-1/2 -translate-y-1/2 w-10 h-10 items-center justify-center rounded-full bg-white border border-blue-200 shadow-sm hover:bg-blue-50 transition z-10"
           >
             <FaChevronRight className="text-[#5F8AE6]" />
           </button>
 
-          {/* Slider */}
+          {/* SLIDER */}
           <div
             ref={sliderRef}
             className="
               flex gap-6 overflow-x-auto scroll-smooth
               snap-x snap-mandatory
-              pb-6
-              scrollbar-hide
+              pb-6 scrollbar-hide
             "
           >
             {includes.map((item, index) => {
               const Icon = item.icon;
+              const isActive = index === activeIndex;
 
               return (
-                <div
+                <article
                   key={index}
-                  className="
+                  className={`
                     snap-center
-                    min-w-[280px] sm:min-w-[340px] md:min-w-[380px]
-                    bg-[#EDF4FF]
+                    min-w-[280px] sm:min-w-[340px] md:min-w-[360px]
                     rounded-2xl p-6
-                    shadow-sm hover:shadow-md
                     transition-all duration-300
-                    relative group
-                  "
+                    ${
+                      isActive
+                        ? "bg-[#EDF4FF] shadow-md scale-[1.02]"
+                        : "bg-[#F7F9FF] opacity-80"
+                    }
+                  `}
                 >
-                  {/* Glow azul sutil */}
-                  <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-300 blur-xl bg-blue-300/10" />
-
-                  <div className="relative z-10">
-                    {/* Icono */}
-                    <div className="w-12 h-12 mb-4 flex items-center justify-center rounded-xl bg-blue-600/10">
-                      <Icon className="text-azulOscuro text-xl" />
-                    </div>
-
-                    {/* Texto */}
-                    <h3 className="font-marcellus text-lg font-semibold mb-2 text-gray-900">
-                      {item.title}
-                    </h3>
-
-                    <p className="font-marcellus text-gray-700 text-sm leading-relaxed">
-                      {item.description}
-                    </p>
+                  <div className="w-12 h-12 mb-4 flex items-center justify-center rounded-xl bg-blue-600/10">
+                    <Icon className="text-azulOscuro text-xl" />
                   </div>
-                </div>
+
+                  <h3 className="font-marcellus text-lg font-semibold mb-2 text-gray-900">
+                    {item.title}
+                  </h3>
+
+                  <p className="font-marcellus text-gray-700 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </article>
               );
             })}
           </div>
 
-          {/* Hint text mobile */}
+          {/* DOT INDICATORS */}
+          <div className="flex justify-center gap-2 mt-6">
+            {includes.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => scrollToIndex(index)}
+                className={`
+                  h-2 rounded-full transition-all duration-300
+                  ${
+                    index === activeIndex
+                      ? "w-6 bg-[#5F8AE6]"
+                      : "w-2 bg-gray-300 hover:bg-gray-400"
+                  }
+                `}
+              />
+            ))}
+          </div>
+
+          {/* MOBILE HINT */}
           <p className="text-center text-sm text-gray-400 mt-4 md:hidden">
             Deslizá para ver más →
           </p>
