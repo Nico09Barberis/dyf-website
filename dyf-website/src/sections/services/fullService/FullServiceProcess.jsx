@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import {
   FiSearch,
   FiLayers,
@@ -7,7 +7,7 @@ import {
   FiCheckCircle,
 } from "react-icons/fi";
 
-const steps = [
+const STEPS = [
   {
     icon: FiSearch,
     title: "Diagnóstico y concepto",
@@ -37,57 +37,101 @@ const steps = [
 
 const PlanningProcess = () => {
   return (
-    <section className="py-8 md:py-16">
+    <section className="py-20 md:py-28 bg-[#FAFBFD]">
       <div className="max-w-6xl mx-auto px-6">
+
         {/* Header */}
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-xl md:text-4xl font-marcellus font-bold uppercase text-gray-900 mb-2">
+        <header className="text-center mb-20">
+          <h2 className="text-xl md:text-4xl font-marcellus font-bold uppercase text-gray-900 mb-3">
             Nuestro proceso de trabajo
           </h2>
-          <div className="w-20 h-1.5 bg-dorado mx-auto mb-4" />
+
+          <div className="w-20 h-1.5 bg-dorado mx-auto mb-5" />
+
           <p className="max-w-2xl mx-auto text-gray-700 font-marcellus text-base md:text-lg">
             Un método probado para planificar, coordinar y ejecutar eventos sin
             margen de error.
           </p>
-        </div>
+        </header>
 
-        {/* Grid de Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {steps.map((step, index) => {
-            const Icon = step.icon;
-            const number = String(index + 1).padStart(2, "0");
+        {/* Timeline */}
+        <div className="relative">
 
-            return (
-              <div
-                key={index}
-                className="relative bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300"
-              >
-                {/* Número decorativo */}
-                <span className="absolute top-6 right-6 text-5xl font-bold text-gray-100 select-none">
-                  {number}
-                </span>
+          {/* Línea desktop */}
+          <div className="
+            hidden md:block
+            absolute top-7 left-0 right-0
+            h-[2px] bg-dorado/30
+          " />
 
-                {/* Icono */}
-                <div className="w-14 h-14 rounded-full bg-[#3A6EA5] text-white flex items-center justify-center text-xl mb-6 shadow">
-                  <Icon />
+          <div className="
+            flex flex-col md:flex-row
+            gap-14 md:gap-6
+            justify-between
+          ">
+            {STEPS.map((step, index) => {
+              const Icon = step.icon;
+              const number = String(index + 1).padStart(2, "0");
+
+              return (
+                <div
+                  key={index}
+                  className="relative flex-1 text-center md:text-left"
+                >
+                  {/* Nodo */}
+                  <div className="
+                    mx-auto md:mx-0
+                    w-14 h-14
+                    rounded-full
+                    bg-white
+                    border-2 border-dorado
+                    flex items-center justify-center
+                    text-azulOscuro text-xl
+                    shadow-sm
+                    relative z-10
+                  ">
+                    <Icon />
+                  </div>
+
+                  {/* Número */}
+                  <span className="
+                    block mt-4
+                    text-dorado
+                    font-urbanist
+                    font-bold
+                    tracking-widest
+                    text-sm
+                  ">
+                    {number}
+                  </span>
+
+                  {/* Contenido */}
+                  <h3 className="font-urbanist font-semibold text-lg text-gray-900 mt-2 mb-2">
+                    {step.title}
+                  </h3>
+
+                  <p className="font-marcellus text-gray-600 text-sm leading-relaxed max-w-xs mx-auto md:mx-0">
+                    {step.text}
+                  </p>
+
+                  {/* Línea mobile */}
+                  {index !== STEPS.length - 1 && (
+                    <div className="
+                      md:hidden
+                      w-[2px] h-10
+                      bg-dorado/30
+                      mx-auto mt-6
+                    " />
+                  )}
                 </div>
+              );
+            })}
+          </div>
 
-                {/* Título */}
-                <h3 className="font-urbanist font-semibold text-lg text-gray-900 mb-3">
-                  {step.title}
-                </h3>
-
-                {/* Texto */}
-                <p className="font-marcellus text-gray-600 text-sm leading-relaxed">
-                  {step.text}
-                </p>
-              </div>
-            );
-          })}
         </div>
       </div>
     </section>
   );
 };
 
-export default PlanningProcess;
+export default memo(PlanningProcess);

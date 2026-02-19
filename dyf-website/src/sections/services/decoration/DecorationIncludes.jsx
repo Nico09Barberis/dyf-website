@@ -1,108 +1,132 @@
-import React from "react";
+import React, { memo } from "react";
 import {
   FaLightbulb,
   FaPaintBrush,
   FaRegImages,
   FaVectorSquare,
   FaTools,
-  FaUserCheck
+  FaUserCheck,
 } from "react-icons/fa";
 
-const includes = [
+const INCLUDES = [
   {
     title: "Concepto y diseño",
     description:
       "Desarrollamos una propuesta visual coherente con el tipo de evento, el espacio y el estilo buscado.",
-    icon: <FaLightbulb />
+    icon: FaLightbulb,
   },
   {
     title: "Curaduría decorativa",
     description:
       "Seleccionamos cuidadosamente colores, materiales y elementos para lograr una ambientación armónica.",
-    icon: <FaPaintBrush />
+    icon: FaPaintBrush,
   },
   {
     title: "Iluminación ambiental",
     description:
       "Creamos atmósferas a través de la iluminación, resaltando puntos clave del espacio.",
-    icon: <FaRegImages />
+    icon: FaRegImages,
   },
   {
     title: "Estructuras y backdrops",
     description:
       "Diseñamos fondos y estructuras que funcionan como protagonistas visuales del evento.",
-    icon: <FaVectorSquare />
+    icon: FaVectorSquare,
   },
   {
     title: "Montaje integral",
     description:
       "Nos encargamos de la instalación y desmontaje, cuidando tiempos y detalles.",
-    icon: <FaTools />
+    icon: FaTools,
   },
   {
     title: "Supervisión en evento",
     description:
       "Acompañamos el desarrollo del evento para garantizar que todo se vea tal como fue diseñado.",
-    icon: <FaUserCheck />
-  }
+    icon: FaUserCheck,
+  },
 ];
 
 const DecorationIncludes = () => {
   return (
-    <section className="py-8 md:py-16 bg-white w-full">
-      <div className="max-w-5xl mx-auto px-6 md:px-12">
+    <section className="py-20 md:py-28 bg-white w-full">
+      <div className="max-w-4xl mx-auto px-6 md:px-12">
 
         {/* Header */}
-        <div className="mb-16 text-center">
-          <h2 className="text-xl md:text-4xl font-semibold font-marcellus uppercase text-gray-900 mb-2">
+        <header className="mb-16 text-center">
+          <h2 className="text-xl md:text-4xl font-marcellus uppercase font-semibold text-gray-900 mb-3">
             De la idea al espacio
           </h2>
-          <div className="w-20 h-1.5 bg-dorado mx-auto mb-4" />
-          <p className="text-gray-600 font-marcellus text-base md:text-lg max-w-3xl mx-auto">
-            Cada ambientación es el resultado de un proceso creativo cuidado,
-            donde diseño, estética y ejecución trabajan en conjunto.
+
+          <div className="w-20 h-1.5 bg-dorado mx-auto mb-5" />
+
+          <p className="text-gray-600 font-marcellus text-base md:text-lg max-w-2xl mx-auto">
+            Cada ambientación nace de un proceso creativo donde diseño,
+            estética y ejecución trabajan en perfecta armonía.
           </p>
-        </div>
+        </header>
 
-        {/* List */}
-        <div className="space-y-10">
-          {includes.map((item, index) => (
-            <div
-              key={index}
-              className="
-                group
-                flex items-start gap-6
-                transition-all
-                duration-300
-              "
-            >
-              {/* Icon */}
-              <div className="
-                flex-shrink-0
-                w-12 h-12
-                flex items-center justify-center
-                rounded-lg
-                bg-[#EDF4FF]
-                text-azulOscuro
-                text-xl
-                transition-transform
-                duration-300
-                group-hover:scale-110
-              ">
-                {item.icon}
-              </div>
+        {/* Container */}
+        <div className="relative">
 
-              {/* Content */}
-              <div className="flex-1 pb-10 border-b border-gray-200 group-last:border-b-0">
-                <h3 className="font-urbanist text-xl font-semibold text-gray-900 mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 font-marcellus max-w-2xl">
-                  {item.description}
-                </p>
-              </div>
-            </div>
-          ))}
+          {/* Línea timeline SOLO desktop */}
+          <div className="
+            hidden md:block
+            absolute left-1/2 top-0 bottom-0
+            w-[2px] bg-dorado/30
+            -translate-x-1/2
+          " />
+
+          <div className="space-y-12 md:space-y-20">
+
+            {INCLUDES.map((item, index) => {
+              const Icon = item.icon;
+              const isEven = index % 2 === 0;
+
+              return (
+                <div
+                  key={index}
+                  className={`
+                    relative
+                    flex md:grid md:grid-cols-2
+                    gap-6 md:gap-12
+                    items-start md:items-center
+                    ${!isEven ? "md:[&>*:first-child]:order-2" : ""}
+                  `}
+                >
+                  {/* Icono */}
+                  <div className="
+                    flex-shrink-0
+                    w-12 h-12 md:w-14 md:h-14
+                    rounded-full
+                    bg-[#EDF4FF]
+                    flex items-center justify-center
+                    text-azulOscuro
+                    shadow-sm
+                    md:absolute md:left-1/2 md:-translate-x-1/2
+                    z-10
+                  ">
+                    <Icon className="text-lg" />
+                  </div>
+
+                  {/* Contenido */}
+                  <div className="max-w-md">
+                    <h3 className="font-urbanist text-lg md:text-xl font-semibold text-gray-900 mb-2">
+                      {item.title}
+                    </h3>
+
+                    <div className="w-10 h-[2px] bg-dorado mb-3" />
+
+                    <p className="text-gray-600 font-marcellus leading-relaxed text-sm md:text-base">
+                      {item.description}
+                    </p>
+                  </div>
+
+                </div>
+              );
+            })}
+
+          </div>
         </div>
 
       </div>
@@ -110,4 +134,4 @@ const DecorationIncludes = () => {
   );
 };
 
-export default DecorationIncludes;
+export default memo(DecorationIncludes);

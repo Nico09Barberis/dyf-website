@@ -100,7 +100,7 @@ export default function ServiceIncludesSection() {
             ¿Qué incluye nuestro servicio?
           </h2>
 
-          <div className="w-20 h-2 bg-dorado mx-auto mb-5"></div>
+          <div className="w-20 h-1.5 bg-dorado mx-auto mb-5"></div>
 
           <p className="text-gray-700 max-w-2xl mx-auto text-base md:text-lg font-marcellus">
             Diseñado para que tu evento sea simple, seguro y sin preocupaciones.

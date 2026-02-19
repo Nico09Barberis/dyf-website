@@ -49,7 +49,7 @@ const FullServiceGallery = () => {
           Nuestros eventos
         </h2>
 
-        <div className="w-20 h-2 bg-dorado mx-auto mb-4"></div>
+        <div className="w-20 h-1.5 bg-dorado mx-auto mb-4"></div>
 
         <p className="font-marcellus text-gray-700 text-base md:text-xl leading-relaxed">
           Cada proyecto refleja planificación, estética y atención al detalle.

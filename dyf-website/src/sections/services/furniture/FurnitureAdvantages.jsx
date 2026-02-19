@@ -1,38 +1,38 @@
-import React from "react";
+import React, { memo } from "react";
 
-const Furnitureadvantages = [
+const ADVANTAGES = [
   {
-    number: "01",
+    id: "01",
     title: "Stock propio y variado",
     description:
       "Disponemos de un amplio inventario de mobiliario para cubrir eventos pequeños y de gran escala.",
   },
   {
-    number: "02",
+    id: "02",
     title: "Puntualidad garantizada",
     description:
       "Cumplimos estrictamente con los horarios acordados de entrega y retiro.",
   },
   {
-    number: "03",
+    id: "03",
     title: "Diseño moderno y cuidado",
     description:
       "Nuestro mobiliario se renueva constantemente para mantener una estética actual.",
   },
   {
-    number: "04",
+    id: "04",
     title: "Equipo especializado",
     description:
       "Personal capacitado para montaje eficiente y manejo responsable de cada pieza.",
   },
   {
-    number: "05",
+    id: "05",
     title: "Adaptabilidad total",
     description:
       "Nos ajustamos a diferentes espacios, estilos y tipos de eventos.",
   },
   {
-    number: "06",
+    id: "06",
     title: "Atención personalizada",
     description:
       "Acompañamiento profesional desde la cotización hasta el retiro final.",
@@ -41,46 +41,58 @@ const Furnitureadvantages = [
 
 const FurnitureAdvantages = () => {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <section className="py-20 md:py-28 bg-white w-full">
+      <div className="max-w-6xl mx-auto px-6 md:px-12">
 
         {/* Header */}
-        <div className="text-center mb-16">
+        <header className="text-center mb-20">
           <h2 className="text-xl md:text-4xl font-marcellus uppercase font-bold text-gray-900 mb-3">
             ¿Por qué elegirnos?
           </h2>
-          <div className="w-20 h-1.5 mx-auto bg-dorado mb-4"></div>
-          <p className="text-gray-700 max-w-3xl mx-auto font-marcellus text-md md:text-lg">
-            Ventajas que nos diferencian y garantizan un servicio confiable y profesional.
+
+          <div className="w-20 h-1.5 mx-auto bg-dorado mb-5"></div>
+
+          <p className="text-gray-600 max-w-3xl mx-auto font-marcellus text-md md:text-lg">
+            Ventajas que garantizan un servicio confiable, organizado y profesional.
           </p>
-        </div>
+        </header>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Editorial layout */}
+        <div className="space-y-16">
 
-          {Furnitureadvantages.map((item, index) => (
+          {ADVANTAGES.map((item, index) => (
             <div
-              key={index}
-              className="
-                group bg-[#F2F4F7] rounded-2xl p-6
-                shadow-sm transition-all duration-300 
-                hover:-translate-y-1 hover:shadow-lg
-              "
+              key={item.id}
+              className={`
+                grid md:grid-cols-2 gap-10 items-center
+                ${index % 2 !== 0 ? "md:[&>*:first-child]:order-2" : ""}
+              `}
             >
-              {/* Number */}
-              <div className="text-dorado font-urbanist text-4xl font-bold mb-4 opacity-80">
-                {item.number}
+              {/* Número gigante */}
+              <div className="relative flex justify-center md:justify-start">
+                <span className="
+                  text-[80px] md:text-[110px]
+                  font-urbanist font-bold
+                  text-dorado/60
+                  leading-none
+                  select-none
+                ">
+                  {item.id}
+                </span>
               </div>
 
-              {/* Title */}
-              <h3 className="font-urbanist font-semibold text-lg text-gray-900 mb-2">
-                {item.title}
-              </h3>
+              {/* Contenido */}
+              <div className="max-w-lg">
+                <h3 className="font-urbanist text-xl md:text-2xl font-semibold text-gray-900 mb-3">
+                  {item.title}
+                </h3>
 
-              {/* Description */}
-              <p className="text-gray-600 text-sm leading-relaxed font-marcellus">
-                {item.description}
-              </p>
+                <div className="w-12 h-[2px] bg-dorado mb-4"></div>
+
+                <p className="font-marcellus text-gray-600 leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
             </div>
           ))}
 
@@ -91,4 +103,4 @@ const FurnitureAdvantages = () => {
   );
 };
 
-export default FurnitureAdvantages;
+export default memo(FurnitureAdvantages);
