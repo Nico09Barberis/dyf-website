@@ -1,20 +1,41 @@
+import { memo } from "react";
+
 const PresentationSection = () => {
   return (
-    <section className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row md:my-20 p-2">
-      
-      {/* Contenedor Izquierdo (imagen en desktop, abajo en mobile) */}
+    <section
+      className="
+        max-w-6xl mx-auto
+        flex flex-col-reverse md:flex-row
+        md:my-20 p-2
+        content-visibility-auto
+        contain-intrinsic-size-[700px]
+      "
+    >
+      {/* Imagen */}
       <div className="w-full md:w-1/2">
         <img
           src="/images/varias/intro1.webp"
           alt="DyF Celebraciones - Nuestro equipo"
-          loading="lazy"
           decoding="async"
-          className="w-full h-64 md:h-full object-cover"
+          fetchpriority="high"
+          className="
+            w-full
+            h-64 md:h-[520px]
+            object-cover
+          "
         />
       </div>
 
-      {/* Contenedor Derecho (texto primero en mobile) */}
-      <div className="w-full md:w-1/2 flex flex-col md:shadow-2xl justify-center px-6 py-10 bg-white">
+      {/* Texto */}
+      <div
+        className="
+          w-full md:w-1/2
+          flex flex-col justify-center
+          px-6 py-10
+          bg-white
+          md:shadow-xl
+        "
+      >
         <h2 className="text-lg uppercase font-lora font-semibold mb-2 text-gray-500">
           d&f
         </h2>
@@ -23,7 +44,7 @@ const PresentationSection = () => {
           Sobre nosotros
         </h3>
 
-        <div className="w-20 h-1 bg-[#F4D03F] mb-4"></div>
+        <div className="w-20 h-1 bg-[#F4D03F] mb-4" />
 
         <p className="text-gray-800 font-marcellus text-base leading-relaxed">
           Somos Dani y Fede, y DyF Celebraciones nació de un sueño que empezó bien
@@ -39,9 +60,8 @@ const PresentationSection = () => {
           años de compromiso y crecimiento.
         </p>
       </div>
-
     </section>
   );
 };
 
-export default PresentationSection;
+export default memo(PresentationSection);

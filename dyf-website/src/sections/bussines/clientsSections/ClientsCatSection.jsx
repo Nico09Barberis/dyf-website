@@ -1,4 +1,4 @@
-import React from "react";
+import { memo } from "react";
 import { FiBriefcase, FiHome } from "react-icons/fi";
 
 const clientsByCategory = [
@@ -26,6 +26,56 @@ const clientsByCategory = [
   },
 ];
 
+const CategoryCard = memo(function CategoryCard({ title, icon, clients }) {
+  const IconComponent = icon;
+
+  return (
+    <div
+      className="
+        bg-white
+        border border-gray-200
+        rounded-xl
+        overflow-hidden
+        shadow-sm
+        grid grid-cols-1 md:grid-cols-4
+      "
+    >
+      {/* Left panel */}
+      <div
+        className="
+          bg-[#EDF4FF]
+          p-6
+          flex flex-col justify-center items-start
+          md:items-center md:text-center
+          gap-3
+        "
+      >
+        <div className="w-12 h-12 rounded-full bg-azulOscuro/10 flex items-center justify-center">
+          <IconComponent className="text-azulOscuro text-xl" />
+        </div>
+
+        <h3 className="text-xl md:text-2xl font-urbanist uppercase font-bold text-gray-900 leading-tight">
+          {title}
+        </h3>
+      </div>
+
+      {/* Right panel */}
+      <div className="md:col-span-3 p-6">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-2 gap-x-6">
+          {clients.map((client) => (
+            <li
+              key={client}
+              className="text-gray-700 font-marcellus text-sm leading-relaxed"
+            >
+              {client}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+});
+
 const ClientsCatSection = () => {
   return (
     <section className="py-16 px-6 md:px-12 bg-gray-50">
@@ -33,9 +83,11 @@ const ClientsCatSection = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-xl md:text-4xl font-marcellus uppercase font-bold text-azulOscuro mb-2">
-            clientes con los que hemos trabajado
+            Clientes con los que hemos trabajado
           </h2>
-          <div className="w-20 h-1.5 mx-auto bg-dorado mb-4"></div>
+
+          <div className="w-20 h-1.5 mx-auto bg-dorado mb-4" />
+
           <p className="text-gray-700 max-w-3xl mx-auto font-marcellus text-base md:text-lg">
             A lo largo de nuestra trayectoria hemos trabajado con una amplia
             variedad de clientes, desde empresas privadas hasta organismos
@@ -47,41 +99,18 @@ const ClientsCatSection = () => {
 
         {/* Categories */}
         <div className="space-y-8">
-          {clientsByCategory.map((category, index) => {
-            const Icon = category.icon;
-
-            return (
-              <div
-                key={index}
-                className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm grid grid-cols-1 md:grid-cols-4"
-              >
-                {/* Left panel */}
-                <div className="bg-[#EDF4FF] p-6 flex flex-col justify-center items-start md:items-center text-left md:text-center">
-                  <h3 className="text-xl md:text-2xl font-urbanist uppercase font-bold text-gray-900 leading-tight">
-                    {category.title}
-                  </h3>
-                </div>
-
-                {/* Right panel */}
-                <div className="md:col-span-3 p-6">
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-2 gap-x-6">
-                    {category.clients.map((client, idx) => (
-                      <li
-                        key={idx}
-                        className="text-gray-700 font-marcellus text-sm leading-relaxed"
-                      >
-                        {client}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            );
-          })}
+          {clientsByCategory.map((category) => (
+            <CategoryCard
+              key={category.title}
+              title={category.title}
+              icon={category.icon}
+              clients={category.clients}
+            />
+          ))}
         </div>
       </div>
     </section>
   );
 };
 
-export default ClientsCatSection;
+export default memo(ClientsCatSection);

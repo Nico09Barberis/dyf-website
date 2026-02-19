@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, memo } from "react";
 import {
   FaSearchPlus,
   FaChevronLeft,
@@ -17,33 +17,46 @@ const images = [
   "/images/galery/tableware/tableware-1.webp",
 ];
 
-const HomeGallery = () => {
+function HomeGallery() {
   const [selectedIndex, setSelectedIndex] = useState(null);
 
-  const handleClose = useCallback(() => setSelectedIndex(null), []);
-  const handleNext = useCallback(
-    () => setSelectedIndex((i) => (i + 1) % images.length),
-    []
-  );
-  const handlePrev = useCallback(
-    () => setSelectedIndex((i) => (i - 1 + images.length) % images.length),
-    []
-  );
+  const handleClose = useCallback(() => {
+    setSelectedIndex(null);
+    document.body.style.overflow = "auto";
+  }, []);
 
-  // Cerrar con tecla Esc
+  const handleNext = useCallback(() => {
+    setSelectedIndex((i) => (i + 1) % images.length);
+  }, []);
+
+  const handlePrev = useCallback(() => {
+    setSelectedIndex((i) => (i - 1 + images.length) % images.length);
+  }, []);
+
+  // 🔥 Activar teclado SOLO cuando el modal está abierto
   useEffect(() => {
+    if (selectedIndex === null) return;
+
+    document.body.style.overflow = "hidden";
+
     const handleKey = (e) => {
       if (e.key === "Escape") handleClose();
       if (e.key === "ArrowRight") handleNext();
       if (e.key === "ArrowLeft") handlePrev();
     };
+
     window.addEventListener("keydown", handleKey);
-    return () => window.removeEventListener("keydown", handleKey);
-  }, [handleClose, handleNext, handlePrev]);
+
+    return () => {
+      window.removeEventListener("keydown", handleKey);
+      document.body.style.overflow = "auto";
+    };
+  }, [selectedIndex, handleClose, handleNext, handlePrev]);
 
   return (
-    <section className="w-full">
-      {/* Galería sin separación */}
+    <section className="w-full content-visibility-auto">
+      
+      {/* Grid */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-0">
         {images.map((src, index) => (
           <div
@@ -54,12 +67,12 @@ const HomeGallery = () => {
             <img
               src={src}
               alt={`gallery-${index}`}
-              className="w-full h-48 md:h-56 object-cover transform transition-transform duration-500 group-hover:scale-110"
+              loading="lazy"
+              decoding="async"
+              className="w-full h-48 md:h-56 object-cover transition-transform duration-500 group-hover:scale-110"
             />
 
-            {/* Overlay hover */}
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-500 flex items-center justify-center">
-              {/* Ícono aparece solo al hover */}
               <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="bg-dorado rounded-full p-3 transition-transform duration-500 group-hover:rotate-[360deg] group-hover:scale-110">
                   <FaSearchPlus className="text-white text-md" />
@@ -70,46 +83,42 @@ const HomeGallery = () => {
         ))}
       </div>
 
-      {/* Modal Lightbox */}
+      {/* Modal */}
       {selectedIndex !== null && (
         <div
-          className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 transition-all duration-300"
+          className="fixed inset-0 bg-black/90 flex items-center justify-center z-50"
           onClick={handleClose}
         >
-          {/* Imagen ampliada */}
           <img
             src={images[selectedIndex]}
             alt="Ampliada"
-            className="max-w-[90%] max-h-[85%] object-contain rounded-lg shadow-2xl transition-transform duration-500 scale-100 hover:scale-105"
+            className="max-w-[90%] max-h-[85%] object-contain rounded-lg shadow-2xl transition-transform duration-500 hover:scale-105"
             onClick={(e) => e.stopPropagation()}
           />
 
-          {/* Botón Cerrar */}
           <button
             onClick={handleClose}
-            className="absolute top-6 right-6 text-white text-3xl hover:text-gray-300 transition"
+            className="absolute top-6 right-6 text-white text-3xl hover:text-gray-300"
           >
             <FaTimes />
           </button>
 
-          {/* Navegación izquierda */}
           <button
             onClick={(e) => {
               e.stopPropagation();
               handlePrev();
             }}
-            className="absolute left-6 text-white text-4xl hover:text-gray-300 transition"
+            className="absolute left-6 text-white text-4xl hover:text-gray-300"
           >
             <FaChevronLeft />
           </button>
 
-          {/* Navegación derecha */}
           <button
             onClick={(e) => {
               e.stopPropagation();
               handleNext();
             }}
-            className="absolute right-6 text-white text-4xl hover:text-gray-300 transition"
+            className="absolute right-6 text-white text-4xl hover:text-gray-300"
           >
             <FaChevronRight />
           </button>
@@ -117,6 +126,6 @@ const HomeGallery = () => {
       )}
     </section>
   );
-};
+}
 
-export default HomeGallery;
+export default memo(HomeGallery);
