@@ -41,7 +41,7 @@ export default function RentalProcessSection() {
 
         {/* HEADER */}
         <header className="text-center mb-20">
-          <h2 className="text-2xl md:text-4xl font-marcellus uppercase font-semibold text-azulOscuro mb-3">
+          <h2 className="text-xl md:text-4xl font-marcellus uppercase font-semibold text-azulOscuro mb-3">
             ¿Cómo funciona el alquiler?
           </h2>
 

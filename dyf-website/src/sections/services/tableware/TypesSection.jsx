@@ -35,7 +35,7 @@ const TablewareTypes = () => {
 
         {/* Intro */}
         <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-marcellus font-semibold uppercase mb-3">
+          <h2 className="text-xl md:text-4xl font-marcellus font-semibold uppercase mb-3">
             Tipos de Vajilla
           </h2>
 
