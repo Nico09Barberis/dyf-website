@@ -12,7 +12,7 @@ const TYPES = [
     id: "moderna",
     title: "Vajilla Moderna",
     description: "Estilo minimalista y contemporáneo para celebraciones actuales.",
-    image: "/images/galery/tableware/tableware-2.webp",
+    image: "/images/galery/tableware/tableware-5.webp",
   },
   {
     id: "premium",
@@ -30,8 +30,8 @@ const TYPES = [
 
 const TablewareTypes = () => {
   return (
-    <section className="py-20 text-azulOscuro">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-20 w-full px-6 md:px20 text-azulOscuro">
+      <div className="w-full mx-auto px-6">
 
         {/* Intro */}
         <div className="text-center mb-14">

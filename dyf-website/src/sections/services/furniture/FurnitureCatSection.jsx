@@ -5,35 +5,35 @@ const CATEGORIES = [
     id: "sillas",
     title: "Sillas",
     image:
-      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=900&q=80",
+      "/images/galery/furniture/furniture-10.webp",
   },
   {
     id: "mesas",
     title: "Mesas",
     image:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80",
+      "/images/galery/furniture/furniture-8.webp",
   },
   {
     id: "livings",
     title: "Livings",
-    image: "/images/catFurniture/catSillones.webp",
+    image: "/images/galery/furniture/furniture-7.webp",
+  },
+  {
+    id: "decorativo",
+    title: "Mobiliario decorativo",
+    image: "/images/decGallery/decGallery11.webp",
   },
   {
     id: "barras",
     title: "Barras",
     image:
-      "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=900&q=80",
+      "/images/catFurniture/catBar.webp",
   },
   {
-    id: "decorativo",
-    title: "Mobiliario decorativo",
-    image: "/images/catFurniture/catDecoracion.webp",
-  },
-  {
-    id: "carpas",
-    title: "Carpas y estructuras",
+    id: "sillones",
+    title: "sillones",
     image:
-      "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=900&q=80",
+      "../../../../public/images/catFurniture/catSofas.webp",
   },
 ];
 

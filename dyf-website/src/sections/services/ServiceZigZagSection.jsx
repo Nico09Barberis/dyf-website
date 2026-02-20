@@ -13,14 +13,14 @@ const SERVICES = [
     title: "Alquiler de mobiliario",
     description:
       "Mesas, sillas y mobiliario funcional y estético para todo tipo de eventos, adaptado a cada espacio y necesidad.",
-    image: "/images/galery/furniture/furniture-2.webp",
+    image: "/images/galery/furniture/furniture-7.webp",
     path: "/servicios/alquiler-mobiliario",
   },
   {
     title: "Ambientación y decoración",
     description:
       "Diseño y montaje de espacios únicos, personalizados según la temática, el estilo y la identidad de cada celebración.",
-    image: "/images/galery/fullEvents/fullEvent-4.webp",
+    image: "/images/galery/fullEvents/fullEvent-1.webp",
     path: "/servicios/ambientacion-decoracion",
   },
   {

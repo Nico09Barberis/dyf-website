@@ -67,7 +67,7 @@ Trabajamos con responsabilidad, puntualidad y compromiso para que disfrutes tu e
   },
   {
     id: 3,
-    image: "/images/galery/fullEvents/fullEvent-1.webp",
+    image: "../../../public/images/galery/fullEvents/fullEvent-5.webp",
     title: "Eventos que se recuerdan",
     text: `Nuestro objetivo es crear experiencias memorables.
 Cada celebración es única, por eso cuidamos cada detalle para lograr un resultado elegante, armonioso y especial.`,

@@ -8,10 +8,10 @@ import {
 
 const images = [
   "/images/catFurniture/catDecoracion.webp",
-  "/images/galery/fullEvents/fullEvent-2.webp",
+  "/images/galery/furniture/furniture-5.webp",
   "/images/galery/tableware/tableware-3.webp",
-  "/images/galery/furniture/furniture-2.webp",
-  "/images/galery/furniture/furniture-3.webp",
+  "/images/galery/fullEvents/fullEvent-5.webp",
+  "/images/galery/furniture/furniture-7.webp",
   "/images/galery/tableware/tableware-4.webp",
   "/images/home/servHome2.webp",
   "/images/galery/tableware/tableware-1.webp",

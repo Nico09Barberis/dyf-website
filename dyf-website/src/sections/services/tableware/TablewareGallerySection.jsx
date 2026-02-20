@@ -10,7 +10,7 @@ const images = [
     title: "Vajilla premium para eventos exclusivos",
   },
   {
-    src: "/images/galery/tableware/tableware-4.webp",
+    src: "/images/galery/tableware/tableware-6.webp",
     title: "Vajilla moderna para eventos actuales",
   },
 ];

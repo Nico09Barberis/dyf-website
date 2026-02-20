@@ -4,7 +4,7 @@ import RentalProcessSection from "../../sections/services/tableware/RentalProces
 import ServiceIncludesSection from "../../sections/services/tableware/ServiceIncludesSection";
 import TablewareGallerySection from "../../sections/services/tableware/TablewareGallerySection";
 import TablewareHero from "../../sections/services/tableware/TablewareHero";
-import TypesSection from "../../sections/services/tableware/TypesSection";
+import TablewareTypes from "../../sections/services/tableware/TablewareTypes";
 
 export default function TablewarePage() {
   const breadcrumb = [
@@ -23,7 +23,7 @@ export default function TablewarePage() {
 
       <TablewareHero />
 
-      <TypesSection />
+      <TablewareTypes />
 
       <ServiceIncludesSection />
 

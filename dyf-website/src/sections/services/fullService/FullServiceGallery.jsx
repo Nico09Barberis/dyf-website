@@ -11,9 +11,9 @@ const images = [
   "/images/galery/fullEvents/fullEvent-7.webp",
   "/images/galery/fullEvents/fullEvent-2.webp",
   "/images/galery/fullEvents/fullEvent-6.webp",
-  "/images/galery/furniture/furniture-2.webp",
+  "../../../../public/images/galery/fullEvents/fullEvent-8.webp",
   "/images/galery/furniture/furniture-3.webp",
-  "/images/home/servHome2.webp",
+  "/images/home/servHome2.webp", 
   "/images/galery/fullEvents/fullEvent-5.webp",
 ];
 
