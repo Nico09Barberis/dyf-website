@@ -54,7 +54,7 @@ const SECTIONS = [
     image: "/images/varias/info1.webp",
     title: "Asesoramiento personalizado",
     text: `Te acompañamos en cada etapa de tu evento, escuchando tus ideas y transformándolas en una propuesta única.
-Nuestro equipo te asesora en la elección de estilos, colores, decoración y vajilla para que cada detalle refleje exactamente lo que imaginás.`,
+      Te asesoramos en cuanto a catering, vajilla, ambientación y decoración, también en la selección de proveedores, producción y coordinación de tu evento..`,
     reverse: false,
   },
   {
@@ -62,15 +62,15 @@ Nuestro equipo te asesora en la elección de estilos, colores, decoración y vaj
     image: "/images/varias/info2.webp",
     title: "Experiencia y confianza",
     text: `Contamos con años de experiencia en la organización y ambientación de eventos sociales y corporativos.
-Trabajamos con responsabilidad, puntualidad y compromiso para que disfrutes tu evento con total tranquilidad.`,
+      Trabajamos con responsabilidad, puntualidad y compromiso para que disfrutes tu evento con total tranquilidad.`,
     reverse: true,
   },
   {
     id: 3,
-    image: "../../../public/images/galery/fullEvents/fullEvent-5.webp",
+    image: "../../../public/images/home/servHome2.webp",
     title: "Eventos que se recuerdan",
     text: `Nuestro objetivo es crear experiencias memorables.
-Cada celebración es única, por eso cuidamos cada detalle para lograr un resultado elegante, armonioso y especial.`,
+      Cada celebración es única, por eso cuidamos cada detalle para lograr un resultado elegante, armonioso y especial.`,
     reverse: false,
   },
 ];

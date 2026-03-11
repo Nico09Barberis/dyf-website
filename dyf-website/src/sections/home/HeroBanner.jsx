@@ -7,7 +7,7 @@ const HeroBanner = ({
   message = "Hola! Estoy interesado en sus servicios.",
   backgroundImage = "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80",
 }) => {
-  const whatsappNumber = "5491123456789"; // número fijo
+  const whatsappNumber = "5493512324008";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
     message
   )}`;

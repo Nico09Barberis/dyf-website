@@ -16,12 +16,12 @@ const CATEGORIES = [
   {
     id: "livings",
     title: "Livings",
-    image: "/images/galery/furniture/furniture-7.webp",
+    image: "/images/catFurniture/catLiving.webp",
   },
   {
     id: "decorativo",
     title: "Mobiliario decorativo",
-    image: "/images/decGallery/decGallery11.webp",
+    image: "/images/catFurniture/catDecoracion.webp",
   },
   {
     id: "barras",
@@ -33,7 +33,7 @@ const CATEGORIES = [
     id: "sillones",
     title: "sillones",
     image:
-      "../../../../public/images/catFurniture/catSofas.webp",
+      "/images/catFurniture/catSofas.webp",
   },
 ];
 

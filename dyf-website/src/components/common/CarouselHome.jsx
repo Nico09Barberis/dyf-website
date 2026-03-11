@@ -11,16 +11,16 @@ const SLIDES = [
     image: "/images/home/slide2.webp",
     title: "Tu Evento, Nuestra Pasión",
     subtitle:
-      "Decoración, coordinación y equipamiento pensados para cada ocasión",
+      "Equipamiento, decoracion, producción y asesoramiento para cada tipo de celebración",
   },
   {
-    image: "/images/home/slide3.webp",
+    image: "/images/galery/tableware/tableware-6.webp",
     title: "Vajilla y Ambientación Profesional",
     subtitle:
       "Calidad, estilo y elegancia para realzar cada celebración",
   },
   {
-    image: "/images/home/slide4.webp",
+    image: "/images/galery/fullEvents/fullEvent-2.webp",
     title: "Confianza y Experiencia",
     subtitle:
       "Acompañamos eventos sociales y corporativos con compromiso y excelencia",

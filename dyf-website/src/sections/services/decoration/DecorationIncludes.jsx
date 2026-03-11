@@ -5,7 +5,6 @@ import {
   FaRegImages,
   FaVectorSquare,
   FaTools,
-  FaUserCheck,
 } from "react-icons/fa";
 
 const INCLUDES = [
@@ -38,12 +37,6 @@ const INCLUDES = [
     description:
       "Nos encargamos de la instalación y desmontaje, cuidando tiempos y detalles.",
     icon: FaTools,
-  },
-  {
-    title: "Supervisión en evento",
-    description:
-      "Acompañamos el desarrollo del evento para garantizar que todo se vea tal como fue diseñado.",
-    icon: FaUserCheck,
   },
 ];
 

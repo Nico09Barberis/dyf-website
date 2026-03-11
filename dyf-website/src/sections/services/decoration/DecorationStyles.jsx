@@ -34,7 +34,7 @@ const styles = [
     description:
       "Ambientaciones divertidas y personalizadas para celebrar a lo grande.",
     image:
-      "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1513151233558-d860c5398177?auto=format&fit=crop&w=1400&q=80",
   },
 ];
 
