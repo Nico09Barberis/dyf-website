@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, memo } from "react";
+import { Link } from "react-router-dom";
 import {
   FaSearchPlus,
   FaChevronLeft,
@@ -54,34 +55,48 @@ function HomeGallery() {
   }, [selectedIndex, handleClose, handleNext, handlePrev]);
 
   return (
-    <section className="w-full content-visibility-auto">
+    <section className="w-full">
 
       {/* Grid */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
-        {images.map((src, index) => (
-          <div
-            key={index}
-            className="relative overflow-hidden group cursor-pointer"
-            onClick={() => setSelectedIndex(index)}
-          >
-          <LazyImage
-            src={src}
-            alt={`Evento ${index + 1}`}
-            className="w-full h-48 md:h-56 object-cover transition-transform duration-500 group-hover:scale-110"
-          />
 
-            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-500 flex items-center justify-center">
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="bg-dorado rounded-full p-3 transition-transform duration-500 group-hover:rotate-[360deg] group-hover:scale-110">
-                  <FaSearchPlus className="text-white text-md" />
+        {images.map((src, index) => (
+          <div key={index} className="relative overflow-hidden group">
+
+            {/* MOBILE → redirige */}
+            <Link to="/galeria" className="md:hidden block">
+              <LazyImage
+                src={src}
+                alt={`Evento ${index + 1}`}
+                className="w-full h-48 object-cover"
+              />
+            </Link>
+
+            {/* DESKTOP → abre modal */}
+            <div
+              className="hidden md:block cursor-pointer"
+              onClick={() => setSelectedIndex(index)}
+            >
+              <LazyImage
+                src={src}
+                alt={`Evento ${index + 1}`}
+                className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-500 flex items-center justify-center">
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="bg-dorado rounded-full p-3 transition-transform duration-500 group-hover:rotate-[360deg] group-hover:scale-110">
+                    <FaSearchPlus className="text-white text-md" />
+                  </div>
                 </div>
               </div>
             </div>
+
           </div>
         ))}
       </div>
 
-      {/* Modal */}
+      {/* Modal (solo desktop) */}
       {selectedIndex !== null && (
         <div
           className="fixed inset-0 bg-black/90 flex items-center justify-center z-50"
@@ -90,15 +105,13 @@ function HomeGallery() {
           <img
             src={images[selectedIndex]}
             alt="Imagen ampliada"
-            loading="eager"
-            decoding="async"
             className="max-w-[90%] max-h-[85%] object-contain rounded-lg shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           />
 
           <button
             onClick={handleClose}
-            className="absolute top-6 right-6 text-white text-3xl hover:text-gray-300"
+            className="absolute top-6 right-6 text-white text-3xl"
           >
             <FaTimes />
           </button>
@@ -108,7 +121,7 @@ function HomeGallery() {
               e.stopPropagation();
               handlePrev();
             }}
-            className="absolute left-6 text-white text-4xl hover:text-gray-300"
+            className="absolute left-6 text-white text-4xl"
           >
             <FaChevronLeft />
           </button>
@@ -118,7 +131,7 @@ function HomeGallery() {
               e.stopPropagation();
               handleNext();
             }}
-            className="absolute right-6 text-white text-4xl hover:text-gray-300"
+            className="absolute right-6 text-white text-4xl"
           >
             <FaChevronRight />
           </button>
