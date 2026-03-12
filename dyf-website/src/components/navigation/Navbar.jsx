@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import navLogo from "../../assets/images/logo.png";
 
-import { FaFacebook, FaInstagram } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
 import { MdOutlinePhoneIphone } from "react-icons/md";
 
@@ -129,19 +129,10 @@ function Navbar() {
             <FaInstagram className="w-6 h-6" />
           </a>
 
-          {/* Facebook */}
-          <a
-            href="https://www.facebook.com/TU_PERFIL"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-beige hover:text-white transition-colors"
-          >
-            <FaFacebook className="w-6 h-6" />
-          </a>
 
           {/* WhatsApp */}
           <a
-            href="https://wa.me/5493492582838"
+            href="https://wa.me/5493512324008"
             target="_blank"
             rel="noopener noreferrer"
             className="text-beige hover:text-white transition-colors"
@@ -213,7 +204,7 @@ function Navbar() {
                   </Link>
                 </div>
               )}
-            </div>
+            </div> 
 
             {/* Servicios con submenú */}
             <div>
