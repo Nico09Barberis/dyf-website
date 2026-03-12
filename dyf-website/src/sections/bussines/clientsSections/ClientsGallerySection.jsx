@@ -77,7 +77,7 @@ const ClientsGallerySection = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-xl md:text-4xl font-marcellus uppercase font-bold text-azulOscuro mb-2">
+          <h2 className="text-xl md:text-3xl lg:text-4xl font-marcellus uppercase font-bold text-azulOscuro mb-2">
             Eventos realizados
           </h2>
 

@@ -19,6 +19,7 @@ function GallerySection({ title, images = [], onImageClick }) {
         </h2>
       </div>
 
+
       {/* MOBILE → Carousel */}
       <div className="block md:hidden">
         <div
@@ -57,6 +58,10 @@ function GallerySection({ title, images = [], onImageClick }) {
             </button>
           ))}
         </div>
+        {/* Mobile hint */}
+        <p className="md:hidden text-xs text-gray-500 font-urbanist mb-2 pl-1">
+          Deslizá para ver más imágenes →
+        </p>
       </div>
 
       {/* DESKTOP → Grid */}

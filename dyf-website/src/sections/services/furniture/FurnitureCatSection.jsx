@@ -44,7 +44,7 @@ const FurnitureCatSection = () => {
 
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-xl md:text-4xl font-marcellus uppercase font-bold text-azulOscuro mb-3">
+          <h2 className="text-xl md:text-3xl lg:text-4xl font-marcellus uppercase font-bold text-azulOscuro mb-3">
             Nuestro mobiliario
           </h2>
 

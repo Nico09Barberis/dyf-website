@@ -82,7 +82,7 @@ function HomeProcess() {
 
       {/* Header */}
       <div className="text-center mb-12 px-4">
-        <h2 className="text-xl md:text-4xl font-marcellus uppercase font-bold text-azulOscuro mb-2">
+        <h2 className="text-xl md:text-3xl lg:text-4xl font-marcellus uppercase font-bold text-azulOscuro mb-2">
           Organización integral de tu evento
         </h2>
 

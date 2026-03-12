@@ -6,7 +6,7 @@ const HomeTestimonials = () => {
     <section className="w-full py-16 bg-[#BBDCE5]">
       <div className="max-w-6xl mx-auto px-6 text-center">
         {/* Título */}
-        <h2 className="text-xl md:text-4xl font-marcellus uppercase font-bold text-azulOscuro mb-2">
+        <h2 className="text-xl md:text-3xl lg:text-4xl font-marcellus uppercase font-bold text-azulOscuro mb-2">
           Lo que dicen nuestros clientes
         </h2>
         <div className="bg-azulOscuro w-20 h-1.5 mx-auto mb-4"></div>

@@ -49,7 +49,7 @@ const DecorationStylesCarousel = () => {
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-10 md:mb-14 text-center">
-          <h2 className="text-xl md:text-4xl font-semibold font-marcellus uppercase text-gray-900 mb-2">
+          <h2 className="text-xl md:text-3xl lg:text-4xl font-semibold font-marcellus uppercase text-gray-900 mb-2">
             Estilos de ambientación
           </h2>
           <div className="w-20 h-1.5 bg-dorado mx-auto mb-4" />

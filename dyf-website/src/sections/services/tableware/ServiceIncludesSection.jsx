@@ -97,7 +97,7 @@ export default function ServiceIncludesSection() {
 
         {/* HEADER */}
         <header className="text-center mb-14">
-          <h2 className="text-xl md:text-4xl font-marcellus uppercase font-semibold text-gray-900 mb-3">
+          <h2 className="text-xl md:text-3xl lg:text-4xl font-marcellus uppercase font-semibold text-gray-900 mb-3">
             ¿Qué incluye nuestro servicio?
           </h2>
 

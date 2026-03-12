@@ -60,7 +60,7 @@ const FurnitureIncludes = () => {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14">
-          <h2 className="text-xl md:text-4xl font-marcellus uppercase font-bold text-gray-900 mb-2">
+          <h2 className="text-xl md:text-3xl lg:text-4xl font-marcellus uppercase font-bold text-gray-900 mb-2">
             ¿Qué incluye el servicio?
           </h2>
           <div className="w-20 h-1.5 mx-auto bg-dorado mb-4"></div>

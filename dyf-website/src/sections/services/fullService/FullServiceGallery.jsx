@@ -45,7 +45,7 @@ const FullServiceGallery = () => {
 
       {/* Intro Section */}
       <div className="max-w-4xl mx-auto text-center px-6 mb-16">
-        <h2 className="text-xl md:text-4xl font-marcellus font-bold uppercase text-gray-900 mb-2">
+        <h2 className="text-xl md:text-3xl lg:text-4xl font-marcellus font-bold uppercase text-gray-900 mb-2">
           Galería de momentos inolvidadables
         </h2>
 

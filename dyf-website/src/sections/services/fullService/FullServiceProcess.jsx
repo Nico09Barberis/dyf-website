@@ -42,7 +42,7 @@ const PlanningProcess = () => {
 
         {/* Header */}
         <header className="text-center mb-20">
-          <h2 className="text-xl md:text-4xl font-marcellus font-bold uppercase text-gray-900 mb-3">
+          <h2 className="text-xl md:text-3xl lg:text-4xl font-marcellus font-bold uppercase text-gray-900 mb-3">
             Nuestro proceso de trabajo
           </h2>
 

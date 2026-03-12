@@ -3,7 +3,7 @@ const HeroSection = () => {
     <section className="py-12 md:py-24 w-full flex items-center justify-center bg-white text-azulOscuro overflow-hidden">
       {/* Contenido */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center flex flex-col items-center gap-2">
-        <h1 className="text-xl md:text-4xl font-marcellus font-semibold uppercase tracking-wide">
+        <h1 className="text-xl md:text-3xl lg:text-4xl font-marcellus font-semibold uppercase tracking-wide">
           Alquiler de Vajilla para Eventos 
         </h1> 
 
