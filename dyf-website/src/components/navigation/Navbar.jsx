@@ -296,10 +296,10 @@ function Navbar() {
                 aria-label="Instagram"
               >
                 <FaInstagram size={24} />
-              </a>
+              </a> 
 
               <a
-                href="https://wa.me/5493492582838?text=Hola%2C+me+gustar%C3%ADa+recibir+m%C3%A1s+informaci%C3%B3n+sobre+sus+servicios."
+                href="https://wa.me/5493512324008?text=Hola%2C+me+gustar%C3%ADa+recibir+m%C3%A1s+informaci%C3%B3n+sobre+sus+servicios."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-beige hover:text-white transition-colors"
