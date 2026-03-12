@@ -7,34 +7,27 @@ const styles = [
     description:
       "Ambientaciones elegantes y personalizadas para celebrar momentos únicos.",
     image:
-      "https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?auto=format&fit=crop&w=1400&q=80",
+      "/images/varias/decStyle2.webp",
   },
   {
-    title: "Eventos corporativos",
+    title: "Eventos al aire libre",
     description:
-      "Espacios profesionales alineados con la identidad de tu marca.",
+      "Ambientaciones pensadas para disfrutar cada detalle en espacios abiertos.",
     image:
-      "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1400&q=80",
+      "/images/galery/fullEvents/fullEvent-8.webp",
   },
   {
     title: "Eventos sociales",
     description:
       "Celebraciones privadas con ambientaciones que marcan la diferencia.",
     image:
-      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1400&q=80",
+      "/images/varias/decStyle1.webp",
   },
   {
     title: "Temáticas",
     description: "Conceptos creativos adaptados a la idea de tu evento.",
     image:
-      "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1400&q=80",
-  },
-  {
-    title: "Cumpleaños",
-    description:
-      "Ambientaciones divertidas y personalizadas para celebrar a lo grande.",
-    image:
-      "https://images.unsplash.com/photo-1513151233558-d860c5398177?auto=format&fit=crop&w=1400&q=80",
+      "/images/varias/decStyle3.webp",
   },
 ];
 

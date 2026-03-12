@@ -2,7 +2,7 @@ import { useEffect, useState, memo } from "react";
 
 const SLIDES = [
   {
-    image: "/images/home/slide1.webp",
+    image: "/images/varias/decStyle2.webp",
     title: "Momentos que se Viven, Detalles que se Recuerdan",
     subtitle:
       "Transformamos tus ideas en eventos únicos y perfectamente organizados",

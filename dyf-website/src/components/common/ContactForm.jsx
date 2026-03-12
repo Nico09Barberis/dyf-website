@@ -65,7 +65,7 @@ export default function ContactForm() {
         <div className="mb-6 h-2 w-20 bg-dorado" />
 
         <form
-          action="https://formspree.io/f/xovpkokq"
+          action="https://formspree.io/f/mqeybapy"
           method="POST"
           className="grid grid-cols-1 gap-4 md:grid-cols-2"
         >
@@ -97,18 +97,6 @@ export default function ContactForm() {
             name="telefono"
             placeholder="Telefono"
           />
-
-          <div className="flex flex-col">
-            <label htmlFor="fecha" className="mb-1 font-semibold">
-              Fecha de evento
-            </label>
-            <FormField
-              type="date"
-              id="fecha"
-              name="fecha"
-              required
-            />
-          </div>
 
           <FormSelect
             id="tipoEvento"

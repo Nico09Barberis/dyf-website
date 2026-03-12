@@ -13,7 +13,7 @@ const SERVICES = [
     title: "Alquiler de mobiliario",
     description:
       "Mesas, sillas y mobiliario funcional y estético para todo tipo de eventos, adaptado a cada espacio y necesidad.",
-    image: "/images/galery/furniture/furniture-7.webp",
+    image: "/images/catFurniture/catLiving.webp",
     path: "/servicios/alquiler-mobiliario",
   },
   {

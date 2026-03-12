@@ -59,9 +59,10 @@ const FullServiceHero = () => {
             mb-12
           "
         >
-          Planificamos, coordinamos y ejecutamos cada aspecto del evento:
-          estructuras, ambientación, vajilla, iluminación, fotografía, video y
-          logística. Vos solo te ocupás de vivir la experiencia.
+          Planificamos, producimos y coordinamos tu evento para que solo te
+          ocupes de vivir la experiencia. Desde bodas hasta eventos
+          corporativos, nos encargamos de cada detalle para crear momentos
+          inolvidables.
         </p>
 
         {/* CTA */}

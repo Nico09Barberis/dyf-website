@@ -10,7 +10,7 @@ const cards = [
   {
     id: 2,
     title: "Diseño y propuesta",
-    image: "/images/home/process/process2.webp",
+    image: "/images/varias/info1.webp",
     description: "Definimos concepto, proveedores y presupuesto personalizado.",
   },
   {

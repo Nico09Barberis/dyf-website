@@ -18,7 +18,7 @@ export default function FullEventsPage() {
       <HeroWithBreadcrumb
         title="Organización integral de eventos"
         breadcrumbItems={breadcrumb}
-        imageUrl="/images/home/slide1.webp"
+        imageUrl="/images/galery/fullEvents/fullEvent-2.webp"
       />
 
       <FullServiceHero />

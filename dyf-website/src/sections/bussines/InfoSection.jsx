@@ -67,7 +67,7 @@ const SECTIONS = [
   },
   {
     id: 3,
-    image: "../../../public/images/home/servHome2.webp",
+    image: "/images/home/servHome2.webp",
     title: "Eventos que se recuerdan",
     text: `Nuestro objetivo es crear experiencias memorables.
       Cada celebración es única, por eso cuidamos cada detalle para lograr un resultado elegante, armonioso y especial.`,

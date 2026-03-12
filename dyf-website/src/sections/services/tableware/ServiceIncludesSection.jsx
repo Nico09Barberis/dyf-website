@@ -17,22 +17,22 @@ const includes = [
     icon: FaSoap,
   },
   {
-    title: "Reposición por roturas",
-    description:
-      "Cobertura ante roturas accidentales durante el evento, sin costos ocultos.",
-    icon: FaShieldAlt,
-  },
-  {
     title: "Entrega y retiro",
     description:
-      "Coordinamos logística en el horario que mejor se adapte a tu evento.",
+    "Coordinamos logística en el horario que mejor se adapte a tu evento.",
     icon: FaTruck,
   },
   {
     title: "Embalaje seguro",
     description:
-      "Protección profesional para evitar daños en el traslado.",
+    "Protección profesional para evitar daños en el traslado.",
     icon: FaBoxOpen,
+  },
+  {
+    title: "Reposición por roturas",
+    description:
+      "En caso de rotura durante el evento, el cliente deberá reponer la pieza dañada o se aplicará el cargo correspondiente al servicio.",
+    icon: FaShieldAlt,
   },
   {
     title: "Asesoramiento personalizado",
