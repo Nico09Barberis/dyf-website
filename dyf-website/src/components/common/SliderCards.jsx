@@ -84,7 +84,7 @@ const GoogleIcon = () => (
 ========================= */
 
 const TestimonialCard = ({ data, index }) => (
-  <div className="flex w-64 flex-shrink-0 flex-col bg-white p-3 text-black transition-transform duration-300 hover:scale-105 hover:shadow-2xl md:w-72 lg:w-80">
+  <div className="flex w-[260px] sm:w-64 md:w-72 lg:w-80 flex-shrink-0 flex-col bg-white p-3 text-black transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
     <div className="mb-4 flex items-center justify-between">
       <div className="flex items-center space-x-3">
         <img
@@ -156,7 +156,7 @@ const SliderCards = ({ speed = 0.5 }) => {
     >
       <div
         ref={sliderRef}
-        className="flex space-x-6 px-6 will-change-transform"
+        className="flex gap-6 will-change-transform"
       >
         {slides.map((slide, index) => (
           <TestimonialCard

@@ -4,14 +4,14 @@ import commentImg from "/images/varias/coment.jpg";
 
 const ClientTestimonialsSection = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="w-full py-20 bg-white">
 
       {/* Top section */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 mb-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           
           {/* Image */}
-          <div className="w-full h-72 md:h-80 rounded-xl overflow-hidden">
+          <div className="w-full max-w-full h-56 sm:h-64 md:h-80 rounded-xl overflow-hidden">
             <img
               src={commentImg}
               alt="Clientes satisfechos"
@@ -43,9 +43,7 @@ const ClientTestimonialsSection = () => {
       </div>
 
       {/* Slider */}
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
         <SliderCards />
-      </div>
 
     </section>
   );
