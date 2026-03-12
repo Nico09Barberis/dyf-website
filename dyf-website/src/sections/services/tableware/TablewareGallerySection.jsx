@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const images = [
   {
@@ -93,8 +94,8 @@ const TablewareGallerySection = () => {
 
         {/* CTA */}
         <div className="flex justify-center mt-14">
-          <a
-            href="/galeria"
+          <Link
+            to="/galeria"
             className="
               inline-flex items-center justify-center
               px-9 py-3.5
@@ -103,14 +104,14 @@ const TablewareGallerySection = () => {
               rounded-full
               shadow-md
               transition-all duration-300
-              hover:bg-dorado/90
+              hover:bg-dorado/90 
               hover:-translate-y-0.5
               hover:shadow-lg
               focus:outline-none focus:ring-2 focus:ring-dorado focus:ring-offset-2
             "
           >
             Ver galería completa
-          </a>
+          </Link>
         </div>
 
       </div>
