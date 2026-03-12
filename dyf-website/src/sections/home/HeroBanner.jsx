@@ -1,7 +1,7 @@
 // src/components/sections/HeroBanner.jsx
 import React from "react";
 
-const HeroBanner = ({
+const HeroBanner = ({ 
   title = "¿Buscás ayuda ahora mismo?",
   buttonText = "Contáctanos",
   message = "Hola! Estoy interesado en sus servicios.",
