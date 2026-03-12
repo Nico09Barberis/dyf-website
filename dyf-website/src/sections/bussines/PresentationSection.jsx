@@ -37,7 +37,7 @@ const PresentationSection = () => {
         "
       >
         <h2 className="text-lg uppercase font-lora font-semibold mb-2 text-gray-500">
-          d&f
+          D&F
         </h2>
 
         <h3 className="text-xl md:text-2xl font-lora font-semibold text-gray-800 mb-1">

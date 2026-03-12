@@ -14,7 +14,7 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50 text-gray-800">
       <HeroWithBreadcrumb
-        title="Acerca de nosotros"
+        title="Sobre nosotros"
         breadcrumbItems={breadcrumb}
         imageUrl="/images/bgPages/bgAbout.webp"
       />

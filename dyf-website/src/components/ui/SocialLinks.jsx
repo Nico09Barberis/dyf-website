@@ -1,5 +1,5 @@
 import React from "react";
-import { FaInstagram, FaWhatsapp, FaFacebookF } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const SocialLinks = () => {
   const icons = [
@@ -13,13 +13,7 @@ const SocialLinks = () => {
       id: "whatsapp",
       icon: FaWhatsapp,
       color: "hover:bg-gray-800",
-      link: "https://wa.me/5491123456789", // reemplaza con tu WhatsApp
-    },
-    {
-      id: "facebook",
-      icon: FaFacebookF,
-      color: "hover:bg-gray-800",
-      link: "https://www.facebook.com/tu_usuario", // reemplaza con tu Facebook
+      link: "https://wa.me/5493512324008", // reemplaza con tu WhatsApp
     },
   ];
 

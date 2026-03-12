@@ -23,6 +23,11 @@ const faqs = [
       "Sí, coordinamos la entrega y el retiro en el lugar del evento, en los horarios previamente acordados."
   },
   {
+    question: "¿Qué ocurre si se rompe algún elemento durante el evento?",
+    answer:
+      "En caso de rotura durante el evento, el cliente deberá reponer la pieza dañada o se aplicará el cargo correspondiente al servicio."
+  },
+  {
     question: "¿En qué zonas brindan servicio?",
     answer:
       "Actualmente brindamos servicio en la ciudad y zonas aledañas. Puedes consultarnos tu ubicación específica para confirmarlo."

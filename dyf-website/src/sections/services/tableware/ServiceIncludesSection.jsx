@@ -7,6 +7,7 @@ import {
   FaSoap,
   FaChevronLeft,
   FaChevronRight,
+  FaGlassCheers
 } from "react-icons/fa";
 
 const includes = [
@@ -29,16 +30,16 @@ const includes = [
     icon: FaBoxOpen,
   },
   {
-    title: "Reposición por roturas",
-    description:
-      "En caso de rotura durante el evento, el cliente deberá reponer la pieza dañada o se aplicará el cargo correspondiente al servicio.",
-    icon: FaShieldAlt,
-  },
-  {
     title: "Asesoramiento personalizado",
     description:
       "Te ayudamos a calcular cantidades y elegir el tipo de vajilla ideal.",
     icon: FaHandsHelping,
+  },
+  {
+    title: "Ideal para todo tipo de eventos",
+    description:
+      "Perfecto para cumpleaños, casamientos, eventos corporativos y reuniones familiares.",
+    icon: FaGlassCheers,
   },
 ];
 

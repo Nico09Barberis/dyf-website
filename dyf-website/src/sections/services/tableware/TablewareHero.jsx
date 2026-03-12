@@ -1,10 +1,10 @@
-const TablewareHero = () => {
+const HeroSection = () => {
   return (
     <section className="py-12 md:py-24 w-full flex items-center justify-center bg-white text-azulOscuro overflow-hidden">
       {/* Contenido */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center flex flex-col items-center gap-2">
         <h1 className="text-xl md:text-4xl font-marcellus font-semibold uppercase tracking-wide">
-          Alquiler de Vajilla para Eventos
+          Alquiler de Vajilla para Eventos 
         </h1> 
 
         <div className="w-20 h-1.5 bg-dorado mx-auto mb-4"></div>
@@ -15,7 +15,7 @@ const TablewareHero = () => {
           especiales.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 mt-4">
+        <div className="flex flex-col gap-4 mt-4">
           <a
             href="https://wa.me/5493512324008?text=Hola%20quiero%20solicitar%20un%20presupuesto%20para%20alquiler%20de%20vajilla."
             target="_blank"
@@ -33,16 +33,6 @@ const TablewareHero = () => {
             Solicitar presupuesto
           </a>
 
-          <button className="inline-flex items-center justify-center
-              px-8 py-3
-              border border-dorado text-dorado
-              font-urbanist font-semibold
-              rounded-full
-              transition-all duration-300
-              hover:bg-dorado hover:text-white
-              focus:outline-none focus:ring-2 focus:ring-dorado focus:ring-offset-2">
-            Ver catálogo
-          </button>
         </div>
       </div>
 
@@ -52,4 +42,4 @@ const TablewareHero = () => {
   );
 };
 
-export default TablewareHero;
+export default HeroSection;

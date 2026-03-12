@@ -11,10 +11,10 @@ const images = [
   "/images/galery/tableware/tableware-6.webp",
   "/images/galery/fullEvents/fullEvent-2.webp",
   "/images/home/slide2.webp",
-  "/images/galery/fullEvents/fullEvent-8.webp",
+  "/images/decGallery/decGallery8.webp",
   "/images/galery/furniture/furniture-3.webp",
   "/images/home/servHome2.webp", 
-  "/images/galery/fullEvents/fullEvent-5.webp",
+  "/images/decGallery/decGallery5.webp",
 ];
 
 const FullServiceGallery = () => {
@@ -46,7 +46,7 @@ const FullServiceGallery = () => {
       {/* Intro Section */}
       <div className="max-w-4xl mx-auto text-center px-6 mb-16">
         <h2 className="text-xl md:text-4xl font-marcellus font-bold uppercase text-gray-900 mb-2">
-          Nuestros eventos
+          Galería de momentos inolvidadables
         </h2>
 
         <div className="w-20 h-1.5 bg-dorado mx-auto mb-4"></div>

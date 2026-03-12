@@ -125,7 +125,7 @@ const ServiceItem = memo(function ServiceItem({
 const ServicesZigZagSection = () => {
   return (
     <section
-      className="
+      className=" 
         max-w-6xl mx-auto py-20
         content-visibility-auto
         contain-intrinsic-size-[1400px]

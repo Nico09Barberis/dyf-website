@@ -54,7 +54,7 @@ const SECTIONS = [
     image: "/images/varias/info1.webp",
     title: "Asesoramiento personalizado",
     text: `Te acompañamos en cada etapa de tu evento, escuchando tus ideas y transformándolas en una propuesta única.
-      Te asesoramos en cuanto a catering, vajilla, ambientación y decoración, también en la selección de proveedores, producción y coordinación de tu evento..`,
+      Te asesoramos en cuanto a equipamiento, vajilla, mobiliario y ambientación, también con agenda de proveedores, producción y coordinación de tu evento..`,
     reverse: false,
   },
   {

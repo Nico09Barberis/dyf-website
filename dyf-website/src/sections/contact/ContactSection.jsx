@@ -25,7 +25,7 @@ export default function ContactSection() {
             <MdOutlinePhoneIphone className="w-10 h-10 p-2 bg-gray-700 rounded-full text-[#EEDF7A] mt-1" />
             <div>
               <h3 className="font-semibold text-[#EEDF7A] uppercase">Teléfono</h3>
-              <p className="text-gray-100">+54 9 11 1234-5678</p>
+              <p className="text-gray-100">+54 9 351 2324008</p>
             </div>
           </div>
 
@@ -33,7 +33,7 @@ export default function ContactSection() {
             <FaMapMarkedAlt className="w-10 h-10 p-2 bg-gray-700 rounded-full text-[#EEDF7A] mt-1" />
             <div>
               <h3 className="font-semibold text-[#EEDF7A] uppercase">Ubicación</h3>
-              <p className="text-gray-100">Cordoba, Argentina</p>
+              <p className="text-gray-100">Salsipuedes, Cordoba, Argentina</p>
             </div>
           </div>
         </div>

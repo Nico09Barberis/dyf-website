@@ -45,7 +45,7 @@ export default function RentalProcessSection() {
             ¿Cómo funciona el alquiler?
           </h2>
 
-          <div className="w-16 h-[2px] bg-dorado mx-auto mb-5"></div>
+          <div className="w-20 h-1.5 bg-dorado mx-auto mb-4"></div>
 
           <p className="text-gray-600 max-w-2xl mx-auto font-marcellus text-base md:text-lg">
             Un proceso simple y transparente, pensado para que no pierdas tiempo.
