@@ -27,7 +27,7 @@ const sectionsData = [
       { src: "/images/decGallery/decGallery4.webp" },
       { src: "/images/decGallery/decGallery5.webp" },
       { src: "/images/decGallery/decGallery6.webp" },
-      { src: "/images/decGallery/decGallery11.webp" },
+      { src: "/images/decGallery/decGallery8.webp" },
       { src: "/images/decGallery/decGallery10.webp" },
     ],
   },

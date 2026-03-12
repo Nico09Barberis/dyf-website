@@ -27,14 +27,15 @@ const SLIDES = [
   },
 ];
 
-const CarouselSlide = memo(function CarouselSlide({ slide }) {
+const CarouselSlide = memo(function CarouselSlide({ slide, priority }) {
   return (
     <div className="absolute inset-0 transition-opacity duration-[2000ms] ease-in-out">
       <img
         src={slide.image}
         alt={slide.title}
-        className="w-full h-full object-cover will-change-transform"
-        fetchPriority="high"
+        className="w-full h-full object-cover"
+        fetchPriority={priority ? "high" : "auto"}
+        loading={priority ? "eager" : "lazy"}
         decoding="async"
       />
 
@@ -63,7 +64,10 @@ const Carousel = () => {
 
   return (
     <div className="relative h-[600px] w-full overflow-hidden">
-      <CarouselSlide slide={SLIDES[current]} />
+      <CarouselSlide
+        slide={SLIDES[current]}
+        priority={current === 0}
+      />
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import { memo } from "react";
+import { Link } from "react-router-dom";
 
 const cards = [
   {
@@ -33,8 +34,8 @@ const BG_IMAGE = "/images/home/process/bg-flashcards.webp";
 const ProcessCard = memo(function ProcessCard({ title, image, description }) {
   return (
     <div className="group w-64 aspect-[4/5] [perspective:1000px] content-visibility-auto">
-      <div className="relative w-full h-full font-urbanist transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] will-change-transform">
-        
+      <div className="relative w-full h-full font-urbanist transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-hover:will-change-transform">
+
         {/* Frente */}
         <div className="absolute inset-0 rounded-xl overflow-hidden shadow-lg [backface-visibility:hidden]">
           <img
@@ -42,8 +43,11 @@ const ProcessCard = memo(function ProcessCard({ title, image, description }) {
             alt={title}
             loading="lazy"
             decoding="async"
+            width="400"
+            height="500"
             className="w-full h-full object-cover"
           />
+
           <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
             <h3 className="text-white text-2xl md:text-3xl font-semibold text-center px-2 drop-shadow-md">
               {title}
@@ -52,14 +56,14 @@ const ProcessCard = memo(function ProcessCard({ title, image, description }) {
         </div>
 
         {/* Reverso */}
-        <div className="absolute inset-0 rounded-xl overflow-hidden shadow-lg [transform:rotateY(180deg)] [backface-visibility:hidden]">
-          <img
-            src={BG_IMAGE}
-            alt=""
-            loading="lazy"
-            decoding="async"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
+        <div
+          className="
+            absolute inset-0 rounded-xl overflow-hidden shadow-lg
+            [transform:rotateY(180deg)] [backface-visibility:hidden]
+            bg-cover bg-center
+          "
+          style={{ backgroundImage: `url(${BG_IMAGE})` }}
+        >
           <div className="absolute inset-0 bg-black/40 flex items-center justify-center p-4">
             <p className="text-white text-center text-xl md:text-2xl font-bold leading-relaxed drop-shadow-lg">
               {description}
@@ -72,10 +76,10 @@ const ProcessCard = memo(function ProcessCard({ title, image, description }) {
   );
 });
 
-
 function HomeProcess() {
   return (
     <section className="flex flex-col items-center justify-center py-16 my-12">
+
       {/* Header */}
       <div className="text-center mb-12 px-4">
         <h2 className="text-xl md:text-4xl font-marcellus uppercase font-bold text-azulOscuro mb-2">
@@ -91,7 +95,7 @@ function HomeProcess() {
       </div>
 
       {/* Cards */}
-      <div className="flex flex-wrap justify-center gap-8 px-4">
+      <div className="flex flex-wrap justify-center gap-8 px-4 content-visibility-auto">
         {cards.map((card) => (
           <ProcessCard
             key={card.id}
@@ -102,10 +106,10 @@ function HomeProcess() {
         ))}
       </div>
 
-      {/* CTA secundario */}
+      {/* CTA */}
       <div className="mt-14">
-        <a
-          href="/servicios/organizacion-integral"
+        <Link
+          to="/servicios/organizacion-integral"
           className="
             inline-flex items-center gap-2
             px-8 py-3
@@ -117,10 +121,11 @@ function HomeProcess() {
             shadow-lg shadow-blue-900/30
           "
         >
-          saber mas
+          saber más
           <span className="text-lg">→</span>
-        </a>
+        </Link>
       </div>
+
     </section>
   );
 }
