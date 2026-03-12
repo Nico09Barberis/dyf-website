@@ -34,7 +34,7 @@ const CarouselSlide = memo(function CarouselSlide({ slide }) {
         src={slide.image}
         alt={slide.title}
         className="w-full h-full object-cover will-change-transform"
-        fetchpriority="high"
+        fetchPriority="high"
         decoding="async"
       />
 
