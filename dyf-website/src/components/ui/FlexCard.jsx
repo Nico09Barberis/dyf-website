@@ -23,7 +23,7 @@ const FlexCard = () => {
       title: "Alquiler de mobiliario",
       subtitle: "Muebles funcionales con diseño y estilo",
       button: "Explorar",
-      image: "../../../public/images/catFurniture/catSofas.webp",
+      image: "/images/catFurniture/catSofas.webp",
       link: "/servicios/alquiler-mobiliario",
     },
   ];

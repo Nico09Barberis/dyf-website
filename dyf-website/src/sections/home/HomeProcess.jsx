@@ -33,11 +33,11 @@ const BG_IMAGE = "/images/home/process/bg-flashcards.webp";
 
 const ProcessCard = memo(function ProcessCard({ title, image, description }) {
   return (
-    <div className="group w-64 aspect-[4/5] [perspective:1000px] content-visibility-auto">
+    <div className="group w-64 aspect-[4/5] [perspective:1000px]">
       <div className="relative w-full h-full font-urbanist transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-hover:will-change-transform">
 
         {/* Frente */}
-        <div className="absolute inset-0 rounded-xl overflow-hidden shadow-lg [backface-visibility:hidden]">
+        <div className="absolute inset-0 rounded-xl overflow-hidden shadow-lg [backface-visibility:hidden][-webkit-backface-visibility:hidden]">
           <img
             src={image}
             alt={title}
@@ -95,7 +95,7 @@ function HomeProcess() {
       </div>
 
       {/* Cards */}
-      <div className="flex flex-wrap justify-center gap-8 px-4 content-visibility-auto">
+      <div className="flex flex-wrap justify-center gap-8 px-4">
         {cards.map((card) => (
           <ProcessCard
             key={card.id}
