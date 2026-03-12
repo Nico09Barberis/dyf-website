@@ -13,7 +13,7 @@ const sectionsData = [
       { src: "/images/galery/fullEvents/fullEvent-4.webp" },
       { src: "/images/galery/fullEvents/fullEvent-5.webp" },
       { src: "/images/galery/fullEvents/fullEvent-3.webp" },
-      { src: "/images/galery/fullEvents/fullEvent-6.webp" },
+      { src: "/images/galery/fullEvents/fullEvent-8.webp" },
       { src: "/images/home/servHome2.webp" },
     ],
   },

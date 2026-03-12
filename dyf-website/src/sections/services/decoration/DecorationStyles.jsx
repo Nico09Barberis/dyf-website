@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const styles = [
   {
@@ -71,15 +72,15 @@ const DecorationStylesCarousel = () => {
                 <div key={index} className="w-full min-w-full flex-shrink-0">
                   <div
                     className="
-              relative
-              w-full
-              aspect-[5/3]
-              sm:aspect-[21/9]
-              rounded-2xl
-              overflow-hidden
-              bg-cover
-              bg-center
-            "
+                      relative
+                      w-full
+                      aspect-[5/3]
+                      sm:aspect-[21/9]
+                      rounded-2xl
+                      overflow-hidden
+                      bg-cover
+                      bg-center
+                    "
                     style={{ backgroundImage: `url(${item.image})` }}
                   >
                     {/* Overlay */}
@@ -96,8 +97,8 @@ const DecorationStylesCarousel = () => {
                           {item.description}
                         </p>
 
-                        <a
-                          href="/contacto"
+                        <Link
+                          to="/contacto"
                           className="
                             inline-flex items-center justify-center
                             px-8 py-3
@@ -111,7 +112,7 @@ const DecorationStylesCarousel = () => {
                           "
                         >
                           Solicitar asesoramiento
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>

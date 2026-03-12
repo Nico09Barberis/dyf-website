@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const FullServiceHero = () => {
   return (
@@ -67,8 +68,8 @@ const FullServiceHero = () => {
 
         {/* CTA */}
         <div className="flex justify-center">
-          <a
-            href="/contacto"
+          <Link
+            to="/contacto"
             className="
               inline-flex items-center justify-center
               px-8 py-3
@@ -82,7 +83,7 @@ const FullServiceHero = () => {
             "
           >
             Planificar mi evento
-          </a>
+          </Link>
         </div>
       </div>
     </section>

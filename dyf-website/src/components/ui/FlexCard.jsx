@@ -10,21 +10,21 @@ const FlexCard = () => {
       subtitle: "Estilo y calidad para tu evento",
       button: "Ver más",
       image: "/images/home/servHome1.webp",
-      link: "/diseno",
+      link: "/servicios/alquiler-vajilla",
     },
     {
       title: "Ambientación y decoración",
       subtitle: "Creamos espacios únicos para tu evento",
       button: "Ver más",
       image: "/images/home/servHome2.webp",
-      link: "/desarrollo",
+      link: "/servicios/ambientacion-decoracion",
     },
     {
       title: "Alquiler de mobiliario",
       subtitle: "Muebles funcionales con diseño y estilo",
       button: "Explorar",
       image: "/images/galery/furniture/furniture-7.webp",
-      link: "/galeria",
+      link: "/servicios/alquiler-mobiliario",
     },
   ];
 

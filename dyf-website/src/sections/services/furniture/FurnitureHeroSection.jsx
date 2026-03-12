@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const FurnitureHeroSection = () => {
   return (
@@ -28,8 +29,8 @@ const FurnitureHeroSection = () => {
         {/* CTA buttons */}
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
 
-          <a
-            href="/contacto"
+          <Link
+            to="/contacto"
             className="
               inline-block items-center justify-center
               px-8 py-3
@@ -43,7 +44,7 @@ const FurnitureHeroSection = () => {
             "
           >
             Solicitar cotización
-          </a>
+          </Link>
 
           <a
             href="#categorias"
