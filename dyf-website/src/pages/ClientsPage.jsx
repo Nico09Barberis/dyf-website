@@ -3,7 +3,6 @@ import ClientsIntroSection from "../sections/bussines/clientsSections/ClientIntr
 import ClientsCatSection from "../sections/bussines/clientsSections/ClientsCatSection";
 import ClientsGallerySection from "../sections/bussines/clientsSections/ClientsGallerySection";
 import ClientTestimonialsSection from "../sections/bussines/clientsSections/ClientTestimonialSection";
-import HeroBanner from "../sections/home/HeroBanner";
 
 export default function ClientsPage() {
   const breadcrumb = [
