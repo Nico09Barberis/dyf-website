@@ -20,7 +20,7 @@ const WhatsAppButton = () => {
         aria-label="Chatear por WhatsApp"
       >
         <img
-          src="../../../public/images/varias/whatsapp-logo.png" 
+          src="/images/varias/whatsapp-logo.png" 
           alt="WhatsApp"
           className="w-12 h-12 md:w-14 md:h-14 object-contain"
           loading="lazy"
