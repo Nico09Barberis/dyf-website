@@ -62,7 +62,7 @@ export default function ContactForm() {
         <h2 className="mb-2 text-start text-lg md:text-xl lg:text-2xl font-urbanist uppercase font-bold">
           Contactanos
         </h2>
-        <div className="mb-6 h-2 w-20 bg-dorado" />
+        <div className="mb-6 h-1.5 w-20 bg-dorado" />
 
         <form
           action="https://formspree.io/f/mqeybapy"

@@ -64,7 +64,7 @@ const Footer = () => {
 
           <p className="flex flex-wrap items-center gap-2 text-gray-300">
             <GrMapLocation className="text-2xl text-[#E7D283]" />
-            Córdoba, Argentina
+            Salsipuedes, Córdoba, Argentina
           </p>
 
           <p className="flex flex-wrap items-center gap-2 text-gray-300">
@@ -82,7 +82,7 @@ const Footer = () => {
 
             <div className="flex flex-col leading-tight">
               <span>3512 324008</span>
-              <span>351 2312725</span>
+              <span>3512 312725</span>
             </div>
           </div>
 
