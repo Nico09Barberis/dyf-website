@@ -83,10 +83,10 @@ function HomeProcess() {
       {/* Header */}
       <div className="text-center mb-12 px-4">
         <h2 className="text-xl md:text-3xl lg:text-4xl font-marcellus uppercase font-bold text-azulOscuro mb-2">
-          Organización integral de tu evento
+          Asi hacemos realidad tu evento
         </h2>
 
-        <div className="bg-dorado h-2 w-20 mx-auto mb-4" />
+        <div className="bg-dorado h-1.5 w-20 mx-auto mb-4" />
 
         <p className="text-md md:text-lg text-gray-800 font-marcellus">
           Nos encargamos de todo el proceso, desde la idea inicial hasta la
