@@ -110,7 +110,7 @@ export default function Gallery() {
     <div className="container mx-auto px-4 py-8 mt-12">
       <section className="mb-16 flex flex-col items-center text-center px-4 sm:px-6 lg:px-0">
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-marcellus font-semibold uppercase mb-2 text-azulOscuro">
-          nuestra galeria
+          nuestra galería
         </h1>
 
         <div className="h-1.5 w-20 mx-auto mb-4 bg-dorado" />
