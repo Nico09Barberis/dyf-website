@@ -1,5 +1,75 @@
 import { useContactForm } from "./UseContactForm";
 
+const inputBaseStyles =
+  "border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500";
+
+function FormField({ type = "text", id, name, placeholder, required, error }) {
+  return (
+    <div className="flex flex-col">
+      <input
+        type={type}
+        id={id}
+        name={name}
+        placeholder={placeholder}
+        required={required}
+        className={`${inputBaseStyles} ${error ? "border-red-500" : ""}`}
+      />
+      {error && <span className="text-sm text-red-500">{error}</span>}
+    </div>
+  );
+}
+
+function FormSelect({ id, name, label, options, required, error }) {
+  return (
+    <div className="flex flex-col">
+      <label htmlFor={id} className="mb-1 font-semibold">
+        {label}
+      </label>
+      <select
+        id={id}
+        name={name}
+        required={required}
+        className={`${inputBaseStyles} ${error ? "border-red-500" : ""}`}
+      >
+        <option value="">Selecciona</option>
+        {options.map(({ value, label }) => (
+          <option key={value} value={value}>
+            {label}
+          </option>
+        ))}
+      </select>
+      {error && <span className="text-sm text-red-500">{error}</span>}
+    </div>
+  );
+}
+
+function FormTextarea({
+  id,
+  name,
+  label,
+  placeholder,
+  required,
+  rows = 5,
+  error,
+}) {
+  return (
+    <div className="flex flex-col md:col-span-2">
+      <label htmlFor={id} className="mb-1 font-semibold">
+        {label}
+      </label>
+      <textarea
+        id={id}
+        name={name}
+        placeholder={placeholder}
+        required={required}
+        rows={rows}
+        className={`${inputBaseStyles} ${error ? "border-red-500" : ""}`}
+      />
+      {error && <span className="text-sm text-red-500">{error}</span>}
+    </div>
+  );
+}
+
 export default function ContactForm() {
   const { handleSubmit, status, errors } = useContactForm();
 

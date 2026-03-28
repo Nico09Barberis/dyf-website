@@ -60,7 +60,8 @@ export function useContactForm() {
         setStatus("error");
       }
     } catch (error) {
-      setStatus("error: ", error);
+      setStatus("error");
+      console.error(error);
     }
   };
 
