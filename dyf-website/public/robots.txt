@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Bloqueo opcional de rutas sensibles
+Disallow: /admin/
+Disallow: /dashboard/
+
+# Sitemap
+Sitemap: https://dyfcelebraciones.com.ar/sitemap.xml
