@@ -1,79 +1,28 @@
-const inputBaseStyles =
-  "border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500";
-
-function FormField({ type = "text", id, name, placeholder, required }) {
-  return (
-    <input
-      type={type}
-      id={id}
-      name={name}
-      placeholder={placeholder}
-      required={required}
-      className={inputBaseStyles}
-    />
-  );
-}
-
-function FormSelect({ id, name, label, options, required }) {
-  return (
-    <div className="flex flex-col">
-      <label htmlFor={id} className="mb-1 font-semibold">
-        {label}
-      </label>
-      <select
-        id={id}
-        name={name}
-        required={required}
-        className={inputBaseStyles}
-      >
-        <option value="">Selecciona</option>
-        {options.map(({ value, label }) => (
-          <option key={value} value={value}>
-            {label}
-          </option>
-        ))}
-      </select>
-    </div>
-  );
-}
-
-function FormTextarea({ id, name, label, placeholder, required, rows = 5 }) {
-  return (
-    <div className="flex flex-col md:col-span-2">
-      <label htmlFor={id} className="mb-1 font-semibold">
-        {label}
-      </label>
-      <textarea
-        id={id}
-        name={name}
-        placeholder={placeholder}
-        required={required}
-        rows={rows}
-        className={inputBaseStyles}
-      />
-    </div>
-  );
-}
+import { useContactForm } from "./UseContactForm";
 
 export default function ContactForm() {
+  const { handleSubmit, status, errors } = useContactForm();
+
   return (
     <section className="bg-white">
       <div className="mx-auto max-w-3xl bg-white p-8">
-        <h2 className="mb-2 text-start text-lg md:text-xl lg:text-2xl font-urbanist uppercase font-bold">
+        <h2 className="mb-2 text-lg md:text-xl lg:text-2xl font-bold uppercase">
           Contactanos
         </h2>
-        <div className="mb-6 h-1.5 w-20 bg-dorado" />
 
         <form
-          action="https://formspree.io/f/mqeybapy"
-          method="POST"
+          onSubmit={handleSubmit}
           className="grid grid-cols-1 gap-4 md:grid-cols-2"
         >
+          {/* Honeypot anti-spam */}
+          <input type="text" name="_gotcha" className="hidden" />
+
           <FormField
             id="nombre"
             name="nombre"
             placeholder="Nombre"
             required
+            error={errors.nombre}
           />
 
           <FormField
@@ -81,6 +30,7 @@ export default function ContactForm() {
             name="apellido"
             placeholder="Apellido"
             required
+            error={errors.apellido}
           />
 
           <FormField
@@ -89,6 +39,7 @@ export default function ContactForm() {
             name="email"
             placeholder="Email"
             required
+            error={errors.email}
           />
 
           <FormField
@@ -109,6 +60,7 @@ export default function ContactForm() {
               { value: "corporativo", label: "Evento corporativo" },
               { value: "otros", label: "Otros" },
             ]}
+            error={errors.tipoEvento}
           />
 
           <FormTextarea
@@ -117,24 +69,29 @@ export default function ContactForm() {
             label="Descripción del evento"
             placeholder="Cuéntanos un poco qué quieres..."
             required
+            error={errors.mensaje}
           />
 
-          <div className="flex justify-center md:col-span-2">
+          <div className="flex flex-col items-center md:col-span-2 gap-2">
             <button
               type="submit"
-              className="
-                inline-flex items-center justify-center
-                px-8 py-3
-                bg-dorado text-white
-                font-urbanist font-semibold
-                rounded-full
-                shadow-md
-                transition-all duration-300
-                hover:bg-dorado/90 hover:shadow-lg hover:-translate-y-0.5
-                focus:outline-none focus:ring-2 focus:ring-dorado focus:ring-offset-2"
-              >
-              Enviar 
+              disabled={status === "loading"}
+              className="px-8 py-3 bg-dorado text-white rounded-full"
+            >
+              {status === "loading" ? "Enviando..." : "Enviar"}
             </button>
+
+            {status === "success" && (
+              <p className="text-green-600">
+                Mensaje enviado correctamente 👌
+              </p>
+            )}
+
+            {status === "error" && (
+              <p className="text-red-600">
+                Hubo un error. Intenta nuevamente.
+              </p>
+            )}
           </div>
         </form>
       </div>
