@@ -19,7 +19,7 @@ const HomeAbout = () => {
           />
           <img
             src="/images/galery/fullEvents/fullEvent-4.webp"
-            alt="Reunión de trabajo"
+            alt="Vajilla"
             className="w-full h-1/2 object-cover"
             loading="lazy"
             decoding="async"
@@ -29,7 +29,7 @@ const HomeAbout = () => {
         <div className="w-1/2 ml-3 h-full">
           <img
             src="/images/home/servHome2.webp"
-            alt="Oficina moderna"
+            alt="Boda al aire libre"
             className="w-full h-full object-cover"
             loading="lazy"
             decoding="async"

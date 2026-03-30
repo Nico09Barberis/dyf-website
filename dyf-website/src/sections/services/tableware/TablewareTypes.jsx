@@ -52,12 +52,16 @@ const TablewareTypes = () => {
           {TYPES.map((item) => (
             <article
               key={item.id}
+              tabIndex={0}
+              role="button"
+              aria-label={item.title}
               className="
                 group relative h-[320px]
                 rounded-2xl overflow-hidden
                 shadow-md hover:shadow-lg
-                transition-shadow duration-300
+                transition-all duration-300
                 will-change-transform
+                focus:outline-none
               "
             >
               {/* Imagen */}
@@ -68,23 +72,45 @@ const TablewareTypes = () => {
                 decoding="async"
                 className="
                   absolute inset-0 w-full h-full object-cover
-                  transition-transform duration-500
-                  group-hover:scale-105
+                  transition-all duration-500
+                  group-hover:scale-105 group-hover:blur-sm
+                  group-focus-within:scale-105 group-focus-within:blur-sm
+                  group-active:scale-105 group-active:blur-sm
                 "
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-black/40 transition-opacity duration-300 group-hover:opacity-80" />
+              <div className="
+                absolute inset-0 bg-black/40
+                transition-opacity duration-300
+                group-hover:opacity-80
+                group-focus-within:opacity-80
+                group-active:opacity-80
+              " />
 
               {/* Título base */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 transition-all duration-300 group-hover:opacity-0 group-hover:translate-y-4">
+              <div className="
+                absolute bottom-0 left-0 right-0 p-6
+                transition-all duration-300
+                group-hover:opacity-0 group-hover:translate-y-4
+                group-focus-within:opacity-0 group-focus-within:translate-y-4
+                group-active:opacity-0 group-active:translate-y-4
+              ">
                 <h3 className="text-xl font-marcellus text-white font-semibold">
                   {item.title}
                 </h3>
               </div>
 
-              {/* Hover content */}
-              <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              {/* Hover / Focus content */}
+              <div className="
+                absolute inset-0 flex flex-col justify-center items-center
+                text-center p-4 text-white
+                opacity-0 transition-opacity duration-300
+
+                group-hover:opacity-100
+                group-focus-within:opacity-100
+                group-active:opacity-100
+              ">
                 <h3 className="text-2xl font-marcellus font-semibold mb-4 tracking-wide">
                   {item.title}
                 </h3>
