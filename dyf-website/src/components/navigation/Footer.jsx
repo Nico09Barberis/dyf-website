@@ -16,7 +16,7 @@ const SERVICIOS = [
 const EMPRESA = [
   { id: "e1", label: "Inicio", to: "/" },
   { id: "e2", label: "Nosotros", to: "/empresa/nosotros" },
-  { id: "e3", label: "Galeria", to: "/galeria" },
+  { id: "e3", label: "Galería", to: "/galeria" },
   { id: "e4", label: "Contacto", to: "/contacto" },
 ];
 

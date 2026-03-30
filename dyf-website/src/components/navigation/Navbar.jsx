@@ -274,7 +274,7 @@ function Navbar() {
               onClick={() => setIsOpen(false)}
               className="block text-gray-200 hover:text-gray-300 hover:bg-[#002856] rounded-md py-1 px-2"
             >
-              Galeria
+              Galería
             </Link>
 
             <Link
@@ -347,7 +347,7 @@ function Navbar() {
               },
             ],
           },
-          { to: "/galeria", label: "galeria" },
+          { to: "/galeria", label: "galería" },
           { to: "/contacto", label: "contacto" },
         ].map((item) => (
           <div key={item.to} className="relative group">

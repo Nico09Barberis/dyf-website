@@ -11,14 +11,14 @@ const HomeAbout = () => {
         
         <div className="w-1/2 flex flex-col gap-3 h-full">
           <img
-            src="/images/home/about1.webp"
+            src="/images/home/about2.webp"
             alt="Equipo trabajando"
             className="w-full h-1/2 object-cover"
             loading="lazy"
             decoding="async"
           />
           <img
-            src="/images/home/about2.webp"
+            src="/images/galery/fullEvents/fullEvent-4.webp"
             alt="Reunión de trabajo"
             className="w-full h-1/2 object-cover"
             loading="lazy"

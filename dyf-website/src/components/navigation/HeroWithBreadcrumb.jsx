@@ -57,7 +57,7 @@ export default function HeroWithBreadcrumb({
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-black/60" />
 
       {/* Content */}
       <div className="absolute inset-0 flex h-full flex-col items-start justify-center px-6 md:flex-row md:items-center md:justify-between md:px-20">
